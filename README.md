@@ -36,12 +36,20 @@ In the issues I have logged written, video or screenshot accounts.
 - [Features](#features)
 - [UX Development Planes](#ux-development-planes)
   - [Strategy Plane](#strategy-plane)
+    - [Developer strategy](#developer-strategy)
+    - [Project Timeline](#project-timeline)
+    - [Business Strategy](#business-strategy)
   - [Scope plane](#scope-plane)
   - [Structure Plane](#structure-plane)
   - [Skeleton Plane](#skeleton-plane)
+  - [xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx](#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx)
   - [Surface Plane](#surface-plane)
 - [Testing](#testing)
 - [Manual Testing](#manual-testing)
+  - [Javascript Testing](#javascript-testing)
+  - [Hyperlink Testing](#hyperlink-testing)
+  - [Responsivity Testing](#responsivity-testing)
+  - [BrowserStack Testing](#browserstack-testing)
 - [Automatic Testing](#automatic-testing)
 - [Validator Testing](#validator-testing)
   - [Lighthouse Report](#lighthouse-report)
@@ -53,7 +61,6 @@ In the issues I have logged written, video or screenshot accounts.
   - [Code snippets](#code-snippets)
   - [Technologies Used](#technologies-used)
 - [Acknowledgements](#acknowledgements)
-      - [Pull request acknowledgements](#pull-request-acknowledgements)
 
 ***
 # Features
@@ -131,9 +138,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 # UX Development Planes
 
-The 5 UX development planes are for the purpose of explaining the design process of the website. Both intention and outcome are recorded.
-
-The key tool to bridge UX and code was the Figma wireframe: issues are logged here. [![Figma](https://img.shields.io/github/issues/lmcrean/Hoverboard/Figma?logo=Figma&logoColor=white&label=Figma&color=yellow)](https://github.com/lmcrean/Hoverboard/labels/Figma) [![GitHub 2 features page closed issues by-label](https://img.shields.io/github/issues-closed/lmcrean/Hoverboard/Figma?label=%20&color=green)](https://github.com/lmcrean/Hoverboard/issues?q=label%3Acss+label%3A%222%20features%20page%22+is%3Aclosed)
+The 5 UX development planes are for the purpose of explaining the process of building the website.
 
 ## Strategy Plane
 
@@ -141,6 +146,55 @@ The key tool to bridge UX and code was the Figma wireframe: issues are logged he
 
 The project was researched, conceived and designed in 5 weeks. Important limitations of the project had to be set from the outset such as
 - using a database that already existed for the JavaScript to navigate, e.g. pop quiz trivia data, personality test data. Inventing datasets risked distracting from the front-end design and JavaScript functionality.
+
+The developer researched these areas of the Javascript language:
+
+- Variables. In Javascript, variables are used to store data values. Variables are declared with the ```var``` keyword. The ```=``` sign is used to assign values to variables. In this project, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+- Core Data types, such as **strings**, **float** or real, **integers**, **booleans**. In some situations undefined or null is appropriate. In this project, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+- Operators. In Javascript, operators are used to assign values, compare values, perform arithmetic operations, and more. In this project, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+- Truthy and Falsy. In Javascript, a falsy value is a value that is considered false when encountered in a Boolean context. In this project, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+
+### Project Timeline
+
+The timeline for the project was as follows:
+
+<u>Week 1: 31st July to Sunday 6th August:</u> 
+
+- Researching theory around Javascript Language
+- Practising Mock Projects via Code Institute
+
+<u>Week 2: 7th to Sunday 13th August: </u> 
+
+- Choosing idea - either a quiz, personality test or a game.
+- Figma Wireframe 
+- UX Strategy, Scope, Structure completed. 
+- Finding a database to use. 
+
+<u>Week 3: 14th to Sunday 20th August</u> 
+
+- Designing HTML links, using broad classes for easy styling.
+- Designing CSS with a mobile-first approach, using Figma wireframe as a guide, and using ```clamp()```, ```media  queries``` function to make the website responsive to viewport width.
+- Designing Javascript to navigate the database
+
+<u>Week 4: 21st to Sunday 27th August:</u> 
+
+- CSS positioning
+- CSS animations
+- Javascript debugging
+- Documentation CSS on UX Planes
+- Documentation of Javascript on Skeleton plane
+
+
+<u>Week 5: 28th August to Sunday 3rd September:</u> 
+
+- Debugging standard errors.
+- Documenting bugs and dubugging process.
+
+<u>Week 6: 5th to Saturday 9th: </u>
+
+- Buffer for unforseen issues
+
+- The project was completed on Saturday 9th September 2023.
 
 ### Business Strategy
 
