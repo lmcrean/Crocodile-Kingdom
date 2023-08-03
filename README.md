@@ -147,12 +147,21 @@ The 5 UX development planes are for the purpose of explaining the process of bui
 The project was researched, conceived and designed in 5 weeks. Important limitations of the project had to be set from the outset such as
 - using a database that already existed for the JavaScript to navigate, e.g. pop quiz trivia data, personality test data. Inventing datasets risked distracting from the front-end design and JavaScript functionality.
 
-The developer researched these areas of the Javascript language:
+<summary><detail>The developer researched these areas of the Comparitative programming:</summary
 
-- Variables. In Javascript, variables are used to store data values. Variables are declared with the ```var``` keyword. The ```=``` sign is used to assign values to variables. In this project, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
-- Core Data types, such as **strings**, **float** or real, **integers**, **booleans**. In some situations undefined or null is appropriate. In this project, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
-- Operators. In Javascript, operators are used to assign values, compare values, perform arithmetic operations, and more. In this project, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
-- Truthy and Falsy. In Javascript, a falsy value is a value that is considered false when encountered in a Boolean context. In this project, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+- Variables. In Javascript, variables are used to store data values. Variables are declared with the ```var``` keyword. The ```=``` sign is used to assign values to variables. In this project.
+- Core Data types, such as **strings**, **float** or real, **integers**, **booleans**. In some situations undefined or null is appropriate.
+- Operators. In Javascript, operators are used to assign values, compare values, perform arithmetic operations. In this project.
+- Truthy and Falsy. In Javascript, a falsy value is a value that is considered false when encountered in a Boolean context. 
+- Flow control and iteration. 
+  - If() statements, when they are used without an else statement, are known as "one-way" conditionals because they only execute when the condition is true.
+  - ternary conditional statements, which are a shorthand version of if() statements.
+- Data Structures. In comparatitative programming, data structures are used to store and organize data. In this project, and for Javascript arrays are often used. Arrays are used to store multiple values in a single variable. On a more challenging level, arrays can be used to store objects, which are more complex data structures.
+
+
+The Developer then researched these areas of the Javascript:
+
+The Developer then tested a mockup project via Code institute, using event listeners, functions, loops, arrays, objects, and DOM manipulation. The mockup project was a quiz, which was a good starting point for the project. 
 
 ### Project Timeline
 
@@ -448,7 +457,7 @@ Was also used to for smaller features such as the Navbar hamburger, or read more
 [Figma](https://www.figma.com/)  for Designing wireframe
 [VSCode](https://code.visualstudio.com/) was used as my code editor
 [Github](https://www.github.com/) was used for Version control
-[Python Tutor](https://www.pythontutor.com) was used for debugging the Javascript
+
 
 Tools|How it was used|
 ---|---
@@ -458,6 +467,7 @@ Tools|How it was used|
 [gifcap](https://gifcap.dev/)| Recording gifs
 [shields.io](https://shields.io/)| Documentation Badges
 [FontJoy](https://fontjoy.com/) | Finding font pairings
+[Python Tutor](https://www.pythontutor.com) was used for debugging the Javascript, as well as a research tool early on in the project to understand the flow of the code.
 
 |Library| How it was used|
 |---|---|
