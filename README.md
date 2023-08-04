@@ -37,8 +37,9 @@ In the issues I have logged written, video or screenshot accounts.
 - [UX Development Planes](#ux-development-planes)
   - [Strategy Plane](#strategy-plane)
     - [Developer strategy](#developer-strategy)
-    - [Project Timeline](#project-timeline)
+      - [Project Timeline](#project-timeline)
     - [Business Strategy](#business-strategy)
+    - [Mininum Viable product](#mininum-viable-product)
   - [Scope plane](#scope-plane)
   - [Structure Plane](#structure-plane)
   - [Skeleton Plane](#skeleton-plane)
@@ -147,7 +148,7 @@ The 5 UX development planes are for the purpose of explaining the process of bui
 The project was researched, conceived and designed in 5 weeks. Important limitations of the project had to be set from the outset such as
 - using a database that already existed for the JavaScript to navigate, e.g. pop quiz trivia data, personality test data. Inventing datasets risked distracting from the front-end design and JavaScript functionality.
 
-<summary><detail>The developer researched these areas of the Comparitative programming:</summary
+<summary><detail>The developer researched these areas of the Comparitative programming:</summary>
 
 - Variables. In Javascript, variables are used to store data values. Variables are declared with the ```var``` keyword. The ```=``` sign is used to assign values to variables. In this project.
 - Core Data types, such as **strings**, **float** or real, **integers**, **booleans**. In some situations undefined or null is appropriate.
@@ -157,13 +158,18 @@ The project was researched, conceived and designed in 5 weeks. Important limitat
   - If() statements, when they are used without an else statement, are known as "one-way" conditionals because they only execute when the condition is true.
   - ternary conditional statements, which are a shorthand version of if() statements.
 - Data Structures. In comparatitative programming, data structures are used to store and organize data. In this project, and for Javascript arrays are often used. Arrays are used to store multiple values in a single variable. On a more challenging level, arrays can be used to store objects, which are more complex data structures.
+- Manipulating data structures. An example would be adding points to a scoreboard, or displaying a countdown timer.
+- Functions. In comparitative programming, functions are used to perform a specific task. In this project, functions were used to navigate the database, and to display the data in the DOM.
+- Classes. In comparitative programming, classes are used to create objects for example a class of "car" could have the properties of "colour", "make", "model", "year". Classes can interact with each other, for example a class of "car" could have a method of "drive" which would interact with the class of "engine". In this project, classes could be used to create objects, such as the "quiz" class, which had the properties of "question", "answer", "choices", "correct answer", "image", "explanation".
 
+
+</detail>
 
 The Developer then researched these areas of the Javascript:
 
 The Developer then tested a mockup project via Code institute, using event listeners, functions, loops, arrays, objects, and DOM manipulation. The mockup project was a quiz, which was a good starting point for the project. 
 
-### Project Timeline
+#### Project Timeline
 
 The timeline for the project was as follows:
 
@@ -227,6 +233,12 @@ New User:
 - xxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ***
+
+### Mininum Viable product
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ## Scope plane
 
 
