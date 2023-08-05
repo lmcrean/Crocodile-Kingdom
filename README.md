@@ -2,11 +2,10 @@
 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
 
-#  Portfolio Project 2 with JavaScript (currently using Project 1 as skeleton) <!-- omit in toc -->
+#  Untitled Memory Game with JavaScript <!-- omit in toc -->
 
 [<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-purple?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Hoverboard/) [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Testing-purple?logo=mdBook">](https://github.com/lmcrean/Hoverboard/blob/main/testing.md) [![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/lmcrean/Hoverboard?color=green)](https://github.com/lmcrean/Hoverboard/commits/main) [![GitHub closed issues](https://img.shields.io/github/issues-closed/lmcrean/Hoverboard?color=green)](https://github.com/lmcrean/Hoverboard/issues?q=is%3Aissue+is%3Aclosed) [![GitHub issues](https://img.shields.io/github/issues/lmcrean/Hoverboard?label=%20
 )](https://github.com/lmcrean/Hoverboard/issues) [![HTML](https://img.shields.io/github/issues/lmcrean/Hoverboard/html?logo=html5&logoColor=white&label=HTML&color=yellow)](https://github.com/lmcrean/Hoverboard/labels/html) [![CSSl](https://img.shields.io/github/issues/lmcrean/Hoverboard/css?logo=css3&label=CSS&color=yellow)](https://github.com/lmcrean/Hoverboard/labels/css) [![Javascript](https://img.shields.io/github/issues/lmcrean/Hoverboard/css?logo=JavaScript&label=JavaScript&color=yellow&logoColor=white)](https://github.com/lmcrean/Hoverboard/labels/css) [![Documentation](https://img.shields.io/github/issues/lmcrean/Hoverboard/documentation?logo=mdBook&label=Documentation&color=yellow)](https://github.com/lmcrean/Hoverboard/labels/css)
-
 
 <br>
 
@@ -37,6 +36,7 @@ In the issues I have logged written, video or screenshot accounts.
 - [UX Development Planes](#ux-development-planes)
   - [Strategy Plane](#strategy-plane)
     - [Developer strategy](#developer-strategy)
+      - [Developer Research](#developer-research)
       - [Project Timeline](#project-timeline)
     - [Business Strategy](#business-strategy)
     - [Mininum Viable product](#mininum-viable-product)
@@ -146,7 +146,14 @@ The 5 UX development planes are for the purpose of explaining the process of bui
 ### Developer strategy
 
 The project was researched, conceived and designed in 5 weeks. Important limitations of the project had to be set from the outset such as
-- using a database that already existed for the JavaScript to navigate, e.g. pop quiz trivia data, personality test data. Inventing datasets risked distracting from the front-end design and JavaScript functionality.
+- using an open-source database that already existed for the JavaScript to navigate, e.g. pop quiz trivia data, personality test data. Inventing datasets risked distracting from the front-end design and JavaScript functionality.
+- choosing a very "well-trodden" path that had lots of tutorials and resources available. This was to ensure that the project was achievable in the time frame, and that the developer could learn from the resources available.
+- based on this criteria, the developer chose to create a memory game, which had a lot of resources available, and was a good starting point for Junior-level Javascript.
+
+
+
+
+#### Developer Research
 
 <summary><detail>The developer researched these areas of the Comparitative programming:</summary>
 
@@ -166,6 +173,8 @@ The project was researched, conceived and designed in 5 weeks. Important limitat
 </detail>
 
 The Developer then researched these areas of the Javascript:
+- var, let and const variables. In Javascript, variables are used to store data values. Variables are declared with the ```var``` keyword. The ```=``` sign is used to assign values to variables. In this project.
+- $ symbol. In Javascript, the $ symbol is used to select an element from the DOM. In this project, the $ symbol was used to select the elements from the DOM, and to manipulate the elements.
 
 The Developer then tested a mockup project via Code institute, using event listeners, functions, loops, arrays, objects, and DOM manipulation. The mockup project was a quiz, which was a good starting point for the project. 
 
@@ -175,7 +184,7 @@ The timeline for the project was as follows:
 
 <u>Week 1: 31st July to Sunday 6th August:</u> 
 
-- Researching theory around Javascript Language
+- Researching theory around Javascript Language, low-stakes practise such as coding challenges.
 - Practising Mock Projects via Code Institute
 
 <u>Week 2: 7th to Sunday 13th August: </u> 
@@ -236,9 +245,18 @@ New User:
 
 ### Mininum Viable product
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+The minumum viable product of the memory game was
+- to use 16 cards
+- to include a flip animation
+- the cards needed to stay flipped if they were a match
+- to be responsive in mobile and desktop view
+- to include a header, footer and navbar 
+
+Once that would be designed more interesting features could be added, such as 
+- a timer
+- a scoreboard
+- a chance to switch card sets
+
 ## Scope plane
 
 
@@ -282,7 +300,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 The website was designed with a mobile-first approach, using Figma. The key challenge was to use viewport breakpoints at 768px, 1208px and 1768px to display the website comfortably on different devices.
 
-<div align="center"> <h3> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </h3>
+<div align="center"> <h3> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </h3> <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
 
 *to view wireframe in more detail, ```right click > open image in new tab```* </div>
@@ -494,3 +512,5 @@ Tools|How it was used|
 A special thank you to the wonderful tutors at Code Institute, who provided prompt support throughout the project.
 
 Special thank you to Seun Owonikoko, my mentor at Code Institute, for your time and patience taking me through devtools. 
+
+[🔼 Back to top](#Portfolio-Project-2-with-Javascript)
