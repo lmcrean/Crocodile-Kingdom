@@ -172,11 +172,14 @@ The project was researched, conceived and designed in 5 weeks. Important limitat
 
 </detail>
 
-The Developer then researched these areas of the Javascript:
+<detail><summary>The Developer then researched these areas of the Javascript:</summary>
 - var, let and const variables. In Javascript, variables are used to store data values. Variables are declared with the ```var``` keyword. The ```=``` sign is used to assign values to variables. In this project.
 - $ symbol. In Javascript, the $ symbol is used to select an element from the DOM. In this project, the $ symbol was used to select the elements from the DOM, and to manipulate the elements.
+- String methods for manipulating strings
+- The DOM. The DOM represents the page so that programs can change the document structure, style, and content.
+  </detail>
 
-The Developer then tested a mockup project via Code institute, using event listeners, functions, loops, arrays, objects, and DOM manipulation. The mockup project was a quiz, which was a good starting point for the project. 
+The Developer then tested a walkthrough project of a memory game, using event listeners, functions, loops, arrays, objects, and DOM manipulation. The mockup project was a quiz, which was a good starting point for the project. 
 
 #### Project Timeline
 
@@ -250,7 +253,7 @@ The minumum viable product of the memory game was
 - to include a flip animation
 - the cards needed to stay flipped if they were a match
 - to be responsive in mobile and desktop view
-- to include a header, footer and navbar 
+- to include a header, footer and navbar
 
 Once that would be designed more interesting features could be added, such as 
 - a timer
@@ -287,6 +290,10 @@ There were a few omissions from the project.
 ***
 ## Structure Plane
 
+A flowchart was designed below to show the logic of the **Mininum Viable Product.**
+
+<div align="center"><img alt="placeholder" src="assets/media/documentation-flowchart/flowchart-mvp.svg" width="800px" ></div>
+
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 <div align="center"><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"></div>
@@ -300,7 +307,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 The website was designed with a mobile-first approach, using Figma. The key challenge was to use viewport breakpoints at 768px, 1208px and 1768px to display the website comfortably on different devices.
 
-<div align="center"> <h3> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </h3> <!-- omit in toc -->
+<div align="center"> <h3> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx <!-- omit in toc --> </h3> 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
 
 *to view wireframe in more detail, ```right click > open image in new tab```* </div>
