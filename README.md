@@ -37,6 +37,7 @@ In the issues I have logged written, video or screenshot accounts.
   - [Strategy Plane](#strategy-plane)
     - [Developer strategy](#developer-strategy)
       - [Developer Research](#developer-research)
+      - [Product Research](#product-research)
       - [Project Timeline](#project-timeline)
     - [Business Strategy](#business-strategy)
     - [Mininum Viable product](#mininum-viable-product)
@@ -179,7 +180,19 @@ The project was researched, conceived and designed in 5 weeks. Important limitat
 - The DOM. The DOM represents the page so that programs can change the document structure, style, and content.
   </detail>
 
-The Developer then tested a walkthrough project of a memory game, using event listeners, functions, loops, arrays, objects, and DOM manipulation. The mockup project was a quiz, which was a good starting point for the project. 
+The Developer then tested a walkthrough project of a memory game, using event listeners, functions, loops, arrays, objects, and DOM manipulation. The mockup project was a quiz, which was a good starting point for the project.
+
+#### Product Research
+This project had the intentional advantage of plenty existing resources of high relevance. 
+
+The following resources and repositories were researched. 
+- [Alien Memory Game](https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game) by Github user: moirahartigan
+- [Memory Game](https://github.com/code-sketch/memory-game) by code-sketch  with [Walkthrough](https://marina-ferreira.github.io/tutorials/js/memory-game/), [Demo](https://marina-ferreira.github.io/projects/js/memory-game/), [Video tutorial](https://www.youtube.com/watch?v=eMhiMsEC9Uk&list=PLLX1I3KXZ-YH-woTgiCfONMya39-Ty8qw)
+- [Memory Game](https://github.com/flowforfrank/memory-game) by flowforfrank, with [tutorial article](https://webtips.dev/memory-game-in-javascript)
+- [30 minute walkthrough tutorial](https://www.youtube.com/watch?v=bznJPt4t_4s) by dcode
+- [Article](https://www.codewithfaraz.com/content/112/creating-flip-card-memory-game-with-html-css-and-javascript) by codewithfiraz.com explaining the role of each CSS class and JS function
+
+It was crucial for this project to choose a memory game that was achievable in the time frame, and that had a lot of resources available.
 
 #### Project Timeline
 
@@ -188,13 +201,14 @@ The timeline for the project was as follows:
 <u>Week 1: 31st July to Sunday 6th August:</u> 
 
 - Researching theory around Javascript Language, low-stakes practise such as coding challenges.
-- Practising Mock Projects via Code Institute
+- Practising Mock Projects via Code Institute and other resources
+- Established the concept of a memory game.
 
 <u>Week 2: 7th to Sunday 13th August: </u> 
 
-- Choosing idea - either a quiz, personality test or a game.
-- Figma Wireframe 
-- UX Strategy, Scope, Structure completed. 
+- Practising Mock Projects via Code Institute and other resources
+- UX Strategy, Scope, Structure completed.
+- Figma Wireframe  
 - Finding a database to use. 
 
 <u>Week 3: 14th to Sunday 20th August</u> 
@@ -225,35 +239,33 @@ The timeline for the project was as follows:
 
 ### Business Strategy
 
-The business goals were to xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-The website itself was aimed at xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-The new user is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+The business goals were to create a simple memory game that was fun and engaging for the user. The target audience was 5 year olds, and it could be assumed that they have never played a memory game before.
 
 <div align="center"><h3> User Stories</h3> <!-- omit in toc -->
 
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
+
+<img alt="placeholder" src="assets/media/userimage.svg" width="300px" >
  </div>
 
-New User:
-- xxxxxxxxxxxxxxxxxxxxxxxx
-- xxxxxxxxxxxxxxxxxxxxxxxxx
-- xxxxxxxxxxxxxxxxxxxxxx
-- xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-- xxxxxxxxxxxxxxxxxxxxxxxxxxx
+New User: (for MVP)
+- I need to understand how to play the game.  
+- I need the design to be accessible, easy to read with lots of visuals.
+- I need the tone of the design to appear warm, entertaining and encouraging.
+- I need to a quick feedback loop that suggests how I'm doing as I play the game.
+- I need to recieve praise for completing the game.
+- I need a new arrangement of cards each time I play the game.
 
 ***
 
 ### Mininum Viable product
 
 The minumum viable product of the memory game was
-- to use 16 cards
-- to include a flip animation
+- to use 16 cards that displayed randomly
+- to include a flip animation when the card was turned over
+- the cards needed to flip back after a 2 second delay if they were a mismatch
 - the cards needed to stay flipped if they were a match
-- to be responsive in mobile and desktop view
-- to include a header, footer and navbar
+- the website needed to be responsive in mobile and desktop view
+- the webstite needed to include a header, footer and navbar
 
 Once that would be designed more interesting features could be added, such as 
 - a timer
