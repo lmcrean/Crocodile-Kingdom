@@ -237,6 +237,7 @@ New User: (for MVP)
 - I need to a quick feedback loop that suggests how I'm doing as I play the game.
 - I need to recieve praise for completing the game.
 - I need a new arrangement of cards each time I play the game to keep it interesting.
+- I want to be able to contact the business if I have any questions, as well as share the game easily with my friends.
 
 ***
 
@@ -266,17 +267,58 @@ Once that would be designed more interesting features could be added, such as
 ### Scope of Features
 The following features were designed to meet the needs of new users.  They were displayed across three main pages, sometimes appearing more than once for the purpose of both making the website easy to navigate and consistent branding design.
 
-| Feature       | Function  | Most relevant user story |
-| --- | --- | ------- | 
-| Card Deck <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">| use to play the game, via various JS cues, see flowchart in skeleton plane <br> <img src="assets/media/documentation-flowchart/flowchart-mvp.svg" width="500px"> |  I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging.
-I need a new arrangement of cards each time I play the game.|
-| Turn count <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">| xxxxxxxxxx | - I need to a quick feedback loop that suggests how I'm doing as I play the game. |
-| Restart button <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">| xxxxxxxxxx | - I need a new arrangement of cards each time I play the game to keep it interesting.|
-| You've Won feature <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> | xxxxxxxxxx | - I need to recieve praise for completing the game.|
+| Feature   |Purpose    | Function (HTML, CSS, JS) | Most relevant user story |
+| --- | --- | --- | ------- | 
+| Card Deck <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">| use to play the game | HTML: ```img``` files with ```a``` hyperlinks <br> CSS: ```object-fit:contain``` <br>JS: would update html ```class ids``` as users clicked on the images.<br> <br>see flowchart (right click-open image in new tab) <br> <img src="assets/media/documentation-flowchart/flowchart-mvp.svg" width="500px"> |  -I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging. <br>- I need a new arrangement of cards each time I play the game.|
+| Turn count <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">| An updating score count that follows the attempts taken by the user |Let's the HTML&CSS: Plain text, "Turns Taken". <br>JS: The number updates ```+1``` after each 2nd click | - I need to a quick feedback loop that suggests how I'm doing as I play the game. |
+| Restart button <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">| User clicks here to restart their game|-HTML link, ```button``` class <br> -CSS Button format <br> -flip all the cards back and reshuffle the deck,<br>-resets the score count | - I need a new arrangement of cards each time I play the game to keep it interesting.|
+| You've Won feature <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> | An encouraging message at the end of the game, it shows total turns taken and also displays the **Restart** button feature | HTML: Text, reuse the turn count and restart button <br>CSS: Reuse modal class | - I need to recieve praise for completing the game.|
 | How To Play feature <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> | xxxxxxxxxx | - I need to understand how to play the game.|
 | Navbar <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> | xxxxxxxxxx | - I need the tone of the design to appear warm, entertaining and encouraging.
 |
 | Footer <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> | xxxxxxxxxx | (helps the business strategy, increase their product's online presence) |
+
+#### Card Deck <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<b>Use to play the game.</b>
+<i>"Most Relevant user story: I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging."</i>
+
+#### Turn count <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<b>An updating score count that follows the attempts taken by the user.</b>
+<i>"I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
+
+#### Restart button <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<b>User clicks here to restart their game.</b>
+<i>"I need a new arrangement of cards each time I play the game to keep it interesting."</i>
+
+#### You've Won feature <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<b>An encouraging message at the end of the game, it shows total turns taken and also displays the Restart button.</b>
+<i>"I need to receive praise for completing the game."</i>
+
+#### How To Play feature <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<b>Allows the user to read the rules of the game.</b>
+<i>"I need to understand how to play the game."</i>
+
+#### Navbar <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<b>Displays just the Logo.</b>
+<i>"I need the tone of the design to appear warm, entertaining and encouraging."</i>
+
+#### Footer <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<b>Displays the social media links, and a Contact Us link.</b>
+<i>"I want to be able to contact the business if I have any questions, and share the game easily with my friends."</i>
 
 <u>Omissions from the scope</u>
 There were a few omissions from the project.
@@ -294,6 +336,7 @@ A flowchart was designed below to show the logic of the **Mininum Viable Product
 
 xxxxxxxxx
 
+Functionality overview:
 
 ***
 ## Skeleton Plane
