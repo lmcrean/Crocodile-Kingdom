@@ -40,11 +40,12 @@ In the issues I have logged written, video or screenshot accounts.
       - [Product Research](#product-research)
       - [Project Timeline](#project-timeline)
     - [Business Strategy](#business-strategy)
-    - [Mininum Viable product](#mininum-viable-product)
   - [Scope plane](#scope-plane)
+    - [Mininum Viable product](#mininum-viable-product)
+    - [Scope of Features](#scope-of-features)
   - [Structure Plane](#structure-plane)
   - [Skeleton Plane](#skeleton-plane)
-  - [xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx](#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx)
+    - [Coding in the skeleton](#coding-in-the-skeleton)
   - [Surface Plane](#surface-plane)
 - [Testing](#testing)
 - [Manual Testing](#manual-testing)
@@ -67,12 +68,46 @@ In the issues I have logged written, video or screenshot accounts.
 ***
 # Features
 
-## Navbar <!-- omit in toc -->
+## Card Deck <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+***
+## Turn Count <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+***
+
+## Restart Button <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+***
+
+## How to Play, modal popup <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+***
+
+## Navbar <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ***
 
@@ -82,61 +117,9 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-***
-
-## xxxxxxxxxxx <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ***
 
-## xxxxxxxxxxx <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-***
-
-## xxxxxxxxxxx <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-***
-
-## xxxxxxxxxxx <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-***
-
-## xxxxxxxxxxx <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-***
-
-## xxxxxxxxxxx <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-***
 
 # UX Development Planes
 
@@ -253,13 +236,21 @@ New User: (for MVP)
 - I need the tone of the design to appear warm, entertaining and encouraging.
 - I need to a quick feedback loop that suggests how I'm doing as I play the game.
 - I need to recieve praise for completing the game.
-- I need a new arrangement of cards each time I play the game.
+- I need a new arrangement of cards each time I play the game to keep it interesting.
 
 ***
 
+## Scope plane
+
+For the scope plane, the developer drafted a mininum viable product that informed a scope of features designed to meet the needs of new users.
+
+A mininum viable product is a product with just enough features to satisfy early customers, and to provide feedback for future development. 
+
 ### Mininum Viable product
 
+<i>
 The minumum viable product of the memory game was
+
 - to use 16 cards that displayed randomly
 - to include a flip animation when the card was turned over
 - the cards needed to flip back after a 2 second delay if they were a mismatch
@@ -270,27 +261,22 @@ The minumum viable product of the memory game was
 Once that would be designed more interesting features could be added, such as 
 - a timer
 - a scoreboard
-- a chance to switch card sets
+- a chance to switch card sets</i>
 
-## Scope plane
-
-
+### Scope of Features
 The following features were designed to meet the needs of new users.  They were displayed across three main pages, sometimes appearing more than once for the purpose of both making the website easy to navigate and consistent branding design.
-<!-- Add thumbnails 3rd column?--->
+
 | Feature       | Function  | Most relevant user story |
 | --- | --- | ------- | 
-| xxxxxxxxxx<br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">| xxxxxxxxxx| xxxxxxxxxx|
-| xxxxxxxxxx <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">| xxxxxxxxxx | [xxxxxxxxxx]|
-| xxxxxxxxxx<br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> | xxxxxxxxxx | - xxxxxxxxxx|
-| xxxxxxxxxx<br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> | xxxxxxxxxx | - xxxxxxxxxx|
-| xxxxxxxxxx<br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> | xxxxxxxxxx | - xxxxxxxxxx|
-| xxxxxxxxxx<br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> | xxxxxxxxxx | - xxxxxxxxxx |
-| xxxxxxxxxx<br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> | xxxxxxxxxx | - xxxxxxxxxx |
-| xxxxxxxxxx<br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">      | xxxxxxxxxx | - xxxxxxxxxx |
-| xxxxxxxxxx<br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">| xxxxxxxxxx |    - xxxxxxxxxx |
-
-
-
+| Card Deck <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">| use to play the game, via various JS cues, see flowchart in skeleton plane <br> <img src="assets/media/documentation-flowchart/flowchart-mvp.svg" width="500px"> |  I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging.
+I need a new arrangement of cards each time I play the game.|
+| Turn count <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">| xxxxxxxxxx | - I need to a quick feedback loop that suggests how I'm doing as I play the game. |
+| Restart button <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">| xxxxxxxxxx | - I need a new arrangement of cards each time I play the game to keep it interesting.|
+| You've Won feature <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> | xxxxxxxxxx | - I need to recieve praise for completing the game.|
+| How To Play feature <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> | xxxxxxxxxx | - I need to understand how to play the game.|
+| Navbar <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> | xxxxxxxxxx | - I need the tone of the design to appear warm, entertaining and encouraging.
+|
+| Footer <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> | xxxxxxxxxx | (helps the business strategy, increase their product's online presence) |
 
 <u>Omissions from the scope</u>
 There were a few omissions from the project.
@@ -306,63 +292,42 @@ A flowchart was designed below to show the logic of the **Mininum Viable Product
 
 <div align="center"><img alt="placeholder" src="assets/media/documentation-flowchart/flowchart-mvp.svg" width="800px" ></div>
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-<div align="center"><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"></div>
-
+xxxxxxxxx
 
 
 ***
 ## Skeleton Plane
 
-**In the skeleton plane each feature's display changed according to the device size.** As well as adapting to viewport, a sense of depth was achieved by taking background images and discrete overlapping. 
+The skeleton plane was first designed with figma to emphasise a simple and efficient responsive design.  The design used CSS Grid to arrange all elements:
+- Mobile design used 1 column and arranged all the elements vertically. The cards with in a 4x4 subgrid.
+- Desktop Design split the page into 2 columns,  
+  - with the card deck on the right, taking up the screen space, 
+  - the footer taking up both columns hiding underneath the card deck.
+  - the remaining features were arranged in the left column in various rows, with a right-aligned position.
 
-The website was designed with a mobile-first approach, using Figma. The key challenge was to use viewport breakpoints at 768px, 1208px and 1768px to display the website comfortably on different devices.
 
-<div align="center"> <h3> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx <!-- omit in toc --> </h3> 
+<div align="center">
+
+**Main Page Skeleton** <!-- omit in toc --> 
+
+</div>
+
+<div align="center"><img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe.png" width="800px"></div>
+<br><br><br>
+<div align="center"> 
+
+**How to play Skeleton**
+
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
 
-*to view wireframe in more detail, ```right click > open image in new tab```* </div>
+</div>
 
-#### Navbar (used on all pages) <!-- omit in toc -->
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+The How To Play feature was a simple modal pop-up that would show an animated gif of how to play the game. The other content would fade out when the modal was activated.
 
-#### Footer (used on all pages) <!-- omit in toc -->
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-#### Hero section <!-- omit in toc -->
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+### Coding in the skeleton
 
-### xxxxxxxxxxxxxxxx <!-- omit in toc -->
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-### xxxxxxxxxxxxxxxx <!-- omit in toc -->
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-### xxxxxxxxxxxxxxxx <!-- omit in toc -->
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-<div align="center"> <h3> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </h3>
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
-
-*to view wireframe in more detail, ```right click > open image in new tab```* </div>
-
-### xxxxxxxxxxxxxxxx <!-- omit in toc -->
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-- 
-### xxxxxxxxxxxxxxxx <!-- omit in toc -->
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-<div align="center"> <h3> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </h3>
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
-
-*to view wireframe in more detail, ```right click > open image in new tab```* </div>
-
-### xxxxxxxxxxxxxxxx <!-- omit in toc -->
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-### xxxxxxxxxxxxxxxx <!-- omit in toc -->
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+After the skeleton was designed, the code was drafted using HTML, CSS and Javacript. A set of placeholder images were used, which the developer designed on Canva.
 
 ***
 ## Surface Plane
