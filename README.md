@@ -298,31 +298,35 @@ xxxxxxxxx
 ***
 ## Skeleton Plane
 
-The skeleton plane was first designed with figma to emphasise a simple and efficient responsive design.  The design used CSS Grid to arrange all elements:
-- Mobile design used 1 column and arranged all the elements vertically. The cards with in a 4x4 subgrid.
+**The skeleton plane was first designed with figma to emphasise a simple and efficient responsive design.**  The design used CSS ```display: grid``` to arrange all elements:<i>
+- Mobile design used 1 column and arranged all the elements vertically. 
+  - The deck of cards were also displayed in a 4x4 subgrid. 
+  - As the **JS code** would assign a set of 16 different ```class``` ID's randomly to each card, the cards would be put into different squares on the deck.
 - Desktop Design split the page into 2 columns,  
   - with the card deck on the right, taking up the screen space, 
   - the footer taking up both columns hiding underneath the card deck.
-  - the remaining features were arranged in the left column in various rows, with a right-aligned position.
+  - the remaining features were arranged in the left column in various rows, with a right-aligned position.</i>
 
 
 <div align="center">
 
-**Main Page Skeleton** <!-- omit in toc --> 
+**Main Page Skeleton:** <!-- omit in toc --> 
 
 </div>
 
 <div align="center"><img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe.png" width="800px"></div>
-<br><br><br>
+<br><br>
 <div align="center"> 
 
-**How to play Skeleton**
+**How to play Skeleton:**
 
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
+<img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe-howtoplay.png" width="800px">
 
 </div>
 
 The How To Play feature was a simple modal pop-up that would show an animated gif of how to play the game. The other content would fade out when the modal was activated.
+- Mobile design used 1 column and arranged all the elements vertically inside a container with ```position: absolute``` 
+- Desktop design split the page into 2 columns, with the animated tutorial in the left column, and the remaining content in the right column.
 
 
 ### Coding in the skeleton
