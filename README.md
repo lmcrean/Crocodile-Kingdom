@@ -48,6 +48,8 @@ In the issues I have logged written, video or screenshot accounts.
     - [Coding in the skeleton](#coding-in-the-skeleton)
   - [Surface Plane](#surface-plane)
 - [Testing](#testing)
+- [Fixed bugs](#fixed-bugs)
+- [Unfixed Bugs](#unfixed-bugs)
 - [Manual Testing](#manual-testing)
   - [Javascript Testing](#javascript-testing)
   - [Hyperlink Testing](#hyperlink-testing)
@@ -56,8 +58,6 @@ In the issues I have logged written, video or screenshot accounts.
 - [Automatic Testing](#automatic-testing)
 - [Validator Testing](#validator-testing)
   - [Lighthouse Report](#lighthouse-report)
-- [Fixed bugs](#fixed-bugs)
-- [Unfixed Bugs](#unfixed-bugs)
 - [Deployment](#deployment)
 - [Future features to implement](#future-features-to-implement)
 - [Credits](#credits)
@@ -252,12 +252,16 @@ A mininum viable product is a product with just enough features to satisfy early
 <i>
 The minumum viable product of the memory game was
 
-- to use 16 cards that displayed randomly
-- to include a flip animation when the card was turned over
-- the cards needed to flip back after a 2 second delay if they were a mismatch
-- the cards needed to stay flipped if they were a match
-- the website needed to be responsive in mobile and desktop view
-- the webstite needed to include a header, footer and navbar
+- A card Deck:
+  - to use 16 cards that displayed randomly
+  - the cards needed to flip back after a 2 second delay if they were a mismatch
+  - the cards needed to stay flipped if they were a match
+- Turn count
+- Restart button
+- A congratulations message when the game was completed
+- a how to play feature
+- a Navbar with the logo and a contact button
+- a footer with social media links
 
 Once that would be designed more interesting features could be added, such as 
 - a timer
@@ -266,17 +270,6 @@ Once that would be designed more interesting features could be added, such as
 
 ### Scope of Features
 The following features were designed to meet the needs of new users.  They were displayed across three main pages, sometimes appearing more than once for the purpose of both making the website easy to navigate and consistent branding design.
-
-| Feature   |Purpose    | Function (HTML, CSS, JS) | Most relevant user story |
-| --- | --- | --- | ------- | 
-| Card Deck <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">| use to play the game | HTML: ```img``` files with ```a``` hyperlinks <br> CSS: ```object-fit:contain``` <br>JS: would update html ```class ids``` as users clicked on the images.<br> <br>see flowchart (right click-open image in new tab) <br> <img src="assets/media/documentation-flowchart/flowchart-mvp.svg" width="500px"> |  -I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging. <br>- I need a new arrangement of cards each time I play the game.|
-| Turn count <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">| An updating score count that follows the attempts taken by the user |Let's the HTML&CSS: Plain text, "Turns Taken". <br>JS: The number updates ```+1``` after each 2nd click | - I need to a quick feedback loop that suggests how I'm doing as I play the game. |
-| Restart button <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">| User clicks here to restart their game|-HTML link, ```button``` class <br> -CSS Button format <br> -flip all the cards back and reshuffle the deck,<br>-resets the score count | - I need a new arrangement of cards each time I play the game to keep it interesting.|
-| You've Won feature <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> | An encouraging message at the end of the game, it shows total turns taken and also displays the **Restart** button feature | HTML: Text, reuse the turn count and restart button <br>CSS: Reuse modal class | - I need to recieve praise for completing the game.|
-| How To Play feature <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> | xxxxxxxxxx | - I need to understand how to play the game.|
-| Navbar <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> | xxxxxxxxxx | - I need the tone of the design to appear warm, entertaining and encouraging.
-|
-| Footer <br><img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> | xxxxxxxxxx | (helps the business strategy, increase their product's online presence) |
 
 #### Card Deck <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
@@ -330,9 +323,81 @@ There were a few omissions from the project.
 ***
 ## Structure Plane
 
-A flowchart was designed below to show the logic of the **Mininum Viable Product.**
+This Structure plane summarises the structure of each individual feature, in regards to HTML, CSS and JS, highlighting most essential functions for the feature to work. The developer also used this as a workflow for drafting in the features.
 
-<div align="center"><img alt="placeholder" src="assets/media/documentation-flowchart/flowchart-mvp.svg" width="800px" ></div>
+#### Card Deck <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<i>"I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging."</i>
+
+HTML:
+- [ ] ```img``` files for open and closed cards, .svg format for best efficiency. 
+- [ ] ```a``` hyperlinks
+
+CSS:
+- [ ] ```object-fit:contain``` to let the images fit the card size
+
+JS:
+The flowchart below illustrates the logic of the card deck.
+
+<img alt="placeholder" src="assets/media/documentation-flowchart/flowchart-mvp.svg" width="800px" >
+
+START computer spawn cards, turns starts at 0:
+- [ ] ```Math.random()``` to shuffle the deck
+- [ ] ```classList.add``` to add the ```open``` and ```show``` classes to the cards
+- [ ] ```classList.remove``` to remove the ```open``` and ```show``` classes to the cards
+- [ ] ```classList.add``` to add the ```match``` class to the cards
+
+User clicks on first image, card appears:
+- [ ] ```classList.add``` to add the ```open``` and ```show``` classes to the cards
+
+User clicks on second image, card appears, +1 to turns:
+- [ ] ```classList.add``` to add the ```open``` and ```show``` classes to the cards
+- [ ] to add 1 to the turn count, use ```turnCount++```
+
+Do the cards match? (no), clicked images flipped back after 2 seconds:
+- [ ] ```classList.remove``` to remove the ```open``` and ```show``` classes to the cards
+
+Do the cards match? (yes), clicked images stay flipped:
+- [ ] ```classList.add``` to add the ```match``` class to the cards
+
+Are all the cards flipped? (no), go back to user clicks on first image.
+- [ ] ```classList.remove``` to remove the ```open``` and ```show``` classes to the cards
+
+Are all the cards flipped? (yes), go to you've won feature.
+
+
+#### Turn count <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<i>"I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
+
+#### Restart button <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<i>"I need a new arrangement of cards each time I play the game to keep it interesting."</i>
+
+#### You've Won feature <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<i>"I need to receive praise for completing the game."</i>
+
+#### How To Play feature <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<i>"I need to understand how to play the game."</i>
+
+#### Navbar <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<i>"I need the tone of the design to appear warm, entertaining and encouraging."</i>
+
+#### Footer <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<i>"I want to be able to contact the business if I have any questions, and share the game easily with my friends."</i>
+
+
 
 xxxxxxxxx
 
@@ -341,15 +406,7 @@ Functionality overview:
 ***
 ## Skeleton Plane
 
-**The skeleton plane was first designed with figma to emphasise a simple and efficient responsive design.**  The design used CSS ```display: grid``` to arrange all elements:<i>
-- Mobile design used 1 column and arranged all the elements vertically. 
-  - The deck of cards were also displayed in a 4x4 subgrid. 
-  - As the **JS code** would assign a set of 16 different ```class``` ID's randomly to each card, the cards would be put into different squares on the deck.
-- Desktop Design split the page into 2 columns,  
-  - with the card deck on the right, taking up the screen space, 
-  - the footer taking up both columns hiding underneath the card deck.
-  - the remaining features were arranged in the left column in various rows, with a right-aligned position.</i>
-
+**The skeleton plane was first designed with figma to emphasise a simple and efficient responsive design.**  The design used CSS ```display: grid``` to arrange all elements:
 
 <div align="center">
 
@@ -358,6 +415,20 @@ Functionality overview:
 </div>
 
 <div align="center"><img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe.png" width="800px"></div>
+
+<i>
+
+- Mobile design used 1 column and arranged all the elements vertically. 
+  - The deck of cards were also displayed in a 4x4 subgrid. 
+  - As the **JS code** would assign a set of 16 different ```class``` ID's randomly to each card, the cards would be put into different squares on the deck.
+- Desktop Design split the page into 2 columns,  
+  - with the card deck on the right, taking up the screen space, 
+  - the footer taking up both columns hiding underneath the card deck.
+  - the remaining features were arranged in the left column in various rows, with a right-aligned position.
+  </i>
+
+
+
 <br><br>
 <div align="center"> 
 
@@ -370,6 +441,14 @@ Functionality overview:
 The How To Play feature was a simple modal pop-up that would show an animated gif of how to play the game. The other content would fade out when the modal was activated.
 - Mobile design used 1 column and arranged all the elements vertically inside a container with ```position: absolute``` 
 - Desktop design split the page into 2 columns, with the animated tutorial in the left column, and the remaining content in the right column.
+
+<div align="center"> 
+
+**Well done Skeleton:**
+
+<img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe-howtoplay.png" width="800px">
+
+</div>
 
 
 ### Coding in the skeleton
@@ -422,6 +501,53 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Testing
 This link is currently not being used but will be once the Manual Testing section needs shortening [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Testing-purple?logo=mdBook">](https://github.com/lmcrean/Hoverboard/blob/main/testing.md)
 
+# Fixed bugs
+
+#### Card Deck <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<i>"I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging."</i>
+
+
+<img alt="placeholder" src="assets/media/documentation-flowchart/flowchart-mvp.svg" width="800px" >
+
+- [ ] used ```Math.random()``` to shuffle the deck
+- [ ] used ```classList.add``` to add the ```open``` and ```show``` classes to the cards
+
+#### Turn count <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<i>"I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
+
+#### Restart button <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<i>"I need a new arrangement of cards each time I play the game to keep it interesting."</i>
+
+#### You've Won feature <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<i>"I need to receive praise for completing the game."</i>
+
+#### How To Play feature <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<i>"I need to understand how to play the game."</i>
+
+#### Navbar <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<i>"I need the tone of the design to appear warm, entertaining and encouraging."</i>
+
+#### Footer <!-- omit in toc -->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+
+<i>"I want to be able to contact the business if I have any questions, and share the game easily with my friends."</i>
+
+# Unfixed Bugs
+
+xxxxxxxxxxxxxx update at the end.
+
 # Manual Testing
 
 [![GitHub CSS open issues by-label](https://img.shields.io/github/issues/lmcrean/Hoverboard/css?label=CSS%20Issues&color=yellow)](https://github.com/lmcrean/Hoverboard/issues?q=label%3Acss+is%3Aopen) [![GitHub CSS closed issues by-label](https://img.shields.io/github/issues-closed/lmcrean/Hoverboard/css?label=%20&color=green)](https://github.com/lmcrean/Hoverboard/issues?q=label%3Acss+is%3Aclosed) [![GitHub HTML open issues by-label](https://img.shields.io/github/issues/lmcrean/Hoverboard/html?label=HTML%20Issues&color=yellow)](https://github.com/lmcrean/Hoverboard/issues?q=label%3Ahtml+is%3Aopen) [![GitHub HTML closed issues by-label](https://img.shields.io/github/issues-closed/lmcrean/Hoverboard/html?label=%20&color=green)](https://github.com/lmcrean/Hoverboard/issues?q=label%3Ahtml+is%3Aclosed)xxxxxxxxxxxxxxxxxxxxxxx
@@ -468,20 +594,12 @@ To further improve the lighthouse score I could use more WebP images and reduce 
 | Desktop | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px"> | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px"> | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
 |Timestamp| 31st July '23 | 31st July '23 | 15th July '23 |
 
-# Fixed bugs
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-# Unfixed Bugs
-
-xxxxxxxxxxxxxx
 
 ## Code to be modified <!-- omit in toc -->
 
 - xxxxxxxxxxxxxxxxxxx
 - xxxxxxxxxxxxxxxxxxxxx
-
-The navbar animation could be smoother, and this was a 
 
 ## Documentation to complete <!-- omit in toc -->
 - xxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -490,10 +608,14 @@ The navbar animation could be smoother, and this was a
 # Deployment
 The site was deployed to GitHub pages. You can access the live link [here](https://lmcrean.github.io/Hoverboard/).
 
-How to deploy:
-xxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxx
+To deploy on Github pages, the following steps were taken:
+
+1. Log in to GitHub and locate the GitHub Repository
+2. Go to the settings tab
+3. Go to the GitHub Pages section
+4. Go to the Source section and select the Master Branch
+5. The page will automatically refresh
+
 
 # Future features to implement  
 - xxxxxxxxxxxxxxxxxxxx
