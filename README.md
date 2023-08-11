@@ -51,6 +51,11 @@ In the issues I have logged written, video or screenshot accounts.
   - [Surface Plane](#surface-plane)
     - [Typefaces Surface](#typefaces-surface)
     - [Color surface](#color-surface)
+    - [Card Deck Surface](#card-deck-surface)
+    - [Logo Surface](#logo-surface)
+    - [Background Surface](#background-surface)
+    - [Button Surface](#button-surface)
+    - [Modal Surface](#modal-surface)
 - [Testing](#testing)
 - [Fixed bugs](#fixed-bugs)
 - [Unfixed Bugs](#unfixed-bugs)
@@ -522,6 +527,23 @@ The color theme was chosen to be consistent with the logo with the aim of creati
 
 ### Color surface
 
+### Card Deck Surface
+|<img alt="placeholder" src="assets/media/card-deck/A.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/B.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/C.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/D.svg" width="100px">|
+|----|----|----|----|
+|<img alt="placeholder" src="assets/media/card-deck/D.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/E.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/F.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/G.svg" width="100px">|
+The card deck used an animal theme, as a way to be appealing for children.
+
+<img alt="placeholder" src="assets/media/card-deck/back.svg" width="100px">
+
+The back of the card included a box with question marks, with diagonal lines to indicate excitement.
+
+### Logo Surface
+
+### Background Surface
+
+### Button Surface
+
+### Modal Surface
 
 # Testing
 This link is currently not being used but will be once the Manual Testing section needs shortening [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Testing-purple?logo=mdBook">](https://github.com/lmcrean/Hoverboard/blob/main/testing.md)
