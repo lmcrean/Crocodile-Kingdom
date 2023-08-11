@@ -8,11 +8,13 @@
   <meta name="description" content="Memory Game for kids">
   <meta name="keywords" content="Memory Game"> 
   <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"><!--bootstrap CSS-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://kit.fontawesome.com/c7515a9d31.js" crossorigin="anonymous"></script>
   <script src="assets/js/script.js" defer></script>
   <link rel="icon" href="assets/media/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script><!--bootstrap JS-->
   <title>Memory Game</title>
 </head>
 
@@ -41,7 +43,73 @@
 
 <main>
 
-<section id="card-deck"></section>
+<section id="card-deck" class="display-grid display-grid-4x4">
+  <div class="card-item-container color-grey">
+    <img src="assets/media/card-back.png" alt="card-back" class="card card-back">
+    <img src="assets/media/card-A.png" alt="card-A" class="card card-A">
+  </div>
+  <div class="card-item-container">
+    <img src="assets/media/card-back.png" alt="card-back" class="card card-back">
+    <img src="assets/media/card-A.png" alt="card-A" class="card card-A">
+  </div>
+  <div class="card-item-container">
+    <img src="assets/media/card-back.png" alt="card-back" class="card card-back">
+    <img src="assets/media/card-B.png" alt="card-B" class="card card-B">
+  </div>
+  <div class="card-item-container">
+    <img src="assets/media/card-back.png" alt="card-back" class="card card-back">
+    <img src="assets/media/card-B.png" alt="card-B" class="card card-B">
+  </div>
+  <div class="card-item-container">
+    <img src="assets/media/card-back.png" alt="card-back" class="card card-back">
+    <img src="assets/media/card-C.png" alt="card-C" class="card card-C">
+  </div>
+  <div class="card-item-container">
+    <img src="assets/media/card-back.png" alt="card-back" class="card card-back">
+    <img src="assets/media/card-C.png" alt="card-C" class="card card-C">
+  </div>
+  <div class="card-item-container">
+    <img src="assets/media/card-back.png" alt="card-back" class="card card-back">
+    <img src="assets/media/card-D.png" alt="card-D" class="card card-D">
+  </div>
+  <div class="card-item-container">
+    <img src="assets/media/card-back.png" alt="card-back" class="card card-back">
+    <img src="assets/media/card-D.png" alt="card-D" class="card card-D">
+  </div>
+  <div class="card-item-container">
+    <img src="assets/media/card-back.png" alt="card-back" class="card card-back">
+    <img src="assets/media/card-E.png" alt="card-E" class="card card-E">
+  </div>
+  <div class="card-item-container">
+    <img src="assets/media/card-back.png" alt="card-back" class="card card-back"> 
+    <img src="assets/media/card-E.png" alt="card-E" class="card card-E">
+  </div>
+  <div class="card-item-container">
+    <img src="assets/media/card-F.png" alt="card-F" class="card card-F">
+    <img src="assets/media/card-back.png" alt="card-back" class="card card-back">
+  </div>
+  <div class="card-item-container"> 
+    <img src="assets/media/card-F.png" alt="card-F" class="card card-F">
+    <img src="assets/media/card-back.png" alt="card-back" class="card card-back">
+  </div>
+  <div class="card-item-container"> 
+    <img src="assets/media/card-G.png" alt="card-G" class="card card-G">
+    <img src="assets/media/card-back.png" alt="card-back" class="card card-back">
+  </div>
+  <div class="card-item-container"> 
+    <img src="assets/media/card-G.png" alt="card-G" class="card card-G">
+    <img src="assets/media/card-back.png" alt="card-back" class="card card-back">
+  </div>
+  <div class="card-item-container"> 
+    <img src="assets/media/card-H.png" alt="card-H" class="card card-H">
+    <img src="assets/media/card-back.png" alt="card-back" class="card card-back">
+  </div>
+  <div class="card-item-container"> 
+    <img src="assets/media/card-H.png" alt="card-H" class="card card-H">
+    <img src="assets/media/card-back.png" alt="card-back" class="card card-back">
+  </div>
+</section>
+
 <section id="turn-count"></section>
 <section id="restart-button"></section>
 <section id="well-done" class="modal-box"></section>

@@ -62,27 +62,54 @@ h5 {font-size: 0.7rem;/*reduce font size*/}
 /*Root variables are used to define the color palette. The colors are used throughout the stylesheet. It's a useful function because it allows the color palette to be changed easily.*/
 
 :root {
---orange: #ff8400; /* Brand color */
---lightblue: #add8e6; /*background color*/
+--brand-color: #ff8400; /* Brand color */
+--background-color: #add8e6; /*background color*/
 
 /*Harmonious palette*/
---orangered: #ff4500;
---salmon: #fa8072;
---lightsalmon: #ffa07a;
---yellow: #ffd000;
---transparent-orange: #ffa6007e;
+--harmonious-bold: #ff4500;
+--harmonious-light: #fa8072;
+--harmonious-lighter: #ffa07a;
+--harmonious-lightest: #ffd000;
 
 /*Neutral palette*/
 --black-dark: #1e1e1e;
 --black-medium: #313131;
 --black-light: #434343;
---lightgrey:#d3d3d3;
 --grey: #808080;
+--lightgrey:#d3d3d3;
 --white: #ffffff;
 }
 
-/*---------------SURFACE PLANE - ROUNDED CORNERS---------------*/
+/*class selectors are used to apply the root colors (above) to the elements*/
+.brand-color {color: var(--brand-color);}
+.background-color {background-color: var(--background-color);}
+.harmonious-bold {color: var(--harmonious-bold);}
+.harmonious-light {color: var(--harmonious-light);}
+.harmonious-lighter {color: var(--harmonious-lighter);}
+.harmonious-lightest {color: var(--harmonious-lightest);}
+.black-dark {color: var(--black-dark);}
+.black-medium {color: var(--black-medium);}
+.black-light {color: var(--black-light);}
+.grey {color: var(--grey);}
+.lightgrey {color: var(--lightgrey);}
+.white {color: var(--white);}
+.background-brand-color {background-color: var(--brand-color);}
+.background-color {background-color: var(--background-color);}
+.background-harmonious-bold {background-color: var(--harmonious-bold);}
+.background-harmonious-light {background-color: var(--harmonious-light);}
+.background-harmonious-lighter {background-color: var(--harmonious-lighter);}
+.background-harmonious-lightest {background-color: var(--harmonious-lightest);}
+.background-black-dark {background-color: var(--black-dark);}
+.background-black-medium {background-color: var(--black-medium);}
+.background-black-light {background-color: var(--black-light);}
+.background-grey {background-color: var(--grey);}
+.background-lightgrey {background-color: var(--lightgrey);}
+.background-white {background-color: var(--white);}
 
+/*---------------SURFACE PLANE - SHADOWS, ROUNDED CORNERS---------------*/
+
+/*.shadow is used to create a shadow effect on the card deck*/
+/*.rounded is used to create rounded corners on the card deck and button*/
 
 /*---------------SURFACE PLANE - HOVER INTERACTIONS---------------*/
 
@@ -172,6 +199,7 @@ p {
 .display-grid {
   display:grid;
 }
+
 /*
 .modal-popup /*this is the modal popup for Well Done and How to Play Feature*/
 
@@ -396,6 +424,17 @@ z-index: 3;
 }
 
 /*---------------CARD DECK SKELETON---------------*/
+
+#card-deck {/*should be perfectly square without distortion*/
+  max-width: 100%;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+}
+
+.card { /*puts the cards one over the other*/
+  position: relative;
+}
 
 /*---------------TURN COUNT SKELETON---------------*/
 
