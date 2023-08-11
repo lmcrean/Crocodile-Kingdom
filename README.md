@@ -46,7 +46,11 @@ In the issues I have logged written, video or screenshot accounts.
   - [Structure Plane](#structure-plane)
   - [Skeleton Plane](#skeleton-plane)
     - [Coding in the skeleton](#coding-in-the-skeleton)
+    - [Sizing skeleton](#sizing-skeleton)
+    - [HTML classes skeleton](#html-classes-skeleton)
   - [Surface Plane](#surface-plane)
+    - [Typefaces Surface](#typefaces-surface)
+    - [Color surface](#color-surface)
 - [Testing](#testing)
 - [Fixed bugs](#fixed-bugs)
 - [Unfixed Bugs](#unfixed-bugs)
@@ -269,45 +273,45 @@ Once that would be designed more interesting features could be added, such as
 - a chance to switch card sets</i>
 
 ### Scope of Features
-The following features were designed to meet the needs of new users.  They were displayed across three main pages, sometimes appearing more than once for the purpose of both making the website easy to navigate and consistent branding design.
+The following features were designed to meet the needs of new userssometimes appearing more than once for the purpose of both making the website easy to navigate and consistent branding design.
 
-#### Card Deck <!-- omit in toc -->
+#### Card Deck scope <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>Use to play the game.</b>
 <i>"Most Relevant user story: I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
-#### Turn count <!-- omit in toc -->
+#### Turn count scope <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>An updating score count that follows the attempts taken by the user.</b>
 <i>"I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
 
-#### Restart button <!-- omit in toc -->
+#### Restart button scope <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>User clicks here to restart their game.</b>
 <i>"I need a new arrangement of cards each time I play the game to keep it interesting."</i>
 
-#### You've Won feature <!-- omit in toc -->
+#### You've Won feature scope <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>An encouraging message at the end of the game, it shows total turns taken and also displays the Restart button.</b>
 <i>"I need to receive praise for completing the game."</i>
 
-#### How To Play feature <!-- omit in toc -->
+#### How To Play feature scope <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>Allows the user to read the rules of the game.</b>
 <i>"I need to understand how to play the game."</i>
 
-#### Navbar <!-- omit in toc -->
+#### Navbar scope <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>Displays just the Logo.</b>
 <i>"I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
-#### Footer <!-- omit in toc -->
+#### Footer scope <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>Displays the social media links, and a Contact Us link.</b>
@@ -323,9 +327,9 @@ There were a few omissions from the project.
 ***
 ## Structure Plane
 
-This Structure plane summarises the structure of each individual feature, in regards to HTML, CSS and JS, highlighting most essential functions for the feature to work. The developer also used this as a workflow for drafting in the features.
+This Structure plane summarises the structure of each feature by highlighting most essential HTML, CSS and JS functions for the feature to work. The developer also used this as a workflow for drafting in the features.
 
-#### Card Deck <!-- omit in toc -->
+#### Card Deck structure <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging."</i>
@@ -367,32 +371,32 @@ Are all the cards flipped? (no), go back to user clicks on first image.
 Are all the cards flipped? (yes), go to you've won feature.
 
 
-#### Turn count <!-- omit in toc -->
+#### Turn count structure <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
 
-#### Restart button <!-- omit in toc -->
+#### Restart button structure <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need a new arrangement of cards each time I play the game to keep it interesting."</i>
 
-#### You've Won feature <!-- omit in toc -->
+#### Well done feature structure <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need to receive praise for completing the game."</i>
 
-#### How To Play feature <!-- omit in toc -->
+#### How To Play structure <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need to understand how to play the game."</i>
 
-#### Navbar <!-- omit in toc -->
+#### Navbar structure <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
-#### Footer <!-- omit in toc -->
+#### Footer structure <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I want to be able to contact the business if I have any questions, and share the game easily with my friends."</i>
@@ -427,8 +431,6 @@ Functionality overview:
   - the remaining features were arranged in the left column in various rows, with a right-aligned position.
   </i>
 
-
-
 <br><br>
 <div align="center"> 
 
@@ -446,18 +448,48 @@ The How To Play feature was a simple modal pop-up that would show an animated gi
 
 **Well done Skeleton:**
 
-<img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe-howtoplay.png" width="800px">
+<img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe-welldone.png" width="800px">
 
 </div>
 
+The Well Done feature was a simple modal pop-up that would show a Well done title, a summary of score count, and a play again button. The other content would fade out when the modal was activated. 
+- The well done feature would **reuse**
+  - ```display: grid``` from How to play Feature
+  - the modal pop-up formula
+  - the score count formula
+  - the restart button 
+- Mobile design used 1 column and arranged all the elements vertically inside a container with ```position: absolute``` 
+- Desktop design split the page into 2 columns, with the well done in the left column, and the remaining content in the right column.
 
 ### Coding in the skeleton
 
 After the skeleton was designed, the code was drafted using HTML, CSS and Javacript. A set of placeholder images were used, which the developer designed on Canva.
 
 ***
+### Sizing skeleton
+Regarding font-size, the ```clamp()``` function was mostly used to ensure the font size was responsive to the device size. This was used instead of media queries, as it was more efficient and easier to read, it allowed the media queries to be used more for positioning and to address bugs with the display.
+
+```css
+/* The clamp() CSS function clamps a value between an upper and lower bound. It takes three parameters: a minimum value, a preferred value, and a maximum allowed value. [...]*/
+h1 { font-size: clamp(1.8rem, 1.3893rem + 2.3467vw, 4rem);}
+h2 { font-size: clamp(1.5rem, 1.5rem + 1.2vw, 2.5rem); }
+p, h3,h4,h5 { font-size: clamp(1rem, 0.9253rem + 0.4267vw, 1.4rem);}
+```
+
+### HTML classes skeleton
+Important HTML Class selectors were used to shorten the CSS code, such as
+- ```display-grid```
+- ```color-priority-1```
+- ```color-priority-2```
+- ```color-priority-3```
+- ```color-priority-4```
+- ```color-background```
+- ```modal-container```
+
 ## Surface Plane
 This surface plane describes the choice of typefaces, colors and style themes relevant to the project's desired tone and practical needs.
+
+### Typefaces Surface
 
 Typefaces used were xxxxxxxxxxxxxxxxxxxxxxxxx for headings and xxxxxxxxxxxxxxxxxxxxxx for body text. The font pairings were chosen for their playful  but professional tone as outlined in the strategy plane.
 
@@ -467,7 +499,7 @@ Typefaces used were xxxxxxxxxxxxxxxxxxxxxxxxx for headings and xxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxx
 ```css
 /*These type selectors are all Peace Sans*/
-h1, h2, label {
+h1, h2 {
   font-family: 'PeaceSans', sans-serif;
 }
 
@@ -482,20 +514,10 @@ h3 {font-weight: 700 !important; /*bolden text*/}
 h4 {font-style:italic;/*italicize text*/}
 h5 {font-size: 0.7rem;/*reduce font size*/}
 ```
-Regarding font-size, the ```clamp()``` function was mostly used to ensure the font size was responsive to the device size. This was used instead of media queries, as it was more efficient and easier to read, it allowed the media queries to be used more for positioning and to address bugs with the display.
-
-```css
-/* The clamp() CSS function clamps a value between an upper and lower bound. It takes three parameters: a minimum value, a preferred value, and a maximum allowed value. [...]*/
-h1 { font-size: clamp(1.8rem, 1.3893rem + 2.3467vw, 4rem);}
-h2 { font-size: clamp(1.5rem, 1.5rem + 1.2vw, 2.5rem); }
-p { font-size: clamp(1rem, 0.9253rem + 0.4267vw, 1.4rem);}
-```
 ***
-The color theme was chosen to be consistent with the logo with the aim of creating a consistent brand identity. To speed up efficiency, root variables were used to store the color values. This allowed the color theme to be changed easily in the future.
+The color theme was chosen to be consistent with the logo with the aim of creating a consistent brand identity. To speed up efficiency, root variables were used to store the color values. This also allowed the color theme to be changed easily in the future.
 
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+### Color surface
 
 
 # Testing
@@ -503,7 +525,7 @@ This link is currently not being used but will be once the Manual Testing sectio
 
 # Fixed bugs
 
-#### Card Deck <!-- omit in toc -->
+#### Card Deck  fixed bugs <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging."</i>
@@ -514,32 +536,32 @@ This link is currently not being used but will be once the Manual Testing sectio
 - [ ] used ```Math.random()``` to shuffle the deck
 - [ ] used ```classList.add``` to add the ```open``` and ```show``` classes to the cards
 
-#### Turn count <!-- omit in toc -->
+#### Turn count  fixed bugs <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
 
-#### Restart button <!-- omit in toc -->
+#### Restart button fixed bugs <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need a new arrangement of cards each time I play the game to keep it interesting."</i>
 
-#### You've Won feature <!-- omit in toc -->
+#### You've Won feature fixed bugs <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need to receive praise for completing the game."</i>
 
-#### How To Play feature <!-- omit in toc -->
+#### How To Play feature fixed bugs <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need to understand how to play the game."</i>
 
-#### Navbar <!-- omit in toc -->
+#### Navbar fixed bugs <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
-#### Footer <!-- omit in toc -->
+#### Footer fixed bugs <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I want to be able to contact the business if I have any questions, and share the game easily with my friends."</i>
@@ -561,12 +583,26 @@ Manual testing was executed with the following criteria:
 
 ## Javascript Testing
 xxxxxxxxxxxxxxxxxxxxxxxxx
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
+
 ## Hyperlink Testing
 xxxxxxxxxxxxxxxxxxx
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
+
 ## Responsivity Testing
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Main game
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
+
+How to play
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
+
+Well done
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
+
 ## BrowserStack Testing
 xxxxxxxxxxxxxxxxxxxxxxxxxx
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
+
 # Automatic Testing
 
 The Automatic Testing achieved
@@ -580,8 +616,6 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 
 The result was <b> <font color="green"> passed </font> </b> for HTML5 and CSS3.
 
-further documentation here: [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Testing-purple?logo=mdBook">](https://github.com/lmcrean/Hoverboard/blob/main/testing.md)
-
 ## Lighthouse Report
 
 To check the lighthouse report on a chrome browser, right click inspect and click on the lighthouse tab. The lighthouse report was run on the home page, features page and sign up page.
@@ -594,19 +628,8 @@ To further improve the lighthouse score I could use more WebP images and reduce 
 | Desktop | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px"> | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px"> | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
 |Timestamp| 31st July '23 | 31st July '23 | 15th July '23 |
 
-
-
-## Code to be modified <!-- omit in toc -->
-
-- xxxxxxxxxxxxxxxxxxx
-- xxxxxxxxxxxxxxxxxxxxx
-
-## Documentation to complete <!-- omit in toc -->
-- xxxxxxxxxxxxxxxxxxxxxxxxxx
-- xxxxxxxxxxxxxxxxxxxxxx
-
 # Deployment
-The site was deployed to GitHub pages. You can access the live link [here](https://lmcrean.github.io/Hoverboard/).
+The site was deployed to GitHub pages. You can access the live link [XXXXXXXXXXXXXXXXXX](https://lmcrean.github.io/XXXXXXXXXXXXXXXXXXX).
 
 To deploy on Github pages, the following steps were taken:
 
