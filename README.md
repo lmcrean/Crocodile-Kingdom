@@ -231,7 +231,7 @@ The business goals were to create a simple memory game that was fun and engaging
 <div align="center"><h3> User Stories</h3> <!-- omit in toc -->
 
 
-<img alt="placeholder" src="assets/media/userimage.svg" width="300px" >
+<img alt="placeholder" src="assets/media/documentation/userimage.svg" width="300px" >
  </div>
 
 New User: (for MVP)
@@ -340,6 +340,9 @@ HTML:
 
 CSS:
 - [ ] ```object-fit:contain``` to let the images fit the card size
+- [ ] ```card-deck``` ID selector
+- [ ] ```card``` class selector to format individual card
+- [ ] 
 
 JS:
 The flowchart below illustrates the logic of the card deck.
