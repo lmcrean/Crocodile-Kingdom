@@ -137,20 +137,37 @@ main {
   max-width: 100%;
 }
 
-
-.card-item {/*selects front and back of cards*/
-transform-style: preserve-3d; 
-transition: all 0.5s ease-in-out; 
+#card-deck {
+  perspective: 1000px; /*this is used to create the 3D effect on the card deck*/
 }
 
-.card-item:active {/*selects front and back of cards when clicked*/
+.card-item-container {
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out; 
+}
+
+.card-item-container:active {/*selects front and back of cards when clicked*/
   transform: scale(.90);
   transition: transform .2s;
   }
 
-.card-item.flipped {
+.card-item-container.flipped-over {
   transform: rotateY(180deg);
+  backface-visibility: hidden;
 }
+
+.card-item {/*selects front and back of cards*/
+transition: transform 0.5s ease-in-out; 
+transform: scale(1);
+}
+
+.card-front, .card-back {
+}
+
+
+
+
 
 /*-------------------SKELETON PLANE--------------------*/
 
@@ -363,16 +380,12 @@ z-index: 3;
   height: auto;
   margin: auto;
   grid-area: 1/1/2/2;
-  backface-visibility: hidden; /*hides the back of the card when facing away*/
+
 }
 
 .card-back {
     grid-column-start: 1;
     grid-area: 1/1/2/2;
-}
-
-.card-front{
-  transform: rotateY(180deg);/*start off face down hidden*/
 }
 
 /*---------------TURN COUNT SKELETON---------------*/

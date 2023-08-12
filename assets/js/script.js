@@ -38,7 +38,6 @@
 
 // ----------------- CARD DECK -----------------
 const cardsContainer = document.querySelector(".cards-container");
-const cardChoices = [A, B, C, D, E, F, G, H]; // draft
 
 // ----------------- START ----------------- 
 // ----------------- Computer Spawns cards, rearrange at random -----------------
@@ -52,9 +51,15 @@ let score = 0;
 
 // ----------------- User Clicks on 1st card -----------------
 
-// Card appears
+const cards = document.querySelectorAll(".card-item-container");
 
-function firstCardAppear() // this function flips both the front of the card and the back of the card, due to the CSS rule of backface-visibility, the front of the card becomes visible and the back of the card becomes invisible.
+cards.forEach(card => card.addEventListener("click", cardAppear));
+
+// Card appears this function flips both the front of the card and the back of the card, due to the CSS rule of backface-visibility, the front of the card becomes visible and the back of the card becomes invisible.
+
+function cardAppear() { 
+this.classList.toggle("flipped-over"); // .toggle adds/removes the class of "flipped-over" on the card that it is clicked on.
+}
 
 // ----------------- User clicks on 2nd card -----------------
 // 2nd Card appears
