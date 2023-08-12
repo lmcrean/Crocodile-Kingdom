@@ -7,12 +7,12 @@ This testing page is currently not being used. When the readme gets too long, pa
 
 # Issues and bugs
 
-## 1 Card Deck  issues and bugs <!-- omit in toc -->
+# 1 Card Deck  issues and bugs <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
-### 1.1 Responsive grid is falling off the viewport <!-- omit in toc -->
+## 1.1 Responsive grid is falling off the horizontal viewport <!-- omit in toc -->
 ![Alt text](assets/media/issues/image.png)
 ![](assets/media/issues/2023-08-12-15-40-14.png)
 Seems okay in browser view, but not Devtools. Need the correct CSS Functions to
@@ -20,45 +20,100 @@ Seems okay in browser view, but not Devtools. Need the correct CSS Functions to
 - [x] make the grid responsive to viewport width
 - [x] make cards overlap each other
 
-**Solution:** 
-Hard refreshed the browser.
-Reordered the html so that the card-back appears on top.
-Used ```object-fit:contain``` to let the images fit the card size.
-Improved sizing by changing card-item max-width from 25% to 100%
+**Solution:**
+- Hard refreshed the browser.
+- Reordered the html so that the card-back appears on top.
+- Used ```object-fit:contain``` to let the images fit the card size.
+- Improved sizing by changing card-item max-width from 25% to 100%
 used padding: 0px 1em to improve spacing between cards;
 
 ![image](https://github.com/lmcrean/Crocodile-Kingdom/assets/133490867/7a1a18e2-5314-4999-9704-49ffdfaf854f)
 
+## 1.2 Responsive grid is falling off the vertical viewport
+have tried ```max-height: 100vh``` and ```max-height: 100%``` but neither work.
+
+![](assets/media/issues/2023-08-12-17-27-46.png)
+
+- [ ] check W3 Schools for CSS functions to make the grid responsive to viewport height
+
+## 1.3 How to make front card appear upon clicking the card
+
+- [ ] research JS functions to make the front card appear upon clicking the card
 
 
 
 
-#### Turn count  issues and bugs <!-- omit in toc -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Turn count  issues and bugs <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
 
-#### Restart button issues and bugs <!-- omit in toc -->
+# Restart button issues and bugs <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need a new arrangement of cards each time I play the game to keep it interesting."</i>
 
-#### You've Won feature issues and bugs <!-- omit in toc -->
+# You've Won feature issues and bugs <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need to receive praise for completing the game."</i>
 
-#### How To Play feature issues and bugs <!-- omit in toc -->
+# How To Play feature issues and bugs <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need to understand how to play the game."</i>
 
-#### Navbar issues and bugs <!-- omit in toc -->
+# Navbar issues and bugs <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
-#### Footer issues and bugs <!-- omit in toc -->
+# Footer issues and bugs <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I want to be able to contact the business if I have any questions, and share the game easily with my friends."</i>
