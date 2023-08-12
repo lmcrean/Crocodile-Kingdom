@@ -33,6 +33,9 @@ used padding: 0px 1em to improve spacing between cards;
 
 
 
+
+
+
 #### Turn count  issues and bugs <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 

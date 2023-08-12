@@ -137,6 +137,14 @@ main {
   max-width: 100%;
 }
 
+.card-item {/*selects front and back of cards*/
+transform-style: preserve-3d; 
+transition: all 0.5s ease-in-out; 
+}
+
+.card-item.flipped {
+  transform: rotateY(180deg);
+}
 
 /*-------------------SKELETON PLANE--------------------*/
 
@@ -334,24 +342,30 @@ z-index: 3;
 /*---------------CARD DECK SKELETON---------------*/
 
 #card-deck {/*should be perfectly square without distortion*/
-  max-width: 100%;
+  width: 100%;
+  max-height: 700px !important;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1em;
   padding: 0px 1em;
 }
 
-.card-item { /*puts the cards one over the other*/
+.card-item { /*this selects both the front and back, puts the cards one over the other*/
   position: relative;
   max-width: 100%;
   height: auto;
   margin: auto;
   grid-area: 1/1/2/2;
+  backface-visibility: hidden; /*hides the back of the card when facing away*/
 }
 
 .card-back {
     grid-column-start: 1;
     grid-area: 1/1/2/2;
+}
+
+.card-front{
+  transform: rotateY(180deg);/*start off face down hidden*/
 }
 
 /*---------------TURN COUNT SKELETON---------------*/

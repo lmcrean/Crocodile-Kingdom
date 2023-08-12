@@ -37,16 +37,24 @@
 // ----------------- JAVASCRIPT CODE -----------------
 
 // ----------------- CARD DECK -----------------
-// ----------------- START ----------------- 
+const cardsContainer = document.querySelector(".cards-container");
+const cardChoices = [A, B, C, D, E, F, G, H]; // draft
 
+// ----------------- START ----------------- 
 // ----------------- Computer Spawns cards, rearrange at random -----------------
+
+function shuffleCards () { // This function uses the Fisher-Yates shuffle algorithm to shuffle the cards at random.
+}
 
 // ----------------- turns starts at 0 ----------------- 
 
+let score = 0; 
 
 // ----------------- User Clicks on 1st card -----------------
 
 // Card appears
+
+function firstCardAppear() // this function flips both the front of the card and the back of the card, due to the CSS rule of backface-visibility, the front of the card becomes visible and the back of the card becomes invisible.
 
 // ----------------- User clicks on 2nd card -----------------
 // 2nd Card appears
@@ -81,6 +89,4 @@
 // ...then run restart button function
 // ...then close modal box
 
-
-    
 
