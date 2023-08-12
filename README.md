@@ -31,7 +31,6 @@ In the issues I have logged written, video or screenshot accounts.
 
 ## Table of Contents <!-- omit in toc -->
 
-- [Features](#features)
 - [UX Development Planes](#ux-development-planes)
   - [Strategy Plane](#strategy-plane)
     - [Developer strategy](#developer-strategy)
@@ -72,9 +71,11 @@ In the issues I have logged written, video or screenshot accounts.
 - [Acknowledgements](#acknowledgements)
 
 ***
+
+<!--
 # Features
 
-## Card Deck <!-- omit in toc -->
+## Card Deck
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -82,7 +83,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ***
-## Turn Count <!-- omit in toc -->
+## Turn Count
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -91,7 +92,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ***
 
-## Restart Button <!-- omit in toc -->
+## Restart Button 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -99,16 +100,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ***
 
-## How to Play, modal popup <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-***
-
-## Navbar <!-- omit in toc -->
+## How to Play, modal popup 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -117,7 +109,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ***
 
-## Footer <!-- omit in toc -->
+## Navbar
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -126,6 +118,15 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ***
 
+## Footer
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+***
+-->
 
 # UX Development Planes
 
@@ -136,12 +137,9 @@ The 5 UX development planes are for the purpose of explaining the process of bui
 ### Developer strategy
 
 The project was researched, conceived and designed in 5 weeks. Important limitations of the project had to be set from the outset such as
-- using an open-source database that already existed for the JavaScript to navigate, e.g. pop quiz trivia data, personality test data. Inventing datasets risked distracting from the front-end design and JavaScript functionality.
-- choosing a very "well-trodden" path that had lots of tutorials and resources available. This was to ensure that the project was achievable in the time frame, and that the developer could learn from the resources available.
-- based on this criteria, the developer chose to create a memory game, which had a lot of resources available, and was a good starting point for Junior-level Javascript.
-
-
-
+- **choosing a "well-trodden" path that had lots of tutorials and resources available.** This was to ensure that the project was achievable in the time frame, and that the developer could learn from the resources available.
+- **using a simple open-source database that already existed for the JavaScript to navigate**, e.g. pop quiz trivia data, personality test data. Inventing datasets risked distracting from the front-end design and JavaScript functionality.
+- **based on this criteria, the developer chose to create a memory game**, which had a lot of resources available, and was a good starting point for Junior-level Javascript.
 
 #### Developer Research
 
@@ -176,7 +174,9 @@ This project had the intentional advantage of plenty existing resources of high 
 
 The following resources and repositories were researched. 
 - [Alien Memory Game](https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game) by Github user: moirahartigan
-- [Memory Game](https://github.com/code-sketch/memory-game) by code-sketch  with [Walkthrough](https://marina-ferreira.github.io/tutorials/js/memory-game/), [Demo](https://marina-ferreira.github.io/projects/js/memory-game/), [Video tutorial](https://www.youtube.com/watch?v=eMhiMsEC9Uk&list=PLLX1I3KXZ-YH-woTgiCfONMya39-Ty8qw)
+- [Memory Game](https://github.com/code-sketch/memory-game) by code-sketch  with [Walkthrough](https://marina-ferreira.github.io/tutorials/js/memory-game/), [Demo](https://marina-ferreira.github.io/projects/js/memory-game/), [Video tutorial](https://www.youtube.com/watch?v=eMhiMsEC9Uk&list=PLLX1I3KXZ-YH-woTgiCfONMya39-Ty8qw) 
+  - This a particularly well documented resource and most similar to what the developer was trying to achieve.
+  - the tutorial offers step by step guidance on how to build the game.
 - [Memory Game](https://github.com/flowforfrank/memory-game) by flowforfrank, with [tutorial article](https://webtips.dev/memory-game-in-javascript)
 - [30 minute walkthrough tutorial](https://www.youtube.com/watch?v=bznJPt4t_4s) by dcode
 - [Article](https://www.codewithfaraz.com/content/112/creating-flip-card-memory-game-with-html-css-and-javascript) by codewithfiraz.com explaining the role of each CSS class and JS function

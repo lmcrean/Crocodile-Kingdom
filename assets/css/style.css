@@ -137,10 +137,16 @@ main {
   max-width: 100%;
 }
 
+
 .card-item {/*selects front and back of cards*/
 transform-style: preserve-3d; 
 transition: all 0.5s ease-in-out; 
 }
+
+.card-item:active {/*selects front and back of cards when clicked*/
+  transform: scale(.90);
+  transition: transform .2s;
+  }
 
 .card-item.flipped {
   transform: rotateY(180deg);
@@ -343,6 +349,7 @@ z-index: 3;
 
 #card-deck {/*should be perfectly square without distortion*/
   width: 100%;
+  margin: auto;
   max-height: 700px !important;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(4, 1fr);
