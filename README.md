@@ -1,8 +1,8 @@
 <div align="center">
 
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
+<img alt="placeholder" src="assets/media/logo.svg" width="250px" >
 
-#  Untitled Memory Game with JavaScript <!-- omit in toc -->
+#  Memory Game with JavaScript <!-- omit in toc -->
 
 [<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-purple?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Hoverboard/) [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Testing-purple?logo=mdBook">](https://github.com/lmcrean/Hoverboard/blob/main/testing.md) [![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/lmcrean/Hoverboard?color=green)](https://github.com/lmcrean/Hoverboard/commits/main) [![GitHub closed issues](https://img.shields.io/github/issues-closed/lmcrean/Hoverboard?color=green)](https://github.com/lmcrean/Hoverboard/issues?q=is%3Aissue+is%3Aclosed) [![GitHub issues](https://img.shields.io/github/issues/lmcrean/Hoverboard?label=%20
 )](https://github.com/lmcrean/Hoverboard/issues) [![HTML](https://img.shields.io/github/issues/lmcrean/Hoverboard/html?logo=html5&logoColor=white&label=HTML&color=yellow)](https://github.com/lmcrean/Hoverboard/labels/html) [![CSSl](https://img.shields.io/github/issues/lmcrean/Hoverboard/css?logo=css3&label=CSS&color=yellow)](https://github.com/lmcrean/Hoverboard/labels/css) [![Javascript](https://img.shields.io/github/issues/lmcrean/Hoverboard/css?logo=JavaScript&label=JavaScript&color=yellow&logoColor=white)](https://github.com/lmcrean/Hoverboard/labels/css) [![Documentation](https://img.shields.io/github/issues/lmcrean/Hoverboard/documentation?logo=mdBook&label=Documentation&color=yellow)](https://github.com/lmcrean/Hoverboard/labels/css)
@@ -538,6 +538,10 @@ The card deck used an animal theme, as a way to be appealing for children.
 The back of the card included a box with question marks, with diagonal lines to indicate excitement.
 
 ### Logo Surface
+
+<img alt="logo" src="assets/media/logo.svg" width="500px">
+
+The logo was designed with simple colors with Canva Open Source imagery.
 
 ### Background Surface
 

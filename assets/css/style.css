@@ -432,7 +432,7 @@ z-index: 3;
   grid-gap: 1em;
 }
 
-.card { /*puts the cards one over the other*/
+.card-item { /*puts the cards one over the other*/
   position: relative;
 }
 
