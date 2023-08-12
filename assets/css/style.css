@@ -338,11 +338,12 @@ z-index: 3;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1em;
+  padding: 0px 1em;
 }
 
 .card-item { /*puts the cards one over the other*/
   position: relative;
-  max-width: 25%;
+  max-width: 100%;
   height: auto;
   margin: auto;
   grid-area: 1/1/2/2;

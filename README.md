@@ -55,14 +55,12 @@ In the issues I have logged written, video or screenshot accounts.
     - [Background Surface](#background-surface)
     - [Button Surface](#button-surface)
     - [Modal Surface](#modal-surface)
-- [Testing](#testing)
-- [Fixed bugs](#fixed-bugs)
-- [Unfixed Bugs](#unfixed-bugs)
 - [Manual Testing](#manual-testing)
   - [Javascript Testing](#javascript-testing)
   - [Hyperlink Testing](#hyperlink-testing)
   - [Responsivity Testing](#responsivity-testing)
   - [BrowserStack Testing](#browserstack-testing)
+- [Testing](#testing)
 - [Automatic Testing](#automatic-testing)
 - [Validator Testing](#validator-testing)
   - [Lighthouse Report](#lighthouse-report)
@@ -548,55 +546,8 @@ The logo was designed with simple colors with Canva Open Source imagery.
 
 ### Modal Surface
 
-# Testing
-This link is currently not being used but will be once the Manual Testing section needs shortening [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Testing-purple?logo=mdBook">](https://github.com/lmcrean/Hoverboard/blob/main/testing.md)
-
-# Fixed bugs
-
-#### Card Deck  fixed bugs <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<i>"I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
 
-<img alt="placeholder" src="assets/media/documentation-flowchart/flowchart-mvp.svg" width="800px" >
-
-- [ ] used ```Math.random()``` to shuffle the deck
-- [ ] used ```classList.add``` to add the ```open``` and ```show``` classes to the cards
-
-#### Turn count  fixed bugs <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<i>"I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
-
-#### Restart button fixed bugs <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<i>"I need a new arrangement of cards each time I play the game to keep it interesting."</i>
-
-#### You've Won feature fixed bugs <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<i>"I need to receive praise for completing the game."</i>
-
-#### How To Play feature fixed bugs <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<i>"I need to understand how to play the game."</i>
-
-#### Navbar fixed bugs <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<i>"I need the tone of the design to appear warm, entertaining and encouraging."</i>
-
-#### Footer fixed bugs <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<i>"I want to be able to contact the business if I have any questions, and share the game easily with my friends."</i>
-
-# Unfixed Bugs
-
-xxxxxxxxxxxxxx update at the end.
 
 # Manual Testing
 
@@ -630,6 +581,9 @@ Well done
 ## BrowserStack Testing
 xxxxxxxxxxxxxxxxxxxxxxxxxx
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
+
+# Testing
+This link is currently not being used but will be once the Manual Testing section needs shortening [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Testing-purple?logo=mdBook">](https://github.com/lmcrean/Hoverboard/blob/main/testing.md)
 
 # Automatic Testing
 
