@@ -40,6 +40,9 @@
 const cardsContainer = document.querySelector(".cards-container");
 
 // ----------------- START ----------------- 
+let hasFlippedCard = false; // This variable is set to false because the card has not been clicked yet.
+let firstCard, secondCard; // These variables are set to undefined because the card has not been clicked yet.
+
 // ----------------- Computer Spawns cards, rearrange at random -----------------
 
 function shuffleCards () { // This function uses the Fisher-Yates shuffle algorithm to shuffle the cards at random.
@@ -53,26 +56,57 @@ let score = 0;
 
 const cards = document.querySelectorAll(".card-item-container");
 
-cards.forEach(card => card.addEventListener("click", cardAppear));
-
-// Card appears this function flips both the front of the card and the back of the card, due to the CSS rule of backface-visibility, the front of the card becomes visible and the back of the card becomes invisible.
-
 function cardAppear() { 
 this.classList.toggle("flipped-over"); // .toggle adds/removes the class of "flipped-over" on the card that it is clicked on.
+
+if (!hasFlippedCard) {
+  //first click
+  hasFlippedCard = true;
+  firstCard = this;
+
+  return;}
+
+  hasFlippedCard = false;
+  secondCard = this;
+
+  checkForMatch();
 }
+
+// ----------------- Card appears -------------------
+
+cards.forEach(card => card.addEventListener("click", cardAppear)); // .forEach loops through each card and adds an event listener to each card. When the card is clicked, the function cardAppear is run and the card is flipped.
 
 // ----------------- User clicks on 2nd card -----------------
 // 2nd Card appears
 // +1 to turns
 // ask ??? Do the cards match???
 
+
 // ----------------- ???Do the cards match??? (yes) -----------------
 // ...then clicked images stay flipped
 // ...then ask ???Are all the cards flipped???
+function checkForMatch() {
+    let matchTrue = firstCard.dataset.framework === secondCard.dataset.framework;
+
+    matchTrue ? disableCards() : flipBackCards(); // 
+  }
+
+function disableCards(){
+firstCard.removeEventListener("click", cardAppear);
+secondCard.removeEventListener("click", cardAppear);
+// .removeEventListener removes the event listener from the first card so that it can't be clicked again.})
+}
 
 // ----------------- ???Do the cards match??? (no) -----------------
 // ...then clicked images flip back after 2 seconds
 // ...then wait for "User Clicks on 1st card"
+
+function flipBackCards() {
+setTimeout(() => {
+  firstCard.classList.remove("flipped-over");
+  secondCard.classList.remove("flipped-over");
+  }, 2000);
+}
 
 // ----------------- ??? Are all the cards flipped???(yes) -----------------
 // ...then open Well Done Feature
