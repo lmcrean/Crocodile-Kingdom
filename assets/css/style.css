@@ -134,6 +134,7 @@ button[type="submit"]:hover {
 
 main {
   transition: margin-top 0.45s ease-in-out;
+  max-width: 100%;
 }
 
 
@@ -156,6 +157,7 @@ p { font-size: clamp(1rem, 0.9253rem + 0.4267vw, 1.4rem);}
 /*---------------SKELETON PLANE - DOCUMENT---------------*/
 body {
     overflow-x: hidden; /*responsive design to prevent horizontal scrolling*/
+    max-width: 100%;
   }
 
 * {
@@ -164,6 +166,19 @@ body {
   margin: 0px;
   border: 0px;
   text-align: center;
+}
+
+.card-item-container {
+    display: grid;
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: row; */
+    /* align-content: center; */
+    /* align-items: baseline; */
+    /* position: relative; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    max-width: 100%;
 }
 
 section {
@@ -231,115 +246,8 @@ nav {
   z-index: 3;
 }
 
-.navbar {
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-}
-
-img.navbartitle {
-  width: auto;
-  max-height: 57px;
+img.navbarlogo {
   margin: auto;
-  padding: 0px;
-  z-index: 5;
-}
-
-@media only screen and (max-width: 340px) {
-
-}
-
-.navbar .icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.2em;
-}
-
-.navbar #icon-open {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.2em;
-}
-
-.navbar .icon #icon-close {
-  display: none;
-  padding: 0.2em;
-}
-
-.navbar.menuOpen .icon #icon-open {
-  display: none;
-}
-
-.navbar.menuOpen .icon #icon-close {
-  display: flex;
-  padding: 0.2em;
-  text-decoration: none;
-}
-
-.navbar.menuOpen .icon #icon-close a {
-  text-decoration: none;
-}
-
-.menu-items {
-  border-bottom: 0em
-}
-
-.menu-items a {
-  position: relative;
-  margin: 0.49em 0.4em 0.2em;
-  padding: 0.15em 0.7em 0.27em;
-  text-decoration: none;
-  border-radius: 6px;
-}
-
-
-
-.menu-items li {
-  margin-bottom: 1em;
-  list-style: none;
-}
-
-@media screen and (max-width: 769px) {
-  .menu-items {
-    display: none;
-  }
-}
-.navbar.menuOpen {
-    flex-direction: column;
-}
-
-.move-down {
-  margin-top: 88px !important;
-}
-
-.navbar.menuOpen i {
-  display: none
-} 
-
-.navbar.menuOpen ul {
-    display: flex;
-    flex-direction: column;
-
-}
-
-
-@media screen and (min-width: 768.99px) {
-  .menu-items a {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-  }
-  .menu-items li {
-    display: inline-block; 
-  }
-  .navbar #icon-open {
-    display: none;
-  }
 }
 
 /*---------------FOOTER FEATURE SKELETON---------------
@@ -434,6 +342,15 @@ z-index: 3;
 
 .card-item { /*puts the cards one over the other*/
   position: relative;
+  max-width: 25%;
+  height: auto;
+  margin: auto;
+  grid-area: 1/1/2/2;
+}
+
+.card-back {
+    grid-column-start: 1;
+    grid-area: 1/1/2/2;
 }
 
 /*---------------TURN COUNT SKELETON---------------*/
