@@ -7,22 +7,18 @@ This testing page is currently not being used. When the readme gets too long, pa
 
 # Issues and bugs
 
-#### Card Deck  issues and bugs <!-- omit in toc -->
+## 1 Card Deck  issues and bugs <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
-##### Responsive grid is falling off the viewport <!-- omit in toc -->
+### 1.1 Responsive grid is falling off the viewport <!-- omit in toc -->
 ![Alt text](assets/media/issues/image.png)
 ![](assets/media/issues/2023-08-12-15-40-14.png)
 Seems okay in browser view, but not Devtools. Need the correct CSS Functions to
 
-- [ ] make the grid responsive to viewport width
+- [x] make the grid responsive to viewport width
 - [x] make cards overlap each other
-
-Research:
-- [ ] Javascript tutorial
-- [ ] W3 Schools on flip card
 
 **Solution:** 
 Hard refreshed the browser.
@@ -31,6 +27,7 @@ Used ```object-fit:contain``` to let the images fit the card size.
 Improved sizing by changing card-item max-width from 25% to 100%
 used padding: 0px 1em to improve spacing between cards;
 
+![image](https://github.com/lmcrean/Crocodile-Kingdom/assets/133490867/7a1a18e2-5314-4999-9704-49ffdfaf854f)
 
 
 #### Turn count  issues and bugs <!-- omit in toc -->
