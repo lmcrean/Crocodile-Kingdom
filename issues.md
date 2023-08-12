@@ -12,20 +12,30 @@ This testing page is currently not being used. When the readme gets too long, pa
 </div>
 
 ## Table of Contents <!-- omit in toc -->
-- [1. Structure Issues](#1-structure-issues)
+- [1. Javascript Structure Issues](#1-javascript-structure-issues)
   - [1.1. Card Deck Structure](#11-card-deck-structure)
-- [2. Skeleton Issues and Bugs](#2-skeleton-issues-and-bugs)
+    - [1.1.1. Double click too fast and the card won't flip](#111-double-click-too-fast-and-the-card-wont-flip)
+    - [1.1.2. Click on a different card inbetween the 2 second interval, and it doesn't flip the cards back properly](#112-click-on-a-different-card-inbetween-the-2-second-interval-and-it-doesnt-flip-the-cards-back-properly)
+- [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
   - [3. Card Deck Skeleton](#3-card-deck-skeleton)
     - [3.1. Responsive grid is falling off the horizontal viewport](#31-responsive-grid-is-falling-off-the-horizontal-viewport)
     - [3.2. Responsive grid is falling off the vertical viewport](#32-responsive-grid-is-falling-off-the-vertical-viewport)
+    - [3.3. back of card doesn't fully cover card face underneath](#33-back-of-card-doesnt-fully-cover-card-face-underneath)
 - [3.3.  Surface Issues](#33--surface-issues)
 - [4. Unfixed Bugs](#4-unfixed-bugs)
 
-# 1. Structure Issues
+# 1. Javascript Structure Issues
 
 ## 1.1. Card Deck Structure
 <i>"I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
+### 1.1.1. Double click too fast and the card won't flip
+
+<img src="assets/media/issues/Video08-12-23_222740.gif">
+
+### 1.1.2. Click on a different card inbetween the 2 second interval, and it doesn't flip the cards back properly
+
+<img src="assets/media/issues/Video08-12-23_222519.gif">
 
 
 
@@ -44,7 +54,7 @@ This testing page is currently not being used. When the readme gets too long, pa
 
 
 
-# 2. Skeleton Issues and Bugs
+# 2. CSS Skeleton Issues and Bugs
 Responsive design.
 
 ## 3. Card Deck Skeleton
@@ -74,6 +84,10 @@ have tried ```max-height: 100vh``` and ```max-height: 100%``` but neither work.
 ![](assets/media/issues/2023-08-12-17-27-46.png)
 
 - [ ] check W3 Schools for CSS functions to make the grid responsive to viewport height
+
+### 3.3. back of card doesn't fully cover card face underneath
+
+![](assets/media/issues/2023-08-12-22-23-28.png)
 
 
 
