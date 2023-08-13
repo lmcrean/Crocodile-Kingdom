@@ -1,13 +1,14 @@
 <div align="center">
 
-[<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-purple?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/) [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/ReadMe-purple?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/README.md)
+
 
 <img src="assets/media/documentation/issues-icon.svg" width=200>
 
 
 # Issues and bugs<!-- omit in toc -->
+[<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-purple?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/) [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/ReadMe-purple?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/README.md)
 
-This testing page is currently not being used. When the readme gets too long, paragraphs will be moved here for reference.
+This page documents the issues and bugs encountered during the development of the Crocodile Kingdom game. It also documents the solutions found to fix them.
 
 </div>
 
@@ -17,10 +18,10 @@ This testing page is currently not being used. When the readme gets too long, pa
     - [1.1.1. Double click too fast and the card won't flip](#111-double-click-too-fast-and-the-card-wont-flip)
     - [1.1.2. Click on a different card inbetween the 2 second interval, and it doesn't flip the cards back properly](#112-click-on-a-different-card-inbetween-the-2-second-interval-and-it-doesnt-flip-the-cards-back-properly)
 - [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
-  - [3. Card Deck Skeleton](#3-card-deck-skeleton)
-    - [3.1. Responsive grid is falling off the horizontal viewport](#31-responsive-grid-is-falling-off-the-horizontal-viewport)
-    - [3.2. Responsive grid is falling off the vertical viewport](#32-responsive-grid-is-falling-off-the-vertical-viewport)
-    - [3.3. back of card doesn't fully cover card face underneath](#33-back-of-card-doesnt-fully-cover-card-face-underneath)
+  - [2.1 Card Deck Skeleton](#21-card-deck-skeleton)
+    - [2.1.1 Responsive grid is falling off the horizontal viewport](#211-responsive-grid-is-falling-off-the-horizontal-viewport)
+    - [2.1.2. Responsive grid is falling off the vertical viewport](#212-responsive-grid-is-falling-off-the-vertical-viewport)
+    - [2.1.3. back of card doesn't fully cover card face underneath](#213-back-of-card-doesnt-fully-cover-card-face-underneath)
 - [3.3.  Surface Issues](#33--surface-issues)
 - [4. Unfixed Bugs](#4-unfixed-bugs)
 
@@ -57,9 +58,9 @@ This testing page is currently not being used. When the readme gets too long, pa
 # 2. CSS Skeleton Issues and Bugs
 Responsive design.
 
-## 3. Card Deck Skeleton
+## 2.1 Card Deck Skeleton
 
-### 3.1. Responsive grid is falling off the horizontal viewport 
+### 2.1.1 Responsive grid is falling off the horizontal viewport 
 ![Alt text](assets/media/issues/image.png)
 ![](assets/media/issues/2023-08-12-15-40-14.png)
 Seems okay in browser view, but not Devtools. Need the correct CSS Functions to
@@ -78,14 +79,14 @@ used padding: 0px 1em to improve spacing between cards;
 
 ![image](https://github.com/lmcrean/Crocodile-Kingdom/assets/133490867/7a1a18e2-5314-4999-9704-49ffdfaf854f)
 
-### 3.2. Responsive grid is falling off the vertical viewport
+### 2.1.2. Responsive grid is falling off the vertical viewport
 have tried ```max-height: 100vh``` and ```max-height: 100%``` but neither work.
 
 ![](assets/media/issues/2023-08-12-17-27-46.png)
 
 - [ ] check W3 Schools for CSS functions to make the grid responsive to viewport height
 
-### 3.3. back of card doesn't fully cover card face underneath
+### 2.1.3. back of card doesn't fully cover card face underneath
 
 ![](assets/media/issues/2023-08-12-22-23-28.png)
 

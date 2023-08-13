@@ -1,10 +1,10 @@
 <div align="center">
 
-<img alt="placeholder" src="assets/media/logo.svg" width="250px" >
+<img alt="placeholder" src="assets/media/logo.svg" width="300px" >
 
 #  Memory Game with JavaScript <!-- omit in toc -->
 
-[<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-purple?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/) [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Testing-purple?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/testing.md) [![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/lmcrean/Crocodile-Kingdom?color=green)](https://github.com/lmcrean/Crocodile-Kingdom/commits/main) [<img src="https://wakatime.com/badge/user/416fbf43-2a75-4cf7-8b85-019470ba1cc8/project/d6b1c7ce-4cdd-46d2-bc71-b0b000c2ccae.svg">](https://wakatime.com/badge/user/416fbf43-2a75-4cf7-8b85-019470ba1cc8)
+[<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-purple?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/) [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Issues_Report-purple?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md) [![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/lmcrean/Crocodile-Kingdom?color=green)](https://github.com/lmcrean/Crocodile-Kingdom/commits/main) [![wakatime](https://wakatime.com/badge/user/416fbf43-2a75-4cf7-8b85-019470ba1cc8/project/d6b1c7ce-4cdd-46d2-bc71-b0b000c2ccae.svg)](https://wakatime.com/badge/user/416fbf43-2a75-4cf7-8b85-019470ba1cc8/project/d6b1c7ce-4cdd-46d2-bc71-b0b000c2ccae)
 
 <br>
 
@@ -12,20 +12,15 @@
 
 <br>
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+**Crocodile Kingdom is an animal-themed version of the classic children's memory game**, where the user has to try and match pairs of cards together without a failed attempt in between. The user wins the game when all the cards are flipped.
 
 
 </div>
 
 ***
-## 0.1. Documentation introduction
 This readme introduces the key features of the project, using the framework of the 5 planes of User Experience. It summarises key challenges addressed along the way and also provides credits and acknowledgesments at the end.
 
-Testing is summarised in the readme, while a seperate Testing file is dedicated to a more specific technical account.
+An issues file is dedicated to a more specific technical account.
 
 In the issues I have logged written, video or screenshot accounts.
 
