@@ -47,23 +47,29 @@ let lockCards = false; // This variable is set to false because the card has not
 
 // ----------------- Computer Spawns cards, rearrange at random -----------------
 
-function shuffleCards() {
+(function shuffleCards() {
+  console.log("Shuffling cards")
   const cardIds = Array.from(cards).map(card => card.id); // Get an array of card IDs
+  console.log(cardIds)
   const shuffledCardIds = shuffleArray(cardIds); // Shuffle the array of card IDs
+  console.log(shuffledCardIds)
   cards.forEach((card, index) => {
     card.style.order = shuffledCardIds[index]; // Update the order based on shuffled array
   });
-}
+
+})()
 
 // Helper function to shuffle an array using Fisher-Yates algorithm
-function shuffleArray(array) { 
+(function shuffleArray(array) { 
+  console.log("Shuffling array")
   for (let i = array.length - 1; i > 0; i--)// Loop from end of array to start 
   {
     const j = Math.floor(Math.random() * (i + 1)) // Random index from 0 to i;
     [array[i], array[j]] = [array[j], array[i]]; // Swap elements array[i] and array[j]
   }
   return array;
-}
+
+})()
 
 
 // ----------------- turns starts at 0 ----------------- 
