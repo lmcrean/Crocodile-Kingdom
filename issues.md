@@ -222,7 +222,6 @@ At this point the options are to:
 - use ```display: flex``` instead of ```display: grid``` and copy [code-sketches' version](https://marina-ferreira.github.io/projects/js/memory-game/). risk: leading to responsivity issues.
 - continue to consult the articles below. risk: time and further complications.
 
-***The verdict was to use a display flex layout, on the grounds that it had a close replica to follow, and which would make it easier to debug.***
 
 ***
 Stack Overflow forum, "how to randomize placement order in a placement grid", https://stackoverflow.com/questions/73847991/how-to-randomize-placement-order-in-a-css-grid

@@ -41,14 +41,13 @@
 // Define the variables
 const cardsContainer = document.querySelector(".cards-container");
 const cards = document.querySelectorAll(".card-item-container");
-const j = Math.floor(Math.random() * (i + 1));
-
-i = array.length - 1; // Initialize 'i' here
+// let i = array.length - 1; i > 0; i--; // Initialize 'i' here
+// const j = Math.floor(Math.random() * (i + 1));
 let hasFlippedCard = false; // This variable is set to false because the card has not been clicked yet.
 let firstCard, secondCard; // These variables are set to undefined because the card has not been clicked yet.
 let lockCards = false; // This variable is set to false because the card has not been clicked yet. This variable is used to prevent the user from checking more than 2 cards at a time.
 
-let i = array.length - 1; i > 0; i--;
+
 // Helper function to shuffle an array using Fisher-Yates algorithm
 
 // ----------------- Define the Functions ----------------- 
