@@ -38,6 +38,7 @@
 
 // ----------------- CARD DECK -----------------
 const cardsContainer = document.querySelector(".cards-container");
+const cards = document.querySelectorAll(".card-item-container");
 
 // ----------------- START ----------------- 
 let hasFlippedCard = false; // This variable is set to false because the card has not been clicked yet.
@@ -46,30 +47,23 @@ let lockCards = false; // This variable is set to false because the card has not
 
 // ----------------- Computer Spawns cards, rearrange at random -----------------
 
-(function shuffleCards () { 
-  cards.forEach(card => {
-    let randomPosition = Math.floor(Math.random() * 16); // This variable generates a random number between 0 and 16.
-    document.getElementById("card-A1").style.order = randomPosition;
-    document.getElementById("card-A2").style.order = randomPosition; 
-    document.getElementById("card-B1").style.order = randomPosition;
-    document.getElementById("card-B2").style.order = randomPosition;
-    document.getElementById("card-C1").style.order = randomPosition;
-    document.getElementById("card-C2").style.order = randomPosition;
-    document.getElementById("card-D1").style.order = randomPosition;
-    document.getElementById("card-D2").style.order = randomPosition;
-    document.getElementById("card-E1").style.order = randomPosition;
-    document.getElementById("card-E2").style.order = randomPosition;
-    document.getElementById("card-F1").style.order = randomPosition;
-    document.getElementById("card-F2").style.order = randomPosition;
-    document.getElementById("card-G1").style.order = randomPosition;
-    document.getElementById("card-G2").style.order = randomPosition;
-    document.getElementById("card-H1").style.order = randomPosition;
-    document.getElementById("card-H2").style.order = randomPosition;
+function shuffleCards() {
+  const cardIds = Array.from(cards).map(card => card.id); // Get an array of card IDs
+  const shuffledCardIds = shuffleArray(cardIds); // Shuffle the array of card IDs
+  cards.forEach((card, index) => {
+    card.style.order = shuffledCardIds[index]; // Update the order based on shuffled array
+  });
+}
 
-    return;
-    // This changes the order of the cards to the random number generated above.
-  })
-})(); // This function is put in brackets to make it run as soon as the page loads.
+// Helper function to shuffle an array using Fisher-Yates algorithm
+function shuffleArray(array) { 
+  for (let i = array.length - 1; i > 0; i--)// Loop from end of array to start 
+  {
+    const j = Math.floor(Math.random() * (i + 1)) // Random index from 0 to i;
+    [array[i], array[j]] = [array[j], array[i]]; // Swap elements array[i] and array[j]
+  }
+  return array;
+}
 
 // ----------------- turns starts at 0 ----------------- 
 
@@ -77,7 +71,6 @@ let score = 0;
 
 // ----------------- User Clicks on 1st card -----------------
 
-const cards = document.querySelectorAll(".card-item-container");
 
 function cardAppear() { 
 
