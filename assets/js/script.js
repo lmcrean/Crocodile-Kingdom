@@ -37,40 +37,43 @@
 // ----------------- JAVASCRIPT CODE -----------------
 
 // ----------------- CARD DECK -----------------
+// ----------------- START: Define the variables ----------------- 
+// Define the variables
 const cardsContainer = document.querySelector(".cards-container");
 const cards = document.querySelectorAll(".card-item-container");
+const j = Math.floor(Math.random() * (i + 1));
 
-// ----------------- START ----------------- 
+i = array.length - 1; // Initialize 'i' here
 let hasFlippedCard = false; // This variable is set to false because the card has not been clicked yet.
 let firstCard, secondCard; // These variables are set to undefined because the card has not been clicked yet.
 let lockCards = false; // This variable is set to false because the card has not been clicked yet. This variable is used to prevent the user from checking more than 2 cards at a time.
 
-// ----------------- Computer Spawns cards, rearrange at random -----------------
+let i = array.length - 1; i > 0; i--;
+// Helper function to shuffle an array using Fisher-Yates algorithm
 
-(function shuffleCards() {
-  console.log("Shuffling cards")
+// ----------------- Define the Functions ----------------- 
+
+function shuffleCards() {
+  console.log("shufflesCards");
   const cardIds = Array.from(cards).map(card => card.id); // Get an array of card IDs
-  console.log(cardIds)
   const shuffledCardIds = shuffleArray(cardIds); // Shuffle the array of card IDs
-  console.log(shuffledCardIds)
   cards.forEach((card, index) => {
     card.style.order = shuffledCardIds[index]; // Update the order based on shuffled array
   });
+}
 
-})()
-
-// Helper function to shuffle an array using Fisher-Yates algorithm
-(function shuffleArray(array) { 
-  console.log("Shuffling array")
-  for (let i = array.length - 1; i > 0; i--)// Loop from end of array to start 
-  {
-    const j = Math.floor(Math.random() * (i + 1)) // Random index from 0 to i;
-    [array[i], array[j]] = [array[j], array[i]]; // Swap elements array[i] and array[j]
-  }
+function shuffleArray(array) { 
+  console.log("shufflesArray");
+  for (let i = array.length - 1; i > 0; i--) { // Loop from end of array to start sure
+  const j = Math.floor(Math.random() * (i + 1));
+   [array[i], array[j]] = [array[j], array[i]]; // Swap elements array[i] and array[j] }
   return array;
+}}
 
-})()
 
+// ----------------- Computer Spawns cards, rearrange at random -----------------
+
+shuffleCards(); 
 
 // ----------------- turns starts at 0 ----------------- 
 
@@ -91,12 +94,9 @@ if (!hasFlippedCard) {
   //first click
   hasFlippedCard = true;
   firstCard = this;
-
   return;}
-
   hasFlippedCard = false;
   secondCard = this;
-
   checkForMatch();
 }
 

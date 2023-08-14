@@ -34,7 +34,8 @@ This page documents the issues and bugs encountered during the development of th
 
 ### 1.1.1. Double click too fast and the card won't flip
 Problem (user is double/triple clicking too fast):
-<img src="assets/media/issues/Video08-12-23_222740.gif">
+
+<img src="assets/media/issues/Video08-12-23_222740.gif" width=500>
 
 Solution:
 
@@ -71,14 +72,14 @@ function resetCards() {// This function resets the variables to their original v
 
 Result:
 
-<img src="assets/media/issues/1.1.1.gif">
+<img src="assets/media/issues/1.1.1.gif" width=500>
 
 
 ### 1.1.2. Click on a different card inbetween the 2 second interval, and it doesn't flip the cards back properly
 
 Problem:
 
-<img src="assets/media/issues/Video08-12-23_222519.gif">
+<img src="assets/media/issues/Video08-12-23_222519.gif" width=500>
 
 
 Solution: 
@@ -107,11 +108,11 @@ setTimeout(() => {
 
 Result:
 
-<img src="assets/media/issues/1.1.2.gif">
+<img src="assets/media/issues/1.1.2.gif" width=500>
 
 ### 1.1.3. The shuffle algorithim doesn't appear to be working
 
-<img src="assets/media/issues/1.1.3b.gif">
+<img src="assets/media/issues/1.1.3b.gif" width=500>
 
 Have added this shuffle algorthim to the javascript to randomise the order of the cards with the help of [code-sketch's tutorial](https://www.youtube.com/watch?v=NGtx3EBlpNE&list=PLLX1I3KXZ-YH-woTgiCfONMya39-Ty8qw&index=13). 
 
@@ -175,6 +176,55 @@ function shuffleArray(array) {
 }
 ```
 
+Tried rearranging shuffleArray with shuffleCards
+
+```js
+const cardsContainer = document.querySelector(".cards-container");
+const cards = document.querySelectorAll(".card-item-container");
+const j = Math.floor(Math.random() * (i + 1));
+
+i = array.length - 1; // Initialize 'i' here
+let hasFlippedCard = false; // This variable is set to false because the card has not been clicked yet.
+let firstCard, secondCard; // These variables are set to undefined because the card has not been clicked yet.
+let lockCards = false; // This variable is set to false because the card has not been clicked yet. This variable is used to prevent the user from checking more than 2 cards at a time.
+
+let i = array.length - 1; i > 0; i--;
+// Helper function to shuffle an array using Fisher-Yates algorithm
+
+function shuffleArray(array) { 
+  console.log("shufflesArray");
+  for (let i = array.length - 1; i > 0; i--) { // Loop from end of array to start sure
+  const j = Math.floor(Math.random() * (i + 1));
+   [array[i], array[j]] = [array[j], array[i]]; // Swap elements array[i] and array[j] }
+  return array;
+}}
+
+function shuffleCards() {
+  console.log("shufflesCards");
+  const cardIds = Array.from(cards).map(card => card.id); // Get an array of card IDs
+  const shuffledCardIds = shuffleArray(cardIds); // Shuffle the array of card IDs
+  cards.forEach((card, index) => {
+    card.style.order = shuffledCardIds[index]; // Update the order based on shuffled array
+  });
+}
+```
+
+however getting this message
+```
+script.js:54 Uncaught ReferenceError: shuffleArray is not defined
+    at shuffleCards (script.js:54:27)
+    at script.js:60:3
+```
+shuffleArray is being called before it has been defined. Order doesn't seem to influence.
+
+***
+At this point the options are to:
+- use ```display: flex``` instead of ```display: grid``` and copy [code-sketches' version](https://marina-ferreira.github.io/projects/js/memory-game/). risk: leading to responsivity issues.
+- continue to consult the articles below. risk: time and further complications.
+
+***The verdict was to use a display flex layout, on the grounds that it had a close replica to follow, and which would make it easier to debug.***
+
+***
 Stack Overflow forum, "how to randomize placement order in a placement grid", https://stackoverflow.com/questions/73847991/how-to-randomize-placement-order-in-a-css-grid
 
 Recommended this:
@@ -201,20 +251,22 @@ function makeBoard() {
     }
 ```
 
-Stack Overflow Forum, "Shuffle a container's DOM elements, but not all",
+- [ ] Stack Overflow Forum, "Shuffle a container's DOM elements, but not all",
 https://stackoverflow.com/questions/71617327/shuffle-a-containers-dom-elements-but-not-all-in-javascript
+
+- [ ] CodePen, shuffle grid items, https://codepen.io/GreenSock/pen/KKNJYZM
 
 ### 1.1.4. Using brackets to start the shuffle function seems to stop the cards from flipping
 
 
-<img src="assets/media/issues/1.1.4a.gif">
+<img src="assets/media/issues/1.1.4a.gif" width=500>
 
 - [x] have tried removing entire shuffleCards and shuffleArray function, the result displays exactly the same as above.
 
 solution: hard refreshing the browser, the result is as below.  
 
 
-![](assets/media/issues/2023-08-14-16-20-04.png)
+<img src="assets/media/issues/2023-08-14-16-20-04.png" width=500> 
 
 
 
@@ -224,8 +276,10 @@ Responsive design.
 ## 2.1 Card Deck Skeleton
 
 ### 2.1.1 Responsive grid is falling off the horizontal viewport 
-![Alt text](assets/media/issues/image.png)
-![](assets/media/issues/2023-08-12-15-40-14.png)
+<img src="assets/media/issues/image.png" width=500>
+
+<img src="assets/media/issues/2023-08-12-15-40-14.png" width=500>
+
 Seems okay in browser view, but not Devtools. Need the correct CSS Functions to
 
 - [x] make the grid responsive to viewport width
@@ -240,18 +294,18 @@ Seems okay in browser view, but not Devtools. Need the correct CSS Functions to
 used padding: 0px 1em to improve spacing between cards;
 
 
-![image](https://github.com/lmcrean/Crocodile-Kingdom/assets/133490867/7a1a18e2-5314-4999-9704-49ffdfaf854f)
+<img src="https://github.com/lmcrean/Crocodile-Kingdom/assets/133490867/7a1a18e2-5314-4999-9704-49ffdfaf854f" width=500>
 
 ### 2.1.2. Responsive grid is falling off the vertical viewport
 have tried ```max-height: 100vh``` and ```max-height: 100%``` but neither work.
 
-![](assets/media/issues/2023-08-12-17-27-46.png)
+<img src="assets/media/issues/2023-08-12-17-27-46.png" width=500> 
 
 - [ ] check W3 Schools for CSS functions to make the grid responsive to viewport height
 
 ### 2.1.3. back of card doesn't fully cover card face underneath
 
-![](assets/media/issues/2023-08-12-22-23-28.png)
+<img src="assets/media/issues/2023-08-12-22-23-28.png" width=500>
 
 
 
