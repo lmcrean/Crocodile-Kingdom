@@ -167,10 +167,10 @@ Remaining issues:
 
 2. The current implementation is not efficient and can lead to cards having the same order, causing them to overlap visually. Instead, it's better to update the card order based on the shuffled array.
 
-Suggested this in the JS:
+Tried using an array-based approach function in JS:
   
-  ```js
-  function shuffleCards() {
+```js
+function shuffleCards() {
   const cardIds = Array.from(cards).map(card => card.id); // Get an array of card IDs
   const shuffledCardIds = shuffleArray(cardIds); // Shuffle the array of card IDs
   cards.forEach((card, index) => {
@@ -179,14 +179,44 @@ Suggested this in the JS:
 }
 
 // Helper function to shuffle an array using Fisher-Yates algorithm
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+function shuffleArray(array) { 
+  for (let i = array.length - 1; i > 0; i--)// Loop from end of array to start 
+  {
+    const j = Math.floor(Math.random() * (i + 1)) // Random index from 0 to i;
+    [array[i], array[j]] = [array[j], array[i]]; // Swap elements array[i] and array[j]
   }
   return array;
 }
 ```
+
+Stack Overflow forum, "how to randomize placement order in a placement grid", https://stackoverflow.com/questions/73847991/how-to-randomize-placement-order-in-a-css-grid
+
+Recommended this:
+
+
+```js
+function makeBoard() {
+        var str = "";
+        for (var i = 1; i <= 25; i++) {
+            str += "<div class = 'grid-item'>" + i + "</div>";
+        }
+        document.getElementById("bingo").innerHTML = str;
+    }
+
+    function shuffleBoard() {
+        var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
+        var str = "";
+        while (numbers.length > 0) {
+            var i = Math.floor(Math.random() * numbers.length);
+            str += "<div class = 'grid-item'>" + numbers[i] + "</div>";
+            numbers.splice(i, 1);
+        }
+        document.getElementById("bingo").innerHTML = str;
+    }
+```
+
+Stack Overflow Forum, "Shuffle a container's DOM elements, but not all",
+https://stackoverflow.com/questions/71617327/shuffle-a-containers-dom-elements-but-not-all-in-javascript
 
 ### 1.1.4. Using brackets to start the shuffle function seems to stop the cards from flipping
 

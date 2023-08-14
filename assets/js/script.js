@@ -65,6 +65,7 @@ function shuffleArray(array) {
   return array;
 }
 
+
 // ----------------- turns starts at 0 ----------------- 
 
 let score = 0; 
