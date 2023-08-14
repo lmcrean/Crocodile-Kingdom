@@ -110,8 +110,8 @@ Result:
 <img src="assets/media/issues/1.1.2.gif">
 
 ### 1.1.3. The shuffle algorithim doesn't appear to be working
-initial issue with visibility was converted to 1.1.4.
-<img src="assets/media/issues/1.1.3a.gif">
+
+<img src="assets/media/issues/1.1.3b.gif">
 
 Have added this shuffle algorthim to the javascript to randomise the order of the cards with the help of [code-sketch's tutorial](https://www.youtube.com/watch?v=NGtx3EBlpNE&list=PLLX1I3KXZ-YH-woTgiCfONMya39-Ty8qw&index=13). 
 
@@ -129,7 +129,7 @@ However, once this is added, the cards won't flip.
 resources searched:
 - https://www.w3schools.com/jsref/prop_style_order.asp
 
-tried adding card ID's to the HTML.
+and so tried adding card ID's to the HTML.
 
 ```html
 <div class="card-item-container" data-framework="H" id="card-H2"> 
@@ -143,24 +143,10 @@ then using getElementById to select the card.
     document.getElementById("card-B1").style.order = randomPosition;
     document.getElementById("card-B2").style.order = randomPosition;
     document.getElementById("card-C1").style.order = randomPosition;
-    document.getElementById("card-C2").style.order = randomPosition;
-    document.getElementById("card-D1").style.order = randomPosition;
-    document.getElementById("card-D2").style.order = randomPosition;
-    document.getElementById("card-E1").style.order = randomPosition;
-    document.getElementById("card-E2").style.order = randomPosition;
-    document.getElementById("card-F1").style.order = randomPosition;
-    document.getElementById("card-F2").style.order = randomPosition;
-    document.getElementById("card-G1").style.order = randomPosition;
-    document.getElementById("card-G2").style.order = randomPosition;
-    document.getElementById("card-H1").style.order = randomPosition;
-    document.getElementById("card-H2").style.order = randomPosition;
+   [...etc.]
 ```
 
-does not work - key issue is the bracket around the function. However it is not shuffling the cards.
-
-inspected the page and found that the order of the cards is somewhat predictable.
-
-![](assets/media/issues/2023-08-14-13-52-21.png)
+does not work.
 
 Remaining issues:
 1. The shuffleCards function is missing an array of card elements (cards) that it needs to shuffle. This array should be defined before the function is called.
