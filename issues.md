@@ -17,6 +17,8 @@ This page documents the issues and bugs encountered during the development of th
   - [1.1. Card Deck Structure](#11-card-deck-structure)
     - [1.1.1. Double click too fast and the card won't flip](#111-double-click-too-fast-and-the-card-wont-flip)
     - [1.1.2. Click on a different card inbetween the 2 second interval, and it doesn't flip the cards back properly](#112-click-on-a-different-card-inbetween-the-2-second-interval-and-it-doesnt-flip-the-cards-back-properly)
+    - [1.1.3. Once the shuffle algorthim is implemented, the cards won't flip](#113-once-the-shuffle-algorthim-is-implemented-the-cards-wont-flip)
+    - [1.1.4. Using brackets to start the shuffle function seems to stop](#114-using-brackets-to-start-the-shuffle-function-seems-to-stop)
 - [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
   - [2.1 Card Deck Skeleton](#21-card-deck-skeleton)
     - [2.1.1 Responsive grid is falling off the horizontal viewport](#211-responsive-grid-is-falling-off-the-horizontal-viewport)
@@ -34,6 +36,42 @@ This page documents the issues and bugs encountered during the development of th
 
 <img src="assets/media/issues/Video08-12-23_222740.gif">
 
+Solution:
+
+implemented a ```resetCards``` function to reset the variables to their original values? Not sure if this was the direct solution, but it is now working.
+
+```js
+function disableCards(){
+firstCard.removeEventListener("click", cardAppear);
+secondCard.removeEventListener("click", cardAppear);
+// .removeEventListener removes the event listener from the first card so that it can't be clicked again.})
+resetCards (); // unlocks the cards so that the user can click on them again.
+}
+
+// ----------------- ???Do the cards match??? (no) -----------------
+// ...then clicked images flip back after 2 seconds
+// ...then wait for "User Clicks on 1st card"
+
+function flipBackCards() {
+  lockCards = true; // This prevents the user from clicking on more than 2 cards at a time.
+
+setTimeout(() => {
+  firstCard.classList.remove("flipped-over");
+  secondCard.classList.remove("flipped-over");
+  resetCards (); // unlocks the cards so that the user can click on them again.
+  }, 2000);
+}
+
+
+function resetCards() {// This function resets the variables to their original values.
+  [hasFlippedCard, lockCards] = [false, false];
+  [firstCard, secondCard] = [null, null];
+}
+```
+
+<img src="assets/media/issues/1.1.1.gif">
+
+
 ### 1.1.2. Click on a different card inbetween the 2 second interval, and it doesn't flip the cards back properly
 
 <img src="assets/media/issues/Video08-12-23_222519.gif">
@@ -42,7 +80,7 @@ This page documents the issues and bugs encountered during the development of th
 Solution: 
 used ```let lockCards = false```  rule to lock the board when the cards are flipped. Credit to code-sketch tutorial on youtube for the solution.
 
-```css
+```js
 function cardAppear() { 
 
 if (lockCards) return; // This stops the function of lockCards is true, preventing the user from clicking on more than 2 cards at a time.
@@ -64,15 +102,59 @@ setTimeout(() => {
 ```
 <img src="assets/media/issues/1.1.2.gif">
 
+### 1.1.3. Once the shuffle algorthim is implemented, the cards won't flip
+
+<img src="assets/media/issues/1.1.3a.gif">
+
+Have added this shuffle algorthim to the javascript to randomise the order of the cards with the help of [code-sketch's tutorial](https://www.youtube.com/watch?v=NGtx3EBlpNE&list=PLLX1I3KXZ-YH-woTgiCfONMya39-Ty8qw&index=13). 
+
+```js
+(function shuffleCards () { 
+  cards.forEach(card => {
+    let randomPosition = Math.floor(Math.random() * 16); // This variable generates a random number between 0 and 16.
+    card.style.order = randomPosition; // This changes the order of the cards to the random number generated above.
+  })
+})(); // This function is put in brackets to make it run as soon as the page loads.
+```
+
+However, once this is added, the cards won't flip.
+
+resources searched:
+- https://www.w3schools.com/jsref/prop_style_order.asp
+
+tried adding card ID's to the HTML.
+
+```html
+<div class="card-item-container" data-framework="H" id="card-H2"> 
+```
+
+then using getElementById to select the card.
+
+```js
+    document.getElementById("card-A1").style.order = randomPosition;
+    document.getElementById("card-A2").style.order = randomPosition; 
+    document.getElementById("card-B1").style.order = randomPosition;
+    document.getElementById("card-B2").style.order = randomPosition;
+    document.getElementById("card-C1").style.order = randomPosition;
+    document.getElementById("card-C2").style.order = randomPosition;
+    document.getElementById("card-D1").style.order = randomPosition;
+    document.getElementById("card-D2").style.order = randomPosition;
+    document.getElementById("card-E1").style.order = randomPosition;
+    document.getElementById("card-E2").style.order = randomPosition;
+    document.getElementById("card-F1").style.order = randomPosition;
+    document.getElementById("card-F2").style.order = randomPosition;
+    document.getElementById("card-G1").style.order = randomPosition;
+    document.getElementById("card-G2").style.order = randomPosition;
+    document.getElementById("card-H1").style.order = randomPosition;
+    document.getElementById("card-H2").style.order = randomPosition;
+```
+
+does not work - key issue is the bracket around the function. However it is not shuffling the cards.
+
+### 1.1.4. Using brackets to start the shuffle function seems to stop 
 
 
-
-
-
-
-
-
-
+<img src="assets/media/issues/1.1.4a.gif">
 
 
 

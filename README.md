@@ -59,10 +59,10 @@ In the issues I have logged written, video or screenshot accounts.
   - [5.1. Lighthouse Report](#51-lighthouse-report)
 - [6. Deployment](#6-deployment)
 - [7. Future features to implement](#7-future-features-to-implement)
-- [8. Credits](#8-credits)
+- [8. Credits \& Acknowledgements](#8-credits--acknowledgements)
   - [8.1. Code snippets](#81-code-snippets)
   - [8.2. Technologies Used](#82-technologies-used)
-- [9. Acknowledgements](#9-acknowledgements)
+  - [8.3 Acknowledgements](#83-acknowledgements)
 
 ***
 
@@ -128,12 +128,15 @@ The 5 UX development planes are for the purpose of explaining the process of bui
 
 ## 1.1. Strategy Plane
 
+
 ### 1.1.1. Developer strategy
 
 The project was researched, conceived and designed in 5 weeks. Important limitations of the project had to be set from the outset such as
 - **choosing a "well-trodden" path that had lots of tutorials and resources available.** This was to ensure that the project was achievable in the time frame, and that the developer could learn from the resources available.
 - **using a simple open-source database that already existed for the JavaScript to navigate**, e.g. pop quiz trivia data, personality test data. Inventing datasets risked distracting from the front-end design and JavaScript functionality.
 - **based on this criteria, the developer chose to create a memory game**, which had a lot of resources available, and was a good starting point for Junior-level Javascript.
+
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 ### 1.1.2. Developer Research
 
@@ -163,6 +166,8 @@ The project was researched, conceived and designed in 5 weeks. Important limitat
 
 The Developer then tested a walkthrough project of a memory game, using event listeners, functions, loops, arrays, objects, and DOM manipulation. The mockup project was a quiz, which was a good starting point for the project.
 
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
 ### 1.1.3. Product Research
 This project had the intentional advantage of plenty existing resources of high relevance. 
 
@@ -176,6 +181,8 @@ The following resources and repositories were researched.
 - [Article](https://www.codewithfaraz.com/content/112/creating-flip-card-memory-game-with-html-css-and-javascript) by codewithfiraz.com explaining the role of each CSS class and JS function
 
 It was crucial for this project to choose a memory game that was achievable in the time frame, and that had a lot of resources available.
+
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 ### 1.1.4. Project Timeline
 
@@ -220,6 +227,8 @@ The timeline for the project was as follows:
 
 - The project was completed on Saturday 9th September 2023.
 
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
 ### 1.1.5. Business Strategy
 
 The business goals were to create a simple memory game that was fun and engaging for the user. The target audience was 5 year olds, and it could be assumed that they have never played a memory game before.
@@ -247,6 +256,8 @@ For the scope plane, the developer drafted a mininum viable product that informe
 
 A mininum viable product is a product with just enough features to satisfy early customers, and to provide feedback for future development. 
 
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
 ### 1.2.1. Mininum Viable product
 
 <i>
@@ -267,6 +278,8 @@ Once that would be designed more interesting features could be added, such as
 - a timer
 - a scoreboard
 - a chance to switch card sets</i>
+
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 <!-->
 ### Scope of Features
@@ -319,8 +332,10 @@ There were a few omissions from the project.
 - xxxxxxxxxx
 - xxxxxxxxxx
 - xxxxxxxxxx
-
+  
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 -->
+
 ***
 ## 1.3. Structure Plane
 
@@ -406,7 +421,7 @@ Are all the cards flipped? (no), go back to user clicks on first image.
 
 Are all the cards flipped? (yes), go to you've won feature.
 
-
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 #### Turn count structure <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
@@ -441,8 +456,7 @@ Are all the cards flipped? (yes), go to you've won feature.
 
 xxxxxxxxx
 
-Functionality overview:
-
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 ***
 ## 1.4. Skeleton Plane
 
@@ -497,11 +511,12 @@ The Well Done feature was a simple modal pop-up that would show a Well done titl
 - Mobile design used 1 column and arranged all the elements vertically inside a container with ```position: absolute``` 
 - Desktop design split the page into 2 columns, with the well done in the left column, and the remaining content in the right column.
 
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 ### 1.4.1. Coding in the skeleton
 
 After the skeleton was designed, the code was drafted using HTML, CSS and Javacript. A set of placeholder images were used, which the developer designed on Canva.
 
-***
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 ### 1.4.2. Sizing skeleton
 Regarding font-size, the ```clamp()``` function was mostly used to ensure the font size was responsive to the device size. This was used instead of media queries, as it was more efficient and easier to read, it allowed the media queries to be used more for positioning and to address bugs with the display.
 
@@ -511,6 +526,7 @@ h1 { font-size: clamp(1.8rem, 1.3893rem + 2.3467vw, 4rem);}
 h2 { font-size: clamp(1.5rem, 1.5rem + 1.2vw, 2.5rem); }
 p, h3,h4,h5 { font-size: clamp(1rem, 0.9253rem + 0.4267vw, 1.4rem);}
 ```
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 ### 1.4.3. HTML classes skeleton
 Important HTML Class selectors were used to shorten the CSS code, such as
@@ -522,8 +538,12 @@ Important HTML Class selectors were used to shorten the CSS code, such as
 - ```color-background```
 - ```modal-container```
 
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
 ## 1.5. Surface Plane
 This surface plane describes the choice of typefaces, colors and style themes relevant to the project's desired tone and practical needs.
+
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 ### 1.5.1. Typefaces Surface
 
@@ -531,6 +551,7 @@ Typefaces used were xxxxxxxxxxxxxxxxxxxxxxxxx for headings and xxxxxxxxxxxxxxxxx
 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
 
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 xxxxxxxxxxxxxxxx
 ```css
@@ -553,6 +574,8 @@ h5 {font-size: 0.7rem;/*reduce font size*/}
 ***
 The color theme was chosen to be consistent with the logo with the aim of creating a consistent brand identity. To speed up efficiency, root variables were used to store the color values. This also allowed the color theme to be changed easily in the future.
 
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
 ### 1.5.2. Color surface
 
 ### 1.5.3. Card Deck Surface
@@ -564,6 +587,8 @@ The card deck used an animal theme, as a way to be appealing for children.
 <img alt="placeholder" src="assets/media/card-deck/back.svg" width="100px">
 
 The back of the card included a box with question marks, with diagonal lines to indicate excitement.
+
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 ### 1.5.4. Logo Surface
 
@@ -578,7 +603,7 @@ The logo was designed with simple colors with Canva Open Source imagery.
 ### 1.5.7. Modal Surface
 
 
-
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 # 2. Manual Testing
 
@@ -591,13 +616,20 @@ Manual testing was executed with the following criteria:
 - Testing on different browsers, specifically Chrome, Firefox, Edge, Opera and Safari
 - test HTML5 Hyperlinks and Forms so that they are all working as expected, identifying potential syntax errors or with the form requirements
 
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
 ## 2.1. Javascript Testing
 xxxxxxxxxxxxxxxxxxxxxxxxx
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
 
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
 ## 2.2. Hyperlink Testing
 xxxxxxxxxxxxxxxxxxx
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
+
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
 
 ## 2.3. Responsivity Testing
 Main game
@@ -609,12 +641,20 @@ How to play
 Well done
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
 
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+
 ## 2.4. BrowserStack Testing
 xxxxxxxxxxxxxxxxxxxxxxxxxx
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
 
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+
 # 3. Testing
 This link is currently not being used but will be once the Manual Testing section needs shortening [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Testing-purple?logo=mdBook">](https://github.com/lmcrean/Hoverboard/blob/main/testing.md)
+
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 # 4. Automatic Testing
 
@@ -623,11 +663,15 @@ The Automatic Testing achieved
 * a good lighthouse testing score, particularly for performance, accessibility, best practices.
 * Passed W3C Validator Testing for both HTML5 and CSS3, thereby removing excess code and broken links.
 
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
 # 5. Validator Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate the project to ensure there were no syntax errors in the project.
 
 The result was <b> <font color="green"> passed </font> </b> for HTML5 and CSS3.
+
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 ## 5.1. Lighthouse Report
 
@@ -641,6 +685,9 @@ To further improve the lighthouse score I could use more WebP images and reduce 
 | Desktop | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px"> | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px"> | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
 |Timestamp| 31st July '23 | 31st July '23 | 15th July '23 |
 
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+
 # 6. Deployment
 The site was deployed to GitHub pages. You can access the live link [XXXXXXXXXXXXXXXXXX](https://lmcrean.github.io/XXXXXXXXXXXXXXXXXXX).
 
@@ -652,18 +699,25 @@ To deploy on Github pages, the following steps were taken:
 4. Go to the Source section and select the Master Branch
 5. The page will automatically refresh
 
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 # 7. Future features to implement  
 - xxxxxxxxxxxxxxxxxxxx
 - xxxxxxxxxxxxxxxxxxx
 
-# 8. Credits
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+
+# 8. Credits & Acknowledgements
 
 ## 8.1. Code snippets
 - W3 School's [Navbar](https://www.w3schools.com/css/css_navbar.asp) was used early in the project and then adapted to meet the design standards set by the Figma wireframe.
 
 - Dominic Fraser from Free Code Camp had an article on fixing footers to the bottom of the screen, which helped with footer issues [Read here](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/)
 
+- code-sketches youtube tutorial was followed and adapted as a fouundation xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 
 ## 8.2. Technologies Used
@@ -696,10 +750,12 @@ Tools|How it was used|
 [Font Awesome](https://fontawesome.com/) | The icons in the footer and navbar were taken from 
 [CDN Fonts](https://www.cdnfonts.com/) | Peace Sans and Glacial Indifference fonts sourced
 
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-# 9. Acknowledgements
+
+## 8.3 Acknowledgements
 A special thank you to the wonderful tutors at Code Institute, who provided prompt support throughout the project.
 
 Special thank you to Seun Owonikoko, my mentor at Code Institute, for your time and patience taking me through devtools. 
 
-[🔼 Back to top](#Portfolio-Project-2-with-Javascript)
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)

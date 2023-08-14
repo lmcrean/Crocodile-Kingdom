@@ -46,8 +46,30 @@ let lockCards = false; // This variable is set to false because the card has not
 
 // ----------------- Computer Spawns cards, rearrange at random -----------------
 
-function shuffleCards () { // This function uses the Fisher-Yates shuffle algorithm to shuffle the cards at random.
-}
+(function shuffleCards () { 
+  cards.forEach(card => {
+    let randomPosition = Math.floor(Math.random() * 16); // This variable generates a random number between 0 and 16.
+    document.getElementById("card-A1").style.order = randomPosition;
+    document.getElementById("card-A2").style.order = randomPosition; 
+    document.getElementById("card-B1").style.order = randomPosition;
+    document.getElementById("card-B2").style.order = randomPosition;
+    document.getElementById("card-C1").style.order = randomPosition;
+    document.getElementById("card-C2").style.order = randomPosition;
+    document.getElementById("card-D1").style.order = randomPosition;
+    document.getElementById("card-D2").style.order = randomPosition;
+    document.getElementById("card-E1").style.order = randomPosition;
+    document.getElementById("card-E2").style.order = randomPosition;
+    document.getElementById("card-F1").style.order = randomPosition;
+    document.getElementById("card-F2").style.order = randomPosition;
+    document.getElementById("card-G1").style.order = randomPosition;
+    document.getElementById("card-G2").style.order = randomPosition;
+    document.getElementById("card-H1").style.order = randomPosition;
+    document.getElementById("card-H2").style.order = randomPosition;
+
+    return;
+    // This changes the order of the cards to the random number generated above.
+  })
+})(); // This function is put in brackets to make it run as soon as the page loads.
 
 // ----------------- turns starts at 0 ----------------- 
 
@@ -60,6 +82,8 @@ const cards = document.querySelectorAll(".card-item-container");
 function cardAppear() { 
 
 if (lockCards) return; // This stops the function of lockCards is true, preventing the user from clicking on more than 2 cards at a time.
+
+if (this === firstCard) return; // This stops the function if the user clicks on the same card twice.
 
 this.classList.toggle("flipped-over"); // .toggle adds/removes the class of "flipped-over" on the card that it is clicked on.
 
@@ -99,6 +123,7 @@ function disableCards(){
 firstCard.removeEventListener("click", cardAppear);
 secondCard.removeEventListener("click", cardAppear);
 // .removeEventListener removes the event listener from the first card so that it can't be clicked again.})
+resetCards (); // unlocks the cards so that the user can click on them again.
 }
 
 // ----------------- ???Do the cards match??? (no) -----------------
@@ -111,8 +136,13 @@ function flipBackCards() {
 setTimeout(() => {
   firstCard.classList.remove("flipped-over");
   secondCard.classList.remove("flipped-over");
-  lockCards = false; // unlocks the cards so that the user can click on them again.
+  resetCards (); // unlocks the cards so that the user can click on them again.
   }, 2000);
+}
+
+function resetCards() {// This function resets the variables to their original values.
+  [hasFlippedCard, lockCards] = [false, false];
+  [firstCard, secondCard] = [null, null];
 }
 
 // ----------------- ??? Are all the cards flipped???(yes) -----------------
