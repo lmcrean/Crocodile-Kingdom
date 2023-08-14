@@ -199,8 +199,9 @@ body {
   margin: 0px;
   border: 0px;
   text-align: center;
-  box-sizing: border-box;
 }
+
+
 
 section {
   max-width: 2000px; /*This rule is useful for responsivity because it prevents the section from expanding too much on giant viewports*/
@@ -216,6 +217,19 @@ h1,h2,h3,h4 {
 p {
   padding: 0em 2em;
   margin: auto;
+}
+
+.button {
+  text-align: center;
+}
+
+.button a, #myBtn {
+  display: inline;
+  justify-content: center;
+  border-style: solid;
+  border-width: 0.2em;
+  border-radius: 12em;
+  padding: 0.5em 1em;
 }
 
 /*--------------- SKELETON PLANE - HTML CLASS SELECTORS---------------*/
@@ -266,7 +280,7 @@ img.navbarlogo {
 }
 
 .body-content-wrap-for-fixed-footer {
-  /* padding-bottom: 25rem; */    /* Footer height */
+  padding-bottom: 25rem;    /* Footer height */
 }
 
 footer {
@@ -342,40 +356,27 @@ z-index: 3;
 /*---------------CARD DECK SKELETON---------------*/
 
 #card-deck {/*should be perfectly square without distortion*/
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  max-width: 100%;
-  max-height: 700px;
+  width: 100%;
+  margin: auto;
+  max-height: 700px !important;
   grid-gap: 1em;
   padding: 0px 1em;
-  border: 2px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card-item-container {
-  width: 25%;
-  height: auto;
+  width: 21%;
+  display: block;
 }
 
 .card-item { /*this selects both the front and back, puts the cards one over the other*/
+  position: relative;
+  width: 100%;
   height: auto;
   margin: auto;
-  grid-area: 1/1/2/2;
 }
 
-.card-back, .card-front {
-  position: absolute;
-  /* object-fit: contain; */
-  width: 50%;
-  height: auto;
-  margin: 1px;
-  padding:  20px;
-}
-
-.card-back {
-    grid-column-start: 1;
-    grid-area: 1/1/2/2;
-}
 
 /*---------------TURN COUNT SKELETON---------------*/
 
