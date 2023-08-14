@@ -42,6 +42,7 @@ const cardsContainer = document.querySelector(".cards-container");
 // ----------------- START ----------------- 
 let hasFlippedCard = false; // This variable is set to false because the card has not been clicked yet.
 let firstCard, secondCard; // These variables are set to undefined because the card has not been clicked yet.
+let lockCards = false; // This variable is set to false because the card has not been clicked yet. This variable is used to prevent the user from checking more than 2 cards at a time.
 
 // ----------------- Computer Spawns cards, rearrange at random -----------------
 
@@ -57,6 +58,9 @@ let score = 0;
 const cards = document.querySelectorAll(".card-item-container");
 
 function cardAppear() { 
+
+if (lockCards) return; // This stops the function of lockCards is true, preventing the user from clicking on more than 2 cards at a time.
+
 this.classList.toggle("flipped-over"); // .toggle adds/removes the class of "flipped-over" on the card that it is clicked on.
 
 if (!hasFlippedCard) {
@@ -102,9 +106,12 @@ secondCard.removeEventListener("click", cardAppear);
 // ...then wait for "User Clicks on 1st card"
 
 function flipBackCards() {
+  lockCards = true; // This prevents the user from clicking on more than 2 cards at a time.
+
 setTimeout(() => {
   firstCard.classList.remove("flipped-over");
   secondCard.classList.remove("flipped-over");
+  lockCards = false; // unlocks the cards so that the user can click on them again.
   }, 2000);
 }
 

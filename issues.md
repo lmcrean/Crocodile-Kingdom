@@ -39,6 +39,32 @@ This page documents the issues and bugs encountered during the development of th
 <img src="assets/media/issues/Video08-12-23_222519.gif">
 
 
+Solution: 
+used ```let lockCards = false```  rule to lock the board when the cards are flipped. Credit to code-sketch tutorial on youtube for the solution.
+
+```css
+function cardAppear() { 
+
+if (lockCards) return; // This stops the function of lockCards is true, preventing the user from clicking on more than 2 cards at a time.
+[...]
+
+}
+
+[...]
+
+function flipBackCards() {
+  lockCards = true; // This prevents the user from clicking on more than 2 cards at a time.
+
+setTimeout(() => {
+  firstCard.classList.remove("flipped-over");
+  secondCard.classList.remove("flipped-over");
+  lockCards = false; // unlocks the cards so that the user can click on them again.
+  }, 2000);
+}
+```
+<img src="assets/media/issues/1.1.2.gif">
+
+
 
 
 
