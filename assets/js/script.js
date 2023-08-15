@@ -52,27 +52,17 @@ let lockCards = false; // This variable is set to false because the card has not
 
 // ----------------- Define the Functions ----------------- 
 
-function shuffleCards() {
-  console.log("shufflesCards");
-  const cardIds = Array.from(cards).map(card => card.id); // Get an array of card IDs
-  const shuffledCardIds = shuffleArray(cardIds); // Shuffle the array of card IDs
-  cards.forEach((card, index) => {
-    card.style.order = shuffledCardIds[index]; // Update the order based on shuffled array
-  });
-}
-
-function shuffleArray(array) { 
-  console.log("shufflesArray");
-  for (let i = array.length - 1; i > 0; i--) { // Loop from end of array to start sure
-  const j = Math.floor(Math.random() * (i + 1));
-   [array[i], array[j]] = [array[j], array[i]]; // Swap elements array[i] and array[j] }
-  return array;
-}}
+(function shuffleCards () { 
+  cards.forEach(card => {
+    let randomPosition = Math.floor(Math.random() * 16); // This variable generates a random number between 0 and 16.
+    card.style.order = randomPosition; // This changes the order of the cards to the random number generated above.
+  })
+})(); // This function is put in brackets to make it run as soon as the page loads.
 
 
 // ----------------- Computer Spawns cards, rearrange at random -----------------
 
-shuffleCards(); 
+
 
 // ----------------- turns starts at 0 ----------------- 
 

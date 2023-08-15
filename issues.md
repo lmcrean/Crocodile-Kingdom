@@ -19,6 +19,7 @@ This page documents the issues and bugs encountered during the development of th
     - [1.1.2. Click on a different card inbetween the 2 second interval, and it doesn't flip the cards back properly](#112-click-on-a-different-card-inbetween-the-2-second-interval-and-it-doesnt-flip-the-cards-back-properly)
     - [1.1.3. The shuffle algorithim doesn't appear to be working with ```Display: Grid``` (issue closed)](#113-the-shuffle-algorithim-doesnt-appear-to-be-working-with-display-grid-issue-closed)
     - [1.1.4. Using brackets to start the shuffle function seems to stop the cards from flipping](#114-using-brackets-to-start-the-shuffle-function-seems-to-stop-the-cards-from-flipping)
+    - [1.1.5 Need to complete Shuffle Algorithm with display: flex method](#115-need-to-complete-shuffle-algorithm-with-display-flex-method)
 - [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
   - [2.1 Card Deck Skeleton](#21-card-deck-skeleton)
     - [2.1.1 Responsive grid is falling off the horizontal viewport ✔️](#211-responsive-grid-is-falling-off-the-horizontal-viewport-️)
@@ -269,17 +270,36 @@ https://stackoverflow.com/questions/71617327/shuffle-a-containers-dom-elements-b
 
 - [x] have tried removing entire shuffleCards and shuffleArray function, the result displays exactly the same as above.
 
-solution: hard refreshing the browser, the result is as below.  
+- [x] **solution: hard refreshing the browser, the result is as below.** 
 
 
-<img src="assets/media/issues/2023-08-14-16-20-04.png" width=500> 
+<img src="assets/media/issues/1.1.3b.gif" width=500>
 
+### 1.1.5 Need to complete Shuffle Algorithm with display: flex method
 
+[current result is same as image above]
 
+- [x] Implemented shuffleCards function as taught in code-sketch tutorial
 
+```js
+(function shuffleCards () { 
+  cards.forEach(card => {
+    let randomPosition = Math.floor(Math.random() * 16); // This variable generates a random number between 0 and 16.
+    card.style.order = randomPosition; // This changes the order of the cards to the random number generated above.
+  })
+})(); // This function is put in brackets to make it run as soon as the page loads.
+```
 
+Result: it's now shuffling correctly
 
+**Refresh 1:**
+[![](assets/media/issues/2023-08-15-13-14-21.png)](assets/media/issues/1.1.5.mp4)
 
+**Refresh 2:**
+
+[![](assets/media/issues/2023-08-15-13-23-37.png)](assets/media/issues/1.1.5b.mp4)
+
+That concludes the essential structure of the card game.
 
 
 
