@@ -144,22 +144,16 @@ main {
 .card-item-container {
   transform: scale(1);
   transform-style: preserve-3d;
-  transition: transform 0.5s ease-in-out; 
+  transition: transform 0.5s; 
 }
 
 .card-item-container:active {/*selects front and back of cards when clicked*/
-  transform: scale(.90);
-  transition: transform .2s;
-  }
-
-.card-item-container.flipped-over {
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
+transform: scale(.90);
+transition: transform .2s;
 }
 
-.card-item {/*selects front and back of cards*/
-transition: transform 0.5s ease-in-out; 
-transform: scale(1);
+.card-item-container.flipped-over {
+transform: rotateY(180deg);
 }
 
 .card-front {
@@ -191,6 +185,7 @@ body {
     overflow-x: hidden; /*responsive design to prevent horizontal scrolling*/
     max-width: 100%;
     height: 100vh;
+    display: flex;
   }
 
 * {
@@ -356,25 +351,27 @@ z-index: 3;
 /*---------------CARD DECK SKELETON---------------*/
 
 #card-deck {/*should be perfectly square without distortion*/
-  width: 100%;
+  width: 640px;
+  height: 640px;
   margin: auto;
-  max-height: 700px !important;
-  grid-gap: 1em;
-  padding: 0px 1em;
   display: flex;
   flex-wrap: wrap;
 }
 
 .card-item-container {
-  width: 21%;
-  display: block;
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
 }
 
 .card-item { /*this selects both the front and back, puts the cards one over the other*/
-  position: relative;
+  backface-visibility: hidden;
   width: 100%;
-  height: auto;
-  margin: auto;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+
 }
 
 
