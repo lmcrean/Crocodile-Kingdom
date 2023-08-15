@@ -135,6 +135,7 @@ button[type="submit"]:hover {
 main {
   transition: margin-top 0.45s ease-in-out;
   max-width: 100%;
+  margin: auto;
 }
 
 #card-deck {
@@ -356,6 +357,7 @@ z-index: 3;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
 }
 
 .card-item-container {
@@ -363,15 +365,14 @@ z-index: 3;
   height: calc(33.333% - 10px);
   margin: 5px;
   position: relative;
+  display: flex;
 }
 
 .card-item { /*this selects both the front and back, puts the cards one over the other*/
   backface-visibility: hidden;
   width: 100%;
   height: 100%;
-  padding: 20px;
   position: absolute;
-
 }
 
 

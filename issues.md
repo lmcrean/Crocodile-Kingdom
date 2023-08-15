@@ -17,17 +17,19 @@ This page documents the issues and bugs encountered during the development of th
   - [1.1. Card Deck Structure](#11-card-deck-structure)
     - [1.1.1. Double click too fast and the card won't flip](#111-double-click-too-fast-and-the-card-wont-flip)
     - [1.1.2. Click on a different card inbetween the 2 second interval, and it doesn't flip the cards back properly](#112-click-on-a-different-card-inbetween-the-2-second-interval-and-it-doesnt-flip-the-cards-back-properly)
-    - [1.1.3. The shuffle algorithim doesn't appear to be working](#113-the-shuffle-algorithim-doesnt-appear-to-be-working)
+    - [1.1.3. The shuffle algorithim doesn't appear to be working with ```Display: Grid``` (issue closed)](#113-the-shuffle-algorithim-doesnt-appear-to-be-working-with-display-grid-issue-closed)
     - [1.1.4. Using brackets to start the shuffle function seems to stop the cards from flipping](#114-using-brackets-to-start-the-shuffle-function-seems-to-stop-the-cards-from-flipping)
 - [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
   - [2.1 Card Deck Skeleton](#21-card-deck-skeleton)
-    - [2.1.1 Responsive grid is falling off the horizontal viewport](#211-responsive-grid-is-falling-off-the-horizontal-viewport)
+    - [2.1.1 Responsive grid is falling off the horizontal viewport ✔️](#211-responsive-grid-is-falling-off-the-horizontal-viewport-️)
     - [2.1.2. Responsive grid is falling off the vertical viewport](#212-responsive-grid-is-falling-off-the-vertical-viewport)
     - [2.1.3. back of card doesn't fully cover card face underneath](#213-back-of-card-doesnt-fully-cover-card-face-underneath)
-- [3.3.  Surface Issues](#33--surface-issues)
+    - [2.1.4. with new "display: flex" method, card-face moves to side in flipped state](#214-with-new-display-flex-method-card-face-moves-to-side-in-flipped-state)
 - [4. Unfixed Bugs](#4-unfixed-bugs)
 
 # 1. Javascript Structure Issues
+
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Devtools](https://img.shields.io/badge/Devtools-3d89fc?style=for-the-badge&logo=google%20chrome&logoColor=white&color=black)
 
 ## 1.1. Card Deck Structure
 <i>"I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging."</i>
@@ -110,7 +112,7 @@ Result:
 
 <img src="assets/media/issues/1.1.2.gif" width=500>
 
-### 1.1.3. The shuffle algorithim doesn't appear to be working
+### 1.1.3. The shuffle algorithim doesn't appear to be working with ```Display: Grid``` (issue closed)
 
 <img src="assets/media/issues/1.1.3b.gif" width=500>
 
@@ -255,6 +257,11 @@ https://stackoverflow.com/questions/71617327/shuffle-a-containers-dom-elements-b
 
 - [ ] CodePen, shuffle grid items, https://codepen.io/GreenSock/pen/KKNJYZM
 
+- [x] researched other memory games with CSS grid, but upon they seemed to have more bugs and missing shuffle functions: https://codepen.io/virmasalo/pen/XRmyYE
+- [x] researched this more advanced memory game https://www.khanacademy.org/computer-programming/memory-card-game/5648647542833152
+
+**Result: This was an unsolved issue that began to introduce too much new material at the same time. The developer closed this issue by reverting to ```display: flex``` and thereby offering the opportunity to study a functioning example with [code-sketch](https://marina-ferreira.github.io/projects/js/memory-game/)**
+
 ### 1.1.4. Using brackets to start the shuffle function seems to stop the cards from flipping
 
 
@@ -269,12 +276,36 @@ solution: hard refreshing the browser, the result is as below.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!------------------------------------------------>
+
 # 2. CSS Skeleton Issues and Bugs
-Responsive design.
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Devtools](https://img.shields.io/badge/Devtools-3d89fc?style=for-the-badge&logo=google%20chrome&logoColor=white&color=black)
+
 
 ## 2.1 Card Deck Skeleton
 
-### 2.1.1 Responsive grid is falling off the horizontal viewport 
+### 2.1.1 Responsive grid is falling off the horizontal viewport ✔️
 <img src="assets/media/issues/image.png" width=500>
 
 <img src="assets/media/issues/2023-08-12-15-40-14.png" width=500>
@@ -306,15 +337,36 @@ have tried ```max-height: 100vh``` and ```max-height: 100%``` but neither work.
 
 <img src="assets/media/issues/2023-08-12-22-23-28.png" width=500>
 
+### 2.1.4. with new "display: flex" method, card-face moves to side in flipped state
 
+<img src="assets/media/issues/2.1.4.gif" width=500>
 
+- [x] devtools inspection
+  - [x] inspect backface-visibility
+  - [x] inspect which items disappear in flipped state
 
 
+![](assets/media/issues/2023-08-15-12-35-40.png)
+it appears that the a2 container is pushed slightly to the right. Let's inspect the elements.
 
+- [x] removed padding from .card-item, looks a bit healthier
 
+- [x] **Solution: add `display: flex` to card-item-container**
+```css
+.card-item-container {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  display: flex;
+}
+```
 
+Result: functions same as ```display: grid``` version now
 
+<img src="assets/media/issues/1.1.3b.gif" width=500>
 
+now to solve the shuffle issue.
 
 
 
@@ -345,84 +397,12 @@ have tried ```max-height: 100vh``` and ```max-height: 100%``` but neither work.
 
 
 
-# 3.3.  Surface Issues
-Surface issues were rarely bugs, but more so design challenges that needed to be fixed.
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Turn count  issues and bugs <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<i>"I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
-
-# Restart button issues and bugs <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<i>"I need a new arrangement of cards each time I play the game to keep it interesting."</i>
-
-# You've Won feature issues and bugs <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<i>"I need to receive praise for completing the game."</i>
-
-# How To Play feature issues and bugs <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<i>"I need to understand how to play the game."</i>
-
-# Navbar issues and bugs <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<i>"I need the tone of the design to appear warm, entertaining and encouraging."</i>
-
-# Footer issues and bugs <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<i>"I want to be able to contact the business if I have any questions, and share the game easily with my friends."</i>
 
 # 4. Unfixed Bugs
 
