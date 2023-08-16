@@ -52,8 +52,7 @@ In the issues I have logged written, video or screenshot accounts.
 - [2. Manual Testing](#2-manual-testing)
   - [2.1. Javascript Testing](#21-javascript-testing)
   - [2.2. Hyperlink Testing](#22-hyperlink-testing)
-  - [2.3. Responsivity Testing](#23-responsivity-testing)
-  - [2.4. BrowserStack Testing](#24-browserstack-testing)
+  - [2.3. BrowserStack Testing](#23-browserstack-testing)
 - [3. Testing](#3-testing)
 - [4. Automatic Testing](#4-automatic-testing)
 - [5. Validator Testing](#5-validator-testing)
@@ -428,6 +427,7 @@ Are all the cards flipped? (no), go back to user clicks on first image.
 Are all the cards flipped? (yes), go to you've won feature.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
 #### Turn count structure <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
@@ -545,8 +545,40 @@ Important HTML Class selectors were used to shorten the CSS code, such as
 - ```modal-container```
 
 ### 1.4.4 Responsivity Tests
+Responsivity tests were made with devtools to ensure that the features would adapt to all mainstream device sizes.
 
-> [Go to ## 2.3. Responsivity Testing for more details](##-2.3.-Responsivity-Testing)
+Cards responsivity as low as 200px then capped width at 800px.
+
+<img alt="placeholder" src="assets/media/responsivity-tests/cards.gif" width="300px">
+
+
+```css
+#card-deck {
+  width: 800px;
+  height: 800px;
+  margin: auto;
+}
+
+.card-item-container {
+  width: calc(25% - 10px);
+  height: calc(25% - 10px);
+  margin: 5px;
+}
+
+.card-item { /*this selects both the front and back, puts the cards one over the other*/
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+}
+```
+
+***
+
+How to play
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
+
+Well done
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -647,21 +679,7 @@ xxxxxxxxxxxxxxxxxxx
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-
-## 2.3. Responsivity Testing
-Cards responsivity as low as 200px then capped width at 800px.
-<img alt="placeholder" src="assets/media/responsivity-tests/cards.gif" width="300px">
-
-How to play
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
-
-Well done
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
-
-[↑ Back to top](#Portfolio-Project-2-with-Javascript)
-
-
-## 2.4. BrowserStack Testing
+## 2.3. BrowserStack Testing
 xxxxxxxxxxxxxxxxxxxxxxxxxx
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
 
@@ -706,7 +724,7 @@ To further improve the lighthouse score I could use more WebP images and reduce 
 
 
 # 6. Deployment
-The site was deployed to GitHub pages. You can access the live link [XXXXXXXXXXXXXXXXXX](https://lmcrean.github.io/XXXXXXXXXXXXXXXXXXX).
+The site was deployed to GitHub pages. You can access the live link here: [https://lmcrean.github.io/Crocodile-Kingdom](https://lmcrean.github.io/Crocodile-Kingdom).
 
 To deploy on Github pages, the following steps were taken:
 

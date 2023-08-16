@@ -260,18 +260,13 @@ p {
 /*---------------SKELETON PLANE BY FEATURE---------------*/
 /*The selectors are grouped according to feature. Elements of each feature are then grouped with media queries, starting mobile first.*/
 
-/*---------------NAVBAR FEATURE SKELETON---------------
+/*---------------HEADER FEATURE SKELETON---------------
   Elements = navbartitle, hamburger icon*/
 
-nav {
-  position: fixed;
-  width:100%;
-  height: 57px;
-  z-index: 3;
-}
-
-img.navbarlogo {
-  margin: auto;
+.headerlogo {
+  margin: 1.5em auto auto auto;
+  padding: 0em 0em 0em 0em;
+  max-width: 385px;
 }
 
 /*---------------FOOTER FEATURE SKELETON---------------
@@ -358,7 +353,7 @@ z-index: 3;
 
 /*---------------CARD DECK SKELETON---------------*/
 
-#card-deck {/*should be perfectly square without distortion*/
+#card-deck {
   width: 800px;
   height: 800px;
   margin: auto;
