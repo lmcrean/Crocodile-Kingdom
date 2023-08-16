@@ -26,11 +26,12 @@
 
 // ----------------- JAVASCRIPT CODE -----------------
 
-// ----------------- CARD DECK -----------------
-// ----------------- START: Define the variables ----------------- 
+// ----------------- DEFINE THE VARIABLES ----------------- 
 // Define the variables
 
 const cards = document.querySelectorAll(".card-item-container"); // This variable selects the card-item-container class from the HTML
+
+const attemptsContainer = document.querySelector(".attempts"); // This variable selects the attempts class from the HTML, which is used to display the number of attempts the user has taken. It has started at 0.
 
 let hasFlippedCard = false; // This variable is set to false because the card has not been clicked yet.
 
@@ -38,6 +39,9 @@ let firstCard, secondCard; // These variables are set to undefined because the c
 
 let lockCards = false; // This variable is set to false because the card has not been clicked yet. This variable is used to prevent the user from checking more than 2 cards at a time.
 
+let attemptsCount = 0;  // attempts starts at 0
+
+// ----------------- CARD DECK -----------------
 // ----------------- Computer Spawns cards, rearrange at random -----------------
 
 (function shuffleCards () { 
@@ -84,7 +88,11 @@ function disableCards(){
 firstCard.removeEventListener("click", cardAppear);
 secondCard.removeEventListener("click", cardAppear);
 // .removeEventListener removes the event listener from the two selected cards so that they can't be clicked again.})
+
 resetCards (); // unlocks the board so that the user can click on new cards again.
+
+plusOneAttempts(); // adds 1 to the attempts counter
+
 }
 
 // ----------------- ???Do the cards match??? (no) -----------------
@@ -98,8 +106,10 @@ setTimeout(() => {
   firstCard.classList.remove("flipped-over");
   secondCard.classList.remove("flipped-over"); // removes the HTML class of "flipped-over" on the card that it is clicked on. This flips the card back over.
   resetCards (); // unlocks the cards so that the user can click on them again.
-  }, 
+  },
   2000); // This sets a timer of 2 seconds before the cards flip back over.
+
+  plusOneAttempts(); // adds 1 to the attempts counter
 }
 
 function resetCards() {// This function resets the variables to their original values.
@@ -107,15 +117,16 @@ function resetCards() {// This function resets the variables to their original v
   [firstCard, secondCard] = [null, null];
 }
 
-// TURN COUNTER
-    // turns starts at 0
-    let turns = 0;
+//----------------- +1 to turns -----------------
 
-    // +1 to turns
-    function turnCounter() {
-      turns++; // This adds 1 to the turns variable.
-      document.getElementById("turns").innerHTML = turns; // This displays the turns variable in the HTML.
-    }
+//attempts counter
+attemptsCount = 0;
+attemptsContainer.innerHtml = 0;
+ 
+function plusOneAttempts() {
+  attemptsCount++;
+  attemptsContainer.innerHTML = attemptsCount;
+}
 
 
 // ----------------- Restart button Event listener -----------------

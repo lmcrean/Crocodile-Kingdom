@@ -20,6 +20,7 @@ This page documents the issues and bugs encountered during the development of th
     - [1.1.3. The shuffle algorithim doesn't appear to be working with ```Display: Grid``` (issue closed)](#113-the-shuffle-algorithim-doesnt-appear-to-be-working-with-display-grid-issue-closed)
     - [1.1.4. Using brackets to start the shuffle function seems to stop the cards from flipping](#114-using-brackets-to-start-the-shuffle-function-seems-to-stop-the-cards-from-flipping)
     - [1.1.5 Need to complete Shuffle Algorithm with display: flex method](#115-need-to-complete-shuffle-algorithm-with-display-flex-method)
+  - [1.2 Turn Counter is not working](#12-turn-counter-is-not-working)
 - [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
   - [2.1 Card Deck Skeleton](#21-card-deck-skeleton)
     - [2.1.1 Responsive grid is falling off the horizontal viewport ✔️](#211-responsive-grid-is-falling-off-the-horizontal-viewport-️)
@@ -301,6 +302,74 @@ https://stackoverflow.com/questions/71617327/shuffle-a-containers-dom-elements-b
 
 That concludes the essential structure of the card game.
 
+## 1.2 Turn Counter is not working
+
+<img src ="assets/media/issues/1.2.gif" width=500>
+
+- turn counter does not update
+- additional bug where the board seems to lock up after 2 clicks? seems ok on 2nd tests.
+
+HTML:
+```html
+  <header>
+    <a href="index.html"><img src="assets/media/logo.svg" class="headerlogo" alt="Company Logo"></a>
+  </header>
+```
+
+JS:
+Establishing the variables:
+```js
+const attemptsContainer = document.querySelector(".attempts"); // This variable selects the attempts class from the HTML, which is used to display the number of attempts the user has taken. It has started at 0.
+```
+
+```js
+let attemptsCount = 0;  // attempts starts at 0
+```
+
+establishing the function:
+```js
+ //attempts counter
+attemptsCount = 0;
+attemptsContainer.innerHtml = 0;
+ 
+function plusOneAttempts() {
+  attemptsCount++;
+  attemptsContainer.innerHTML = attemptsCount;
+  }
+```
+
+add plusOneAttempts the functions:
+```js
+function disableCards(){
+firstCard.removeEventListener("click", cardAppear);
+secondCard.removeEventListener("click", cardAppear);
+// .removeEventListener removes the event listener from the two selected cards so that they can't be clicked again.})
+
+resetCards (); // unlocks the board so that the user can click on new cards again.
+
+plusOneAttempts(); // adds 1 to the attempts counter
+
+}
+```
+
+```js
+function flipBackCards() {
+  lockCards = true; // This statement is set to true so that the user can't click on more than 2 cards at a time.
+
+setTimeout(() => {
+  firstCard.classList.remove("flipped-over");
+  secondCard.classList.remove("flipped-over"); // removes the HTML class of "flipped-over" on the card that it is clicked on. This flips the card back over.
+  resetCards (); // unlocks the cards so that the user can click on them again.
+  },
+  2000); // This sets a timer of 2 seconds before the cards flip back over.
+
+  plusOneAttempts(); // adds 1 to the attempts counter
+}
+```
+
+Resources consulted:
+- https://codepen.io/WebDevSimplified/pen/EdEjyx
+- https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js
 
 
 

@@ -184,6 +184,7 @@ The following resources and repositories were researched.
 - [Memory Game](https://github.com/flowforfrank/memory-game) by flowforfrank, with [tutorial article](https://webtips.dev/memory-game-in-javascript)
 - [30 minute walkthrough tutorial](https://www.youtube.com/watch?v=bznJPt4t_4s) by dcode
 - [Article](https://www.codewithfaraz.com/content/112/creating-flip-card-memory-game-with-html-css-and-javascript) by codewithfiraz.com explaining the role of each CSS class and JS function
+- https://codepen.io/WebDevSimplified/pen/EdEjyx had a use of flip counter and a fun couuntdown timer
 
 It was crucial for this project to choose a memory game that was achievable in the time frame, and that had a lot of resources available.
 
@@ -346,7 +347,7 @@ There were a few omissions from the project.
 
 This Structure plane summarises the structure of each feature by highlighting most essential HTML, CSS and JS functions for the feature to work. The developer also used this as a workflow for drafting in the features.
 
-#### Card Deck structure <!-- omit in toc -->
+### 1.3.1 Card Deck structure <!-- omit in toc -->
 <a src="assets/media/issues/1.1.5.mp4"><img src="assets/media/issues/2023-08-15-13-14-21.png" width=400></a>
 
 <i>"I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging."</i>
@@ -434,12 +435,75 @@ this.classList.toggle("flipped-over"); // .toggle adds/removes the class of "fli
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-#### Turn count structure <!-- omit in toc -->
+### 1.3.2 Turn count structure <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
 
-#### Restart button structure <!-- omit in toc -->
+HTML:
+```html
+  <header>
+    <a href="index.html"><img src="assets/media/logo.svg" class="headerlogo" alt="Company Logo"></a>
+  </header>
+```
+
+JS:
+Establishing the variables:
+```js
+const attemptsContainer = document.querySelector(".attempts"); // This variable selects the attempts class from the HTML, which is used to display the number of attempts the user has taken. It has started at 0.
+```
+
+```js
+let attemptsCount = 0;  // attempts starts at 0
+```
+
+establishing the function:
+```js
+ //attempts counter
+attemptsCount = 0;
+attemptsContainer.innerHtml = 0;
+ 
+function plusOneAttempts() {
+  attemptsCount++;
+  attemptsContainer.innerHTML = attemptsCount;
+  }
+```
+
+add plusOneAttempts the functions:
+```js
+function disableCards(){
+firstCard.removeEventListener("click", cardAppear);
+secondCard.removeEventListener("click", cardAppear);
+// .removeEventListener removes the event listener from the two selected cards so that they can't be clicked again.})
+
+resetCards (); // unlocks the board so that the user can click on new cards again.
+
+plusOneAttempts(); // adds 1 to the attempts counter
+
+}
+```
+
+```js
+function flipBackCards() {
+  lockCards = true; // This statement is set to true so that the user can't click on more than 2 cards at a time.
+
+setTimeout(() => {
+  firstCard.classList.remove("flipped-over");
+  secondCard.classList.remove("flipped-over"); // removes the HTML class of "flipped-over" on the card that it is clicked on. This flips the card back over.
+  resetCards (); // unlocks the cards so that the user can click on them again.
+  },
+  2000); // This sets a timer of 2 seconds before the cards flip back over.
+
+  plusOneAttempts(); // adds 1 to the attempts counter
+}
+```
+
+Resources consulted:
+- https://codepen.io/WebDevSimplified/pen/EdEjyx
+- https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js
+
+
+### Restart button structure <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need a new arrangement of cards each time I play the game to keep it interesting."</i>
