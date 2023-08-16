@@ -108,7 +108,12 @@ h5 {font-size: 0.7rem;/*reduce font size*/}
 
 /*---------------SURFACE PLANE - SHADOWS, ROUNDED CORNERS---------------*/
 
-/*.shadow is used to create a shadow effect on the card deck*/
+/*.shadow is used to create a shadow effect on the card deck with bootstrap*/
+
+.rounded-corner {
+  border-radius: 0.8em;
+}
+
 /*.rounded is used to create rounded corners on the card deck and button*/
 
 /*---------------SURFACE PLANE - HOVER INTERACTIONS---------------*/
@@ -187,6 +192,7 @@ body {
     max-width: 100%;
     height: 100vh;
     display: flex;
+    margin: auto;
   }
 
 * {
@@ -277,6 +283,7 @@ img.navbarlogo {
 
 .body-content-wrap-for-fixed-footer {
   padding-bottom: 25rem;    /* Footer height */
+  margin: auto;
 }
 
 footer {
@@ -352,8 +359,8 @@ z-index: 3;
 /*---------------CARD DECK SKELETON---------------*/
 
 #card-deck {/*should be perfectly square without distortion*/
-  width: 640px;
-  height: 640px;
+  width: 800px;
+  height: 800px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -362,7 +369,7 @@ z-index: 3;
 
 .card-item-container {
   width: calc(25% - 10px);
-  height: calc(33.333% - 10px);
+  height: calc(25% - 10px);
   margin: 5px;
   position: relative;
   display: flex;

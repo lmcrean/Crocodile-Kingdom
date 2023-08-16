@@ -8,11 +8,11 @@
 
 <br>
 
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
+<a src="assets/media/issues/1.1.5.mp4"><img alt="placeholder" src="assets/media/issues/2023-08-15-13-14-21.png" width="300px" ></a>
 
 <br>
 
-**Crocodile Kingdom is an animal-themed version of the classic children's memory game**, where the user has to try and match pairs of cards together without a failed attempt in between. The user wins the game when all the cards are flipped.
+Crocodile Kingdom is an **animal-themed version of the classic children's memory game**, where the user has to try and match pairs of cards together while never turning more than two cards at once. The game challenges the user's memory skills. *The user wins the game when all the cards are flipped.*
 
 
 </div>
@@ -40,6 +40,7 @@ In the issues I have logged written, video or screenshot accounts.
     - [1.4.1. Coding in the skeleton](#141-coding-in-the-skeleton)
     - [1.4.2. Sizing skeleton](#142-sizing-skeleton)
     - [1.4.3. HTML classes skeleton](#143-html-classes-skeleton)
+    - [1.4.4 Responsivity Tests](#144-responsivity-tests)
   - [1.5. Surface Plane](#15-surface-plane)
     - [1.5.1. Typefaces Surface](#151-typefaces-surface)
     - [1.5.2. Color surface](#152-color-surface)
@@ -124,7 +125,12 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 # 1. UX Development Planes
 
-The 5 UX development planes are for the purpose of explaining the process of building the website.
+The 5 UX development planes were used as an efficient framework for documenting the project.
+ - The Strategy plane xxxxxxxxxxxxxxxxx
+ - The Scope plane xxxxxxxxxxxx
+ - The Structure plane xxxxxxxxxxxxxx
+ - The Skeleton plane xxxxxxxxxxxxxxx
+ - The Surface plane xxxxxxxxxxxxxxxxx
 
 ## 1.1. Strategy Plane
 
@@ -538,12 +544,18 @@ Important HTML Class selectors were used to shorten the CSS code, such as
 - ```color-background```
 - ```modal-container```
 
+### 1.4.4 Responsivity Tests
+
+> [Go to ## 2.3. Responsivity Testing for more details](##-2.3.-Responsivity-Testing)
+
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 ## 1.5. Surface Plane
 This surface plane describes the choice of typefaces, colors and style themes relevant to the project's desired tone and practical needs.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+
 
 ### 1.5.1. Typefaces Surface
 
@@ -582,11 +594,16 @@ The color theme was chosen to be consistent with the logo with the aim of creati
 |<img alt="placeholder" src="assets/media/card-deck/A.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/B.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/C.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/D.svg" width="100px">|
 |----|----|----|----|
 |<img alt="placeholder" src="assets/media/card-deck/D.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/E.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/F.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/G.svg" width="100px">|
+
 The card deck used an animal theme, as a way to be appealing for children.
 
 <img alt="placeholder" src="assets/media/card-deck/back.svg" width="100px">
 
 The back of the card included a box with question marks, with diagonal lines to indicate excitement.
+
+<img alt="card surface" src="assets/media/issues/2023-08-16-12-02-16.png" width=400>
+
+drop-shadow and rouunded corners were added to the cards to make them appear more 3D.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -632,8 +649,8 @@ xxxxxxxxxxxxxxxxxxx
 
 
 ## 2.3. Responsivity Testing
-Main game
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
+Cards responsivity as low as 200px then capped width at 800px.
+<img alt="placeholder" src="assets/media/responsivity-tests/cards.gif" width="300px">
 
 How to play
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">

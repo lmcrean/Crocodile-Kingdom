@@ -277,7 +277,7 @@ https://stackoverflow.com/questions/71617327/shuffle-a-containers-dom-elements-b
 
 ### 1.1.5 Need to complete Shuffle Algorithm with display: flex method
 
-[current result is same as image above]
+[current result is same as video above]
 
 - [x] Implemented shuffleCards function as taught in code-sketch tutorial
 
@@ -290,12 +290,12 @@ https://stackoverflow.com/questions/71617327/shuffle-a-containers-dom-elements-b
 })(); // This function is put in brackets to make it run as soon as the page loads.
 ```
 
-Result: it's now shuffling correctly
+- [x] **Result: it's now shuffling correctly**
 
-**Refresh 1:**
+**Video 1 with cards shuffled correctly:**
 [![](assets/media/issues/2023-08-15-13-14-21.png)](assets/media/issues/1.1.5.mp4)
 
-**Refresh 2:**
+**Video 2 presents fresh shuffle:**
 
 [![](assets/media/issues/2023-08-15-13-23-37.png)](assets/media/issues/1.1.5b.mp4)
 
