@@ -31,7 +31,7 @@
 
 const cards = document.querySelectorAll(".card-item-container"); // This variable selects the card-item-container class from the HTML
 
-const attemptsContainer = document.querySelector(".attempts"); // This variable selects the attempts class from the HTML, which is used to display the number of attempts the user has taken. It has started at 0.
+const attemptsContainer = document.getElementById("attempts"); // This variable selects the attempts class from the HTML, which is used to display the number of attempts the user has taken. It has started at 0.
 
 let hasFlippedCard = false; // This variable is set to false because the card has not been clicked yet.
 
@@ -121,11 +121,10 @@ function resetCards() {// This function resets the variables to their original v
 
 //attempts counter
 attemptsCount = 0;
-attemptsContainer.innerHtml = 0;
  
 function plusOneAttempts() {
-  attemptsCount++;
-  attemptsContainer.innerHTML = attemptsCount;
+  let oldAttempt = parseInt(attemptsContainer.innerText);
+  attemptsContainer.innerText = ++oldAttempt;
 }
 
 
