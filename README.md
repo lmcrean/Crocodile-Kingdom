@@ -347,7 +347,7 @@ There were a few omissions from the project.
 This Structure plane summarises the structure of each feature by highlighting most essential HTML, CSS and JS functions for the feature to work. The developer also used this as a workflow for drafting in the features.
 
 #### Card Deck structure <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+<a src="assets/media/issues/1.1.5.mp4"><img src="assets/media/issues/2023-08-15-13-14-21.png" width=400></a>
 
 <i>"I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
@@ -358,7 +358,8 @@ The flowchart below illustrates the logic of the card deck.
 
 START computer spawn cards, turns starts at 0:
 
-![image](https://github.com/lmcrean/Crocodile-Kingdom/assets/133490867/7a1a18e2-5314-4999-9704-49ffdfaf854f)
+<img src="https://github.com/lmcrean/Crocodile-Kingdom/assets/133490867/7a1a18e2-5314-4999-9704-49ffdfaf854f" width=400>
+
 ```CSS grid``` was used here.
 
 **User clicks on first image, card appears:**
@@ -411,20 +412,25 @@ this.classList.toggle("flipped-over"); // .toggle adds/removes the class of "fli
 }
 ```
 
-User clicks on second image, card appears, +1 to turns:
-- [ ] ```classList.add``` to add the ```open``` and ```show``` classes to the cards
-- [ ] to add 1 to the turn count, use ```turnCount++```
+- User clicks on second image, card appears, +1 to turns:
 
-Do the cards match? (no), clicked images flipped back after 2 seconds:
-- [ ] ```classList.remove``` to remove the ```open``` and ```show``` classes to the cards
 
-Do the cards match? (yes), clicked images stay flipped:
-- [ ] ```classList.add``` to add the ```match``` class to the cards
+- Do the cards match? (no), clicked images flipped back after 2 seconds:
 
-Are all the cards flipped? (no), go back to user clicks on first image.
-- [ ] ```classList.remove``` to remove the ```open``` and ```show``` classes to the cards
 
-Are all the cards flipped? (yes), go to you've won feature.
+- Do the cards match? (yes), clicked images stay flipped:
+
+
+- Are all the cards flipped? (no), go back to user clicks on first image.
+
+
+- Are all the cards flipped? (yes), go to you've won feature.
+
+**Video 1 with cards shuffled correctly:**
+<a src="assets/media/issues/1.1.5.mp4"><img src="assets/media/issues/2023-08-15-13-14-21.png" width=400></a>
+
+**Video 2 presents fresh shuffle:**
+<a src="assets/media/issues/1.1.5b.mp4"><img src="assets/media/issues/2023-08-15-13-23-37.png" width=400></a>
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
