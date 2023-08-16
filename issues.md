@@ -311,9 +311,9 @@ That concludes the essential structure of the card game.
 
 HTML:
 ```html
-  <header>
-    <a href="index.html"><img src="assets/media/logo.svg" class="headerlogo" alt="Company Logo"></a>
-  </header>
+<section id="score-count">
+  <h2 class="attempts-count">Turns: <span id="attempts">0</span></h2>
+</section>
 ```
 
 JS:
@@ -371,9 +371,67 @@ Resources consulted:
 - https://codepen.io/WebDevSimplified/pen/EdEjyx
 - https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js
 
+**Solution use getElementById instead of querySelector:**
 
+HTML:
+```html
+<section id="score-count">
+  <h2 class="attempts-count">Turns: <span id="attempts">0</span></h2>
+</section>
+```
 
+JS:
+Establishing the variables **with getElementById**:
+```js
+const attemptsContainer = document.getElementById("attempts"); // This variable selects the attempts class from the HTML, which is used to display the number of attempts the user has taken. It has started at 0.
+```
 
+```js
+let attemptsCount = 0;  // attempts starts at 0
+```
+
+establishing the function:
+```js
+ //attempts counter
+attemptsCount = 0;
+ 
+function plusOneAttempts() {
+  let oldAttempt = parseInt(attemptsContainer.innerText);
+  attemptsContainer.innerText = ++oldAttempt;
+}
+```
+
+add ```plusOneAttempts ();``` inside the end of ```disableCards()``` and ```flipBackCards()``` :
+```js
+function disableCards(){
+firstCard.removeEventListener("click", cardAppear);
+secondCard.removeEventListener("click", cardAppear);
+// .removeEventListener removes the event listener from the two selected cards so that they can't be clicked again.})
+
+resetCards (); // unlocks the board so that the user can click on new cards again.
+
+plusOneAttempts(); // adds 1 to the attempts counter
+
+}
+```
+
+```js
+function flipBackCards() {
+  lockCards = true; // This statement is set to true so that the user can't click on more than 2 cards at a time.
+
+setTimeout(() => {
+  firstCard.classList.remove("flipped-over");
+  secondCard.classList.remove("flipped-over"); // removes the HTML class of "flipped-over" on the card that it is clicked on. This flips the card back over.
+  resetCards (); // unlocks the cards so that the user can click on them again.
+  },
+  2000); // This sets a timer of 2 seconds before the cards flip back over.
+
+  plusOneAttempts(); // adds 1 to the attempts counter
+}
+```
+
+result turn counter updates:
+<img src="assets/media/issues/1.2b.gif" width=500>
 
 
 

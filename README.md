@@ -436,21 +436,22 @@ this.classList.toggle("flipped-over"); // .toggle adds/removes the class of "fli
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 ### 1.3.2 Turn count structure <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+<img src="assets/media/issues/1.2b.gif" width=500>
 
 <i>"I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
 
 HTML:
 ```html
-  <header>
-    <a href="index.html"><img src="assets/media/logo.svg" class="headerlogo" alt="Company Logo"></a>
-  </header>
+<section id="score-count">
+  <h2 class="attempts-count">Turns: <span id="attempts">0</span></h2>
+</section>
 ```
 
 JS:
-Establishing the variables:
+Establishing the variables **with getElementById**:
+
 ```js
-const attemptsContainer = document.querySelector(".attempts"); // This variable selects the attempts class from the HTML, which is used to display the number of attempts the user has taken. It has started at 0.
+const attemptsContainer = document.getElementById("attempts"); // This variable selects the attempts class from the HTML, which is used to display the number of attempts the user has taken. It has started at 0.
 ```
 
 ```js
@@ -458,18 +459,19 @@ let attemptsCount = 0;  // attempts starts at 0
 ```
 
 establishing the function:
+
 ```js
  //attempts counter
 attemptsCount = 0;
-attemptsContainer.innerHtml = 0;
  
 function plusOneAttempts() {
-  attemptsCount++;
-  attemptsContainer.innerHTML = attemptsCount;
-  }
+  let oldAttempt = parseInt(attemptsContainer.innerText);
+  attemptsContainer.innerText = ++oldAttempt;
+}
 ```
 
-add plusOneAttempts the functions:
+add ```plusOneAttempts ();``` inside the end of ```disableCards()``` and ```flipBackCards()``` :
+
 ```js
 function disableCards(){
 firstCard.removeEventListener("click", cardAppear);
@@ -498,9 +500,7 @@ setTimeout(() => {
 }
 ```
 
-Resources consulted:
-- https://codepen.io/WebDevSimplified/pen/EdEjyx
-- https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js
+
 
 
 ### Restart button structure <!-- omit in toc -->
