@@ -36,11 +36,20 @@ In the issues I have logged written, video or screenshot accounts.
   - [1.2. Scope plane](#12-scope-plane)
     - [1.2.1. Mininum Viable product](#121-mininum-viable-product)
   - [1.3. Structure Plane](#13-structure-plane)
+    - [1.3.1. Card Deck structure](#131-card-deck-structure)
+    - [1.3.2. Turn count structure](#132-turn-count-structure)
+    - [1.3.3. Restart button structure](#133-restart-button-structure)
+    - [1.3.4. Well done feature structure](#134-well-done-feature-structure)
+    - [1.3.5. How To Play structure](#135-how-to-play-structure)
+    - [1.3.6. Navbar structure](#136-navbar-structure)
+    - [1.3.7. Footer structure](#137-footer-structure)
   - [1.4. Skeleton Plane](#14-skeleton-plane)
-    - [1.4.1. Coding in the skeleton](#141-coding-in-the-skeleton)
-    - [1.4.2. Sizing skeleton](#142-sizing-skeleton)
-    - [1.4.3. HTML classes skeleton](#143-html-classes-skeleton)
-    - [1.4.4 Responsivity Tests](#144-responsivity-tests)
+    - [1.4.1. Main Page Skeleton:](#141-main-page-skeleton)
+    - [1.4.2. How to play Skeleton:](#142-how-to-play-skeleton)
+    - [1.4.3. Well done Skeleton:](#143-well-done-skeleton)
+    - [1.4.4. Sizing skeleton](#144-sizing-skeleton)
+    - [1.4.5. HTML classes skeleton](#145-html-classes-skeleton)
+    - [1.4.6. Responsivity Tests](#146-responsivity-tests)
   - [1.5. Surface Plane](#15-surface-plane)
     - [1.5.1. Typefaces Surface](#151-typefaces-surface)
     - [1.5.2. Color surface](#152-color-surface)
@@ -62,7 +71,7 @@ In the issues I have logged written, video or screenshot accounts.
 - [8. Credits \& Acknowledgements](#8-credits--acknowledgements)
   - [8.1. Code snippets](#81-code-snippets)
   - [8.2. Technologies Used](#82-technologies-used)
-  - [8.3 Acknowledgements](#83-acknowledgements)
+  - [8.3. 8.3 Acknowledgements](#83-83-acknowledgements)
 
 ***
 
@@ -347,7 +356,7 @@ There were a few omissions from the project.
 
 This Structure plane summarises the structure of each feature by highlighting most essential HTML, CSS and JS functions for the feature to work. The developer also used this as a workflow for drafting in the features.
 
-### 1.3.1 Card Deck structure <!-- omit in toc -->
+### 1.3.1. Card Deck structure
 <a src="assets/media/issues/1.1.5.mp4"><img src="assets/media/issues/2023-08-15-13-14-21.png" width=400></a>
 
 <i>"I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging."</i>
@@ -367,8 +376,8 @@ START computer spawn cards, turns starts at 0:
 <img alt="placeholder" src="assets/media/documentation/card-flip.gif" width="400px">
 
 CSS:
-```css
 
+```css
 #card-deck{ 
   perspective: 1000px; /*this is used to create the 3D effect on the card deck*/
 }
@@ -398,6 +407,7 @@ transform: scale(1);
 transform: rotateY(180deg);
 }
 ```
+
 JS Code:
 ```js
 // ----------------- User Clicks on 1st card -----------------
@@ -435,7 +445,7 @@ this.classList.toggle("flipped-over"); // .toggle adds/removes the class of "fli
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 1.3.2 Turn count structure <!-- omit in toc -->
+### 1.3.2. Turn count structure
 <img src="assets/media/issues/1.2b.gif" width=500>
 
 <i>"I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
@@ -503,27 +513,27 @@ setTimeout(() => {
 
 
 
-### Restart button structure <!-- omit in toc -->
+### 1.3.3. Restart button structure
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need a new arrangement of cards each time I play the game to keep it interesting."</i>
 
-#### Well done feature structure <!-- omit in toc -->
+### 1.3.4. Well done feature structure 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need to receive praise for completing the game."</i>
 
-#### How To Play structure <!-- omit in toc -->
+### 1.3.5. How To Play structure 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need to understand how to play the game."</i>
 
-#### Navbar structure <!-- omit in toc -->
+### 1.3.6. Navbar structure 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
-#### Footer structure <!-- omit in toc -->
+### 1.3.7. Footer structure
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I want to be able to contact the business if I have any questions, and share the game easily with my friends."</i>
@@ -540,7 +550,7 @@ xxxxxxxxx
 
 <div align="center">
 
-**Main Page Skeleton:** <!-- omit in toc --> 
+### 1.4.1. Main Page Skeleton:
 
 </div>
 
@@ -560,7 +570,7 @@ xxxxxxxxx
 <br><br>
 <div align="center"> 
 
-**How to play Skeleton:**
+### 1.4.2. How to play Skeleton:
 
 <img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe-howtoplay.png" width="800px">
 
@@ -572,7 +582,7 @@ The How To Play feature was a simple modal pop-up that would show an animated gi
 
 <div align="center"> 
 
-**Well done Skeleton:**
+### 1.4.3. Well done Skeleton:
 
 <img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe-welldone.png" width="800px">
 
@@ -588,12 +598,8 @@ The Well Done feature was a simple modal pop-up that would show a Well done titl
 - Desktop design split the page into 2 columns, with the well done in the left column, and the remaining content in the right column.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
-### 1.4.1. Coding in the skeleton
 
-After the skeleton was designed, the code was drafted using HTML, CSS and Javacript. A set of placeholder images were used, which the developer designed on Canva.
-
-[↑ Back to top](#Portfolio-Project-2-with-Javascript)
-### 1.4.2. Sizing skeleton
+### 1.4.4. Sizing skeleton
 Regarding font-size, the ```clamp()``` function was mostly used to ensure the font size was responsive to the device size. This was used instead of media queries, as it was more efficient and easier to read, it allowed the media queries to be used more for positioning and to address bugs with the display.
 
 ```css
@@ -604,7 +610,7 @@ p, h3,h4,h5 { font-size: clamp(1rem, 0.9253rem + 0.4267vw, 1.4rem);}
 ```
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 1.4.3. HTML classes skeleton
+### 1.4.5. HTML classes skeleton
 Important HTML Class selectors were used to shorten the CSS code, such as
 - ```display-grid```
 - ```color-priority-1```
@@ -614,7 +620,7 @@ Important HTML Class selectors were used to shorten the CSS code, such as
 - ```color-background```
 - ```modal-container```
 
-### 1.4.4 Responsivity Tests
+### 1.4.6. Responsivity Tests
 Responsivity tests were made with devtools to ensure that the features would adapt to all mainstream device sizes.
 
 Cards responsivity as low as 200px then capped width at 800px.
@@ -858,7 +864,7 @@ Tools|How it was used|
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 
-## 8.3 Acknowledgements
+## 8.3. 8.3 Acknowledgements
 A special thank you to the wonderful tutors at Code Institute, who provided prompt support throughout the project.
 
 Special thank you to Seun Owonikoko, my mentor at Code Institute, for your time and patience taking me through devtools. 

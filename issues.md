@@ -20,7 +20,7 @@ This page documents the issues and bugs encountered during the development of th
     - [1.1.3. The shuffle algorithim doesn't appear to be working with ```Display: Grid``` (issue closed)](#113-the-shuffle-algorithim-doesnt-appear-to-be-working-with-display-grid-issue-closed)
     - [1.1.4. Using brackets to start the shuffle function seems to stop the cards from flipping](#114-using-brackets-to-start-the-shuffle-function-seems-to-stop-the-cards-from-flipping)
     - [1.1.5 Need to complete Shuffle Algorithm with display: flex method](#115-need-to-complete-shuffle-algorithm-with-display-flex-method)
-  - [1.2 Turn Counter is not working](#12-turn-counter-is-not-working)
+  - [1.2 Turn Counter is not updating](#12-turn-counter-is-not-updating)
 - [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
   - [2.1 Card Deck Skeleton](#21-card-deck-skeleton)
     - [2.1.1 Responsive grid is falling off the horizontal viewport ✔️](#211-responsive-grid-is-falling-off-the-horizontal-viewport-️)
@@ -302,12 +302,12 @@ https://stackoverflow.com/questions/71617327/shuffle-a-containers-dom-elements-b
 
 That concludes the essential structure of the card game.
 
-## 1.2 Turn Counter is not working
+## 1.2 Turn Counter is not updating
 
 <img src ="assets/media/issues/1.2.gif" width=500>
 
 - turn counter does not update
-- additional bug where the board seems to lock up after 2 clicks? seems ok on 2nd tests.
+
 
 HTML:
 ```html
@@ -370,6 +370,11 @@ setTimeout(() => {
 Resources consulted:
 - https://codepen.io/WebDevSimplified/pen/EdEjyx
 - https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game/blob/master/assets/js/script.js
+- Devtools console reveals this error message upon click
+
+![](assets/media/issues/2023-08-16-21-11-23.png)
+
+![](assets/media/issues/2023-08-16-21-11-48.png)
 
 **Solution use getElementById instead of querySelector:**
 
