@@ -100,8 +100,12 @@ resetCards (); // unlocks the board so that the user can click on new cards agai
 
 plusOneAttempts(); // adds 1 to the attempts counter
 
+// Check if all cards are matched
+if (document.querySelectorAll(".flipped-over").length === cards.length) {
+// All cards are matched, so show the well-done modal
+showWellDoneModal();
 }
-
+}
 // ----------------- ???Do the cards match??? (no) -----------------
 // ...then clicked images flip back after 2 seconds
 // ...then wait for "User Clicks on 1st card"
@@ -166,8 +170,15 @@ function restartGame() {
 // ...then close modal box
 
 // ----------------- Well done modal box -----------------
+//?has user flipped all cards over? (yes)
+// ...then run well done modal box function
+
+showWellDoneModal = () => {
+  const modal = document.getElementById("well-done-modal");
+  modal.style.display = "block";
+  console.log("showWellDoneModal");
+}
+
 //??? Has user pressed Play Again button???(yes)
 // ...then run restart button function
 // ...then close modal box
-
-
