@@ -26,68 +26,72 @@ In the issues I have logged written, video or screenshot accounts.
 
 ## Table of Contents <!-- omit in toc -->
 
-- [1. UX Development Planes](#1-ux-development-planes)
-  - [1.1. Strategy Plane](#11-strategy-plane)
-    - [1.1.1. Developer strategy](#111-developer-strategy)
-    - [1.1.2. Developer Research](#112-developer-research)
-    - [1.1.3. Product Research](#113-product-research)
-    - [1.1.4. Project Timeline](#114-project-timeline)
-    - [1.1.5. Business Strategy](#115-business-strategy)
-  - [1.2. Scope plane](#12-scope-plane)
-    - [1.2.1. Mininum Viable product](#121-mininum-viable-product)
-  - [1.3. Structure Plane](#13-structure-plane)
-    - [1.3.1. Card Deck structure](#131-card-deck-structure)
-    - [1.3.2. Turn count structure](#132-turn-count-structure)
-    - [1.3.3. Restart button structure](#133-restart-button-structure)
-    - [1.3.4. Well done feature structure](#134-well-done-feature-structure)
-    - [1.3.5. How To Play structure](#135-how-to-play-structure)
-    - [1.3.6. Navbar structure](#136-navbar-structure)
-    - [1.3.7. Footer structure](#137-footer-structure)
-  - [1.4. Skeleton Plane](#14-skeleton-plane)
-    - [1.4.1. Main Page Skeleton:](#141-main-page-skeleton)
-    - [1.4.2. How to play Skeleton:](#142-how-to-play-skeleton)
-    - [1.4.3. Well done Skeleton:](#143-well-done-skeleton)
-    - [1.4.4. Sizing skeleton](#144-sizing-skeleton)
-    - [1.4.5. HTML classes skeleton](#145-html-classes-skeleton)
-    - [1.4.6. Responsivity Tests](#146-responsivity-tests)
-  - [1.5. Surface Plane](#15-surface-plane)
-    - [1.5.1. Typefaces Surface](#151-typefaces-surface)
-    - [1.5.2. Color surface](#152-color-surface)
-    - [1.5.3. Card Deck Surface](#153-card-deck-surface)
-    - [1.5.4. Logo Surface](#154-logo-surface)
-    - [1.5.5. Background Surface](#155-background-surface)
-    - [1.5.6. Button Surface](#156-button-surface)
-    - [1.5.7. Modal Surface](#157-modal-surface)
-- [2. Manual Testing](#2-manual-testing)
-  - [2.1. Javascript Testing](#21-javascript-testing)
-  - [2.2. Hyperlink Testing](#22-hyperlink-testing)
-  - [2.3. BrowserStack Testing](#23-browserstack-testing)
-- [3. Testing](#3-testing)
-- [4. Automatic Testing](#4-automatic-testing)
-- [5. Validator Testing](#5-validator-testing)
-  - [5.1. Lighthouse Report](#51-lighthouse-report)
-- [6. Deployment](#6-deployment)
-- [7. Future features to implement](#7-future-features-to-implement)
-- [8. Credits \& Acknowledgements](#8-credits--acknowledgements)
-  - [8.1. Code snippets](#81-code-snippets)
-  - [8.2. Technologies Used](#82-technologies-used)
-  - [8.3. 8.3 Acknowledgements](#83-83-acknowledgements)
+- [1. Features](#1-features)
+  - [1.1. Card Deck](#11-card-deck)
+  - [1.2. Turn Count](#12-turn-count)
+  - [1.3. Restart Button](#13-restart-button)
+- [2. UX Development Planes](#2-ux-development-planes)
+  - [2.1. Strategy Plane](#21-strategy-plane)
+    - [2.1.1. Developer strategy](#211-developer-strategy)
+    - [2.1.2. Developer Research](#212-developer-research)
+    - [2.1.3. Product Research](#213-product-research)
+    - [2.1.4. Project Timeline](#214-project-timeline)
+    - [2.1.5. Business Strategy](#215-business-strategy)
+  - [2.2. Scope plane](#22-scope-plane)
+    - [2.2.1. Mininum Viable product](#221-mininum-viable-product)
+  - [2.3. Structure Plane](#23-structure-plane)
+    - [2.3.1. Card Deck structure](#231-card-deck-structure)
+    - [2.3.2. Turn count structure](#232-turn-count-structure)
+    - [2.3.3. Restart button structure](#233-restart-button-structure)
+    - [2.3.4. Well done feature structure](#234-well-done-feature-structure)
+    - [2.3.5. How To Play structure](#235-how-to-play-structure)
+    - [2.3.6. Navbar structure](#236-navbar-structure)
+    - [2.3.7. Footer structure](#237-footer-structure)
+  - [2.4. Skeleton Plane](#24-skeleton-plane)
+    - [2.4.1. Main Page Skeleton:](#241-main-page-skeleton)
+    - [2.4.2. How to play Skeleton:](#242-how-to-play-skeleton)
+    - [2.4.3. Well done Skeleton:](#243-well-done-skeleton)
+    - [2.4.4. Sizing skeleton](#244-sizing-skeleton)
+    - [2.4.5. HTML classes skeleton](#245-html-classes-skeleton)
+    - [2.4.6. Responsivity Tests](#246-responsivity-tests)
+  - [2.5. Surface Plane](#25-surface-plane)
+    - [2.5.1. Typefaces Surface](#251-typefaces-surface)
+    - [2.5.2. Color surface](#252-color-surface)
+    - [2.5.3. Card Deck Surface](#253-card-deck-surface)
+    - [2.5.4. Logo Surface](#254-logo-surface)
+    - [2.5.5. Background Surface](#255-background-surface)
+    - [2.5.6. Button Surface](#256-button-surface)
+    - [2.5.7. Modal Surface](#257-modal-surface)
+- [3. Manual Testing](#3-manual-testing)
+  - [3.1. Javascript Testing](#31-javascript-testing)
+  - [3.2. Hyperlink Testing](#32-hyperlink-testing)
+  - [3.3. BrowserStack Testing](#33-browserstack-testing)
+- [4. Testing](#4-testing)
+- [5. Automatic Testing](#5-automatic-testing)
+- [6. Validator Testing](#6-validator-testing)
+  - [6.1. Lighthouse Report](#61-lighthouse-report)
+- [7. Deployment](#7-deployment)
+- [8. Future features to implement](#8-future-features-to-implement)
+- [9. Credits \& Acknowledgements](#9-credits--acknowledgements)
+  - [9.1. Code snippets](#91-code-snippets)
+  - [9.2. Technologies Used](#92-technologies-used)
+  - [9.3. 8.3 Acknowledgements](#93-83-acknowledgements)
 
 ***
+<div align="center">
 
-<!--
-# Features
+# 1. Features
 
-## Card Deck
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
+## 1.1. Card Deck
+<a src="assets/media/issues/1.1.5.mp4"><img alt="placeholder" src="assets/media/issues/2023-08-15-13-14-21.png" width="300px" ></a>
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ***
-## Turn Count
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
+## 1.2. Turn Count
+<img alt="placeholder" src="assets/media/issues/1.2b.gif" width="300px" >
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -95,14 +99,16 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ***
 
-## Restart Button 
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
+## 1.3. Restart Button 
+<img alt="placeholder" src="assets/media/issues/1.3.gif" width="300px" >
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 ***
 
+<!--
 ## How to Play, modal popup 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
 
@@ -130,8 +136,8 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ***
 -->
-
-# 1. UX Development Planes
+</div>
+# 2. UX Development Planes
 
 The 5 UX development planes were used as an efficient framework for documenting the project.
  - The Strategy plane xxxxxxxxxxxxxxxxx
@@ -140,10 +146,10 @@ The 5 UX development planes were used as an efficient framework for documenting 
  - The Skeleton plane xxxxxxxxxxxxxxx
  - The Surface plane xxxxxxxxxxxxxxxxx
 
-## 1.1. Strategy Plane
+## 2.1. Strategy Plane
 
 
-### 1.1.1. Developer strategy
+### 2.1.1. Developer strategy
 
 The project was researched, conceived and designed in 5 weeks. Important limitations of the project had to be set from the outset such as
 - **choosing a "well-trodden" path that had lots of tutorials and resources available.** This was to ensure that the project was achievable in the time frame, and that the developer could learn from the resources available.
@@ -152,7 +158,7 @@ The project was researched, conceived and designed in 5 weeks. Important limitat
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 1.1.2. Developer Research
+### 2.1.2. Developer Research
 
 <summary><detail>The developer researched these areas of the Comparitative programming:</summary>
 
@@ -182,7 +188,7 @@ The Developer then tested a walkthrough project of a memory game, using event li
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 1.1.3. Product Research
+### 2.1.3. Product Research
 This project had the intentional advantage of plenty existing resources of high relevance. 
 
 The following resources and repositories were researched. 
@@ -199,7 +205,7 @@ It was crucial for this project to choose a memory game that was achievable in t
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 1.1.4. Project Timeline
+### 2.1.4. Project Timeline
 
 The timeline for the project was as follows:
 
@@ -244,7 +250,7 @@ The timeline for the project was as follows:
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 1.1.5. Business Strategy
+### 2.1.5. Business Strategy
 
 The business goals were to create a simple memory game that was fun and engaging for the user. The target audience was 5 year olds, and it could be assumed that they have never played a memory game before.
 
@@ -265,7 +271,7 @@ New User: (for MVP)
 
 ***
 
-## 1.2. Scope plane
+## 2.2. Scope plane
 
 For the scope plane, the developer drafted a mininum viable product that informed a scope of features designed to meet the needs of new users.
 
@@ -273,7 +279,7 @@ A mininum viable product is a product with just enough features to satisfy early
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 1.2.1. Mininum Viable product
+### 2.2.1. Mininum Viable product
 
 <i>
 The minumum viable product of the memory game was
@@ -352,11 +358,13 @@ There were a few omissions from the project.
 -->
 
 ***
-## 1.3. Structure Plane
+
+## 2.3. Structure Plane
 
 This Structure plane summarises the structure of each feature by highlighting most essential HTML, CSS and JS functions for the feature to work. The developer also used this as a workflow for drafting in the features.
 
-### 1.3.1. Card Deck structure
+### 2.3.1. Card Deck structure
+
 <a src="assets/media/issues/1.1.5.mp4"><img src="assets/media/issues/2023-08-15-13-14-21.png" width=400></a>
 
 <i>"I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging."</i>
@@ -373,14 +381,12 @@ START computer spawn cards, turns starts at 0:
 ```CSS grid``` was used here.
 
 **User clicks on first image, card appears:**
+
 <img alt="placeholder" src="assets/media/documentation/card-flip.gif" width="400px">
 
 CSS:
 
 ```css
-#card-deck{ 
-  perspective: 1000px; /*this is used to create the 3D effect on the card deck*/
-}
 
 .card-item-container {
   transform: scale(1);
@@ -409,6 +415,7 @@ transform: rotateY(180deg);
 ```
 
 JS Code:
+
 ```js
 // ----------------- User Clicks on 1st card -----------------
 
@@ -438,14 +445,17 @@ this.classList.toggle("flipped-over"); // .toggle adds/removes the class of "fli
 - Are all the cards flipped? (yes), go to you've won feature.
 
 **Video 1 with cards shuffled correctly:**
+
 <a src="assets/media/issues/1.1.5.mp4"><img src="assets/media/issues/2023-08-15-13-14-21.png" width=400></a>
 
 **Video 2 presents fresh shuffle:**
+
 <a src="assets/media/issues/1.1.5b.mp4"><img src="assets/media/issues/2023-08-15-13-23-37.png" width=400></a>
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 1.3.2. Turn count structure
+### 2.3.2. Turn count structure
+
 <img src="assets/media/issues/1.2b.gif" width=500>
 
 <i>"I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
@@ -513,7 +523,8 @@ setTimeout(() => {
 
 
 
-### 1.3.3. Restart button structure
+### 2.3.3. Restart button structure
+
 <img alt="placeholder" src="assets/media/issues/1.3.gif" width="500px">
 
 <i>"I need a new arrangement of cards each time I play the game to keep it interesting."</i>
@@ -542,22 +553,26 @@ function restartGame() {
 }
 ```
 
-### 1.3.4. Well done feature structure 
+### 2.3.4. Well done feature structure 
+
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need to receive praise for completing the game."</i>
 
-### 1.3.5. How To Play structure 
+### 2.3.5. How To Play structure 
+
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need to understand how to play the game."</i>
 
-### 1.3.6. Navbar structure 
+### 2.3.6. Navbar structure 
+
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
-### 1.3.7. Footer structure
+### 2.3.7. Footer structure
+
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I want to be able to contact the business if I have any questions, and share the game easily with my friends."</i>
@@ -567,14 +582,16 @@ function restartGame() {
 xxxxxxxxx
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
 ***
-## 1.4. Skeleton Plane
+
+## 2.4. Skeleton Plane
 
 **The skeleton plane was first designed with figma to emphasise a simple and efficient responsive design.**  The design used CSS ```display: grid``` to arrange all elements:
 
 <div align="center">
 
-### 1.4.1. Main Page Skeleton:
+### 2.4.1. Main Page Skeleton:
 
 </div>
 
@@ -594,7 +611,7 @@ xxxxxxxxx
 <br><br>
 <div align="center"> 
 
-### 1.4.2. How to play Skeleton:
+### 2.4.2. How to play Skeleton:
 
 <img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe-howtoplay.png" width="800px">
 
@@ -606,7 +623,7 @@ The How To Play feature was a simple modal pop-up that would show an animated gi
 
 <div align="center"> 
 
-### 1.4.3. Well done Skeleton:
+### 2.4.3. Well done Skeleton:
 
 <img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe-welldone.png" width="800px">
 
@@ -623,7 +640,7 @@ The Well Done feature was a simple modal pop-up that would show a Well done titl
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 1.4.4. Sizing skeleton
+### 2.4.4. Sizing skeleton
 Regarding font-size, the ```clamp()``` function was mostly used to ensure the font size was responsive to the device size. This was used instead of media queries, as it was more efficient and easier to read, it allowed the media queries to be used more for positioning and to address bugs with the display.
 
 ```css
@@ -634,7 +651,7 @@ p, h3,h4,h5 { font-size: clamp(1rem, 0.9253rem + 0.4267vw, 1.4rem);}
 ```
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 1.4.5. HTML classes skeleton
+### 2.4.5. HTML classes skeleton
 Important HTML Class selectors were used to shorten the CSS code, such as
 - ```display-grid```
 - ```color-priority-1```
@@ -644,7 +661,7 @@ Important HTML Class selectors were used to shorten the CSS code, such as
 - ```color-background```
 - ```modal-container```
 
-### 1.4.6. Responsivity Tests
+### 2.4.6. Responsivity Tests
 Responsivity tests were made with devtools to ensure that the features would adapt to all mainstream device sizes.
 
 Cards responsivity as low as 200px then capped width at 800px.
@@ -653,11 +670,6 @@ Cards responsivity as low as 200px then capped width at 800px.
 
 
 ```css
-#card-deck {
-  width: 800px;
-  height: 800px;
-  margin: auto;
-}
 
 .card-item-container {
   width: calc(25% - 10px);
@@ -682,14 +694,14 @@ Well done
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-## 1.5. Surface Plane
+## 2.5. Surface Plane
 This surface plane describes the choice of typefaces, colors and style themes relevant to the project's desired tone and practical needs.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 
 
-### 1.5.1. Typefaces Surface
+### 2.5.1. Typefaces Surface
 
 Typefaces used were xxxxxxxxxxxxxxxxxxxxxxxxx for headings and xxxxxxxxxxxxxxxxxxxxxx for body text. The font pairings were chosen for their playful  but professional tone as outlined in the strategy plane.
 
@@ -720,9 +732,9 @@ The color theme was chosen to be consistent with the logo with the aim of creati
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 1.5.2. Color surface
+### 2.5.2. Color surface
 
-### 1.5.3. Card Deck Surface
+### 2.5.3. Card Deck Surface
 |<img alt="placeholder" src="assets/media/card-deck/A.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/B.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/C.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/D.svg" width="100px">|
 |----|----|----|----|
 |<img alt="placeholder" src="assets/media/card-deck/D.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/E.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/F.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/G.svg" width="100px">|
@@ -739,22 +751,22 @@ drop-shadow and rouunded corners were added to the cards to make them appear mor
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 1.5.4. Logo Surface
+### 2.5.4. Logo Surface
 
 <img alt="logo" src="assets/media/logo.svg" width="500px">
 
 The logo was designed with simple colors with Canva Open Source imagery.
 
-### 1.5.5. Background Surface
+### 2.5.5. Background Surface
 
-### 1.5.6. Button Surface
+### 2.5.6. Button Surface
 
-### 1.5.7. Modal Surface
+### 2.5.7. Modal Surface
 
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-# 2. Manual Testing
+# 3. Manual Testing
 
 [![GitHub CSS open issues by-label](https://img.shields.io/github/issues/lmcrean/Hoverboard/css?label=CSS%20Issues&color=yellow)](https://github.com/lmcrean/Hoverboard/issues?q=label%3Acss+is%3Aopen) [![GitHub CSS closed issues by-label](https://img.shields.io/github/issues-closed/lmcrean/Hoverboard/css?label=%20&color=green)](https://github.com/lmcrean/Hoverboard/issues?q=label%3Acss+is%3Aclosed) [![GitHub HTML open issues by-label](https://img.shields.io/github/issues/lmcrean/Hoverboard/html?label=HTML%20Issues&color=yellow)](https://github.com/lmcrean/Hoverboard/issues?q=label%3Ahtml+is%3Aopen) [![GitHub HTML closed issues by-label](https://img.shields.io/github/issues-closed/lmcrean/Hoverboard/html?label=%20&color=green)](https://github.com/lmcrean/Hoverboard/issues?q=label%3Ahtml+is%3Aclosed)xxxxxxxxxxxxxxxxxxxxxxx
 
@@ -767,31 +779,31 @@ Manual testing was executed with the following criteria:
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-## 2.1. Javascript Testing
+## 3.1. Javascript Testing
 xxxxxxxxxxxxxxxxxxxxxxxxx
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-## 2.2. Hyperlink Testing
+## 3.2. Hyperlink Testing
 xxxxxxxxxxxxxxxxxxx
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-## 2.3. BrowserStack Testing
+## 3.3. BrowserStack Testing
 xxxxxxxxxxxxxxxxxxxxxxxxxx
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 
-# 3. Testing
+# 4. Testing
 This link is currently not being used but will be once the Manual Testing section needs shortening [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Testing-purple?logo=mdBook">](https://github.com/lmcrean/Hoverboard/blob/main/testing.md)
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-# 4. Automatic Testing
+# 5. Automatic Testing
 
 The Automatic Testing achieved
 * use lighthouse testing to identify files that could be resized and accessibility that can be improved.
@@ -800,7 +812,7 @@ The Automatic Testing achieved
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-# 5. Validator Testing
+# 6. Validator Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate the project to ensure there were no syntax errors in the project.
 
@@ -808,7 +820,7 @@ The result was <b> <font color="green"> passed </font> </b> for HTML5 and CSS3.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-## 5.1. Lighthouse Report
+## 6.1. Lighthouse Report
 
 To check the lighthouse report on a chrome browser, right click inspect and click on the lighthouse tab. The lighthouse report was run on the home page, features page and sign up page.
 
@@ -823,7 +835,7 @@ To further improve the lighthouse score I could use more WebP images and reduce 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 
-# 6. Deployment
+# 7. Deployment
 The site was deployed to GitHub pages. You can access the live link here: [https://lmcrean.github.io/Crocodile-Kingdom](https://lmcrean.github.io/Crocodile-Kingdom).
 
 To deploy on Github pages, the following steps were taken:
@@ -836,16 +848,16 @@ To deploy on Github pages, the following steps were taken:
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-# 7. Future features to implement  
+# 8. Future features to implement  
 - xxxxxxxxxxxxxxxxxxxx
 - xxxxxxxxxxxxxxxxxxx
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 
-# 8. Credits & Acknowledgements
+# 9. Credits & Acknowledgements
 
-## 8.1. Code snippets
+## 9.1. Code snippets
 - W3 School's [Navbar](https://www.w3schools.com/css/css_navbar.asp) was used early in the project and then adapted to meet the design standards set by the Figma wireframe.
 
 - Dominic Fraser from Free Code Camp had an article on fixing footers to the bottom of the screen, which helped with footer issues [Read here](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/)
@@ -855,7 +867,7 @@ To deploy on Github pages, the following steps were taken:
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 
-## 8.2. Technologies Used
+## 9.2. Technologies Used
 
 The main languages used were HTML5, CSS3 and Javascript. 
 Was also used to for smaller features such as the Navbar hamburger, or read more - read less button.
@@ -888,7 +900,7 @@ Tools|How it was used|
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 
-## 8.3. 8.3 Acknowledgements
+## 9.3. 8.3 Acknowledgements
 A special thank you to the wonderful tutors at Code Institute, who provided prompt support throughout the project.
 
 Special thank you to Seun Owonikoko, my mentor at Code Institute, for your time and patience taking me through devtools. 

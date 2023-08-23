@@ -99,8 +99,66 @@
 <section id="restart-section">
   <button class="btn btn-primary rounded-corner shadow" id="restart-button">Restart</button>
 </section>
-<section id="well-done" class="modal-box"></section>
-<section id="how-to-play" class="modal-box"></section>
+<section id="well-done" class="modal-box">
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#well-done-modal">
+  Well done (placeholder)
+</button>
+
+<div class="modal fade  " id="well-done-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h1>Well Done!😊</h1><br><br>
+        <img src="assets/media/documentation/placeholder.svg" alt="trophy" class="trophy-icon" width="399"><br><br>
+
+        <h2>You completed the game in 
+        <span id="score-welldone-modal"></span>
+        turns!⭐</h2><br><br>
+
+        <h3> Can you beat that now? </h3><br>
+      </div>
+      <div class="modal-footer-centered">
+        <button type="button" class="btn btn-primary">Play Again</button>
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
+</section>
+<section id="how-to-play" class="modal-box">
+  <br>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#howtoplay">
+    How to Play
+  </button>
+
+  <div class="modal fade  " id="howtoplay" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h1>How to play</h1><br><br>
+          <img src="assets/media/documentation/placeholder.svg" alt="trophy" class="trophy-icon" width="399"><br><br>
+          
+        </div>
+        <div class="modal-footer-centered">
+          <button type="button" class="btn btn-primary">Continue</button>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+  </section>
+  <section id="how-to-play" class="modal-box"></section>
+
+</section>
 
 </main>
 
