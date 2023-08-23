@@ -23,7 +23,6 @@ This page documents the issues and bugs encountered during the development of th
   - [1.2 Turn Counter is not updating](#12-turn-counter-is-not-updating)
   - [1.3 Restart Button](#13-restart-button)
   - [1.3.1 After restart, the matched cards stay in a locked state.](#131-after-restart-the-matched-cards-stay-in-a-locked-state)
-  - [1.3.2 Restart button doesn't shuffle the cards](#132-restart-button-doesnt-shuffle-the-cards)
 - [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
   - [2.1 Card Deck Skeleton](#21-card-deck-skeleton)
     - [2.1.1 Responsive grid is falling off the horizontal viewport ✔️](#211-responsive-grid-is-falling-off-the-horizontal-viewport-️)
@@ -487,14 +486,6 @@ The restart button is now unlocks all the cards.
 inside restartgame () function, added ```cards.forEach(card => card.addEventListener("click", cardAppear));``` 
 
 This adds an event listener to each card, as well as restores the "click" event listener from ```disablecards``` function (used to disable cards when the cards match). When the card is clicked, the function cardAppear is run and the card is flipped.
-
-## 1.3.2 Restart button doesn't shuffle the cards
-
-<img src="assets/media/issues/1.3.1b.gif" width=500>
-
-```js
-
-```
 
 <!------------------------------------------------>
 

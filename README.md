@@ -514,7 +514,7 @@ setTimeout(() => {
 
 
 ### 1.3.3. Restart button structure
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+<img alt="placeholder" src="assets/media/issues/1.3.gif" width="500px">
 
 <i>"I need a new arrangement of cards each time I play the game to keep it interesting."</i>
 
@@ -526,7 +526,20 @@ HTML:
 
 JS:
 ```js
+function restartGame() {
+  cards.forEach(card => card.classList.remove("flipped-over")); // This removes the HTML class of "flipped-over" from all cards, flipping them back over.
 
+  cards.forEach(card => card.addEventListener("click", cardAppear)); // This adds an event listener to each card, as well as restores the "click" event listener from disablecards function (used to disable cards when the cards match). When the card is clicked, the function cardAppear is run and the card is flipped.
+
+  setTimeout (() => { // This sets a timer of just over 0.5 seconds before the cards flip back over, without this function, the player would be able to see the flipped over cards get assigned to their secret position.
+  shuffleCardsAgain (); // This reshuffles the cards.
+  }, 550);
+  
+  resetCards (); // This resets the variables to their original values.
+  attemptsContainer.innerText = 0; // This resets the attempts counter to 0. 
+
+  lockCards = false; // This statement is set to false so that the user can click on the cards again.
+}
 ```
 
 ### 1.3.4. Well done feature structure 
