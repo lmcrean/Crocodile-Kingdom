@@ -51,6 +51,13 @@ let attemptsCount = 0;  // attempts starts at 0
   })
 })(); // This function is put in brackets to make it run as soon as the page loads.
 
+function shuffleCardsAgain () { 
+  cards.forEach(card => {
+    let randomPosition = Math.floor(Math.random() * 16); // This variable generates a random number between 0 and 16. Math.floor rounds the number down to the nearest whole number. Math.random generates a random number between 0 and 1. Multiplying this by 16 gives a number between 0 and 16.
+    card.style.order = randomPosition; // This changes the order of the cards to the random number generated above. style.order is a CSS property that changes the order of the cards.
+  })
+}
+
 
 // ----------------- User Clicks on 1st or 2nd card -----------------
 
@@ -144,7 +151,9 @@ function restartGame() {
 
   cards.forEach(card => card.addEventListener("click", cardAppear)); // This adds an event listener to each card, as well as restores the "click" event listener from disablecards function (used to disable cards when the cards match). When the card is clicked, the function cardAppear is run and the card is flipped.
 
-  shuffleCards (); // This reshuffles the cards.
+  setTimeout (() => { // This sets a timer of just over 0.5 seconds before the cards flip back over, without this the player would be able to see the flipped over cards get assigned to their secret position.
+  shuffleCardsAgain (); // This reshuffles the cards.
+  }, 550);
   resetCards (); // This resets the variables to their original values.
   attemptsContainer.innerText = 0; // This resets the attempts counter to 0. 
 
