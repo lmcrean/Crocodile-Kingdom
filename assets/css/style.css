@@ -382,6 +382,12 @@ z-index: 3;
 
 /*---------------RESTART BUTTON SKELETON---------------*/
 
+#restart-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em auto 2em auto;
+}
 /*---------------WELL DONE FEATURE SKELETON---------------*/
 
 /*---------------HOW TO PLAY SKELETON---------------*/

@@ -133,6 +133,8 @@ function plusOneAttempts() {
 // ...then all cards flip to face down.
 // ...then reshuffle cards
 
+
+
 // ----------------- How to play modal box -----------------
 //??? Has user pressed close button???(yes)
 // ...then close modal box
