@@ -141,6 +141,9 @@ restartButton.addEventListener("click", restartGame); // This adds an event list
 
 function restartGame() {
   cards.forEach(card => card.classList.remove("flipped-over")); // This removes the HTML class of "flipped-over" from all cards, flipping them back over.
+
+  cards.forEach(card => card.addEventListener("click", cardAppear)); // This adds an event listener to each card, as well as restores the "click" event listener from disablecards function (used to disable cards when the cards match). When the card is clicked, the function cardAppear is run and the card is flipped.
+
   shuffleCards (); // This reshuffles the cards.
   resetCards (); // This resets the variables to their original values.
   attemptsContainer.innerText = 0; // This resets the attempts counter to 0. 
