@@ -559,6 +559,48 @@ function restartGame() {
 
 <i>"I need to receive praise for completing the game."</i>
 
+HTML:
+```html
+<div class="modal fade  " id="well-done-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      ...
+      </div>
+      </div>
+      </div>
+```
+
+The constant ```wellDoneModal``` is established with ```const wellDoneModal = document.getElementById("well-done-modal");```
+
+The well done modal is activated within the ```disableCards()``` function, when the user has flipped all the cards. 
+
+```js
+function disableCards(){
+firstCard.removeEventListener("click", cardAppear);
+secondCard.removeEventListener("click", cardAppear);
+// .removeEventListener removes the event listener from the two selected cards so that they can't be clicked again.})
+
+resetCards (); // unlocks the board so that the user can click on new cards again.
+
+plusOneAttempts(); // adds 1 to the attempts counter
+
+// Check if all cards are matched
+if (document.querySelectorAll(".flipped-over").length === cards.length) {
+// All cards are matched, so show the well-done modal
+showWellDoneModal();
+}
+}
+```
+
+The ```showWellDoneModal()``` function is established:
+
+```js
+showWellDoneModal = () => {
+  wellDoneModal.style.display = "block";
+  console.log("showWellDoneModal");
+}
+```
+
 ### 2.3.5. How To Play structure 
 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">

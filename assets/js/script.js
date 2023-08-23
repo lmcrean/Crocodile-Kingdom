@@ -33,6 +33,8 @@ const cards = document.querySelectorAll(".card-item-container"); // This variabl
 
 const attemptsContainer = document.getElementById("attempts"); // This variable selects the attempts ID from the HTML, which is used to display the number of attempts the user has taken. It has started at 0.
 
+const wellDoneModal = document.getElementById("well-done-modal");
+
 let hasFlippedCard = false; // This variable is set to false because the card has not been clicked yet.
 
 let firstCard, secondCard; // These variables are set to undefined because the card has not been clicked yet.
@@ -174,9 +176,8 @@ function restartGame() {
 // ...then run well done modal box function
 
 showWellDoneModal = () => {
-  const modal = document.getElementById("well-done-modal");
-  modal.style.display = "block";
-  console.log("showWellDoneModal");
+  wellDoneModal.style.display = "block";
+  console.log("showWellDoneModal");// testing confirmed this is firing.
 }
 
 //??? Has user pressed Play Again button???(yes)
