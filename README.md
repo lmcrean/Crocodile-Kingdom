@@ -518,6 +518,17 @@ setTimeout(() => {
 
 <i>"I need a new arrangement of cards each time I play the game to keep it interesting."</i>
 
+HTML:
+
+```html
+<button class="btn btn-primary rounded-corner shadow" id="restart-button">Restart</button>
+```
+
+JS:
+```js
+
+```
+
 ### 1.3.4. Well done feature structure 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 

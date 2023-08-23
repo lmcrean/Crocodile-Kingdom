@@ -21,6 +21,8 @@ This page documents the issues and bugs encountered during the development of th
     - [1.1.4. Using brackets to start the shuffle function seems to stop the cards from flipping](#114-using-brackets-to-start-the-shuffle-function-seems-to-stop-the-cards-from-flipping)
     - [1.1.5 Need to complete Shuffle Algorithm with display: flex method](#115-need-to-complete-shuffle-algorithm-with-display-flex-method)
   - [1.2 Turn Counter is not updating](#12-turn-counter-is-not-updating)
+  - [1.3 Restart Button](#13-restart-button)
+  - [1.3.1 Open restart, the matched cards stay in a locked state.](#131-open-restart-the-matched-cards-stay-in-a-locked-state)
 - [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
   - [2.1 Card Deck Skeleton](#21-card-deck-skeleton)
     - [2.1.1 Responsive grid is falling off the horizontal viewport ✔️](#211-responsive-grid-is-falling-off-the-horizontal-viewport-️)
@@ -438,9 +440,28 @@ setTimeout(() => {
 result turn counter updates:
 <img src="assets/media/issues/1.2b.gif" width=500>
 
+## 1.3 Restart Button
 
+## 1.3.1 Open restart, the matched cards stay in a locked state.
 
+<img src="assets/media/issues/1.3.1.gif" width=500> 
 
+```js
+const restartButton = document.getElementById("restart-button"); // This variable selects the restart-button ID from the HTML
+
+restartButton.addEventListener("click", restartGame); // This adds an event listener to the restart button. When the restart button is clicked, the function restartGame is run.
+
+function restartGame() {
+  cards.forEach(card => card.classList.remove
+
+  ("flipped-over")); // This removes the HTML class of "flipped-over" from all cards, flipping them back over.
+  shuffleCards (); // This reshuffles the cards.
+  resetCards (); // This resets the variables to their original values.
+  attemptsContainer.innerText = 0; // This resets the attempts counter to 0. 
+
+  lockCards = false; // This statement is set to false so that the user can click on the cards again.
+}
+```
 
 
 

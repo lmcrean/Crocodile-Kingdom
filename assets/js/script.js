@@ -133,7 +133,20 @@ function plusOneAttempts() {
 // ...then all cards flip to face down.
 // ...then reshuffle cards
 
+// ----------------- Restart button Event listener -----------------
 
+const restartButton = document.getElementById("restart-button"); // This variable selects the restart-button ID from the HTML
+
+restartButton.addEventListener("click", restartGame); // This adds an event listener to the restart button. When the restart button is clicked, the function restartGame is run.
+
+function restartGame() {
+  cards.forEach(card => card.classList.remove("flipped-over")); // This removes the HTML class of "flipped-over" from all cards, flipping them back over.
+  shuffleCards (); // This reshuffles the cards.
+  resetCards (); // This resets the variables to their original values.
+  attemptsContainer.innerText = 0; // This resets the attempts counter to 0. 
+
+  lockCards = false; // This statement is set to false so that the user can click on the cards again.
+}
 
 // ----------------- How to play modal box -----------------
 //??? Has user pressed close button???(yes)
