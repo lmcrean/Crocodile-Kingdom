@@ -555,7 +555,7 @@ function restartGame() {
 
 ### 2.3.4. Well done feature structure 
 
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+<img alt="placeholder" src="assets/media/issues/1.4.gif" width="400px">
 
 <i>"I need to receive praise for completing the game."</i>
 
@@ -596,8 +596,21 @@ The ```showWellDoneModal()``` function is established:
 
 ```js
 showWellDoneModal = () => {
-  wellDoneModal.style.display = "block";
-  console.log("showWellDoneModal");
+  document.getElementsByClassName("well-done-modal")[0].click();  console.log("showWellDoneModal"); //This function opens the well done modal box, by clicking the HTML button with the class of "well-done-modal".
+}
+```
+
+There is also an ```updateTurnsAndTurnsLeft()``` function that is used to display the score count in the well done modal:
+
+```js
+function updateTurnsAndTurnsLeft() {
+  let oldAttempt = parseInt(turnsContainer.innerText);
+  turnsContainer.innerText = ++oldAttempt; // This adds 1 to the attempts counter.
+  let oldTurnsLeft = parseInt(turnsLeftContainer.innerText);
+  turnsLeftContainer.innerText = --oldTurnsLeft; // This subtracts 1 from the "attempts left" counter.
+
+  turnsModalContainer.textContent = turnsContainer.textContent; // This updates the turns modal box with the number of attempts the user has taken.
+  turnsLeftModalContainer.textContent = turnsLeftContainer.textContent; // This updates the turns left modal box with the number of attempts the user has left.
 }
 ```
 

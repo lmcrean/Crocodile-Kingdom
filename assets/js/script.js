@@ -35,7 +35,9 @@ const turnsContainer = document.getElementById("turns-count"); // This variable 
 
 const turnsLeftContainer = document.getElementById("turns-left-count"); // This variable selects the attempts ID from the HTML, which is used to display the number of attempts the user has taken. It has started at 40.
 
-const wellDoneModal = document.getElementById("well-done-modal");
+const turnsModalContainer = document.getElementById('turns-modal'); // This variable selects the turns-modal ID from the HTML, which is used to display the number of attempts the user has taken.
+
+const turnsLeftModalContainer = document.getElementById('turns-left-modal'); // This variable selects the turns-left-modal ID from the HTML, which is used to display the number of attempts the user has taken.
 
 let hasFlippedCard = false; // This variable is set to false because the card has not been clicked yet.
 
@@ -102,7 +104,7 @@ secondCard.removeEventListener("click", cardAppear);
 
 resetCards (); // unlocks the board so that the user can click on new cards again.
 
-plusOneAttempts(); // adds 1 to the attempts counter
+updateTurnsAndTurnsLeft(); // adds 1 to the attempts counter
 
 // Check if all cards are matched
 if (document.querySelectorAll(".flipped-over").length === cards.length) {
@@ -124,7 +126,7 @@ setTimeout(() => {
   },
   2000); // This sets a timer of 2 seconds before the cards flip back over.
 
-  plusOneAttempts(); // adds 1 to the attempts counter
+  updateTurnsAndTurnsLeft(); // adds 1 to the attempts counter
 }
 
 function resetCards() {// This function resets the variables to their original values.
@@ -133,12 +135,15 @@ function resetCards() {// This function resets the variables to their original v
 }
 
 //----------------- +1 to turns, -1 to turns left -----------------
- 
-function plusOneAttempts() {
+
+function updateTurnsAndTurnsLeft() {
   let oldAttempt = parseInt(turnsContainer.innerText);
-  turnsContainer.innerText = ++oldAttempt;
+  turnsContainer.innerText = ++oldAttempt; // This adds 1 to the attempts counter.
   let oldTurnsLeft = parseInt(turnsLeftContainer.innerText);
-  turnsLeftContainer.innerText = --oldTurnsLeft;
+  turnsLeftContainer.innerText = --oldTurnsLeft; // This subtracts 1 from the "attempts left" counter.
+
+  turnsModalContainer.textContent = turnsContainer.textContent; // This updates the turns modal box with the number of attempts the user has taken.
+  turnsLeftModalContainer.textContent = turnsLeftContainer.textContent; // This updates the turns left modal box with the number of attempts the user has left.
 }
 
 
@@ -177,7 +182,7 @@ function restartGame() {
 // ...then run well done modal box function
 
 showWellDoneModal = () => {
-  document.getElementsByClassName("well-done-modal")[0].click();  console.log("showWellDoneModal");// testing confirmed this is firing.
+  document.getElementsByClassName("well-done-modal")[0].click();  console.log("showWellDoneModal"); //This function opens the well done modal box, by clicking the HTML button with the class of "well-done-modal".
 }
 
 //??? Has user pressed Play Again button???(yes)

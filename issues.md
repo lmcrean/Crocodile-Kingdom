@@ -19,17 +19,18 @@ This page documents the issues and bugs encountered during the development of th
     - [1.1.2. Click on a different card inbetween the 2 second interval, and it doesn't flip the cards back properly](#112-click-on-a-different-card-inbetween-the-2-second-interval-and-it-doesnt-flip-the-cards-back-properly)
     - [1.1.3. The shuffle algorithim doesn't appear to be working with ```Display: Grid``` (issue closed)](#113-the-shuffle-algorithim-doesnt-appear-to-be-working-with-display-grid-issue-closed)
     - [1.1.4. Using brackets to start the shuffle function seems to stop the cards from flipping](#114-using-brackets-to-start-the-shuffle-function-seems-to-stop-the-cards-from-flipping)
-    - [1.1.5 Need to complete Shuffle Algorithm with display: flex method](#115-need-to-complete-shuffle-algorithm-with-display-flex-method)
-  - [1.2 Turn Counter is not updating](#12-turn-counter-is-not-updating)
-  - [1.3 Restart Button](#13-restart-button)
-  - [1.3.1 After restart, the matched cards stay in a locked state.](#131-after-restart-the-matched-cards-stay-in-a-locked-state)
+    - [1.1.5. 1.1.5 Need to complete Shuffle Algorithm with display: flex method](#115-115-need-to-complete-shuffle-algorithm-with-display-flex-method)
+  - [1.2. 1.2 Turn Counter is not updating](#12-12-turn-counter-is-not-updating)
+  - [1.3. Restart Button](#13-restart-button)
+    - [1.3.1. After restart, the matched cards stay in a locked state.](#131-after-restart-the-matched-cards-stay-in-a-locked-state)
 - [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
-  - [2.1 Card Deck Skeleton](#21-card-deck-skeleton)
-    - [2.1.1 Responsive grid is falling off the horizontal viewport ✔️](#211-responsive-grid-is-falling-off-the-horizontal-viewport-️)
-    - [2.1.2. Responsive grid is falling off the vertical viewport](#212-responsive-grid-is-falling-off-the-vertical-viewport)
-    - [2.1.3. back of card doesn't fully cover card face underneath](#213-back-of-card-doesnt-fully-cover-card-face-underneath)
-    - [2.1.4. with new "display: flex" method, card-face moves to side in flipped state](#214-with-new-display-flex-method-card-face-moves-to-side-in-flipped-state)
-- [4. Unfixed Bugs](#4-unfixed-bugs)
+  - [2.1. 2.1 Card Deck Skeleton](#21-21-card-deck-skeleton)
+    - [2.1.1. 2.1.1 Responsive grid is falling off the horizontal viewport in desktop view](#211-211-responsive-grid-is-falling-off-the-horizontal-viewport-in-desktop-view)
+    - [2.1.2. Responsive grid is falling off the horizontal viewport in mobile view](#212-responsive-grid-is-falling-off-the-horizontal-viewport-in-mobile-view)
+    - [2.1.3. Responsive grid is falling off the vertical viewport](#213-responsive-grid-is-falling-off-the-vertical-viewport)
+    - [2.1.4. back of card doesn't fully cover card face underneath](#214-back-of-card-doesnt-fully-cover-card-face-underneath)
+    - [2.1.5. with new "display: flex" method, card-face moves to side in flipped state](#215-with-new-display-flex-method-card-face-moves-to-side-in-flipped-state)
+- [3. Unfixed Bugs](#3-unfixed-bugs)
 
 # 1. Javascript Structure Issues
 
@@ -278,7 +279,7 @@ https://stackoverflow.com/questions/71617327/shuffle-a-containers-dom-elements-b
 
 <img src="assets/media/issues/1.1.3b.gif" width=500>
 
-### 1.1.5 Need to complete Shuffle Algorithm with display: flex method
+### 1.1.5. 1.1.5 Need to complete Shuffle Algorithm with display: flex method
 
 [current result is same as video above]
 
@@ -304,7 +305,7 @@ https://stackoverflow.com/questions/71617327/shuffle-a-containers-dom-elements-b
 
 That concludes the essential structure of the card game.
 
-## 1.2 Turn Counter is not updating
+## 1.2. 1.2 Turn Counter is not updating
 
 <img src ="assets/media/issues/1.2.gif" width=500>
 
@@ -440,9 +441,9 @@ setTimeout(() => {
 result turn counter updates:
 <img src="assets/media/issues/1.2b.gif" width=500>
 
-## 1.3 Restart Button
+## 1.3. Restart Button
 
-## 1.3.1 After restart, the matched cards stay in a locked state.
+### 1.3.1. After restart, the matched cards stay in a locked state.
 
 <img src="assets/media/issues/1.3.1.gif" width=500> 
 
@@ -493,9 +494,9 @@ This adds an event listener to each card, as well as restores the "click" event 
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Devtools](https://img.shields.io/badge/Devtools-3d89fc?style=for-the-badge&logo=google%20chrome&logoColor=white&color=black)
 
 
-## 2.1 Card Deck Skeleton
+## 2.1. 2.1 Card Deck Skeleton
 
-### 2.1.1 Responsive grid is falling off the horizontal viewport ✔️
+### 2.1.1. 2.1.1 Responsive grid is falling off the horizontal viewport in desktop view
 <img src="assets/media/issues/image.png" width=500>
 
 <img src="assets/media/issues/2023-08-12-15-40-14.png" width=500>
@@ -516,18 +517,35 @@ used padding: 0px 1em to improve spacing between cards;
 
 <img src="https://github.com/lmcrean/Crocodile-Kingdom/assets/133490867/7a1a18e2-5314-4999-9704-49ffdfaf854f" width=500>
 
-### 2.1.2. Responsive grid is falling off the vertical viewport
+### 2.1.2. Responsive grid is falling off the horizontal viewport in mobile view
+
+<img src="assets/media/issues/2023-08-24-15-25-21.png" width=300>
+
+```css
+#card-deck {
+  width: 90vw;
+  height: 90vw;
+}
+```
+
+solution: use vw instead of %, seems to work now.
+
+<img src="assets/media/issues/2023-08-24-21-34-25.png" width=300>
+
+tested with Chrome on Samsung Galaxy S21
+
+### 2.1.3. Responsive grid is falling off the vertical viewport
 have tried ```max-height: 100vh``` and ```max-height: 100%``` but neither work.
 
 <img src="assets/media/issues/2023-08-12-17-27-46.png" width=500> 
 
 - [ ] check W3 Schools for CSS functions to make the grid responsive to viewport height
 
-### 2.1.3. back of card doesn't fully cover card face underneath
+### 2.1.4. back of card doesn't fully cover card face underneath
 
 <img src="assets/media/issues/2023-08-12-22-23-28.png" width=500>
 
-### 2.1.4. with new "display: flex" method, card-face moves to side in flipped state
+### 2.1.5. with new "display: flex" method, card-face moves to side in flipped state
 
 <img src="assets/media/issues/2.1.4.gif" width=500>
 
@@ -594,7 +612,7 @@ now to solve the shuffle issue.
 
 
 
-# 4. Unfixed Bugs
+# 3. Unfixed Bugs
 
 xxxxxxxxxxxxxx update at the end.
 
