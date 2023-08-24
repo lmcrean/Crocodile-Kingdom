@@ -354,9 +354,9 @@ z-index: 3;
 /*---------------CARD DECK SKELETON---------------*/
 
 #card-deck {
-  width: 800px;
-  height: 800px;
-  margin: auto;
+  width: 90vw;
+  height: 90vw;
+  margin: 2em auto;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
