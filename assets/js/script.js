@@ -65,6 +65,7 @@ function shuffleCardsAgain () {
 
 function cardAppear() { 
 
+
 if (lockCards) return; // This stops the function of lockCards is true, preventing the user from clicking on more than 2 cards at a time. "If lockCards is true, then return (stop the function)."
 
 if (this === firstCard) return; // This stops the function if the user clicks on the same card twice. "If this is equal to firstCard, then return (stop the function)." this refers to the card that is clicked on.
@@ -176,8 +177,7 @@ function restartGame() {
 // ...then run well done modal box function
 
 showWellDoneModal = () => {
-  wellDoneModal.style.display = "block";
-  console.log("showWellDoneModal");// testing confirmed this is firing.
+  document.getElementsByClassName("well-done-modal")[0].click();  console.log("showWellDoneModal");// testing confirmed this is firing.
 }
 
 //??? Has user pressed Play Again button???(yes)

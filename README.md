@@ -601,6 +601,12 @@ showWellDoneModal = () => {
 }
 ```
 
+Resources consulted:
+- https://www.w3schools.com/bootstrap/bootstrap_modal.asp#:~:text=To%20trigger%20the%20modal%20window,the%20id%20of%20the%20modal
+- https://stackoverflow.com/questions/17144459/javascript-automatically-clicking-a-button
+
+
+
 ### 2.3.5. How To Play structure 
 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
