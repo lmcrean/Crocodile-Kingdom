@@ -28,8 +28,13 @@
   <br>
 <main>
 <section id="score-count">
-  <h2 class="attempts-count">Turns: <span id="attempts">0</span></h2>
+  <h2 class="turns">Turns (placeholder): <span id="turns-count">0</span></h2>
 </section>
+
+<section id="turns-left-section">
+  <h2 class="turns-left">Turns left: <span id="turns-left-count">40</span></h2>
+</section>
+
 <section id="card-deck">
   <div class="card-item-container color-grey" data-framework="A">
     <img src="assets/media/card-deck/A.svg" alt="card-A" class="card-item rounded-corner shadow card-front card-A" >
@@ -102,7 +107,7 @@
 <section id="well-done" class="modal-box">
 
   <!-- Button trigger modal -->
-<button type="button" class="btn btn-secondary well-done-modal" data-bs-toggle="modal" data-bs-target="#well-done-modal" style="display:none">
+<button type="button" class="btn btn-secondary well-done-modal" data-bs-toggle="modal" data-bs-target="#well-done-modal">
   Well done (placeholder)
 </button>
 
@@ -117,11 +122,11 @@
         <h1>Well Done!😊</h1><br><br>
         <img src="assets/media/documentation/placeholder.svg" alt="trophy" class="trophy-icon" width="399"><br><br>
 
-        <h2>You completed the game in 
-        <span id="score-welldone-modal"></span>
-        turns!⭐</h2><br><br>
+        <h2>You completed the game in <br>
+        <span id="score-welldone-modal">0</span>
+        turns!⭐</h2> <h3><br>You even had <span id=turnsleftmodal>40</span> turns remaining!</h3><br><br>
 
-        <h3> Can you beat that now? </h3><br>
+        <h4> Can you beat that now? </h4><br>
       </div>
       <div class="modal-footer-centered">
         <button type="button" class="btn btn-primary">Play Again</button>

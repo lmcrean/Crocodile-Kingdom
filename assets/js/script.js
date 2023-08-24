@@ -31,7 +31,9 @@
 
 const cards = document.querySelectorAll(".card-item-container"); // This variable selects the card-item-container class from the HTML
 
-const attemptsContainer = document.getElementById("attempts"); // This variable selects the attempts ID from the HTML, which is used to display the number of attempts the user has taken. It has started at 0.
+const turnsContainer = document.getElementById("turns-count"); // This variable selects the attempts ID from the HTML, which is used to display the number of attempts the user has taken. It has started at 0.
+
+const turnsLeftContainer = document.getElementById("turns-left-count"); // This variable selects the attempts ID from the HTML, which is used to display the number of attempts the user has taken. It has started at 40.
 
 const wellDoneModal = document.getElementById("well-done-modal");
 
@@ -41,7 +43,6 @@ let firstCard, secondCard; // These variables are set to undefined because the c
 
 let lockCards = false; // This variable is set to false because the card has not been clicked yet. This variable is used to prevent the user from checking more than 2 cards at a time.
 
-let attemptsCount = 0;  // attempts starts at 0
 
 // ----------------- CARD DECK -----------------
 // ----------------- Computer Spawns cards, rearrange at random -----------------
@@ -131,14 +132,13 @@ function resetCards() {// This function resets the variables to their original v
   [firstCard, secondCard] = [null, null];
 }
 
-//----------------- +1 to turns -----------------
-
-//attempts counter
-attemptsCount = 0;
+//----------------- +1 to turns, -1 to turns left -----------------
  
 function plusOneAttempts() {
-  let oldAttempt = parseInt(attemptsContainer.innerText);
-  attemptsContainer.innerText = ++oldAttempt;
+  let oldAttempt = parseInt(turnsContainer.innerText);
+  turnsContainer.innerText = ++oldAttempt;
+  let oldTurnsLeft = parseInt(turnsLeftContainer.innerText);
+  turnsLeftContainer.innerText = --oldTurnsLeft;
 }
 
 
@@ -163,7 +163,7 @@ function restartGame() {
   }, 550);
 
   resetCards (); // This resets the variables to their original values.
-  attemptsContainer.innerText = 0; // This resets the attempts counter to 0. 
+  turnsContainer.innerText = 0; // This resets the attempts counter to 0. 
 
   lockCards = false; // This statement is set to false so that the user can click on the cards again.
 }
