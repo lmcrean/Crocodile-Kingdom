@@ -291,7 +291,7 @@ p {
     "footer footer";
 }
 
-  #logo-desktop {grid-area: logo;}
+  #logo-desktop {grid-area: logo; margin: 0px auto;}
   #card-deck {grid-area: cards;}
   #turns-left-section {grid-area: turns-count;}
   #restart-section {grid-area: restart;}

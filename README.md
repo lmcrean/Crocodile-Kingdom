@@ -4,7 +4,7 @@
 
 #  Memory Game with JavaScript <!-- omit in toc -->
 
-[<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-purple?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/) [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Issues_Report-purple?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md) [![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/lmcrean/Crocodile-Kingdom?color=green)](https://github.com/lmcrean/Crocodile-Kingdom/commits/main) [![wakatime](https://wakatime.com/badge/user/416fbf43-2a75-4cf7-8b85-019470ba1cc8/project/d6b1c7ce-4cdd-46d2-bc71-b0b000c2ccae.svg)](https://wakatime.com/badge/user/416fbf43-2a75-4cf7-8b85-019470ba1cc8/project/d6b1c7ce-4cdd-46d2-bc71-b0b000c2ccae)
+[<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-purple?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/) [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Issues_Report-purple?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md) [![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/lmcrean/Crocodile-Kingdom?color=green)](https://github.com/lmcrean/Crocodile-Kingdom/commits/main) [![wakatime](https://wakatime.com/badge/player/416fbf43-2a75-4cf7-8b85-019470ba1cc8/project/d6b1c7ce-4cdd-46d2-bc71-b0b000c2ccae.svg)](https://wakatime.com/badge/player/416fbf43-2a75-4cf7-8b85-019470ba1cc8/project/d6b1c7ce-4cdd-46d2-bc71-b0b000c2ccae)
 
 <br>
 
@@ -12,13 +12,13 @@
 
 <br>
 
-Crocodile Kingdom is an **animal-themed version of the classic children's memory game**, where the user has to try and match pairs of cards together while never turning more than two cards at once. The game challenges the user's memory skills. *The user wins the game when all the cards are flipped.*
+Crocodile Kingdom is an **animal-themed version of the classic children's memory game**, where the player has to try and match pairs of cards together while never turning more than two cards at once. The game challenges the player's memory skills. *The player wins the game when all the cards are flipped.*
 
 
 </div>
 
 ***
-This readme introduces the key features of the project, using the framework of the 5 planes of User Experience. It summarises key challenges addressed along the way and also provides credits and acknowledgesments at the end.
+This readme introduces the key features of the project, using the framework of the 5 planes of user experience. It summarises key challenges addressed along the way and also provides credits and acknowledgesments at the end.
 
 An issues file is dedicated to a more specific technical account.
 
@@ -85,9 +85,8 @@ In the issues I have logged written, video or screenshot accounts.
 ## 1.1. Card Deck
 <a src="assets/media/issues/1.1.5.mp4"><img alt="placeholder" src="assets/media/issues/2023-08-15-13-14-21.png" width="300px" ></a>
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- The Card Deck functions as the classic Memory Game, where the player has to try and match pairs of cards together while never turning more than two cards at once. The game challenges the player's memory skills. *The player wins the game when all the cards are flipped.*
+- When the player recieves a match, the cards stay flipped over.
 
 ***
 ## 1.2. Turn Count
@@ -192,7 +191,7 @@ The Developer then tested a walkthrough project of a memory game, using event li
 This project had the intentional advantage of plenty existing resources of high relevance. 
 
 The following resources and repositories were researched. 
-- [Alien Memory Game](https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game) by Github user: moirahartigan
+- [Alien Memory Game](https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game) by Github player: moirahartigan
 - [Memory Game](https://github.com/code-sketch/memory-game) by code-sketch  with [Walkthrough](https://marina-ferreira.github.io/tutorials/js/memory-game/), [Demo](https://marina-ferreira.github.io/projects/js/memory-game/), [Video tutorial](https://www.youtube.com/watch?v=eMhiMsEC9Uk&list=PLLX1I3KXZ-YH-woTgiCfONMya39-Ty8qw) 
   - This a particularly well documented resource and most similar to what the developer was trying to achieve.
   - the tutorial offers step by step guidance on how to build the game.
@@ -252,28 +251,28 @@ The timeline for the project was as follows:
 
 ### 2.1.5. Business Strategy
 
-The business goals were to create a simple memory game that was fun and engaging for the user. The target audience was 5 year olds, and it could be assumed that they have never played a memory game before.
+The business goals were to create a simple memory game that was fun and engaging for the player. The target audience was 5 year olds, and it could be assumed that they have never played a memory game before.
 
-<div align="center"><h3> User Stories</h3> <!-- omit in toc -->
+<div align="center"><h3> User Storiesies</h3> <!-- omit in toc -->
 
 
 <img alt="placeholder" src="assets/media/documentation/userimage.svg" width="300px" >
  </div>
 
-New User: (for MVP)
-- I need to understand how to play the game.  
-- I need the design to be accessible, easy to read with lots of visuals.
-- I need the tone of the design to appear warm, entertaining and encouraging.
-- I need to a quick feedback loop that suggests how I'm doing as I play the game.
-- I need to recieve praise for completing the game.
-- I need a new arrangement of cards each time I play the game to keep it interesting.
-- I want to be able to contact the business if I have any questions, as well as share the game easily with my friends.
+New user: (for MVP)
+- As a player, I need to understand how to play the game.  
+- As a player, As a player, I need the design to be accessible, easy to read with lots of visuals.
+- As a player, As a player, I need the tone of the design to appear warm, entertaining and encouraging.
+- As a player, As a player, I need to a quick feedback loop that suggests how I'm doing as I play the game.
+- As a player, As a player, I need to recieve praise for completing the game.
+- As a player, As a player, I need a new arrangement of cards each time I play the game to keep it interesting.
+- As a player, I want to be able to contact the business if I have any questions, as well as share the game easily with my friends.
 
 ***
 
 ## 2.2. Scope plane
 
-For the scope plane, the developer drafted a mininum viable product that informed a scope of features designed to meet the needs of new users.
+For the scope plane, the developer drafted a mininum viable product that informed a scope of features designed to meet the needs of new players.
 
 A mininum viable product is a product with just enough features to satisfy early customers, and to provide feedback for future development. 
 
@@ -304,43 +303,43 @@ Once that would be designed more interesting features could be added, such as
 
 <!-->
 ### Scope of Features
-The following features were designed to meet the needs of new userssometimes appearing more than once for the purpose of both making the website easy to navigate and consistent branding design.
+The following features were designed to meet the needs of new playerssometimes appearing more than once for the purpose of both making the website easy to navigate and consistent branding design.
 
 #### Card Deck scope 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>Use to play the game.</b>
-<i>"Most Relevant user story: I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging."</i>
+<i>"Most Relevant User Stories: As a player, I need the design to be accessible, easy to read with lots of visuals. As a player, I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
 #### Turn count scope 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
-<b>An updating score count that follows the attempts taken by the user.</b>
-<i>"I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
+<b>An updating score count that follows the attempts taken by the player.</b>
+<i>"As a player, I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
 
 #### Restart button scope 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
-<b>User clicks here to restart their game.</b>
-<i>"I need a new arrangement of cards each time I play the game to keep it interesting."</i>
+<b>player clicks here to restart their game.</b>
+<i>"As a player, I need a new arrangement of cards each time I play the game to keep it interesting."</i>
 
 #### You've Won feature scope 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>An encouraging message at the end of the game, it shows total turns taken and also displays the Restart button.</b>
-<i>"I need to receive praise for completing the game."</i>
+<i>"As a player, I need to receive praise for completing the game."</i>
 
 #### How To Play feature scope 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
-<b>Allows the user to read the rules of the game.</b>
-<i>"I need to understand how to play the game."</i>
+<b>Allows the player to read the rules of the game.</b>
+<i>"As a player, I need to understand how to play the game."</i>
 
 #### Navbar scope 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>Displays just the Logo.</b>
-<i>"I need the tone of the design to appear warm, entertaining and encouraging."</i>
+<i>"As a player, I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
 #### Footer scope 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
@@ -367,7 +366,7 @@ This Structure plane summarises the structure of each feature by highlighting mo
 
 <a src="assets/media/issues/1.1.5.mp4"><img src="assets/media/issues/2023-08-15-13-14-21.png" width=400></a>
 
-<i>"I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging."</i>
+<i>"As a player, I need the design to be accessible, easy to read with lots of visuals. As a player, I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
 JS:
 The flowchart below illustrates the logic of the card deck.
@@ -380,7 +379,7 @@ START computer spawn cards, turns starts at 0:
 
 ```CSS grid``` was used here.
 
-**User clicks on first image, card appears:**
+**player clicks on first image, card appears:**
 
 <img alt="placeholder" src="assets/media/documentation/card-flip.gif" width="400px">
 
@@ -417,7 +416,7 @@ transform: rotateY(180deg);
 JS Code:
 
 ```js
-// ----------------- User Clicks on 1st card -----------------
+// ----------------- player Clicks on 1st card -----------------
 
 const cards = document.querySelectorAll(".card-item-container");
 
@@ -430,7 +429,7 @@ this.classList.toggle("flipped-over"); // .toggle adds/removes the class of "fli
 }
 ```
 
-- User clicks on second image, card appears, +1 to turns:
+- player clicks on second image, card appears, +1 to turns:
 
 
 - Do the cards match? (no), clicked images flipped back after 2 seconds:
@@ -439,7 +438,7 @@ this.classList.toggle("flipped-over"); // .toggle adds/removes the class of "fli
 - Do the cards match? (yes), clicked images stay flipped:
 
 
-- Are all the cards flipped? (no), go back to user clicks on first image.
+- Are all the cards flipped? (no), go back to player clicks on first image.
 
 
 - Are all the cards flipped? (yes), go to you've won feature.
@@ -458,7 +457,7 @@ this.classList.toggle("flipped-over"); // .toggle adds/removes the class of "fli
 
 <img src="assets/media/issues/1.2b.gif" width=500>
 
-<i>"I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
+<i>"As a player, I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
 
 HTML:
 ```html
@@ -471,7 +470,7 @@ JS:
 Establishing the variables **with getElementById**:
 
 ```js
-const attemptsContainer = document.getElementById("attempts"); // This variable selects the attempts class from the HTML, which is used to display the number of attempts the user has taken. It has started at 0.
+const attemptsContainer = document.getElementById("attempts"); // This variable selects the attempts class from the HTML, which is used to display the number of attempts the player has taken. It has started at 0.
 ```
 
 ```js
@@ -498,7 +497,7 @@ firstCard.removeEventListener("click", cardAppear);
 secondCard.removeEventListener("click", cardAppear);
 // .removeEventListener removes the event listener from the two selected cards so that they can't be clicked again.})
 
-resetCards (); // unlocks the board so that the user can click on new cards again.
+resetCards (); // unlocks the board so that the player can click on new cards again.
 
 plusOneAttempts(); // adds 1 to the attempts counter
 
@@ -507,12 +506,12 @@ plusOneAttempts(); // adds 1 to the attempts counter
 
 ```js
 function flipBackCards() {
-  lockCards = true; // This statement is set to true so that the user can't click on more than 2 cards at a time.
+  lockCards = true; // This statement is set to true so that the player can't click on more than 2 cards at a time.
 
 setTimeout(() => {
   firstCard.classList.remove("flipped-over");
   secondCard.classList.remove("flipped-over"); // removes the HTML class of "flipped-over" on the card that it is clicked on. This flips the card back over.
-  resetCards (); // unlocks the cards so that the user can click on them again.
+  resetCards (); // unlocks the cards so that the player can click on them again.
   },
   2000); // This sets a timer of 2 seconds before the cards flip back over.
 
@@ -527,7 +526,7 @@ setTimeout(() => {
 
 <img alt="placeholder" src="assets/media/issues/1.3.gif" width="500px">
 
-<i>"I need a new arrangement of cards each time I play the game to keep it interesting."</i>
+<i>"As a player, I need a new arrangement of cards each time I play the game to keep it interesting."</i>
 
 HTML:
 
@@ -549,7 +548,7 @@ function restartGame() {
   resetCards (); // This resets the variables to their original values.
   attemptsContainer.innerText = 0; // This resets the attempts counter to 0. 
 
-  lockCards = false; // This statement is set to false so that the user can click on the cards again.
+  lockCards = false; // This statement is set to false so that the player can click on the cards again.
 }
 ```
 
@@ -557,7 +556,7 @@ function restartGame() {
 
 <img alt="placeholder" src="assets/media/issues/1.4.gif" width="400px">
 
-<i>"I need to receive praise for completing the game."</i>
+<i>"As a player, I need to receive praise for completing the game."</i>
 
 HTML:
 ```html
@@ -572,7 +571,7 @@ HTML:
 
 The constant ```wellDoneModal``` is established with ```const wellDoneModal = document.getElementById("well-done-modal");```
 
-The well done modal is activated within the ```disableCards()``` function, when the user has flipped all the cards. 
+The well done modal is activated within the ```disableCards()``` function, when the player has flipped all the cards. 
 
 ```js
 function disableCards(){
@@ -580,7 +579,7 @@ firstCard.removeEventListener("click", cardAppear);
 secondCard.removeEventListener("click", cardAppear);
 // .removeEventListener removes the event listener from the two selected cards so that they can't be clicked again.})
 
-resetCards (); // unlocks the board so that the user can click on new cards again.
+resetCards (); // unlocks the board so that the player can click on new cards again.
 
 plusOneAttempts(); // adds 1 to the attempts counter
 
@@ -609,8 +608,8 @@ function updateTurnsAndTurnsLeft() {
   let oldTurnsLeft = parseInt(turnsLeftContainer.innerText);
   turnsLeftContainer.innerText = --oldTurnsLeft; // This subtracts 1 from the "attempts left" counter.
 
-  turnsModalContainer.textContent = turnsContainer.textContent; // This updates the turns modal box with the number of attempts the user has taken.
-  turnsLeftModalContainer.textContent = turnsLeftContainer.textContent; // This updates the turns left modal box with the number of attempts the user has left.
+  turnsModalContainer.textContent = turnsContainer.textContent; // This updates the turns modal box with the number of attempts the player has taken.
+  turnsLeftModalContainer.textContent = turnsLeftContainer.textContent; // This updates the turns left modal box with the number of attempts the player has left.
 }
 ```
 
@@ -624,13 +623,13 @@ Resources consulted:
 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
-<i>"I need to understand how to play the game."</i>
+<i>"As a player, I need to understand how to play the game."</i>
 
 ### 2.3.6. Navbar structure 
 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
-<i>"I need the tone of the design to appear warm, entertaining and encouraging."</i>
+<i>"As a player, I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
 ### 2.3.7. Footer structure
 
@@ -668,6 +667,53 @@ xxxxxxxxx
   - the footer taking up both columns hiding underneath the card deck.
   - the remaining features were arranged in the left column in various rows, with a right-aligned position.
   </i>
+
+<img src="assets/issues/../media/issues/2-main-page.gif">
+
+to make the design responsive, the following CSS functions were used with ```grid-template-areas``` to indicate the position of each element:
+
+```css
+.gameplay-display-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "logo"
+    "turns-count"
+    "cards"
+    "restart"
+    "how-to-play"
+    "footer";
+}
+
+  #logo-desktop {grid-area: logo;}
+  #card-deck {grid-area: cards;}
+  #turns-left-section {grid-area: turns-count;}
+  #restart-section {grid-area: restart;}
+  #how-to-play {grid-area: how-to-play;}
+  #footer-desktop-display {grid-area: footer;}
+
+@media screen and (min-width: 1208px) {
+.gameplay-display-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "logo cards"
+    "turns-count cards"
+    "restart cards"
+    "how-to-play cards"
+    "footer footer";
+}
+
+  #logo-desktop {grid-area: logo; margin: 0px auto;}
+  #card-deck {grid-area: cards;}
+  #turns-left-section {grid-area: turns-count;}
+  #restart-section {grid-area: restart;}
+  #how-to-play {grid-area: how-to-play;}
+  #footer-desktop-display {grid-area: footer;}
+}
+```
 
 <br><br>
 <div align="center"> 
@@ -905,7 +951,13 @@ To deploy on Github pages, the following steps were taken:
 2. Go to the settings tab
 3. Go to the GitHub Pages section
 4. Go to the Source section and select the Master Branch
-5. The page will automatically refresh
+5. Once the page has refreshed, scroll back down to the GitHub Pages section to locate the now published site link
+
+To fork the repository:
+1. Log in to GitHub and locate the GitHub Repository
+2. At the top of the Repository, on the right side of the page, select "Fork"
+3. You should now have a copy of the original repository in your GitHub account, and you can deploy it to GitHub pages following the steps above
+
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -953,7 +1005,7 @@ Tools|How it was used|
 |Library| How it was used|
 |---|---|
 [Canva](https://www.canva.com/) | All graphics i.e. non-photographic imagery was designed and adapted from Canva's open source library|
-[Pexels](https://www.pexels.com/) | Used for Testimonials user images and the hero images
+[Pexels](https://www.pexels.com/) | Used for Testimonials player images and the hero images
 [Unsplash](https://unsplash.com/) | John Anderson's picture in the testimonial
 [Font Awesome](https://fontawesome.com/) | The icons in the footer and navbar were taken from 
 [CDN Fonts](https://www.cdnfonts.com/) | Peace Sans and Glacial Indifference fonts sourced
