@@ -4,7 +4,7 @@
 
 #  Memory Game with JavaScript <!-- omit in toc -->
 
-[<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-purple?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/) [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Issues_Report-purple?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md) [![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/lmcrean/Crocodile-Kingdom?color=green)](https://github.com/lmcrean/Crocodile-Kingdom/commits/main) [![wakatime](https://wakatime.com/badge/player/416fbf43-2a75-4cf7-8b85-019470ba1cc8/project/d6b1c7ce-4cdd-46d2-bc71-b0b000c2ccae.svg)](https://wakatime.com/badge/player/416fbf43-2a75-4cf7-8b85-019470ba1cc8/project/d6b1c7ce-4cdd-46d2-bc71-b0b000c2ccae)
+[<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-purple?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/) [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Issues_Report-purple?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md) [![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/lmcrean/Crocodile-Kingdom?color=green)](https://github.com/lmcrean/Crocodile-Kingdom/commits/main)
 
 <br>
 

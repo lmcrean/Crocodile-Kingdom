@@ -25,6 +25,7 @@
     // ...then close modal box
 
 // ----------------- JAVASCRIPT CODE -----------------
+/*jshint esversion: 6 */
 
 // ----------------- DEFINE THE VARIABLES ----------------- 
 // Define the variables
@@ -54,14 +55,14 @@ let lockCards = false; // This variable is set to false because the card has not
   cards.forEach(card => {
     let randomPosition = Math.floor(Math.random() * 16); // This variable generates a random number between 0 and 16. Math.floor rounds the number down to the nearest whole number. Math.random generates a random number between 0 and 1. Multiplying this by 16 gives a number between 0 and 16.
     card.style.order = randomPosition; // This changes the order of the cards to the random number generated above. style.order is a CSS property that changes the order of the cards.
-  })
+  });
 })(); // This function is put in brackets to make it run as soon as the page loads.
 
 function shuffleCardsAgain () { 
   cards.forEach(card => {
     let randomPosition = Math.floor(Math.random() * 16); // This variable generates a random number between 0 and 16. Math.floor rounds the number down to the nearest whole number. Math.random generates a random number between 0 and 1. Multiplying this by 16 gives a number between 0 and 16.
     card.style.order = randomPosition; // This changes the order of the cards to the random number generated above. style.order is a CSS property that changes the order of the cards.
-  })
+  });
 }
 
 
@@ -197,7 +198,7 @@ function restartGame() {
 
 showWellDoneModal = () => {
   document.getElementsByClassName("well-done-modal")[0].click();  console.log("showWellDoneModal"); //This function opens the well done modal box, by clicking the HTML button with the class of "well-done-modal".
-}
+};
 
 //??? Has user pressed Play Again button???(yes)
 // ...then run restart button function

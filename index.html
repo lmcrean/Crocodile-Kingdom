@@ -21,9 +21,9 @@
 
 <body id="home-page">
 <main class="gameplay-display-grid">
-<section id="logo-desktop">
-<a href="index.html"><img src="assets/media/logo.svg" class="headerlogo logo" alt="Company Logo"></a>
-</section>
+<div id="logo-desktop"><div>
+<a href="index.html"><img src="assets/media/logo.svg" class="headerlogo logo" alt="Company Logo"></a></div>
+</div>
 <section id="score-count" style="display: none;">
   <h2 class="turns">Turns (placeholder): <span id="turns-count">0</span></h2>
 </section>
@@ -32,7 +32,7 @@
   <h2 class="turns-left">Turns left: <span id="turns-left-count">40</span></h2>
 </section>
 
-<section id="card-deck">
+<div id="card-deck">
   <div class="card-item-container color-grey" data-framework="A">
     <img src="assets/media/card-deck/A.svg" alt="card-A" class="card-item rounded-corner shadow card-front card-A" >
     <img src="assets/media/card-deck/back.svg" alt="card-back" class="card-item rounded-corner shadow card-back">
@@ -97,10 +97,10 @@
     <img src="assets/media/card-deck/H.svg" alt="card-H" class="card-item rounded-corner shadow card-front card-H">
     <img src="assets/media/card-deck/back.svg" alt="card-back" class="card-item rounded-corner shadow card-back">
   </div>
-</section>
-<section id="restart-section">
+</div>
+<div id="restart-section">
   <button class="btn btn-primary rounded-corner shadow" id="restart-button">Restart</button>
-</section>
+</div>
 
 <section id="how-to-play" class="modal-box">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#howtoplay">
@@ -111,7 +111,6 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"></h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -140,7 +139,6 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -172,7 +170,6 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel"></h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -199,7 +196,6 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel"></h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -216,9 +212,7 @@
       </div>
       </section>
 
-</section>
-
-<section id="footer-desktop-display" class="hide-in-mobile-and-tablet">
+<footer id="footer-desktop-display" class="hide-in-mobile-and-tablet">
 <div class="footer-small-print">
   <p>
     © 2023 Memory Game
@@ -238,10 +232,9 @@
       <a href="https://www.linkedin.com/"><img src="assets/media/icons/linkedin.svg" alt="icon"></a>
     </div>
 </div>
-</section>
+</footer>
 </main>
 
-</div>
 
   <footer class="grey">
     <!-- The footer contains a copyright note and links to the company's social media pages. The links are displayed as 2 columns on smaller devices and as a single row on larger devices. 
