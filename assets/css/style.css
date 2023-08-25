@@ -258,6 +258,26 @@ p {
 
 /*---------------SKELETON PLANE - RESPONSIVE GRID DISPLAY ---------------*/
 
+.gameplay-display-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "logo"
+    "turns-count"
+    "cards"
+    "restart"
+    "how-to-play"
+    "footer";
+}
+
+  #logo-desktop {grid-area: logo;}
+  #card-deck {grid-area: cards;}
+  #turns-left-section {grid-area: turns-count;}
+  #restart-section {grid-area: restart;}
+  #how-to-play {grid-area: how-to-play;}
+  #footer-desktop-display {grid-area: footer;}
+
 @media screen and (min-width: 1208px) {
 .gameplay-display-grid {
   display: grid;
@@ -289,23 +309,14 @@ p {
   margin: 1.5em auto auto auto;
   padding: 0em 0em 0em 0em;
   max-width: 385px;
+  height: auto;
 }
 
 /*---------------FOOTER FEATURE SKELETON---------------
   ---------------Elements = footer-small-print, footer icons ---------------*/
-.container-fixed-footer {
-  position:relative;
-  min-height: 100vh;
-}
-
-.body-content-wrap-for-fixed-footer {
-  padding-bottom: 25rem;    /* Footer height */
-  margin: auto;
-}
-
+/*
 footer {
-  display: none; /*issue with footer overlapping card deck in desktop, fix later*/
-  position: absolute;
+  display: none; /*issue with footer overlapping card deck in desktop, fix later
   margin: auto;
   bottom: 0;
   width:100%;
@@ -333,7 +344,7 @@ footer {
 }
 .footer-row2 {
 margin-bottom: 40px;
-}
+}*/
 
 
 .footer-links a { /*should be perfectly circular without distortion*/
