@@ -172,6 +172,11 @@ transform: rotateY(180deg);
 
 /*-------------------SKELETON PLANE--------------------*/
 
+/*--------------- SKELETON PLANE - HTML CLASS SELECTORS---------------*/
+.display-grid {
+  display:grid;
+}
+
 /*-------------------SKELETON PLANE - FONT SIZES-------------------*/
 /* In this section I have used Fixed font sizes, Font sizes with Media Queries and Font sizes with Clamp. The selectors are grouped according to page.*/
 /*TODO: use clamp to replace all font sizes*/
@@ -234,13 +239,7 @@ p {
   padding: 0.5em 1em;
 }
 
-/*--------------- SKELETON PLANE - HTML CLASS SELECTORS---------------*/
-.display-grid {
-  display:grid;
-}
 
-/*
-.modal-popup /*this is the modal popup for Well Done and How to Play Feature*/
 
 /*--------------- SKELETON PLANE - VIEWPORT SWITCHES---------------*/
 /* For responsive design, some elements will disappear at certain viewport breakpoints and "switch" to another element. Note that CSS is mobile-first.*/
@@ -256,6 +255,29 @@ p {
 @media screen and (max-width: 1727.99px) {.hide-in-mobile-and-tablet-and-laptop {display: none !important;}}
 @media screen and (min-width: 1728px) {
 .hide-in-desktop {display: none !important;}}
+
+/*---------------SKELETON PLANE - RESPONSIVE GRID DISPLAY ---------------*/
+
+@media screen and (min-width: 1208px) {
+.gameplay-display-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "logo cards"
+    "turns-count cards"
+    "restart cards"
+    "how-to-play cards"
+    "footer footer";
+}
+
+  #logo-desktop {grid-area: logo;}
+  #card-deck {grid-area: cards;}
+  #turns-left-section {grid-area: turns-count;}
+  #restart-section {grid-area: restart;}
+  #how-to-play {grid-area: how-to-play;}
+  #footer-desktop-display {grid-area: footer;}
+}
 
 /*---------------SKELETON PLANE BY FEATURE---------------*/
 /*The selectors are grouped according to feature. Elements of each feature are then grouped with media queries, starting mobile first.*/

@@ -22,11 +22,15 @@
 <!---
 <div class="container-fixed-footer"><!---This div is used to fix the footer to the bottom of the page.-->
   <div class="body-content-wrap-for-fixed-footer"><!---This div is used to fix the footer to the bottom of the page.-->  
-    <header>
-        <a href="index.html"><img src="assets/media/logo.svg" class="headerlogo" alt="Company Logo"></a>
+  <header>
+    <a href="index.html"><img src="assets/media/logo.svg" class="headerlogo logo hide-in-laptop-and-desktop" alt="Company Logo"></a>
   </header>
   <br>
-<main>
+<main class="gameplay-display-grid">
+
+<section id="logo-desktop">
+<a href="index.html"><img src="assets/media/logo.svg" class="headerlogo logo hide-in-mobile-and-tablet" alt="Company Logo"></a>
+</section>
 <section id="score-count" style="display: none;">
   <h2 class="turns">Turns (placeholder): <span id="turns-count">0</span></h2>
 </section>
@@ -135,7 +139,7 @@
 <section id="well-done" class="modal-box">
 
   <!-- Button trigger modal -->
-<button type="button" class="btn btn-secondary well-done-modal" data-bs-toggle="modal" data-bs-target="#well-done-modal">
+<button type="button" class="btn btn-secondary well-done-modal hide-in-laptop-and-desktop" data-bs-toggle="modal" data-bs-target="#well-done-modal">
   Well done (placeholder)
 </button>
 
@@ -165,9 +169,9 @@
 </div>
 </section>
 
-  <section id="welcome" class="modal-box">
+<section id="welcome" class="modal-box ">
     <br>
-    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#welcome">
+    <button type="button" class="btn btn-secondary hide-in-laptop-and-desktop" data-bs-toggle="modal" data-bs-target="#welcome">
       Welcome screen (placeholder)
     </button>
   
@@ -192,9 +196,9 @@
     </div>
     </section>
 
-    <section id="you-lose" class="modal-box">
+    <section id="you-lose" class="modal-box ">
       <br>
-      <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#you-lose">
+      <button type="button" class="btn btn-secondary hide-in-laptop-and-desktop" data-bs-toggle="modal" data-bs-target="#you-lose">
         Lose Screen (placeholder)
       </button>
     
@@ -221,11 +225,32 @@
 
 </section>
 
+<section id="footer-desktop-display" class="hide-in-mobile-and-tablet">
+<div class="footer-small-print">
+  <p>
+    © 2023 Memory Game
+  </p>
+</div>
+<div class = "footer-links">
+    <div class="footer-row1">
+      <a href="https://www.facebook.com/"><img src="assets/media/icons/facebook.svg" alt="icon"></a>
+      <a href="https://www.instagram.com/"><img src="assets/media/icons/instagram.svg" alt="icon"></a>
+      <a href="https://www.github.com/"><img src="assets/media/icons/github.svg" alt="icon"></a>
+      <a href="https://www.tiktok.com/"><img src="assets/media/icons/tiktok.svg" alt="icon"></a>
+    </div>
+    <div class="footer-row2">
+      <a href="https://www.youtube.com/"><img src="assets/media/icons/youtube.svg" alt="icon"></a>
+      <a href="https://www.discord.com/"><img src="assets/media/icons/discord.svg" alt="icon"></a>
+      <a href="https://www.slack.com/"><img src="assets/media/icons/slack.svg" alt="icon"></a>
+      <a href="https://www.linkedin.com/"><img src="assets/media/icons/linkedin.svg" alt="icon"></a>
+    </div>
+</div>
+</section>
 </main>
 
 </div>
 
-  <!-- <footer class="grey">
+  <footer class="grey">
     <!-- The footer contains a copyright note and links to the company's social media pages. The links are displayed as 2 columns on smaller devices and as a single row on larger devices. 
     <div class="footer-small-print">
       <p>
@@ -245,7 +270,6 @@
           <a href="https://www.slack.com/"><img src="assets/media/icons/slack.svg" alt="icon"></a>
           <a href="https://www.linkedin.com/"><img src="assets/media/icons/linkedin.svg" alt="icon"></a>
         </div>
-    </div>  
-  </footer>-->
-  </div>
+    </div>  -->
+  </footer>
 </body>
