@@ -304,7 +304,9 @@ p {
 }
 
 footer {
+  display: none; /*issue with footer overlapping card deck in desktop, fix later*/
   position: absolute;
+  margin: auto;
   bottom: 0;
   width:100%;
   margin-top: 2em;

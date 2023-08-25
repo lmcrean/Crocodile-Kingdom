@@ -1,0 +1,22 @@
+{
+  "name": "crocodile-kingdom",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lmcrean/Crocodile-Kingdom.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lmcrean/Crocodile-Kingdom/issues"
+  },
+  "homepage": "https://github.com/lmcrean/Crocodile-Kingdom#readme",
+  "dependencies": {
+    "canvas-confetti": "^1.6.0"
+  }
+}

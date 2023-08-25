@@ -39,6 +39,7 @@ const turnsModalContainer = document.getElementById('turns-modal'); // This vari
 
 const turnsLeftModalContainer = document.getElementById('turns-left-modal'); // This variable selects the turns-left-modal ID from the HTML, which is used to display the number of attempts the user has taken.
 
+
 let hasFlippedCard = false; // This variable is set to false because the card has not been clicked yet.
 
 let firstCard, secondCard; // These variables are set to undefined because the card has not been clicked yet.
@@ -106,12 +107,25 @@ resetCards (); // unlocks the board so that the user can click on new cards agai
 
 updateTurnsAndTurnsLeft(); // adds 1 to the attempts counter
 
+confetti({
+  angle: randomInRange(55, 125),
+  spread: randomInRange(50, 70),
+  particleCount: randomInRange(50, 100),
+  origin: { y: 0.6 }
+});
+
 // Check if all cards are matched
 if (document.querySelectorAll(".flipped-over").length === cards.length) {
 // All cards are matched, so show the well-done modal
 showWellDoneModal();
 }
 }
+
+function randomInRange(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+
 // ----------------- ???Do the cards match??? (no) -----------------
 // ...then clicked images flip back after 2 seconds
 // ...then wait for "User Clicks on 1st card"
