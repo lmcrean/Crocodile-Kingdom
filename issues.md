@@ -539,7 +539,23 @@ have tried ```max-height: 100vh``` and ```max-height: 100%``` but neither work.
 
 <img src="assets/media/issues/2023-08-12-17-27-46.png" width=500> 
 
-- [ ] check W3 Schools for CSS functions to make the grid responsive to viewport height
+solution: use max width and max height at 90vh. This seems to work.
+
+```css
+#card-deck {
+  width: 90vw;
+  height: 90vw;
+  max-width: 90vh;
+  max-height: 90vh;
+  margin: 2em auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+```
+result:
+
+<img src="assets/media/issues/2.1.3.gif" width=500>
 
 ### 2.1.4. back of card doesn't fully cover card face underneath
 

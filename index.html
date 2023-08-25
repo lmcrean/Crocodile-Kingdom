@@ -27,7 +27,7 @@
   </header>
   <br>
 <main>
-<section id="score-count">
+<section id="score-count" style="display: none;">
   <h2 class="turns">Turns (placeholder): <span id="turns-count">0</span></h2>
 </section>
 
@@ -104,6 +104,34 @@
 <section id="restart-section">
   <button class="btn btn-primary rounded-corner shadow" id="restart-button">Restart</button>
 </section>
+
+<section id="how-to-play" class="modal-box">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#howtoplay">
+    How to Play
+  </button>
+
+  <div class="modal fade  " id="howtoplay" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h1>How to play</h1><br><br>
+          <img src="assets/media/documentation/placeholder.svg" alt="trophy" class="trophy-icon" width="399"><br><br>
+          
+        </div>
+        <div class="modal-footer-centered">
+          <button type="button" class="btn btn-primary">Continue</button>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  </section>
+
 <section id="well-done" class="modal-box">
 
   <!-- Button trigger modal -->
@@ -137,33 +165,59 @@
 </div>
 </section>
 
-<section id="how-to-play" class="modal-box">
-  <br>
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#howtoplay">
-    How to Play
-  </button>
-
-  <div class="modal fade  " id="howtoplay" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <section id="welcome" class="modal-box">
+    <br>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#welcome">
+      Welcome screen (placeholder)
+    </button>
+  
+    <div class="modal fade  " id="welcome" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h1>How to play</h1><br><br>
+            <img src="assets/media/documentation/placeholder.svg" alt="trophy" class="trophy-icon" width="399"><br><br>
+            
+          </div>
+          <div class="modal-footer-centered">
+            <button type="button" class="btn btn-primary">Continue</button>
+          </div>
+          <br>
         </div>
-        <div class="modal-body">
-          <h1>How to play</h1><br><br>
-          <img src="assets/media/documentation/placeholder.svg" alt="trophy" class="trophy-icon" width="399"><br><br>
-          
-        </div>
-        <div class="modal-footer-centered">
-          <button type="button" class="btn btn-primary">Continue</button>
-        </div>
-        <br>
       </div>
     </div>
-  </div>
-  </section>
-  <section id="how-to-play" class="modal-box"></section>
+    </section>
+
+    <section id="you-lose" class="modal-box">
+      <br>
+      <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#you-lose">
+        Lose Screen (placeholder)
+      </button>
+    
+      <div class="modal fade  " id="you-lose" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h1>How to play</h1><br><br>
+              <img src="assets/media/documentation/placeholder.svg" alt="trophy" class="trophy-icon" width="399"><br><br>
+              
+            </div>
+            <div class="modal-footer-centered">
+              <button type="button" class="btn btn-primary">Continue</button>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+      </section>
 
 </section>
 
