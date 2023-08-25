@@ -30,15 +30,26 @@ In the issues I have logged written, video or screenshot accounts.
   - [1.1. Card Deck](#11-card-deck)
   - [1.2. Turn Count](#12-turn-count)
   - [1.3. Restart Button](#13-restart-button)
-- [2. UX Development Planes](#2-ux-development-planes)
+  - [1.4. How to Play, modal popup](#14-how-to-play-modal-popup)
+  - [1.5. Logo](#15-logo)
+  - [1.6. Footer](#16-footer)
+- [2. UX Development Planes \& Manual Testing](#2-ux-development-planes--manual-testing)
   - [2.1. Strategy Plane](#21-strategy-plane)
     - [2.1.1. Developer strategy](#211-developer-strategy)
     - [2.1.2. Developer Research](#212-developer-research)
-    - [2.1.3. Product Research](#213-product-research)
+    - [2.1.3. Initial Product Research](#213-initial-product-research)
     - [2.1.4. Project Timeline](#214-project-timeline)
     - [2.1.5. Business Strategy](#215-business-strategy)
   - [2.2. Scope plane](#22-scope-plane)
     - [2.2.1. Mininum Viable product](#221-mininum-viable-product)
+    - [2.2.2. Scope of Features](#222-scope-of-features)
+      - [2.2.2.1. Card Deck scope ](#2221-card-deck-scope-)
+      - [2.2.2.2. Turn count scope ](#2222-turn-count-scope-)
+      - [2.2.2.3. Restart button scope ](#2223-restart-button-scope-)
+      - [2.2.2.4. You've Won feature scope ](#2224-youve-won-feature-scope-)
+      - [2.2.2.5. How To Play feature scope ](#2225-how-to-play-feature-scope-)
+      - [2.2.2.6. Navbar scope ](#2226-navbar-scope-)
+      - [2.2.2.7. Footer scope ](#2227-footer-scope-)
   - [2.3. Structure Plane](#23-structure-plane)
     - [2.3.1. Card Deck structure](#231-card-deck-structure)
     - [2.3.2. Turn count structure](#232-turn-count-structure)
@@ -53,7 +64,7 @@ In the issues I have logged written, video or screenshot accounts.
     - [2.4.3. Well done Skeleton:](#243-well-done-skeleton)
     - [2.4.4. Sizing skeleton](#244-sizing-skeleton)
     - [2.4.5. HTML classes skeleton](#245-html-classes-skeleton)
-    - [2.4.6. Responsivity Tests](#246-responsivity-tests)
+    - [2.4.6. BrowserStack Testing](#246-browserstack-testing)
   - [2.5. Surface Plane](#25-surface-plane)
     - [2.5.1. Typefaces Surface](#251-typefaces-surface)
     - [2.5.2. Color surface](#252-color-surface)
@@ -62,20 +73,15 @@ In the issues I have logged written, video or screenshot accounts.
     - [2.5.5. Background Surface](#255-background-surface)
     - [2.5.6. Button Surface](#256-button-surface)
     - [2.5.7. Modal Surface](#257-modal-surface)
-- [3. Manual Testing](#3-manual-testing)
-  - [3.1. Javascript Testing](#31-javascript-testing)
-  - [3.2. Hyperlink Testing](#32-hyperlink-testing)
-  - [3.3. BrowserStack Testing](#33-browserstack-testing)
-- [4. Testing](#4-testing)
-- [5. Automatic Testing](#5-automatic-testing)
-- [6. Validator Testing](#6-validator-testing)
-  - [6.1. Lighthouse Report](#61-lighthouse-report)
-- [7. Deployment](#7-deployment)
-- [8. Future features to implement](#8-future-features-to-implement)
-- [9. Credits \& Acknowledgements](#9-credits--acknowledgements)
-  - [9.1. Code snippets](#91-code-snippets)
-  - [9.2. Technologies Used](#92-technologies-used)
-  - [9.3. Acknowledgements](#93-acknowledgements)
+- [3. Automatic Testing](#3-automatic-testing)
+  - [3.1. HTML/CSS/JS Validator Testing](#31-htmlcssjs-validator-testing)
+  - [3.2. Lighthouse Report](#32-lighthouse-report)
+- [4. Deployment](#4-deployment)
+- [5. Issues and Bugs](#5-issues-and-bugs)
+- [6. Credits \& Acknowledgements](#6-credits--acknowledgements)
+  - [6.1. Code snippets](#61-code-snippets)
+  - [6.2. Technologies Used](#62-technologies-used)
+  - [6.3. Acknowledgements](#63-acknowledgements)
 
 ***
 <div align="center">
@@ -107,8 +113,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ***
 
-<!--
-## How to Play, modal popup 
+## 1.4. How to Play, modal popup 
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -117,7 +122,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ***
 
-## Navbar
+## 1.5. Logo
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -126,17 +131,20 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ***
 
-## Footer
+## 1.6. Footer
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
 ***
--->
+
 </div>
-# 2. UX Development Planes
+
+# 2. UX Development Planes & Manual Testing
 
 The 5 UX development planes were used as an efficient framework for documenting the project.
  - The Strategy plane xxxxxxxxxxxxxxxxx
@@ -144,6 +152,16 @@ The 5 UX development planes were used as an efficient framework for documenting 
  - The Structure plane xxxxxxxxxxxxxx
  - The Skeleton plane xxxxxxxxxxxxxxx
  - The Surface plane xxxxxxxxxxxxxxxxx
+
+
+Manual testing was executed with the following criteria:
+
+- JS logic and functionality within each feature, using console.log() to check that the code was running as expected.
+- CSS media queries' responsivity to viewport width, key breakpoints being at mobile view, tablet view (768px), laptop view (1208px) and desktop view (1728px+). The videos demonstrate varying viewport widths between 483 to 2500px. Grid and Flex displays were used to switch between differing arrangements of content contributing to the readability.
+- Design choices that are similar to those concieved in the [Figma Wireframe, documented here](https://github.com/lmcrean/Hoverboard/wiki/3.-Design-Testing-via-Figma-wireframe). Effective positioning, sizing and style.
+- Testing on different browsers, specifically Chrome, Firefox, Edge, Opera and Safari
+- test HTML5 Hyperlinks and Forms so that they are all working as expected, identifying potential syntax errors or with the form requirements
+
 
 ## 2.1. Strategy Plane
 
@@ -154,12 +172,14 @@ The project was researched, conceived and designed in 5 weeks. Important limitat
 - **choosing a "well-trodden" path that had lots of tutorials and resources available.** This was to ensure that the project was achievable in the time frame, and that the developer could learn from the resources available.
 - **using a simple open-source database that already existed for the JavaScript to navigate**, e.g. pop quiz trivia data, personality test data. Inventing datasets risked distracting from the front-end design and JavaScript functionality.
 - **based on this criteria, the developer chose to create a memory game**, which had a lot of resources available, and was a good starting point for Junior-level Javascript.
+- **Developing the Mininum Viable Product and Unique Selling Point simultaeneously.** This way, the essential product would be met in time with the deadline, and the unique features would keep me motivated.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 ### 2.1.2. Developer Research
 
-<summary><detail>The developer researched these areas of the Comparitative programming:</summary>
+<detail>
+<summary>The developer researched these areas of the Comparitative programming:</summary>
 
 - Variables. In Javascript, variables are used to store data values. Variables are declared with the ```var``` keyword. The ```=``` sign is used to assign values to variables. In this project.
 - Core Data types, such as **strings**, **float** or real, **integers**, **booleans**. In some situations undefined or null is appropriate.
@@ -187,14 +207,15 @@ The Developer then tested a walkthrough project of a memory game, using event li
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 2.1.3. Product Research
+### 2.1.3. Initial Product Research
 This project had the intentional advantage of plenty existing resources of high relevance. 
 
 The following resources and repositories were researched. 
-- [Alien Memory Game](https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game) by Github player: moirahartigan
+
 - [Memory Game](https://github.com/code-sketch/memory-game) by code-sketch  with [Walkthrough](https://marina-ferreira.github.io/tutorials/js/memory-game/), [Demo](https://marina-ferreira.github.io/projects/js/memory-game/), [Video tutorial](https://www.youtube.com/watch?v=eMhiMsEC9Uk&list=PLLX1I3KXZ-YH-woTgiCfONMya39-Ty8qw) 
   - This a particularly well documented resource and most similar to what the developer was trying to achieve.
   - the tutorial offers step by step guidance on how to build the game.
+ - [Alien Memory Game](https://github.com/moirahartigan/Portfolio-2---Alien-Memory-Game) by Github player: moirahartigan
 - [Memory Game](https://github.com/flowforfrank/memory-game) by flowforfrank, with [tutorial article](https://webtips.dev/memory-game-in-javascript)
 - [30 minute walkthrough tutorial](https://www.youtube.com/watch?v=bznJPt4t_4s) by dcode
 - [Article](https://www.codewithfaraz.com/content/112/creating-flip-card-memory-game-with-html-css-and-javascript) by codewithfiraz.com explaining the role of each CSS class and JS function
@@ -253,20 +274,28 @@ The timeline for the project was as follows:
 
 The business goals were to create a simple memory game that was fun and engaging for the player. The target audience was 5 year olds, and it could be assumed that they have never played a memory game before.
 
-<div align="center"><h3> User Storiesies</h3> <!-- omit in toc -->
+<div align="center"><h3> User Stories testing</h3>
 
 
 <img alt="placeholder" src="assets/media/documentation/userimage.svg" width="300px" >
  </div>
 
-New user: (for MVP)
-- As a player, I need to understand how to play the game.  
-- As a player, As a player, I need the design to be accessible, easy to read with lots of visuals.
-- As a player, As a player, I need the tone of the design to appear warm, entertaining and encouraging.
-- As a player, As a player, I need to a quick feedback loop that suggests how I'm doing as I play the game.
-- As a player, As a player, I need to recieve praise for completing the game.
-- As a player, As a player, I need a new arrangement of cards each time I play the game to keep it interesting.
+New user Testing:
+
+- **As a player, I need to understand how to play the game.**
+  - *there is a how to play feature that explains the rules of the game.*  
+- As a player, I need the design to be accessible, easy to read with lots of visuals.
+  - there is a card deck with 16 cards that display randomly.
+- As a player, I need the tone of the design to appear warm, entertaining and encouraging.
+  - *The colors used are bright, with friendly vector illustrations*
+- As a player, I need to a quick feedback loop that suggests how I'm doing as I play the game.
+  - confetti appears when the player gets a match
+- As a player, I need to recieve praise for completing the game.
+   - a well done message appears when the player wins the game
+- As a player, I need a new arrangement of cards each time I play the game to keep it interesting.
+  - The card deck shuffles each time the player restarts the game.
 - As a player, I want to be able to contact the business if I have any questions, as well as share the game easily with my friends.
+  - A footer is displayed at the bottom of the page.
 
 ***
 
@@ -301,62 +330,58 @@ Once that would be designed more interesting features could be added, such as
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-<!-->
-### Scope of Features
+
+### 2.2.2. Scope of Features
 The following features were designed to meet the needs of new playerssometimes appearing more than once for the purpose of both making the website easy to navigate and consistent branding design.
 
-#### Card Deck scope 
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+#### 2.2.2.1. Card Deck scope <!-- omit in toc-->
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> 
 
 <b>Use to play the game.</b>
 <i>"Most Relevant User Stories: As a player, I need the design to be accessible, easy to read with lots of visuals. As a player, I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
-#### Turn count scope 
+#### 2.2.2.2. Turn count scope <!-- omit in toc-->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>An updating score count that follows the attempts taken by the player.</b>
 <i>"As a player, I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
 
-#### Restart button scope 
+#### 2.2.2.3. Restart button scope <!-- omit in toc-->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>player clicks here to restart their game.</b>
 <i>"As a player, I need a new arrangement of cards each time I play the game to keep it interesting."</i>
 
-#### You've Won feature scope 
+#### 2.2.2.4. You've Won feature scope <!-- omit in toc-->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>An encouraging message at the end of the game, it shows total turns taken and also displays the Restart button.</b>
 <i>"As a player, I need to receive praise for completing the game."</i>
 
-#### How To Play feature scope 
+#### 2.2.2.5. How To Play feature scope <!-- omit in toc-->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>Allows the player to read the rules of the game.</b>
 <i>"As a player, I need to understand how to play the game."</i>
 
-#### Navbar scope 
+#### 2.2.2.6. Navbar scope <!-- omit in toc-->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>Displays just the Logo.</b>
 <i>"As a player, I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
-#### Footer scope 
+#### 2.2.2.7. Footer scope <!-- omit in toc-->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>Displays the social media links, and a Contact Us link.</b>
 <i>"I want to be able to contact the business if I have any questions, and share the game easily with my friends."</i>
 
-<u>Omissions from the scope</u>
-There were a few omissions from the project.
-- xxxxxxxxxx
-- xxxxxxxxxx
-- xxxxxxxxxx
+
   
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 -->
 
-***
+
 
 ## 2.3. Structure Plane
 
@@ -768,12 +793,7 @@ Important HTML Class selectors were used to shorten the CSS code, such as
 - ```color-background```
 - ```modal-container```
 
-### 2.4.6. Responsivity Tests
-Responsivity tests were made with devtools to ensure that the features would adapt to all mainstream device sizes.
 
-Cards responsivity as low as 200px then capped width at 800px.
-
-<img alt="placeholder" src="assets/media/responsivity-tests/cards.gif" width="300px">
 
 
 ```css
@@ -791,12 +811,10 @@ Cards responsivity as low as 200px then capped width at 800px.
 }
 ```
 
-***
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-How to play
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
-
-Well done
+### 2.4.6. BrowserStack Testing
+xxxxxxxxxxxxxxxxxxxxxxxxxx
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
@@ -873,44 +891,9 @@ The logo was designed with simple colors with Canva Open Source imagery.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-# 3. Manual Testing
-
-[![GitHub CSS open issues by-label](https://img.shields.io/github/issues/lmcrean/Hoverboard/css?label=CSS%20Issues&color=yellow)](https://github.com/lmcrean/Hoverboard/issues?q=label%3Acss+is%3Aopen) [![GitHub CSS closed issues by-label](https://img.shields.io/github/issues-closed/lmcrean/Hoverboard/css?label=%20&color=green)](https://github.com/lmcrean/Hoverboard/issues?q=label%3Acss+is%3Aclosed) [![GitHub HTML open issues by-label](https://img.shields.io/github/issues/lmcrean/Hoverboard/html?label=HTML%20Issues&color=yellow)](https://github.com/lmcrean/Hoverboard/issues?q=label%3Ahtml+is%3Aopen) [![GitHub HTML closed issues by-label](https://img.shields.io/github/issues-closed/lmcrean/Hoverboard/html?label=%20&color=green)](https://github.com/lmcrean/Hoverboard/issues?q=label%3Ahtml+is%3Aclosed)xxxxxxxxxxxxxxxxxxxxxxx
-
-Manual testing was executed with the following criteria:
-
-- CSS media queries' responsivity to viewport width, key breakpoints being at mobile view, tablet view (768px), laptop view (1208px) and desktop view (1728px+). The videos demonstrate varying viewport widths between 483 to 2500px. Grid and Flex displays were used to switch between differing arrangements of content contributing to the readability.
-- Design choices that are similar to those concieved in the [Figma Wireframe, documented here](https://github.com/lmcrean/Hoverboard/wiki/3.-Design-Testing-via-Figma-wireframe). Effective positioning, sizing and style.
-- Testing on different browsers, specifically Chrome, Firefox, Edge, Opera and Safari
-- test HTML5 Hyperlinks and Forms so that they are all working as expected, identifying potential syntax errors or with the form requirements
-
-[↑ Back to top](#Portfolio-Project-2-with-Javascript)
-
-## 3.1. Javascript Testing
-xxxxxxxxxxxxxxxxxxxxxxxxx
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
-
-[↑ Back to top](#Portfolio-Project-2-with-Javascript)
-
-## 3.2. Hyperlink Testing
-xxxxxxxxxxxxxxxxxxx
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
-
-[↑ Back to top](#Portfolio-Project-2-with-Javascript)
-
-## 3.3. BrowserStack Testing
-xxxxxxxxxxxxxxxxxxxxxxxxxx
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
-
-[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 
-# 4. Testing
-This link is currently not being used but will be once the Manual Testing section needs shortening [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Testing-purple?logo=mdBook">](https://github.com/lmcrean/Hoverboard/blob/main/testing.md)
-
-[↑ Back to top](#Portfolio-Project-2-with-Javascript)
-
-# 5. Automatic Testing
+# 3. Automatic Testing
 
 The Automatic Testing achieved
 * use lighthouse testing to identify files that could be resized and accessibility that can be improved.
@@ -919,15 +902,19 @@ The Automatic Testing achieved
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-# 6. Validator Testing
+## 3.1. HTML/CSS/JS Validator Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate the project to ensure there were no syntax errors in the project.
 
-The result was <b> <font color="green"> passed </font> </b> for HTML5 and CSS3.
+The result was <b> passed </b> for HTML5, CSS3 and JS.
+
+![](assets/media/issues/2023-08-25-21-59-31.png)
+
+<img src="assets/media/documenation/../documentation/jshint.png" width="800">
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-## 6.1. Lighthouse Report
+## 3.2. Lighthouse Report
 
 To check the lighthouse report on a chrome browser, right click inspect and click on the lighthouse tab. The lighthouse report was run on the home page, features page and sign up page.
 
@@ -942,7 +929,7 @@ To further improve the lighthouse score I could use more WebP images and reduce 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 
-# 7. Deployment
+# 4. Deployment
 The site was deployed to GitHub pages. You can access the live link here: [https://lmcrean.github.io/Crocodile-Kingdom](https://lmcrean.github.io/Crocodile-Kingdom).
 
 To deploy on Github pages, the following steps were taken:
@@ -961,16 +948,17 @@ To fork the repository:
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-# 8. Future features to implement  
-- xxxxxxxxxxxxxxxxxxxx
-- xxxxxxxxxxxxxxxxxxx
+# 5. Issues and Bugs
+
+[<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Issues_Report-purple?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md)
+
+Fixed issues and bugs are documented in a seperate file called [issues.md](issues.md).
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
+# 6. Credits & Acknowledgements
 
-# 9. Credits & Acknowledgements
-
-## 9.1. Code snippets
+## 6.1. Code snippets
 
 The following code snippets were used and adapted in the project:
 
@@ -982,7 +970,7 @@ The following code snippets were used and adapted in the project:
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 
-## 9.2. Technologies Used
+## 6.2. Technologies Used
 
 <u>Languages</u>
 [HTML5](https://en.wikipedia.org/wiki/HTML5) was used for the structure and content of the website
@@ -1013,7 +1001,7 @@ The following code snippets were used and adapted in the project:
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 
-## 9.3. Acknowledgements
+## 6.3. Acknowledgements
 I'd like to thank to the tutors at Code Institute, who provided week-to-week support throughout the project, and were always available to answer questions and provide guidance.
 
 I'd like to thank Seun Owonikoko, my mentor at Code Institute, for her encouragement and support during our mentoring sessions.
