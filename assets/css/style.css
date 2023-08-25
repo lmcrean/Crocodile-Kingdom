@@ -308,6 +308,7 @@ p {
 .headerlogo {
   margin: 1.5em auto auto auto;
   padding: 0em 0em 0em 0em;
+  width: 70vw;
   max-width: 385px;
   height: auto;
 }

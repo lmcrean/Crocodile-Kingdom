@@ -8,7 +8,7 @@
 
 <br>
 
-<a src="assets/media/issues/1.1.5.mp4"><img alt="placeholder" src="assets/media/issues/2023-08-15-13-14-21.png" width="300px" ></a>
+![](assets/media/issues/2023-08-25-16-17-19.png)
 
 <br>
 
@@ -75,7 +75,7 @@ In the issues I have logged written, video or screenshot accounts.
 - [9. Credits \& Acknowledgements](#9-credits--acknowledgements)
   - [9.1. Code snippets](#91-code-snippets)
   - [9.2. Technologies Used](#92-technologies-used)
-  - [9.3. 8.3 Acknowledgements](#93-83-acknowledgements)
+  - [9.3. Acknowledgements](#93-acknowledgements)
 
 ***
 <div align="center">
@@ -933,11 +933,11 @@ To check the lighthouse report on a chrome browser, right click inspect and clic
 
 To further improve the lighthouse score I could use more WebP images and reduce image sizes.
 
-| | Home Page | Features Page | Sign Up Page |
-|---|---|---|---|
-| Mobile |<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">  | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px"> | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
-| Desktop | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px"> | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px"> | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
-|Timestamp| 31st July '23 | 31st July '23 | 15th July '23 |
+| | Home Page |
+|---|---|
+| Mobile | ![](assets/media/issues/2023-08-25-16-10-21.png)  | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px"> | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
+| Desktop | ![](assets/media/issues/2023-08-25-16-09-54.png)| <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px"> | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
+|Timestamp| 25/8/2023 | 31st July '23 | 15th July '23 |
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -971,51 +971,51 @@ To fork the repository:
 # 9. Credits & Acknowledgements
 
 ## 9.1. Code snippets
-- W3 School's [Navbar](https://www.w3schools.com/css/css_navbar.asp) was used early in the project and then adapted to meet the design standards set by the Figma wireframe.
 
-- Dominic Fraser from Free Code Camp had an article on fixing footers to the bottom of the screen, which helped with footer issues [Read here](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/)
+The following code snippets were used and adapted in the project:
 
-- code-sketches youtube tutorial was followed and adapted as a fouundation xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- [Code-sketch's step by step Memory Game tutorial](https://www.youtube.com/watch?v=ZniVgo8U7ek) for a memory game with flex: display. This was used as a starting point for the project, and was adapted to suit the project's needs.
+- [Confetti was added as a fun feature](https://www.npmjs.com/package/canvas-confetti) to celebrate the player's match.
+
+  
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 
 ## 9.2. Technologies Used
 
-The main languages used were HTML5, CSS3 and Javascript. 
-Was also used to for smaller features such as the Navbar hamburger, or read more - read less button.
+<u>Languages</u>
+[HTML5](https://en.wikipedia.org/wiki/HTML5) was used for the structure and content of the website
+[CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) was used for the styling of the website
+[Javascript](https://en.wikipedia.org/wiki/JavaScript) was used for the interactive features of the website
 
 <u>Programmes</u>
-[Canva](https://www.canva.com/) was used for designing Graphics
-[Figma](https://www.figma.com/)  for Designing wireframe
 [VSCode](https://code.visualstudio.com/) was used as my code editor
 [Github](https://www.github.com/) was used for Version control
+[Canva](https://www.canva.com/) was used for designing Graphics including the logo
+[Figma](https://www.figma.com/)  for Designing wireframe
+[Fancy Screen](http://fancyapps.com/) by Janis Skarnelis was used to document GIFs and videos of the project
+
+<u>Libraries</u>
+[Node.js](https://nodejs.org/en/) was used to install ```npm``` and run the Confetti feature.
+[Bootstrap](https://getbootstrap.com/) was used for the Modal, button features as well as drop-shadow effects
+[Canva](https://www.canva.com/) was used for sourcing open-source images.
 
 
-Tools|How it was used|
----|---
-[Clamp tool](https://clamp.font-size.app/)| developing a responsive font size with the clamp tool
-[amiresponsive](https://ui.dev/amiresponsive)| Checking mobile, desktop, tablet view
-[browserstack](https://www.browserstack.com/)| Checking website on firefox, opera, edge, safari and chrome
-[gifcap](https://gifcap.dev/)| Recording gifs
-[shields.io](https://shields.io/)| Documentation Badges
-[FontJoy](https://fontjoy.com/) | Finding font pairings
+<u>Tools</u>
+[Clamp tool](https://clamp.font-size.app/) was used for developing a responsive font size with the clamp tool
+[amiresponsive](https://ui.dev/amiresponsive) was used for checking mobile, desktop, tablet view
+[browserstack](https://www.browserstack.com/) was used for checking website on firefox, opera, edge, safari and chrome
 [Python Tutor](https://www.pythontutor.com) was used for debugging the Javascript, as well as a research tool early on in the project to understand the flow of the code.
+[shields.io](https://shields.io/) was used for Documentation Badges
 
-|Library| How it was used|
-|---|---|
-[Canva](https://www.canva.com/) | All graphics i.e. non-photographic imagery was designed and adapted from Canva's open source library|
-[Pexels](https://www.pexels.com/) | Used for Testimonials player images and the hero images
-[Unsplash](https://unsplash.com/) | John Anderson's picture in the testimonial
-[Font Awesome](https://fontawesome.com/) | The icons in the footer and navbar were taken from 
-[CDN Fonts](https://www.cdnfonts.com/) | Peace Sans and Glacial Indifference fonts sourced
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 
-## 9.3. 8.3 Acknowledgements
-A special thank you to the wonderful tutors at Code Institute, who provided prompt support throughout the project.
+## 9.3. Acknowledgements
+I'd like to thank to the tutors at Code Institute, who provided week-to-week support throughout the project, and were always available to answer questions and provide guidance.
 
-Special thank you to Seun Owonikoko, my mentor at Code Institute, for your time and patience taking me through devtools. 
+I'd like to thank Seun Owonikoko, my mentor at Code Institute, for her encouragement and support during our mentoring sessions.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
