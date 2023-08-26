@@ -84,7 +84,7 @@ $(document).ready(function() {
     
     // Get the audio element...
     var audioElement = document.getElementById('music-player-1');
-    audioElement.volume = 0.6;
+    audioElement.volume = 0.3;
     
     // If the sound-mute class is present, pause the audio
     // If the sound-mute class is not present, play the audio

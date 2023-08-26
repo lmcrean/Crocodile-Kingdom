@@ -131,11 +131,11 @@ color: var(--black-light);
 /*---------------SURFACE PLANE - HOVER INTERACTIONS---------------*/
 
 button[type="submit"]:hover {
-  background-color: var(--salmon);
+  background-color: var(--brand-color);
 }
 
 .button a:hover {
-  background-color: var(--yellow);
+  background-color: var(--harmonious-bold);
   color: var(--black-medium);
   cursor: pointer;
 }
@@ -445,7 +445,7 @@ z-index: 3;
 /*---------------HOW TO PLAY SKELETON---------------*/
 
 /*---------------IMPORTED CODE---------------*/
-
+/*https://codepen.io/giannisrig/pen/RYJPzb*/
 .container-sound {
   position: absolute;
   width:100%;
@@ -473,9 +473,6 @@ z-index: 3;
 	box-shadow: none;
 }
 
-@-webkit-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
-@-moz-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
-@-ms-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
 @keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
 
 .sound {
@@ -531,12 +528,10 @@ border-width: 0 2px 0 0;
 left: 5px;
 }
 .sound-mute .sound--wave_one {
-  -webkit-transform: rotate(45deg) translate3d(0, -50%, 0);
   transform: rotate(45deg) translate3d(7%, -45%, 0);
 }
 .sound-mute .sound--wave_two {
-  -webkit-transform: rotate(-45deg) translate3d(0, 50%, 0);
-          transform: rotate(-45deg) translate3d(0, 50%, 0);
+  transform: rotate(-45deg) translate3d(0, 50%, 0);
 }
 .sound-mute .sound--wave_three {
     opacity: 0;
