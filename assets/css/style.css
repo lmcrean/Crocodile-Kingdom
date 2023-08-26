@@ -539,3 +539,21 @@ left: 5px;
     height: 20%;
 
 }
+
+
+.toggle-sfx {
+  position: fixed;
+  top: calc(25.5px + 1vw);
+  left: calc(25.5px + 1vw);
+  background-color: #EC407A;
+  width: 55px;
+  height: 55px;
+  line-height: 58px;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 99;
+  animation: pulse 3.25s cubic-bezier(0.66, 0, 0, 1);
+  box-shadow: 0 0 0 0 #F06292;
+  margin: 6em auto auto;
+}
