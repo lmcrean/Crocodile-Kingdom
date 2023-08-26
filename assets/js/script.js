@@ -74,10 +74,27 @@ function shuffleCardsAgain () {
   });
 }
 
-$('.toggle-sound').on('click', function(e) {
-  $(this).toggleClass('sound-mute');
-  console.log("sound-mute");
-}); // This function toggles the mute button on and off. When the mute button is clicked, the function is run. The function toggles the class of "sound-mute" on and off.
+// ----------------- Mute Toggle -----------------
+
+$(document).ready(function() {
+  // When the music button is clicked...
+  $('.toggle-sound').on('click', function() {
+    // Toggle the sound-mute class on the button...
+    $(this).toggleClass('sound-mute');
+    
+    // Get the audio element...
+    var audioElement = document.getElementById('music-player-1');
+    audioElement.volume = 0.6;
+    
+    // If the sound-mute class is present, pause the audio
+    // If the sound-mute class is not present, play the audio
+    if ($(this).hasClass('sound-mute')) {
+      audioElement.pause();
+    } else {
+      audioElement.play();
+    }
+  });
+});
 
 // ----------------- User Clicks on 1st or 2nd card -----------------
 
