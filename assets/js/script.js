@@ -29,12 +29,12 @@
 
 //Mute Toggle imported from https://codepen.io/giannisrig/pen/RYJPzb
 
-$(document).on('click', '.toggle-sound', function(e) {
-  $(this).toggleClass('sound-mute');
-});
+
 
 // ----------------- DEFINE THE VARIABLES ----------------- 
 // Define the variables
+
+const musicPlayer1 = document.getElementById('music-player-1'); // This variable selects the music-player ID from the HTML
 
 const cards = document.querySelectorAll(".card-item-container"); // This variable selects the card-item-container class from the HTML
 
@@ -57,11 +57,14 @@ let lockCards = false; // This variable is set to false because the card has not
 // ----------------- CARD DECK -----------------
 // ----------------- Computer Spawns cards, rearrange at random -----------------
 
+
+
 (function shuffleCards () { 
   cards.forEach(card => {
     let randomPosition = Math.floor(Math.random() * 16); // This variable generates a random number between 0 and 16. Math.floor rounds the number down to the nearest whole number. Math.random generates a random number between 0 and 1. Multiplying this by 16 gives a number between 0 and 16.
     card.style.order = randomPosition; // This changes the order of the cards to the random number generated above. style.order is a CSS property that changes the order of the cards.
   });
+
 })(); // This function is put in brackets to make it run as soon as the page loads.
 
 function shuffleCardsAgain () { 
@@ -71,6 +74,10 @@ function shuffleCardsAgain () {
   });
 }
 
+$('.toggle-sound').on('click', function(e) {
+  $(this).toggleClass('sound-mute');
+  console.log("sound-mute");
+}); // This function toggles the mute button on and off. When the mute button is clicked, the function is run. The function toggles the class of "sound-mute" on and off.
 
 // ----------------- User Clicks on 1st or 2nd card -----------------
 

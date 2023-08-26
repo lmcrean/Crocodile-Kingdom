@@ -977,6 +977,7 @@ The following code snippets were used and adapted in the project:
 <u>Libraries</u>
 [Node.js](https://nodejs.org/en/) was used to install ```npm``` and run the Confetti feature.
 [Bootstrap](https://getbootstrap.com/) was used for the Modal, button features as well as drop-shadow effects
+[JQuery](https://jquery.com/) was used for mute button.
 [Canva](https://www.canva.com/) was used for sourcing open-source images.
 
 
