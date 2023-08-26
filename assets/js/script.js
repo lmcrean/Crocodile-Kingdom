@@ -27,6 +27,12 @@
 // ----------------- JAVASCRIPT CODE -----------------
 /*jshint esversion: 6 */
 
+//Mute Toggle imported from https://codepen.io/giannisrig/pen/RYJPzb
+
+$(document).on('click', '.toggle-sound', function(e) {
+  $(this).toggleClass('sound-mute');
+});
+
 // ----------------- DEFINE THE VARIABLES ----------------- 
 // Define the variables
 
@@ -215,3 +221,6 @@ showYouLoseModal = () => {
 //??? Has user pressed Play Again button???(yes)
 // ...then run restart button function
 // ...then close modal box
+
+
+// ----------------- Importated
