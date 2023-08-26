@@ -106,6 +106,18 @@ h5 {font-size: 0.7rem;/*reduce font size*/}
 .background-lightgrey {background-color: var(--lightgrey);}
 .background-white {background-color: var(--white);}
 
+.footer-links a {
+  background-color: var(--lightgrey);
+}
+
+i.fa-brands {
+color: var(--black-light);
+}
+
+.footer-links {
+  filter:invert(20%);
+}
+
 /*---------------SURFACE PLANE - SHADOWS, ROUNDED CORNERS---------------*/
 
 /*.shadow is used to create a shadow effect on the card deck with bootstrap*/
@@ -129,7 +141,15 @@ button[type="submit"]:hover {
 }
 
 .footer-links a:hover {
-  background-color: var(--black-light);
+  background-color: var(--grey);
+}
+
+i.fa-brands:hover {
+color: var(--white);
+}
+
+img.footer-links:hover {
+  filter:invert(80%);
 }
 
 /*---------------SURFACE PLANE - ANIMATIONS---------------*/
@@ -239,7 +259,7 @@ p {
   padding: 0.5em 1em;
 }
 
-
+/*footer {width:100vw !important; overflow-x: hidden;}*/ 
 
 /*--------------- SKELETON PLANE - VIEWPORT SWITCHES---------------*/
 /* For responsive design, some elements will disappear at certain viewport breakpoints and "switch" to another element. Note that CSS is mobile-first.*/
@@ -315,12 +335,12 @@ p {
 
 /*---------------FOOTER FEATURE SKELETON---------------
   ---------------Elements = footer-small-print, footer icons ---------------*/
-/*
+
 footer {
-  display: none; /*issue with footer overlapping card deck in desktop, fix later
+  display: flex; /*issue with footer overlapping card deck in desktop, fix later*/
   margin: auto;
   bottom: 0;
-  width:100%;
+  width: 100%;
   margin-top: 2em;
   min-height: 20rem;
   display: flex;
@@ -345,7 +365,7 @@ footer {
 }
 .footer-row2 {
 margin-bottom: 40px;
-}*/
+}
 
 
 .footer-links a { /*should be perfectly circular without distortion*/
@@ -358,20 +378,14 @@ margin-bottom: 40px;
 }
 
 i.fa-brands {
-
 font-size: 0.7em;
-
-color: var(--white);
-
 margin: auto auto auto auto;
-
 z-index: 3;
 }
 
 .footer-links img {
   width: 25px;
   height: auto;
-  filter:invert(100%);
 }
 
 

@@ -30,6 +30,7 @@ This page documents the issues and bugs encountered during the development of th
     - [2.1.3. Responsive grid is falling off the vertical viewport](#213-responsive-grid-is-falling-off-the-vertical-viewport)
     - [2.1.4. back of card doesn't fully cover card face underneath](#214-back-of-card-doesnt-fully-cover-card-face-underneath)
     - [2.1.5. with new "display: flex" method, card-face moves to side in flipped state](#215-with-new-display-flex-method-card-face-moves-to-side-in-flipped-state)
+    - [2.1.6. Slight x-overflow in desktop view](#216-slight-x-overflow-in-desktop-view)
 - [3. Unfixed Bugs](#3-unfixed-bugs)
 
 # 1. Javascript Structure Issues
@@ -591,6 +592,11 @@ Result: functions same as ```display: grid``` version now
 <img src="assets/media/issues/1.1.3b.gif" width=500>
 
 now to solve the shuffle issue.
+
+### 2.1.6. Slight x-overflow in desktop view
+
+<img src="assets/media/issues/2.1.6.gif" width=500>
+
 
 
 

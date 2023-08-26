@@ -93,6 +93,7 @@ cards.forEach(card => card.addEventListener("click", cardAppear)); // .forEach l
 // ----------------- ???Do the cards match??? (yes) -----------------
 // ...then clicked images stay flipped
 // ...then ask ???Are all the cards flipped???
+
 function checkForMatch() {
     let matchTrue = firstCard.dataset.framework === secondCard.dataset.framework; // This variable checks if the data-framework of the first card is equal to the data-framework of the second card. If they are equal, then the variable is set to true. If they are not equal, then the variable is set to false.
 
@@ -159,6 +160,11 @@ function updateTurnsAndTurnsLeft() {
 
   turnsModalContainer.textContent = turnsContainer.textContent; // This updates the turns modal box with the number of attempts the user has taken.
   turnsLeftModalContainer.textContent = turnsLeftContainer.textContent; // This updates the turns left modal box with the number of attempts the user has left.
+
+  // check if turns-left has reached 0
+if (turnsLeftContainer.innerText === "0") {
+  showYouLoseModal();
+}
 }
 
 
@@ -184,6 +190,7 @@ function restartGame() {
 
   resetCards (); // This resets the variables to their original values.
   turnsContainer.innerText = 0; // This resets the attempts counter to 0. 
+  turnsLeftContainer.innerText = 40; // This resets the attempts left counter to 40.
 
   lockCards = false; // This statement is set to false so that the user can click on the cards again.
 }
@@ -193,12 +200,17 @@ function restartGame() {
 // ...then close modal box
 
 // ----------------- Well done modal box -----------------
-//?has user flipped all cards over? (yes)
-// ...then run well done modal box function
 
 showWellDoneModal = () => {
   document.getElementsByClassName("well-done-modal")[0].click();  console.log("showWellDoneModal"); //This function opens the well done modal box, by clicking the HTML button with the class of "well-done-modal".
 };
+
+// ----------------- You Lose modal box -----------------
+
+showYouLoseModal = () => {
+  document.getElementsByClassName("you-lose-modal")[0].click();  console.log("showYouLoseModal"); //This function opens the well done modal box, by clicking the HTML button with the class of "well-done-modal".
+}
+
 
 //??? Has user pressed Play Again button???(yes)
 // ...then run restart button function

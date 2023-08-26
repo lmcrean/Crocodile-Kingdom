@@ -30,8 +30,8 @@ In the issues I have logged written, video or screenshot accounts.
   - [1.1. Card Deck](#11-card-deck)
   - [1.2. Turn Count](#12-turn-count)
   - [1.3. Restart Button](#13-restart-button)
-  - [1.4. How to Play, modal popup](#14-how-to-play-modal-popup)
-  - [1.5. Logo](#15-logo)
+  - [1.4. Well Done feature](#14-well-done-feature)
+  - [1.5. You Lost feature](#15-you-lost-feature)
   - [1.6. Footer](#16-footer)
 - [2. UX Development Planes \& Manual Testing](#2-ux-development-planes--manual-testing)
   - [2.1. Strategy Plane](#21-strategy-plane)
@@ -43,13 +43,6 @@ In the issues I have logged written, video or screenshot accounts.
   - [2.2. Scope plane](#22-scope-plane)
     - [2.2.1. Mininum Viable product](#221-mininum-viable-product)
     - [2.2.2. Scope of Features](#222-scope-of-features)
-      - [2.2.2.1. Card Deck scope ](#2221-card-deck-scope-)
-      - [2.2.2.2. Turn count scope ](#2222-turn-count-scope-)
-      - [2.2.2.3. Restart button scope ](#2223-restart-button-scope-)
-      - [2.2.2.4. You've Won feature scope ](#2224-youve-won-feature-scope-)
-      - [2.2.2.5. How To Play feature scope ](#2225-how-to-play-feature-scope-)
-      - [2.2.2.6. Navbar scope ](#2226-navbar-scope-)
-      - [2.2.2.7. Footer scope ](#2227-footer-scope-)
   - [2.3. Structure Plane](#23-structure-plane)
     - [2.3.1. Card Deck structure](#231-card-deck-structure)
     - [2.3.2. Turn count structure](#232-turn-count-structure)
@@ -64,7 +57,6 @@ In the issues I have logged written, video or screenshot accounts.
     - [2.4.3. Well done Skeleton:](#243-well-done-skeleton)
     - [2.4.4. Sizing skeleton](#244-sizing-skeleton)
     - [2.4.5. HTML classes skeleton](#245-html-classes-skeleton)
-    - [2.4.6. BrowserStack Testing](#246-browserstack-testing)
   - [2.5. Surface Plane](#25-surface-plane)
     - [2.5.1. Typefaces Surface](#251-typefaces-surface)
     - [2.5.2. Color surface](#252-color-surface)
@@ -76,6 +68,7 @@ In the issues I have logged written, video or screenshot accounts.
 - [3. Automatic Testing](#3-automatic-testing)
   - [3.1. HTML/CSS/JS Validator Testing](#31-htmlcssjs-validator-testing)
   - [3.2. Lighthouse Report](#32-lighthouse-report)
+  - [3.3. Browserstack Testing](#33-browserstack-testing)
 - [4. Deployment](#4-deployment)
 - [5. Issues and Bugs](#5-issues-and-bugs)
 - [6. Credits \& Acknowledgements](#6-credits--acknowledgements)
@@ -92,15 +85,15 @@ In the issues I have logged written, video or screenshot accounts.
 <a src="assets/media/issues/1.1.5.mp4"><img alt="placeholder" src="assets/media/issues/2023-08-15-13-14-21.png" width="300px" ></a>
 
 - The Card Deck functions as the classic Memory Game, where the player has to try and match pairs of cards together while never turning more than two cards at once. The game challenges the player's memory skills. *The player wins the game when all the cards are flipped.*
-- When the player recieves a match, the cards stay flipped over.
+- As the player turns the cards, the rest of the board is temporarily locked so the player can't cheat.
+- When the player gets a match, confetti appears to encourage the player, and the cards stay flipped over and locked.
+- When the player matches all 8 sets of cards, the Well Done modal appears.
 
 ***
 ## 1.2. Turn Count
 <img alt="placeholder" src="assets/media/issues/1.2b.gif" width="300px" >
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+The turns start at 40, and count down each time the player attempts to get a match
 
 ***
 
@@ -113,21 +106,18 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ***
 
-## 1.4. How to Play, modal popup 
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
+## 1.4. Well Done feature
+<img alt="placeholder" src="assets/media/issues/feature-well-done.gif" width="300px">
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+When all the cards are flipped, the Well Done modal appears. It displays the number of turns taken and remaining, and a restart button.
 
 ***
 
-## 1.5. Logo
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
+## 1.5. You Lost feature
+<img alt="placeholder" src="assets/media/issues/feature-you-lost.gif" width="300px" >
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+When turns run out to 0, the You Lost modal appears.
+
 
 ***
 
@@ -146,21 +136,19 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 # 2. UX Development Planes & Manual Testing
 
-The 5 UX development planes were used as an efficient framework for documenting the project.
- - The Strategy plane xxxxxxxxxxxxxxxxx
- - The Scope plane xxxxxxxxxxxx
- - The Structure plane xxxxxxxxxxxxxx
- - The Skeleton plane xxxxxxxxxxxxxxx
- - The Surface plane xxxxxxxxxxxxxxxxx
+The 5 UX development planes were used as an efficient framework for documenting the project's intentions.
+ - The Strategy plane set the intention of a children's memory game with Vanilla Javascript that would be developed over 6 weeks.
+ - The Scope plane identified a range of Mininum Viable Product and Unique Selling Point features.
+ - The Structure plane connected the features with efficient logic for playing the memory game.
+ - The Skeleton plane was developed for a responsive layout, allowing the game to be played on all mainstream devices.
+ - The Surface plane intended to be  
 
 
-Manual testing was executed with the following criteria:
+Using the latter 3 UX Planes as a guideline, Manual testing was executed with the following criteria:
 
-- JS logic and functionality within each feature, using console.log() to check that the code was running as expected.
-- CSS media queries' responsivity to viewport width, key breakpoints being at mobile view, tablet view (768px), laptop view (1208px) and desktop view (1728px+). The videos demonstrate varying viewport widths between 483 to 2500px. Grid and Flex displays were used to switch between differing arrangements of content contributing to the readability.
-- Design choices that are similar to those concieved in the [Figma Wireframe, documented here](https://github.com/lmcrean/Hoverboard/wiki/3.-Design-Testing-via-Figma-wireframe). Effective positioning, sizing and style.
-- Testing on different browsers, specifically Chrome, Firefox, Edge, Opera and Safari
-- test HTML5 Hyperlinks and Forms so that they are all working as expected, identifying potential syntax errors or with the form requirements
+- **For the Structure plane, JS logic and HTML hyperlinks** functionality within each feature, using console.log() to check that the code was running as expected.
+- **For the Skeleton plane, CSS positioning and responsivity to viewport width**, key breakpoints being at mobile view, tablet view (768px), laptop view (1208px) and desktop view (1728px+). 
+- **For the Surface plane, design choices through vector graphics, typography, color and sound** that serve the user stories and elicit a positive emotional response. CSS was the key programming language and Canva was used for rendering graphic illustrations.
 
 
 ## 2.1. Strategy Plane
@@ -334,43 +322,43 @@ Once that would be designed more interesting features could be added, such as
 ### 2.2.2. Scope of Features
 The following features were designed to meet the needs of new playerssometimes appearing more than once for the purpose of both making the website easy to navigate and consistent branding design.
 
-#### 2.2.2.1. Card Deck scope <!-- omit in toc-->
+#### 2.2.2.1. Card Deck scope <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> 
 
 <b>Use to play the game.</b>
 <i>"Most Relevant User Stories: As a player, I need the design to be accessible, easy to read with lots of visuals. As a player, I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
-#### 2.2.2.2. Turn count scope <!-- omit in toc-->
+#### 2.2.2.2. Turn count scope <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>An updating score count that follows the attempts taken by the player.</b>
 <i>"As a player, I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
 
-#### 2.2.2.3. Restart button scope <!-- omit in toc-->
+#### 2.2.2.3. Restart button scope <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>player clicks here to restart their game.</b>
 <i>"As a player, I need a new arrangement of cards each time I play the game to keep it interesting."</i>
 
-#### 2.2.2.4. You've Won feature scope <!-- omit in toc-->
+#### 2.2.2.4. You've Won feature scope <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>An encouraging message at the end of the game, it shows total turns taken and also displays the Restart button.</b>
 <i>"As a player, I need to receive praise for completing the game."</i>
 
-#### 2.2.2.5. How To Play feature scope <!-- omit in toc-->
+#### 2.2.2.5. How To Play feature scope <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>Allows the player to read the rules of the game.</b>
 <i>"As a player, I need to understand how to play the game."</i>
 
-#### 2.2.2.6. Navbar scope <!-- omit in toc-->
+#### 2.2.2.6. Navbar scope <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>Displays just the Logo.</b>
 <i>"As a player, I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
-#### 2.2.2.7. Footer scope <!-- omit in toc-->
+#### 2.2.2.7. Footer scope <!-- omit in toc -->
 <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
 
 <b>Displays the social media links, and a Contact Us link.</b>
@@ -579,7 +567,7 @@ function restartGame() {
 
 ### 2.3.4. Well done feature structure 
 
-<img alt="placeholder" src="assets/media/issues/1.4.gif" width="400px">
+<img alt="placeholder" src="assets/media/issues/feature-well-done.gif" width="400px">
 
 <i>"As a player, I need to receive praise for completing the game."</i>
 
@@ -813,12 +801,6 @@ Important HTML Class selectors were used to shorten the CSS code, such as
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 2.4.6. BrowserStack Testing
-xxxxxxxxxxxxxxxxxxxxxxxxxx
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
-
-[↑ Back to top](#Portfolio-Project-2-with-Javascript)
-
 ## 2.5. Surface Plane
 This surface plane describes the choice of typefaces, colors and style themes relevant to the project's desired tone and practical needs.
 
@@ -899,6 +881,7 @@ The Automatic Testing achieved
 * use lighthouse testing to identify files that could be resized and accessibility that can be improved.
 * a good lighthouse testing score, particularly for performance, accessibility, best practices.
 * Passed W3C Validator Testing for both HTML5 and CSS3, thereby removing excess code and broken links.
+* Confirmed was working as expected on major browser's and devices.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -925,6 +908,13 @@ To further improve the lighthouse score I could use more WebP images and reduce 
 | Mobile | ![](assets/media/issues/2023-08-25-16-10-21.png)  | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px"> | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
 | Desktop | ![](assets/media/issues/2023-08-25-16-09-54.png)| <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px"> | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
 |Timestamp| 25/8/2023 | 31st July '23 | 15th July '23 |
+
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+## 3.3. Browserstack Testing
+
+<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
