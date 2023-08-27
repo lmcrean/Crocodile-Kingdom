@@ -38,6 +38,8 @@ const musicPlayer1 = document.getElementById('music-player-1'); // This variable
 
 const sfxFlip = document.getElementById('sfx-flip'); // This variable selects the sfx-flip ID from the HTML
 
+const sfxFlip2 = document.getElementById('sfx-flip2'); // This variable selects the sfx-flip2 ID from the HTML
+
 const sfxMatch = document.getElementById('sfx-match'); // This variable selects the sfx-match ID from the HTML
 
 const sfxNoMatch = document.getElementById('sfx-no-match'); // This variable selects the sfx-no-match ID from the HTML
@@ -112,6 +114,7 @@ $(document).ready(function() {
     // Toggle the sound-mute class on the button...
     $(this).toggleClass('sound-mute');
     $('#sfx-flip').toggleClass('sound-mute');
+    $('#sfx-flip2').toggleClass('sound-mute');
     $('#sfx-match').toggleClass('sound-mute');
     $('#sfx-no-match').toggleClass('sound-mute');
     $('#sfx-win').toggleClass('sound-mute');
@@ -139,12 +142,12 @@ if (!sfxFlip.classList.contains('sound-mute')) {
   console.log("sfxFlip is muted");
 }
 
-if (!hasFlippedCard) { //"!"" references the opposite of hasFlippedCard. If hasFlippedCard is false, then run the following code. If hasFlippedCard is true, then skip the following code.
+if (!hasFlippedCard) { //"!"" references the opposite of hasFlippedCard. In the game, this would mean that the user has not clicked on a card yet. If the user has not clicked on a card yet, then run the following code.
   hasFlippedCard = true;
   firstCard = this; // "this" refers to the card that is clicked on.
   return;} // This stops the function if the user clicks on the same card twice. "If this is equal to firstCard, then return (stop the function)." this refers to the card that is clicked on.
   hasFlippedCard = false;
-  secondCard = this; // "this" refers to the card that is clicked on.
+  secondCard = this; // "this" refers to the card that is clicked on. This would mean that the user has clicked on a card already. If the user has clicked on a card already, then run the following code.
   checkForMatch(); // "if the user hasn't clicked on the same card twice, check for match" This function checks if the cards match...
 }
 
@@ -163,6 +166,7 @@ function checkForMatch() {
   }
 
 function disableCards(){
+  
 firstCard.removeEventListener("click", cardAppear);
 secondCard.removeEventListener("click", cardAppear);
 // .removeEventListener removes the event listener from the two selected cards so that they can't be clicked again.})
