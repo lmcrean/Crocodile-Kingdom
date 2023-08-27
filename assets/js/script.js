@@ -107,10 +107,15 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  // When the music button is clicked...
+  // When the sfx button is clicked...
   $('.toggle-sfx').on('click', function() {
     // Toggle the sound-mute class on the button...
     $(this).toggleClass('sound-mute');
+    $('#sfx-flip').toggleClass('sound-mute');
+    $('#sfx-match').toggleClass('sound-mute');
+    $('#sfx-no-match').toggleClass('sound-mute');
+    $('#sfx-win').toggleClass('sound-mute');
+    $('#sfx-lose').toggleClass('sound-mute');
   });
 });
 
@@ -125,12 +130,21 @@ if (this === firstCard) return; // This stops the function if the user clicks on
 
 this.classList.toggle("flipped-over"); // .toggle adds/removes the HTML class of "flipped-over" on the card that it is clicked on. This flips the card over.
 
+//check if sfxFlip has class sound-mute
+
+if (!sfxFlip.classList.contains('sound-mute')) {
+  console.log("sfxFlip is not muted, should be playing");
+  sfxFlip.play(); // This plays the flip sound effect when the card is clicked on.
+} else {
+  console.log("sfxFlip is muted");
+}
+
 if (!hasFlippedCard) { //"!"" references the opposite of hasFlippedCard. If hasFlippedCard is false, then run the following code. If hasFlippedCard is true, then skip the following code.
   hasFlippedCard = true;
-  firstCard = this;
+  firstCard = this; // "this" refers to the card that is clicked on.
   return;} // This stops the function if the user clicks on the same card twice. "If this is equal to firstCard, then return (stop the function)." this refers to the card that is clicked on.
   hasFlippedCard = false;
-  secondCard = this;
+  secondCard = this; // "this" refers to the card that is clicked on.
   checkForMatch(); // "if the user hasn't clicked on the same card twice, check for match" This function checks if the cards match...
 }
 
@@ -153,6 +167,14 @@ firstCard.removeEventListener("click", cardAppear);
 secondCard.removeEventListener("click", cardAppear);
 // .removeEventListener removes the event listener from the two selected cards so that they can't be clicked again.})
 
+if (!sfxMatch.classList.contains('sound-mute')) { //used !, if sfxMatch does not have the class sound-mute, then run the following code.
+  console.log("sfxMatch is not muted, should be playing");
+  sfxMatch.play(); // This plays the flip sound effect when the card is clicked on.
+} else {
+  console.log("sfxMatch is muted");
+}
+
+
 resetCards (); // unlocks the board so that the user can click on new cards again.
 
 updateTurnsAndTurnsLeft(); // adds 1 to the attempts counter
@@ -167,6 +189,12 @@ confetti({
 // Check if all cards are matched
 if (document.querySelectorAll(".flipped-over").length === cards.length) {
 // All cards are matched, so show the well-done modal
+if (!sfxWin.classList.contains('sound-mute')) { //used !, if sfxWin does not have the class sound-mute, then run the following code.
+  console.log("sfxWin is not muted, should be playing");
+  sfxWin.play(); // This plays the flip sound effect when the card is clicked on.
+} else {
+  console.log("sfxwin is muted");
+};
 showWellDoneModal();
 }
 }
@@ -182,6 +210,15 @@ function randomInRange(min, max) {
 
 function flipBackCards() {
   lockCards = true; // This statement is set to true so that the user can't click on more than 2 cards at a time.
+
+  setTimeout(() => {
+  if (!sfxNoMatch.classList.contains('sound-mute')) { //used !, if sfxNoMatch does not have the class sound-mute, then run the following code.
+    console.log("sfxNoMatch is not muted, should be playing");
+    sfxNoMatch.play(); // This plays the flip sound effect when the card is clicked on.
+  } else {
+    console.log("sfxNoMatch is muted");
+  }
+}, 600); // This sets a timer of 0.5 seconds before the cards flip back over.
 
 setTimeout(() => {
   firstCard.classList.remove("flipped-over");
@@ -250,12 +287,24 @@ function restartGame() {
 // ----------------- Well done modal box -----------------
 
 showWellDoneModal = () => {
+  if (!sfxWin.classList.contains('sound-mute')) { //used !, if sfxWin does not have the class sound-mute, then run the following code.
+    console.log("sfxWin is not muted, should be playing");
+    sfxWin.play(); // This plays the flip sound effect when the card is clicked on.
+  } else {
+    console.log("sfxwin is muted");
+  };
   document.getElementsByClassName("well-done-modal")[0].click();  console.log("showWellDoneModal"); //This function opens the well done modal box, by clicking the HTML button with the class of "well-done-modal".
 };
 
 // ----------------- You Lose modal box -----------------
 
 showYouLoseModal = () => {
+  if (!sfxLose.classList.contains('sound-mute')) { //used !, if sfxLose does not have the class sound-mute, then run the following code.
+    console.log("sfxLose is not muted, should be playing");
+    sfxLose.play(); // This plays the flip sound effect when the card is clicked on.
+  } else {
+    console.log("sfxLose is muted");
+  };
   document.getElementsByClassName("you-lose-modal")[0].click();  console.log("showYouLoseModal"); //This function opens the well done modal box, by clicking the HTML button with the class of "well-done-modal".
 }
 
