@@ -156,7 +156,7 @@
   </div>
 </div>
 <div id="restart-section">
-  <button class="btn btn-primary rounded-corner shadow" id="restart-button">Restart</button>
+  <button class="btn btn-primary rounded-corner shadow restart-function" id="restart-button">Restart</button>
 </div>
 
 <section id="how-to-play" class="modal-box">
@@ -176,7 +176,8 @@
           
         </div>
         <div class="modal-footer-centered">
-          <button type="button" class="btn btn-primary">Continue</button>
+          <button type="button" class="btn btn-primary continue close-modal" data-bs-dismiss="modal" aria-label="Close">Let's Play</button>
+          <!--this button closes the modal with bootstrap-->
         </div>
         <br>
       </div>
@@ -209,7 +210,8 @@
         <h4> Can you beat that now? </h4><br>
       </div>
       <div class="modal-footer-centered">
-        <button type="button" class="btn btn-primary">Play Again</button>
+        <button type="button" class="btn btn-primary restart-function continue close-modal" data-bs-dismiss="modal" aria-label="Close" id="restart-button-from-win">Play Again</button><br><br>
+        <button type="button" class="btn btn-secondary continue close-modal" data-bs-dismiss="modal" aria-label="Close"> Close </button>
       </div>
       <br>
     </div>
@@ -217,31 +219,7 @@
 </div>
 </section>
 
-<section id="welcome" class="modal-box ">
-    <br>
-    <button type="button" class="btn btn-secondary hide-in-laptop-and-desktop" data-bs-toggle="modal" data-bs-target="#welcome">
-      Welcome screen (placeholder)
-    </button>
-  
-    <div class="modal fade  " id="welcome-modal" tabindex="-1" aria-labelledby="welcome" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <h1>How to play</h1><br><br>
-            <img src="assets/media/documentation/placeholder.svg" alt="trophy" class="trophy-icon" width="399"><br><br>
-            
-          </div>
-          <div class="modal-footer-centered">
-            <button type="button" class="btn btn-primary">Continue</button>
-          </div>
-          <br>
-        </div>
-      </div>
-    </div>
-    </section>
+
 
     <section id="you-lose" class="modal-box ">
       <br>
@@ -261,13 +239,41 @@
               
             </div>
             <div class="modal-footer-centered">
-              <button type="button" class="btn btn-primary">Continue</button>
+              <button type="button" class="btn btn-primary restart-function continue close-modal" data-bs-dismiss="modal" aria-label="Close" id="restart-button-from-lose">Play Again</button><br><br>
+              <button type="button" class="btn btn-secondary continue close-modal" data-bs-dismiss="modal" aria-label="Close"> Close </button>
             </div>
             <br>
           </div>
         </div>
       </div>
       </section>
+
+      <section id="welcome" class="modal-box ">
+        <br>
+        <button type="button" class="btn btn-secondary hide-in-laptop-and-desktop" data-bs-toggle="modal" data-bs-target="#welcome-modal">
+          Welcome screen (placeholder)
+        </button>
+      
+        <div class="modal fade  " id="welcome-modal" tabindex="-1" aria-labelledby="welcome" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h1>How to play</h1><br><br>
+                <img src="assets/media/documentation/placeholder.svg" alt="trophy" class="trophy-icon" width="399"><br><br>
+                
+              </div>
+              <div class="modal-footer-centered">
+                <button type="button" class="btn btn-primary continue close-modal" data-bs-dismiss="modal" aria-label="Close">Continue</button>
+                <!--this button closes the modal with bootstrap-->
+              </div>
+              <br>
+            </div>
+          </div>
+        </div>
+        </section>
 
 <footer id="footer-desktop-display" class="background-harmonious-light">
 <div class="footer-small-print">
