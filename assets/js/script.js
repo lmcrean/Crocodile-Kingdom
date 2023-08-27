@@ -36,6 +36,16 @@
 
 const musicPlayer1 = document.getElementById('music-player-1'); // This variable selects the music-player ID from the HTML
 
+const sfxFlip = document.getElementById('sfx-flip'); // This variable selects the sfx-flip ID from the HTML
+
+const sfxMatch = document.getElementById('sfx-match'); // This variable selects the sfx-match ID from the HTML
+
+const sfxNoMatch = document.getElementById('sfx-no-match'); // This variable selects the sfx-no-match ID from the HTML
+
+const sfxWin = document.getElementById('sfx-win'); // This variable selects the sfx-win ID from the HTML
+
+const sfxLose = document.getElementById('sfx-lose'); // This variable selects the sfx-lose ID from the HTML
+
 const cards = document.querySelectorAll(".card-item-container"); // This variable selects the card-item-container class from the HTML
 
 const turnsContainer = document.getElementById("turns-count"); // This variable selects the attempts ID from the HTML, which is used to display the number of attempts the user has taken. It has started at 0.
@@ -93,6 +103,14 @@ $(document).ready(function() {
     } else {
       audioElement.play();
     }
+  });
+});
+
+$(document).ready(function() {
+  // When the music button is clicked...
+  $('.toggle-sfx').on('click', function() {
+    // Toggle the sound-mute class on the button...
+    $(this).toggleClass('sound-mute');
   });
 });
 
