@@ -215,19 +215,18 @@ function randomInRange(min, max) {
 function flipBackCards() {
   lockCards = true; // This statement is set to true so that the user can't click on more than 2 cards at a time.
 
-  setTimeout(() => {
+  
+
+setTimeout(() => {
+  firstCard.classList.remove("flipped-over");
+  secondCard.classList.remove("flipped-over"); // removes the HTML class of "flipped-over" on the card that it is clicked on. This flips the card back over.
+  resetCards (); // unlocks the cards so that the user can click on them again.
   if (!sfxNoMatch.classList.contains('sound-mute')) { //used !, if sfxNoMatch does not have the class sound-mute, then run the following code.
     console.log("sfxNoMatch is not muted, should be playing");
     sfxNoMatch.play(); // This plays the flip sound effect when the card is clicked on.
   } else {
     console.log("sfxNoMatch is muted");
   }
-}, 600); // This sets a timer of 0.5 seconds before the cards flip back over.
-
-setTimeout(() => {
-  firstCard.classList.remove("flipped-over");
-  secondCard.classList.remove("flipped-over"); // removes the HTML class of "flipped-over" on the card that it is clicked on. This flips the card back over.
-  resetCards (); // unlocks the cards so that the user can click on them again.
   },
   2000); // This sets a timer of 2 seconds before the cards flip back over.
 
@@ -237,6 +236,7 @@ setTimeout(() => {
 function resetCards() {// This function resets the variables to their original values.
   [hasFlippedCard, lockCards] = [false, false];
   [firstCard, secondCard] = [null, null];
+
 }
 
 //----------------- +1 to turns, -1 to turns left -----------------

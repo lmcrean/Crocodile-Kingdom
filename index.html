@@ -159,6 +159,7 @@
   <button class="btn btn-primary rounded-corner shadow restart-function" id="restart-button">Restart</button>
 </div>
 
+<!--------------------- How to play Modal ------------------------>
 <section id="how-to-play" class="modal-box">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#howtoplay">
     How to Play
@@ -172,13 +173,54 @@
         </div>
         <div class="modal-body">
           <h1>How to play</h1><br><br>
-          <img src="assets/media/documentation/placeholder.svg" alt="trophy" class="trophy-icon" width="399"><br><br>
+          <h2>Try to get a matching pair of cards by remembering your previous turns </h2><br>
+          <!---this line shows a demo of MATCH + MATCH = HAPPY -->
+          <img src="assets/media/card-deck/G.svg" alt="match" class="match-demo rounded-1 shadow-sm" width="100">
+          <img src="assets/media/card-deck/G.svg" alt="match" class="match-demo rounded-1 shadow-sm" width="100"><br><hr>
+          <h2>Try not to get a mismatch. Remember, you only have 40 turns! </h2><br>
+          <!---this line shows a demo of MATCH + MISMATCH = SAD -->
+          <img src="assets/media/card-deck/G.svg" alt="match" class="mismatch-demo rounded-1 shadow-sm" width="100">
+          <img src="assets/media/card-deck/H.svg" alt="mismatch" class="mismatch-demo rounded-1 shadow-sm" width="100">
+
+          <br><hr>
+          <h2>You win when all the cards are matched!🏆</h2><br>
+          <div class="win-demo-container">
+          <!--display all 16 cards in a random order-->
+          <img src="assets/media/card-deck/A.svg" alt="A" class="win-demo rounded-1 shadow-sm" width="50">
+          <img src="assets/media/card-deck/B.svg" alt="B" class="win-demo rounded-1 shadow-sm" width="50">
+          <img src="assets/media/card-deck/C.svg" alt="C" class="win-demo rounded-1 shadow-sm" width="50">
+          <img src="assets/media/card-deck/D.svg" alt="D" class="win-demo rounded-1 shadow-sm" width="50">
+          <img src="assets/media/card-deck/E.svg" alt="E" class="win-demo rounded-1 shadow-sm" width="50">
+          <img src="assets/media/card-deck/F.svg" alt="F" class="win-demo rounded-1 shadow-sm" width="50">
+          <img src="assets/media/card-deck/G.svg" alt="G" class="win-demo rounded-1 shadow-sm" width="50">
+          <img src="assets/media/card-deck/H.svg" alt="H" class="win-demo rounded-1 shadow-sm" width="50"><br>
+          <img src="assets/media/card-deck/A.svg" alt="A" class="win-demo rounded-1 shadow-sm" width="50">
+          <img src="assets/media/card-deck/B.svg" alt="B" class="win-demo rounded-1 shadow-sm" width="50">
+          <img src="assets/media/card-deck/C.svg" alt="C" class="win-demo rounded-1 shadow-sm" width="50">
+          <img src="assets/media/card-deck/D.svg" alt="D" class="win-demo rounded-1 shadow-sm" width="50">
+          <img src="assets/media/card-deck/E.svg" alt="E" class="win-demo rounded-1 shadow-sm" width="50">
+          <img src="assets/media/card-deck/F.svg" alt="F" class="win-demo rounded-1 shadow-sm" width="50">
+          <img src="assets/media/card-deck/G.svg" alt="G" class="win-demo rounded-1 shadow-sm" width="50">
+          <img src="assets/media/card-deck/H.svg" alt="H" class="win-demo rounded-1 shadow-sm" width="50">
+          </div>
+          <style>
+            .win-demo {
+              margin: 0.2rem;
+            }
+          </style>
+
           
         </div>
-        <div class="modal-footer-centered">
-          <button type="button" class="btn btn-primary continue close-modal" data-bs-dismiss="modal" aria-label="Close">Let's Play</button>
+        <div class="modal-footer-centered"><br>
+          <h2>Good Luck!🍀</h2><br>
+          <button type="button" id="how-to-play-close-btn" class="btn btn-primary continue close-modal" data-bs-dismiss="modal" aria-label="Close">Let's Play</button>
           <!--this button closes the modal with bootstrap-->
         </div>
+        <style>
+          #how-to-play-close-btn {
+            margin: 1rem auto auto;
+          }
+        </style>
         <br>
       </div>
     </div>
@@ -298,3 +340,31 @@
 </footer>
 </main>
 </body>
+
+<script>
+  // Display all 16 .win-demo cards in a random CSS style order
+  let winDemo = document.querySelectorAll(".win-demo");
+  let winDemoArray = Array.from(winDemo);
+
+  // Create a new array to store the shuffled cards
+  let shuffledCards = [];
+  
+  // Shuffle the cards using a Fisher-Yates shuffle
+  while (winDemoArray.length > 0) {
+    const randomIndex = Math.floor(Math.random() * winDemoArray.length); // Pick a random index
+    const card = winDemoArray.splice(randomIndex, 1)[0]; // Remove the card from the original array
+    shuffledCards.push(card); // Add the card to the new array
+  }
+
+  // Append the shuffled cards back to the container with line breaks
+  let container = document.querySelector("#howtoplay .modal-body");
+  shuffledCards.forEach(function (card, index) {
+    container.appendChild(card);
+    if ((index + 1) % 4 === 0) {
+      container.appendChild(document.createElement("br"));
+    }
+  });
+</script>
+
+
+
