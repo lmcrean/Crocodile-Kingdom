@@ -512,7 +512,15 @@ z-index: 3;
 	margin: 0px 0px 0px 6px;
 	text-align: left;
 	padding: 0px 0px 0px;
+  transform: scale(1.2);
+  transition: all 500ms;
 }
+
+.sound-mute .sound--icon { /*make 20% larger on click*/
+  transform: scale(1);
+  transition: all 500ms;
+}
+
 .sound--wave {
 	position: absolute;
 	border: 2px solid transparent;
