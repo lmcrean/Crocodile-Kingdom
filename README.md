@@ -30,8 +30,10 @@ In the issues I have logged written, video or screenshot accounts.
   - [1.1. Card Deck](#11-card-deck)
   - [1.2. Turn Count](#12-turn-count)
   - [1.3. Restart Button](#13-restart-button)
-  - [1.4. Well Done feature](#14-well-done-feature)
+  - [1.4. You Win feature](#14-you-win-feature)
   - [1.5. You Lost feature](#15-you-lost-feature)
+  - [1.6. How to play feature](#16-how-to-play-feature)
+  - [1.6. SFX feature](#16-sfx-feature)
   - [1.6. Footer](#16-footer)
 - [2. UX Development Planes \& Manual Testing](#2-ux-development-planes--manual-testing)
   - [2.1. Strategy Plane](#21-strategy-plane)
@@ -39,7 +41,7 @@ In the issues I have logged written, video or screenshot accounts.
     - [2.1.2. Developer Research](#212-developer-research)
     - [2.1.3. Initial Product Research](#213-initial-product-research)
     - [2.1.4. Project Timeline](#214-project-timeline)
-    - [2.1.5. Business Strategy](#215-business-strategy)
+    - [2.1.5. Business Strategy \& User Stories](#215-business-strategy--user-stories)
   - [2.2. Scope plane](#22-scope-plane)
     - [2.2.1. Mininum Viable product](#221-mininum-viable-product)
     - [2.2.2. Scope of Features](#222-scope-of-features)
@@ -55,8 +57,9 @@ In the issues I have logged written, video or screenshot accounts.
     - [2.4.1. Main Page Skeleton:](#241-main-page-skeleton)
     - [2.4.2. How to play Skeleton:](#242-how-to-play-skeleton)
     - [2.4.3. Well done Skeleton:](#243-well-done-skeleton)
-    - [2.4.4. Sizing skeleton](#244-sizing-skeleton)
-    - [2.4.5. HTML classes skeleton](#245-html-classes-skeleton)
+    - [2.4.4. You Lose Skeleton:](#244-you-lose-skeleton)
+    - [2.4.5. Sizing skeleton](#245-sizing-skeleton)
+    - [2.4.6. HTML classes skeleton](#246-html-classes-skeleton)
   - [2.5. Surface Plane](#25-surface-plane)
     - [2.5.1. Typefaces Surface](#251-typefaces-surface)
     - [2.5.2. Color surface](#252-color-surface)
@@ -82,18 +85,22 @@ In the issues I have logged written, video or screenshot accounts.
 # 1. Features
 
 ## 1.1. Card Deck
-<a src="assets/media/issues/1.1.5.mp4"><img alt="placeholder" src="assets/media/issues/2023-08-15-13-14-21.png" width="300px" ></a>
+<a src="assets/media/issues/1.1.5.mp4"><img alt="placeholder" src="assets/media/issues/2023-08-15-13-14-21.png" width="300px" ></a></div>
 
 - The Card Deck functions as the classic Memory Game, where the player has to try and match pairs of cards together while never turning more than two cards at once. The game challenges the player's memory skills. *The player wins the game when all the cards are flipped.*
+- As the player turns the cards, the logic checks if there's a match or not.
 - As the player turns the cards, the rest of the board is temporarily locked so the player can't cheat.
-- When the player gets a match, confetti appears to encourage the player, and the cards stay flipped over and locked.
-- When the player matches all 8 sets of cards, the Well Done modal appears.
+- When the player gets a match, confetti appears to encourage the player.
+- When the player gets a match, those cards stay flipped over and locked.
+- When the palyer gets a mismatch, the cards flip back over after 2 seconds.
+- When the player matches all 8 sets of cards, the You Win modal appears.
 
 ***
 ## 1.2. Turn Count
 <img alt="placeholder" src="assets/media/issues/1.2b.gif" width="300px" >
 
-The turns start at 40, and count down each time the player attempts to get a match
+- The turns start at 40, and count down each time the player attempts to get a match
+- When the player reaches 40 turns, the you lose modal appears.
 
 ***
 
@@ -106,10 +113,10 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ***
 
-## 1.4. Well Done feature
+## 1.4. You Win feature
 <img alt="placeholder" src="assets/media/issues/feature-well-done.gif" width="300px">
 
-When all the cards are flipped, the Well Done modal appears. It displays the number of turns taken and remaining, and a restart button.
+When all the cards are flipped, the You Win modal appears. It displays the number of turns taken and remaining, and a restart button. It uses the wording "well done" to encourage the player.
 
 ***
 
@@ -121,12 +128,34 @@ When turns run out to 0, the You Lost modal appears.
 
 ***
 
-## 1.6. Footer
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px" >
+## 1.6. How to play feature
+<img alt="placeholder" src="assets/media/responsivity-tests/how-to-play.gif" width="300px" >
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+The How to play feature explains the rules of the game. 
+
+- it uses the Fisher Yates algorthim to shuffle the cards in the demo.
+
+
+***
+
+## 1.6. SFX feature
+
+There are 2 buttons for music and sound effects. The music button toggles the music on and off. The sound effects button toggles the sound effects on and off.
+
+They start on mute, and the player can choose to turn them on.
+
+SFX are included for the following events:
+- when the player clicks on a card
+- when the player gets a match
+- when the player gets a mismatch
+- when the player wins the game
+- when the player loses the game
+
+
+***
+
+## 1.6. Footer
+There is a footer with social media links.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -238,11 +267,10 @@ The timeline for the project was as follows:
 
 <u>Week 4: 21st to Sunday 27th August:</u> 
 
-- CSS positioning
-- CSS animations
-- Javascript debugging
-- Documentation CSS on UX Planes
-- Documentation of Javascript on Skeleton plane
+- SFX Feature
+- Modals
+- Mininum Viable Product completed
+- Confetti Feature
 
 
 <u>Week 5: 28th August to Sunday 3rd September:</u> 
@@ -258,7 +286,7 @@ The timeline for the project was as follows:
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 2.1.5. Business Strategy
+### 2.1.5. Business Strategy & User Stories
 
 The business goals were to create a simple memory game that was fun and engaging for the player. The target audience was 5 year olds, and it could be assumed that they have never played a memory game before.
 
@@ -272,17 +300,17 @@ New user Testing:
 
 - **As a player, I need to understand how to play the game.**
   - *there is a how to play feature that explains the rules of the game.*  
-- As a player, I need the design to be accessible, easy to read with lots of visuals.
+- **As a player, I need the design to be accessible, easy to read with lots of visuals**.
   - there is a card deck with 16 cards that display randomly.
-- As a player, I need the tone of the design to appear warm, entertaining and encouraging.
+- **As a player, I need the tone of the design to appear warm, entertaining and encouraging.**
   - *The colors used are bright, with friendly vector illustrations*
-- As a player, I need to a quick feedback loop that suggests how I'm doing as I play the game.
+- **As a player, I need to a quick feedback loop that suggests how I'm doing as I play the game.**
   - confetti appears when the player gets a match
-- As a player, I need to recieve praise for completing the game.
+- **As a player, I need to recieve praise for completing the game.**
    - a well done message appears when the player wins the game
-- As a player, I need a new arrangement of cards each time I play the game to keep it interesting.
+- **As a player, I need a new arrangement of cards each time I play the game to keep it interesting.**
   - The card deck shuffles each time the player restarts the game.
-- As a player, I want to be able to contact the business if I have any questions, as well as share the game easily with my friends.
+- **As a player, I want to be able to contact the business if I have any questions, as well as share the game easily with my friends.**
   - A footer is displayed at the bottom of the page.
 
 ***
@@ -295,7 +323,7 @@ A mininum viable product is a product with just enough features to satisfy early
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 2.2.1. Mininum Viable product
+### 2.2.1. Mininum Viable product 
 
 <i>
 The minumum viable product of the memory game was
@@ -367,7 +395,6 @@ The following features were designed to meet the needs of new playerssometimes a
 
   
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
--->
 
 
 
@@ -741,6 +768,10 @@ The How To Play feature was a simple modal pop-up that would show an animated gi
 - Mobile design used 1 column and arranged all the elements vertically inside a container with ```position: absolute``` 
 - Desktop design split the page into 2 columns, with the animated tutorial in the left column, and the remaining content in the right column.
 
+current state: a simple portrait view that fills mobile to desktop screen sizes.
+
+<img src="assets/media/responsivity-tests/how-to-play.gif">
+
 <div align="center"> 
 
 ### 2.4.3. Well done Skeleton:
@@ -758,9 +789,21 @@ The Well Done feature was a simple modal pop-up that would show a Well done titl
 - Mobile design used 1 column and arranged all the elements vertically inside a container with ```position: absolute``` 
 - Desktop design split the page into 2 columns, with the well done in the left column, and the remaining content in the right column.
 
+current state: a simple portrait view that fills mobile to desktop screen sizes.
+
+<img src="assets/media/responsivity-tests/you-win.gif">
+
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 2.4.4. Sizing skeleton
+### 2.4.4. You Lose Skeleton:
+
+current state: a simple portrait view that fills mobile to desktop screen sizes.
+
+<img src="assets/media/responsivity-tests/you-lose.gif">
+
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+### 2.4.5. Sizing skeleton
 Regarding font-size, the ```clamp()``` function was mostly used to ensure the font size was responsive to the device size. This was used instead of media queries, as it was more efficient and easier to read, it allowed the media queries to be used more for positioning and to address bugs with the display.
 
 ```css
@@ -771,7 +814,7 @@ p, h3,h4,h5 { font-size: clamp(1rem, 0.9253rem + 0.4267vw, 1.4rem);}
 ```
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 2.4.5. HTML classes skeleton
+### 2.4.6. HTML classes skeleton
 Important HTML Class selectors were used to shorten the CSS code, such as
 - ```display-grid```
 - ```color-priority-1```
