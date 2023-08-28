@@ -170,7 +170,7 @@ The 5 UX development planes were used as an efficient framework for documenting 
  - The Scope plane identified a range of Mininum Viable Product and Unique Selling Point features.
  - The Structure plane connected the features with efficient logic for playing the memory game.
  - The Skeleton plane was developed for a responsive layout, allowing the game to be played on all mainstream devices.
- - The Surface plane intended to be  
+ - The Surface plane intended to be a fun, engaging and accessible design for children.
 
 
 Using the latter 3 UX Planes as a guideline, Manual testing was executed with the following criteria:
@@ -275,14 +275,16 @@ The timeline for the project was as follows:
 
 <u>Week 5: 28th August to Sunday 3rd September:</u> 
 
-- Debugging standard errors.
-- Documenting bugs and dubugging process.
+- Animated Crocodile Feature
+- Scoreboard
+- Fixing bugs
 
 <u>Week 6: 5th to Saturday 9th: </u>
 
-- Buffer for unforseen issues
+- Surface Design Tweaks
+- Documentation
 
-- The project was completed on Saturday 9th September 2023.
+The project was completed on Saturday 9th September 2023.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -296,22 +298,54 @@ The business goals were to create a simple memory game that was fun and engaging
 <img alt="placeholder" src="assets/media/documentation/userimage.svg" width="300px" >
  </div>
 
-New user Testing:
 
-- **As a player, I need to understand how to play the game.**
-  - *there is a how to play feature that explains the rules of the game.*  
-- **As a player, I need the design to be accessible, easy to read with lots of visuals**.
-  - there is a card deck with 16 cards that display randomly.
-- **As a player, I need the tone of the design to appear warm, entertaining and encouraging.**
-  - *The colors used are bright, with friendly vector illustrations*
-- **As a player, I need to a quick feedback loop that suggests how I'm doing as I play the game.**
-  - confetti appears when the player gets a match
-- **As a player, I need to recieve praise for completing the game.**
-   - a well done message appears when the player wins the game
-- **As a player, I need a new arrangement of cards each time I play the game to keep it interesting.**
-  - The card deck shuffles each time the player restarts the game.
-- **As a player, I want to be able to contact the business if I have any questions, as well as share the game easily with my friends.**
-  - A footer is displayed at the bottom of the page.
+
+  
+  **As a player, I need to an engaging feedback loop that suggests how I'm doing as I play the game.**<i>
+  - *the turn's left feature counts down after each turn*
+    - when they player reaches 0 turns, the you lost modal appears
+  -  *if there's a match...*
+     -  *the cards stay flipped over, allowing the player to see how many turns remain*
+     -  *confetti appears when the player gets a match*
+     -  *a positive "bell chime" plays*
+  -  *if there's a mismatch...*
+     -  *the cards flip back after a moment*
+     -  *a buzz sound effect plays*
+  - *when the player wins...*
+    - a well done message appears with a trophy icon
+    - a celebratory sound effect plays
+  - *when the player loses...*
+    - a you lost message appears with a sad crocodile icon
+    - a sad sound effect plays
+</i>
+
+**As a player, I need to understand how to play the game.**
+  - *there is a how to play feature that explains the rules of the game.*
+  - *it includes engaging graphics*  
+
+
+**As a player, I need the game to be accessible and easy to read**.<i>
+- *there is a card deck with 16 cards that display randomly.*
+- *sound effects are included, they start turned off and the player can adjust if they want to*
+- the fonts chosen are easy to read
+</i>
+
+**As a player, I need the tone of the design to appear warm, entertaining and encouraging.**
+  - *The colors used are bright* 
+  - *friendly vector illustrations*
+  - *confetti appears as the player gets a match*
+  - *there are various friendly sound effects mentioned in the first "feedback loop" User Story*
+
+**As a player, I need to recieve different levels of praise for engaging with and completing the game.**
+   -  *confetti appears when the player gets a match*
+   -  *a well done message appears when the player wins the game*
+
+**As a player, I need an engaging level of challenge**
+  - *The card deck shuffles each time the player restarts the game*
+  - *the player is told their previous score and is encouraged to beat it*
+
+**As a player, I want to be able to contact the business if I have any questions, as well as share the game easily with my friends.**
+  - *A footer is displayed at the bottom of the page.*
 
 ***
 

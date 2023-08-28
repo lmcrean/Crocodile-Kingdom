@@ -62,14 +62,14 @@ h5 {font-size: 0.7rem;/*reduce font size*/}
 /*Root variables are used to define the color palette. The colors are used throughout the stylesheet. It's a useful function because it allows the color palette to be changed easily.*/
 
 :root {
---brand-color: #ff8400; /* Brand color */
---background-color: #add8e6; /*background color*/
+--brand-color: #00ff3c; /* Brand color */
+--background-color: #ade6bf; /*background color*/
 
 /*Harmonious palette*/
---harmonious-bold: #ff4500;
---harmonious-light: #fa8072;
---harmonious-lighter: #ffa07a;
---harmonious-lightest: #ffd000;
+--harmonious-bold: #0e6b06;
+--harmonious-light: #1c7e33;
+--harmonious-lighter: #349b5d;
+--harmonious-lightest: #e0efdd;
 
 /*Neutral palette*/
 --black-dark: #1e1e1e;
@@ -106,16 +106,28 @@ h5 {font-size: 0.7rem;/*reduce font size*/}
 .background-lightgrey {background-color: var(--lightgrey);}
 .background-white {background-color: var(--white);}
 
+/*---------------SURFACE PLANE - COLORS---------------*/
+
+.toggle-sfx, .toggle-sound {background-color: var(--harmonious-lighter); color: var(--white);}
+.container-sound h6 {color: var(--harmonious-lighter);}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: var(--harmonious-bold) !important;
+  border-color: none !important;
+  color: var(--black-medium);
+}
+
 .footer-links a {
-  background-color: var(--lightgrey);
+  background-color: var(--harmonious-lighter);
+  filter:invert(0%);
 }
 
 i.fa-brands {
 color: var(--black-light);
 }
 
-.footer-links {
-  filter:invert(20%);
+.footer-links img {
+  filter:invert(100%);
 }
 
 /*---------------SURFACE PLANE - SHADOWS, ROUNDED CORNERS---------------*/
@@ -149,7 +161,7 @@ color: var(--white);
 }
 
 img.footer-links:hover {
-  filter:invert(80%);
+  filter:invert(20%);
 }
 
 /*---------------SURFACE PLANE - ANIMATIONS---------------*/
@@ -301,7 +313,7 @@ p {
 @media screen and (min-width: 1208px) {
 .gameplay-display-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 3fr;
   grid-template-rows: auto;
   grid-template-areas: 
     "logo cards"
@@ -316,7 +328,6 @@ p {
   #turns-left-section {grid-area: turns-count;}
   #restart-section {grid-area: restart;}
   #how-to-play {grid-area: how-to-play;}
-  #footer-desktop-display {grid-area: footer;}
 }
 
 /*---------------SKELETON PLANE BY FEATURE---------------*/
@@ -336,17 +347,32 @@ p {
 /*---------------FOOTER FEATURE SKELETON---------------
   ---------------Elements = footer-small-print, footer icons ---------------*/
 
-footer {
+footer, #footer-desktop-display {
   display: flex; /*issue with footer overlapping card deck in desktop, fix later*/
   margin: auto;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   margin-top: 2em;
   min-height: 20rem;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (min-width: 1208px) {
+  footer, #footer-desktop-display {
+  width: 100%;
+}
+}
+
+@media screen and (min-width: 1800px) {
+  footer, #footer-desktop-display {
+  width: 100vw;
+  position: relative;
+  justify-content: center;
+  margin-left:0px;
+}
 }
 
 .footer-small-print {
@@ -456,7 +482,7 @@ z-index: 3;
   margin-top: calc(80px + 1vw);
   margin-left: calc(33.5px + 1vw);
   position: fixed;
-  color:#EC407A;
+  color:var(--harmonious-lighter);
   z-index:99;
 } 
 
@@ -469,17 +495,14 @@ z-index: 3;
   position: fixed;
   top: calc(25.5px + 1vw);
   left: calc(25.5px + 1vw);
-  background-color: #EC407A;
   width: 55px;
   height: 55px;
   line-height: 58px;
-  /* text-align: left; */
-  color: #fff;
   border-radius: 50%;
   cursor: pointer;
   z-index: 99;
   animation: pulse 3.25s cubic-bezier(0.66, 0, 0, 1);
-  box-shadow: 0 0 0 0 #F06292;
+  box-shadow: 0 0 0 0 var(--harmonious-light);
 }
 
 .toggle-sound.sound-mute, .toggle-sfx.sound-mute {
@@ -566,15 +589,13 @@ left: 5px;
   position: fixed;
   top: calc(25.5px + 1vw);
   left: calc(25.5px + 1vw);
-  background-color: #EC407A;
   width: 55px;
   height: 55px;
   line-height: 58px;
-  color: #fff;
   border-radius: 50%;
   cursor: pointer;
   z-index: 99;
   animation: pulse 3.25s cubic-bezier(0.66, 0, 0, 1);
-  box-shadow: 0 0 0 0 #F06292;
+  box-shadow: 0 0 0 0;
   margin: 6em auto auto;
 }

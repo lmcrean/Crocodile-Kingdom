@@ -23,6 +23,8 @@ This page documents the issues and bugs encountered during the development of th
   - [1.2. 1.2 Turn Counter is not updating](#12-12-turn-counter-is-not-updating)
   - [1.3. Restart Button](#13-restart-button)
     - [1.3.1. After restart, the matched cards stay in a locked state.](#131-after-restart-the-matched-cards-stay-in-a-locked-state)
+  - [1.4. SFX Button](#14-sfx-button)
+    - [1.4.1. Card-flip SFX does not always play on 2nd turn, if user clicks too fast](#141-card-flip-sfx-does-not-always-play-on-2nd-turn-if-user-clicks-too-fast)
 - [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
   - [2.1. 2.1 Card Deck Skeleton](#21-21-card-deck-skeleton)
     - [2.1.1. 2.1.1 Responsive grid is falling off the horizontal viewport in desktop view](#211-211-responsive-grid-is-falling-off-the-horizontal-viewport-in-desktop-view)
@@ -31,6 +33,7 @@ This page documents the issues and bugs encountered during the development of th
     - [2.1.4. back of card doesn't fully cover card face underneath](#214-back-of-card-doesnt-fully-cover-card-face-underneath)
     - [2.1.5. with new "display: flex" method, card-face moves to side in flipped state](#215-with-new-display-flex-method-card-face-moves-to-side-in-flipped-state)
     - [2.1.6. Slight x-overflow in desktop view](#216-slight-x-overflow-in-desktop-view)
+    - [2.2 would prefer Footer responsive design to meet the edges](#22-would-prefer-footer-responsive-design-to-meet-the-edges)
 - [3. Unfixed Bugs](#3-unfixed-bugs)
 
 # 1. Javascript Structure Issues
@@ -489,6 +492,16 @@ inside restartgame () function, added ```cards.forEach(card => card.addEventList
 
 This adds an event listener to each card, as well as restores the "click" event listener from ```disablecards``` function (used to disable cards when the cards match). When the card is clicked, the function cardAppear is run and the card is flipped.
 
+## 1.4. SFX Button
+
+### 1.4.1. Card-flip SFX does not always play on 2nd turn, if user clicks too fast
+
+Have tried:
+- [x] using a second sound file
+  - [ ] using console.log to see if it runs
+- [ ] compressing the sound files
+- [ ] looking up on Stack Overflow
+
 <!------------------------------------------------>
 
 # 2. CSS Skeleton Issues and Bugs
@@ -597,6 +610,11 @@ now to solve the shuffle issue.
 
 <img src="assets/media/issues/2.1.6.gif" width=500>
 
+### 2.2 would prefer Footer responsive design to meet the edges
+
+![](assets/media/issues/2023-08-28-14-04-49.png)
+
+[] take out of 
 
 
 
