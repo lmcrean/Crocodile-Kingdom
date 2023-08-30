@@ -333,16 +333,24 @@ p {
 /*---------------SKELETON PLANE BY FEATURE---------------*/
 /*The selectors are grouped according to feature. Elements of each feature are then grouped with media queries, starting mobile first.*/
 
-/*---------------HEADER FEATURE SKELETON---------------
+/*---------------LOGO---------------
   Elements = navbartitle, hamburger icon*/
 
-.headerlogo {
-  margin: 1.5em auto auto auto;
-  padding: 0em 0em 0em 0em;
-  width: 70vw;
-  max-width: 385px;
-  height: auto;
+
+#logo-desktop {
+  margin:auto auto 40px;
+  height: 40px;
 }
+
+.logo-layer {
+  position:absolute;
+  top: 0;
+  margin: auto;
+  width: 50%;
+  object-fit: contain;
+}
+
+
 
 /*---------------FOOTER FEATURE SKELETON---------------
   ---------------Elements = footer-small-print, footer icons ---------------*/

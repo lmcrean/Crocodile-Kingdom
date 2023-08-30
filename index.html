@@ -78,9 +78,13 @@
 
 </header>
 <main class="gameplay-display-grid">
-<div id="logo-desktop"><div>
-<a href="index.html"><img src="assets/media/logo.svg" class="headerlogo logo" alt="Company Logo"></a></div>
-</div>
+
+<section id="logo-desktop">
+  <img src="assets/media/crocodile-sprite/text-foreground.svg" id="logo-text-foreground" class="logo-layer">
+  <img src="assets/media/crocodile-sprite/text-background.svg" id="logo-text-background" class="logo-layer">
+  <img src="assets/media/crocodile-sprite/regular.png" id="crocodile-regular" class="logo-layer">
+</section>
+
 <section id="score-count" style="display: none;">
   <h2 class="turns">Turns (placeholder): <span id="turns-count">0</span></h2>
 </section>
@@ -89,8 +93,8 @@
   <h2 class="turns-left">Turns left: <span id="turns-left-count">40</span></h2>
 </section>
 
-<div id="card-deck">
-  <div class="card-item-container color-grey" data-framework="A">
+<div id="card-deck"><!--this card deck uses display-flex, so it can be centered easily-->
+  <div class="card-item-container color-grey" data-framework="A"><!-- the container is used to flip the card-->
     <img src="assets/media/card-deck/A.svg" alt="card-A" class="card-item rounded-corner shadow card-front card-A" >
     <img src="assets/media/card-deck/back.svg" alt="card-back" class="card-item rounded-corner shadow card-back">
   </div>
