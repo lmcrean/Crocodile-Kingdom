@@ -43,7 +43,8 @@ In the issues I have logged written, video or screenshot accounts.
     - [2.1.4. Project Timeline](#214-project-timeline)
     - [2.1.5. Business Strategy \& User Stories](#215-business-strategy--user-stories)
   - [2.2. Scope plane](#22-scope-plane)
-    - [2.2.1. Mininum Viable product](#221-mininum-viable-product)
+    - [2.2.1. Mininum Viable Product features](#221-mininum-viable-product-features)
+    - [2.2.2. Unique Selling Point features](#222-unique-selling-point-features)
     - [2.2.2. Scope of Features](#222-scope-of-features)
   - [2.3. Structure Plane](#23-structure-plane)
     - [2.3.1. Card Deck structure](#231-card-deck-structure)
@@ -76,6 +77,7 @@ In the issues I have logged written, video or screenshot accounts.
 - [5. Issues and Bugs](#5-issues-and-bugs)
 - [6. Credits \& Acknowledgements](#6-credits--acknowledgements)
   - [6.1. Code snippets](#61-code-snippets)
+  - [6.2. Stack Overflow and indirect support](#62-stack-overflow-and-indirect-support)
   - [6.2. Technologies Used](#62-technologies-used)
   - [6.3. Acknowledgements](#63-acknowledgements)
 
@@ -195,8 +197,9 @@ The project was researched, conceived and designed in 5 weeks. Important limitat
 
 ### 2.1.2. Developer Research
 
-<detail>
-<summary>The developer researched these areas of the Comparitative programming:</summary>
+<details>
+<summary>
+The developer researched these areas of the Comparitative programming:</summary>
 
 - Variables. In Javascript, variables are used to store data values. Variables are declared with the ```var``` keyword. The ```=``` sign is used to assign values to variables. In this project.
 - Core Data types, such as **strings**, **float** or real, **integers**, **booleans**. In some situations undefined or null is appropriate.
@@ -210,17 +213,19 @@ The project was researched, conceived and designed in 5 weeks. Important limitat
 - Functions. In comparitative programming, functions are used to perform a specific task. In this project, functions were used to navigate the database, and to display the data in the DOM.
 - Classes. In comparitative programming, classes are used to create objects for example a class of "car" could have the properties of "colour", "make", "model", "year". Classes can interact with each other, for example a class of "car" could have a method of "drive" which would interact with the class of "engine". In this project, classes could be used to create objects, such as the "quiz" class, which had the properties of "question", "answer", "choices", "correct answer", "image", "explanation".
 
+</details>
+<br>
+<details>
+<summary>The Developer then researched these areas of the Javascript:</summary>
 
-</detail>
-
-<detail><summary>The Developer then researched these areas of the Javascript:</summary>
 - var, let and const variables. In Javascript, variables are used to store data values. Variables are declared with the ```var``` keyword. The ```=``` sign is used to assign values to variables. In this project.
 - $ symbol. In Javascript, the $ symbol is used to select an element from the DOM. In this project, the $ symbol was used to select the elements from the DOM, and to manipulate the elements.
 - String methods for manipulating strings
 - The DOM. The DOM represents the page so that programs can change the document structure, style, and content.
-  </detail>
+  </details>
 
-The Developer then tested a walkthrough project of a memory game, using event listeners, functions, loops, arrays, objects, and DOM manipulation. The mockup project was a quiz, which was a good starting point for the project.
+<br>
+The Developer then tested a walkthrough project of a memory game, using event listeners, functions, loops, arrays, objects, and DOM manipulation.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -244,28 +249,29 @@ It was crucial for this project to choose a memory game that was achievable in t
 
 ### 2.1.4. Project Timeline
 
-The timeline for the project was as follows:
+The 6 week timeline for the project was as follows: 
 
-<u>Week 1: 31st July to Sunday 6th August:</u> 
+
+**Week 1: 31st July to Sunday 6th August:** 
 
 - Researching theory around Javascript Language, low-stakes practise such as coding challenges.
 - Practising Mock Projects via Code Institute and other resources
 - Established the concept of a memory game.
 
-<u>Week 2: 7th to Sunday 13th August: </u> 
+**Week 2: 7th to Sunday 13th August:**  
 
 - Practising Mock Projects via Code Institute and other resources
 - UX Strategy, Scope, Structure completed.
 - Figma Wireframe  
 - Finding a database to use. 
 
-<u>Week 3: 14th to Sunday 20th August</u> 
+**Week 3: 14th to Sunday 20th August** 
 
 - Designing HTML links, using broad classes for easy styling.
 - Designing CSS with a mobile-first approach, using Figma wireframe as a guide, and using ```clamp()```, ```media  queries``` function to make the website responsive to viewport width.
 - Designing Javascript to navigate the database
 
-<u>Week 4: 21st to Sunday 27th August:</u> 
+**Week 4: 21st to Sunday 27th August:** 
 
 - SFX Feature
 - Modals
@@ -273,13 +279,13 @@ The timeline for the project was as follows:
 - Confetti Feature
 
 
-<u>Week 5: 28th August to Sunday 3rd September:</u> 
+**Week 5: 28th August to Sunday 3rd September:** 
 
 - Animated Crocodile Feature
 - Scoreboard
 - Fixing bugs
 
-<u>Week 6: 5th to Saturday 9th: </u>
+**Week 6: 5th to Saturday 9th:** 
 
 - Surface Design Tweaks
 - Documentation
@@ -357,7 +363,7 @@ A mininum viable product is a product with just enough features to satisfy early
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 2.2.1. Mininum Viable product 
+### 2.2.1. Mininum Viable Product features
 
 <i>
 The minumum viable product of the memory game was
@@ -366,17 +372,20 @@ The minumum viable product of the memory game was
   - to use 16 cards that displayed randomly
   - the cards needed to flip back after a 2 second delay if they were a mismatch
   - the cards needed to stay flipped if they were a match
-- Turn count
+- Turn's left count
 - Restart button
 - A congratulations message when the game was completed
 - a how to play feature
-- a Navbar with the logo and a contact button
-- a footer with social media links
+- a logo and a contact button
 
-Once that would be designed more interesting features could be added, such as 
-- a timer
-- a scoreboard
-- a chance to switch card sets</i>
+
+### 2.2.2. Unique Selling Point features
+- Confetti
+- Sound effects
+- Music
+- Animated Crocodile
+- Animations
+- a footer with social media links
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -384,53 +393,9 @@ Once that would be designed more interesting features could be added, such as
 ### 2.2.2. Scope of Features
 The following features were designed to meet the needs of new playerssometimes appearing more than once for the purpose of both making the website easy to navigate and consistent branding design.
 
-#### 2.2.2.1. Card Deck scope <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px"> 
+The full scope and function of features is discussed in the opening [Features](#1-features) section.
 
-<b>Use to play the game.</b>
-<i>"Most Relevant User Stories: As a player, I need the design to be accessible, easy to read with lots of visuals. As a player, I need the tone of the design to appear warm, entertaining and encouraging."</i>
-
-#### 2.2.2.2. Turn count scope <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<b>An updating score count that follows the attempts taken by the player.</b>
-<i>"As a player, I need a quick feedback loop that suggests how I'm doing as I play the game."</i>
-
-#### 2.2.2.3. Restart button scope <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<b>player clicks here to restart their game.</b>
-<i>"As a player, I need a new arrangement of cards each time I play the game to keep it interesting."</i>
-
-#### 2.2.2.4. You've Won feature scope <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<b>An encouraging message at the end of the game, it shows total turns taken and also displays the Restart button.</b>
-<i>"As a player, I need to receive praise for completing the game."</i>
-
-#### 2.2.2.5. How To Play feature scope <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<b>Allows the player to read the rules of the game.</b>
-<i>"As a player, I need to understand how to play the game."</i>
-
-#### 2.2.2.6. Navbar scope <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<b>Displays just the Logo.</b>
-<i>"As a player, I need the tone of the design to appear warm, entertaining and encouraging."</i>
-
-#### 2.2.2.7. Footer scope <!-- omit in toc -->
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
-
-<b>Displays the social media links, and a Contact Us link.</b>
-<i>"I want to be able to contact the business if I have any questions, and share the game easily with my friends."</i>
-
-
-  
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
-
-
 
 ## 2.3. Structure Plane
 
@@ -1030,35 +995,40 @@ Fixed issues and bugs are documented in a seperate file called [issues.md](issue
 The following code snippets were used and adapted in the project:
 
 - [Code-sketch's step by step Memory Game tutorial](https://www.youtube.com/watch?v=ZniVgo8U7ek) for a memory game with flex: display. This was used as a starting point for the project, and was adapted to suit the project's needs.
-- [Confetti was added as a fun feature](https://www.npmjs.com/package/canvas-confetti) to celebrate the player's match.
-
-  
+- [Confetti](https://www.npmjs.com/package/canvas-confetti) by Kiril Vatev was used as a fun feature to celebrate the player's match.
+- [Mute / Unmute Button](https://codepen.io/giannisrig/pen/RYJPzb)with Material Design Animation by Giannis Riganas was used to add a mute button to the game.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+## 6.2. Stack Overflow and indirect support
+
+The following Stack Overflow posts were used to solve issues in the project:
+
+- https://stackoverflow.com/questions/48474/how-do-i-position-one-image-on-top-of-another-in-html helped with arranging the Crocodile sprite with layers on top of each other.
 
 
 ## 6.2. Technologies Used
 
-<u>Languages</u>
+Languages
 [HTML5](https://en.wikipedia.org/wiki/HTML5) was used for the structure and content of the website
 [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) was used for the styling of the website
 [Javascript](https://en.wikipedia.org/wiki/JavaScript) was used for the interactive features of the website
 
-<u>Programmes</u>
+Programmes
 [VSCode](https://code.visualstudio.com/) was used as my code editor
 [Github](https://www.github.com/) was used for Version control
 [Canva](https://www.canva.com/) was used for designing Graphics including the logo
 [Figma](https://www.figma.com/)  for Designing wireframe
 [Fancy Screen](http://fancyapps.com/) by Janis Skarnelis was used to document GIFs and videos of the project
 
-<u>Libraries</u>
+Libraries
 [Node.js](https://nodejs.org/en/) was used to install ```npm``` and run the Confetti feature.
 [Bootstrap](https://getbootstrap.com/) was used for the Modal, button features as well as drop-shadow effects
 [JQuery](https://jquery.com/) was used for mute button.
 [Canva](https://www.canva.com/) was used for sourcing open-source images.
 
 
-<u>Tools</u>
+Tools
 [Clamp tool](https://clamp.font-size.app/) was used for developing a responsive font size with the clamp tool
 [amiresponsive](https://ui.dev/amiresponsive) was used for checking mobile, desktop, tablet view
 [browserstack](https://www.browserstack.com/) was used for checking website on firefox, opera, edge, safari and chrome

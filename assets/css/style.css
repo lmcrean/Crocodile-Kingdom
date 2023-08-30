@@ -301,6 +301,8 @@ p {
     "restart"
     "how-to-play"
     "footer";
+  position: absolute;
+  margin: 25px auto auto;
 }
 
   #logo-desktop {grid-area: logo;}
@@ -333,15 +335,171 @@ p {
 /*---------------SKELETON PLANE BY FEATURE---------------*/
 /*The selectors are grouped according to feature. Elements of each feature are then grouped with media queries, starting mobile first.*/
 
-/*---------------HEADER FEATURE SKELETON---------------
+/*---------------LOGO---------------
   Elements = navbartitle, hamburger icon*/
 
-.headerlogo {
-  margin: 1.5em auto auto auto;
-  padding: 0em 0em 0em 0em;
-  width: 70vw;
-  max-width: 385px;
+
+#logo-desktop {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin:auto auto;
+}
+
+.logo-layer {
+  width:90vw;
   height: auto;
+  max-width: 460px;
+}
+
+#logo-text-background {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: auto auto;
+}
+
+#logo-text-foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto auto;
+}
+
+#crocodile-regular {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto auto;
+}
+
+/*--------------- Header buttons ---------------*/
+
+/*---------------SFX button---------------*/
+/*This code is adapted from this source:*/
+/*https://codepen.io/giannisrig/pen/RYJPzb*/
+
+.container-sound {
+  position: absolute;
+}
+
+.toggle-sound, .toggle-sfx {
+  position: fixed;
+  top: calc(25.5px + 1vw);
+  left: calc(25.5px + 1vw);
+  width: 55px;
+  height: 55px;
+  line-height: 58px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 99;
+  animation: pulse 3.25s cubic-bezier(0.66, 0, 0, 1);
+  box-shadow: 0 0 0 0 var(--harmonious-light);
+}
+
+.toggle-sound {
+  margin: auto auto auto;
+}
+
+.toggle-sfx {
+  margin: 6em auto auto;
+}
+
+.toggle-sound.sound-mute, .toggle-sfx.sound-mute {
+	box-shadow: none;
+}
+
+@keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+
+.sound {
+	width: 96%;
+	height: 100%;
+	position: absolute;
+	cursor: pointer;
+	display: inline-block;
+	left: 0;
+	top: 0;
+	margin-left: -15%;
+}
+
+.tooltip--left.sound {
+    margin: 0px 0px 0px -11px;
+}
+
+.sound--icon {
+	color: inherit;
+	line-height: inherit;
+	font-size: 1.3rem;
+	display: block;
+	margin: 0px 0px 0px 6px;
+	text-align: left;
+	padding: 0px 0px 0px;
+  transform: scale(1.2);
+  transition: all 500ms;
+}
+
+.sound-mute .sound--icon { /*make 20% larger on click*/
+  transform: scale(1);
+  transition: all 500ms;
+}
+
+.sound--wave {
+	position: absolute;
+	border: 2px solid transparent;
+	border-right: 2px solid #fff;
+	border-radius: 80%;
+	transition: all 200ms;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 12px;
+	right: -10px;
+}
+.sound--wave_one {
+  width: 36%;
+  height: 35%;
+}
+.sound--wave_two {
+  width: 59%;
+  height: 56%;
+}
+.sound--wave_three {width: 85%;height:75%;}
+.sound-mute .sound--wave {
+border-radius: 0;
+width: 35%;
+height: 35%;
+border-width: 0 2px 0 0;
+left: 5px;
+}
+.sound-mute .sound--wave_one {
+  transform: rotate(45deg) translate3d(7%, -45%, 0);
+}
+.sound-mute .sound--wave_two {
+  transform: rotate(-45deg) translate3d(0, 50%, 0);
+}
+.sound-mute .sound--wave_three {
+    opacity: 0;
+    transform: translateX(-46%);
+    height: 20%;
+
+}
+
+
+
+
+
+.container-sound h6 {
+  text-align: center;
+  margin-top: calc(80px + 1vw);
+  margin-left: calc(33.5px + 1vw);
+  position: fixed;
+  color:var(--harmonious-lighter);
+  z-index:99;
+} 
+
+#sfx-button h6 {
+  margin-left: calc(41.5px + 1vw);
+  margin-top: calc(155px + 1vw);
 }
 
 /*---------------FOOTER FEATURE SKELETON---------------
@@ -458,6 +616,14 @@ z-index: 3;
 
 /*---------------TURN COUNT SKELETON---------------*/
 
+#turns-left-section {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+  width: 100%;
+}
+
 /*---------------RESTART BUTTON SKELETON---------------*/
 
 #restart-section {
@@ -469,133 +635,3 @@ z-index: 3;
 /*---------------WELL DONE FEATURE SKELETON---------------*/
 
 /*---------------HOW TO PLAY SKELETON---------------*/
-
-/*---------------IMPORTED CODE---------------*/
-/*https://codepen.io/giannisrig/pen/RYJPzb*/
-
-.container-sound {
-  position: absolute;
-}
-
-.container-sound h6 {
-  text-align: center;
-  margin-top: calc(80px + 1vw);
-  margin-left: calc(33.5px + 1vw);
-  position: fixed;
-  color:var(--harmonious-lighter);
-  z-index:99;
-} 
-
-#sfx-button h6 {
-  margin-left: calc(41.5px + 1vw);
-  margin-top: calc(155px + 1vw);
-}
-
-.toggle-sound, .toggle-sfx {
-  position: fixed;
-  top: calc(25.5px + 1vw);
-  left: calc(25.5px + 1vw);
-  width: 55px;
-  height: 55px;
-  line-height: 58px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 99;
-  animation: pulse 3.25s cubic-bezier(0.66, 0, 0, 1);
-  box-shadow: 0 0 0 0 var(--harmonious-light);
-}
-
-.toggle-sound.sound-mute, .toggle-sfx.sound-mute {
-	box-shadow: none;
-}
-
-@keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
-
-.sound {
-	width: 96%;
-	height: 100%;
-	position: absolute;
-	cursor: pointer;
-	display: inline-block;
-	left: 0;
-	top: 0;
-	margin-left: -15%;
-}
-
-.tooltip--left.sound {
-    margin: 0px 0px 0px -11px;
-}
-
-.sound--icon {
-	color: inherit;
-	line-height: inherit;
-	font-size: 1.3rem;
-	display: block;
-	margin: 0px 0px 0px 6px;
-	text-align: left;
-	padding: 0px 0px 0px;
-  transform: scale(1.2);
-  transition: all 500ms;
-}
-
-.sound-mute .sound--icon { /*make 20% larger on click*/
-  transform: scale(1);
-  transition: all 500ms;
-}
-
-.sound--wave {
-	position: absolute;
-	border: 2px solid transparent;
-	border-right: 2px solid #fff;
-	border-radius: 80%;
-	transition: all 200ms;
-	margin: auto;
-	top: 0;
-	bottom: 0;
-	left: 12px;
-	right: -10px;
-}
-.sound--wave_one {
-  width: 36%;
-  height: 35%;
-}
-.sound--wave_two {
-  width: 59%;
-  height: 56%;
-}
-.sound--wave_three {width: 85%;height:75%;}
-.sound-mute .sound--wave {
-border-radius: 0;
-width: 35%;
-height: 35%;
-border-width: 0 2px 0 0;
-left: 5px;
-}
-.sound-mute .sound--wave_one {
-  transform: rotate(45deg) translate3d(7%, -45%, 0);
-}
-.sound-mute .sound--wave_two {
-  transform: rotate(-45deg) translate3d(0, 50%, 0);
-}
-.sound-mute .sound--wave_three {
-    opacity: 0;
-    transform: translateX(-46%);
-    height: 20%;
-
-}
-
-
-.toggle-sfx {
-  position: fixed;
-  top: calc(25.5px + 1vw);
-  left: calc(25.5px + 1vw);
-  width: 55px;
-  height: 55px;
-  line-height: 58px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 99;
-  animation: pulse 3.25s cubic-bezier(0.66, 0, 0, 1);
-  box-shadow: 0 0 0 0;
-  margin: 6em auto auto;
-}
