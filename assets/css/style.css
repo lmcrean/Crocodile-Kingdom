@@ -338,6 +338,7 @@ p {
 /*---------------LOGO---------------
   Elements = navbartitle, hamburger icon*/
 
+.hide-sprite {display: none !important;}/*hide sprite icon, JS toggles on and off to give illusion of changing crocodile expression*/
 
 #logo-desktop {
   position: relative;
@@ -353,7 +354,7 @@ p {
 }
 
 #logo-text-background {
-  position: relative;
+  position: relative; /*the other divs are absolute, so they fall into this size*/
   top: 0;
   left: 0;
   margin: auto auto;
@@ -371,6 +372,20 @@ p {
   top: 0;
   left: 0;
   margin: auto auto;
+}
+
+#crocodile-joy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+}
+
+#crocodile-shock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
 }
 
 /*--------------- Header buttons ---------------*/

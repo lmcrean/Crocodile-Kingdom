@@ -377,15 +377,18 @@ The minumum viable product of the memory game was
 - A congratulations message when the game was completed
 - a how to play feature
 - a logo and a contact button
-
+</i>
 
 ### 2.2.2. Unique Selling Point features
+
+<i>
 - Confetti
 - Sound effects
 - Music
 - Animated Crocodile
 - Animations
 - a footer with social media links
+</i>
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 

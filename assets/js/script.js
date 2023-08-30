@@ -34,6 +34,11 @@
 // ----------------- DEFINE THE VARIABLES ----------------- 
 // Define the variables
 
+// the following selects the crocodile images from the HTML
+const crocodileRegular = document.getElementById("crocodile-regular"); 
+const crocodileJoy = document.getElementById("crocodile-joy");
+const crocodileShock = document.getElementById("crocodile-shock");
+
 const musicPlayer1 = document.getElementById('music-player-1'); // This variable selects the music-player ID from the HTML
 
 const sfxFlip = document.getElementById('sfx-flip'); // This variable selects the sfx-flip ID from the HTML
@@ -165,19 +170,19 @@ function checkForMatch() {
     matchTrue ? disableCards() : flipBackCards(); // this is a ternary operator. A ternary operator is a shortcut for an if statement. If matchTrue is true, then run disableCards. If matchTrue is false, then run flipBackCards.
   }
 
-function disableCards(){
+function disableCards(){ //if this function is running, then the cards match.
   
 firstCard.removeEventListener("click", cardAppear);
 secondCard.removeEventListener("click", cardAppear);
 // .removeEventListener removes the event listener from the two selected cards so that they can't be clicked again.})
 
 if (!sfxMatch.classList.contains('sound-mute')) { //used !, if sfxMatch does not have the class sound-mute, then run the following code.
-  console.log("sfxMatch is not muted, should be playing");
   sfxMatch.play(); // This plays the flip sound effect when the card is clicked on.
 } else {
   console.log("sfxMatch is muted");
 }
 
+crocodileJoyAppear(); // This function makes the crocodile appear happy for 2 seconds.
 
 resetCards (); // unlocks the board so that the user can click on new cards again.
 
@@ -215,14 +220,13 @@ function randomInRange(min, max) {
 function flipBackCards() {
   lockCards = true; // This statement is set to true so that the user can't click on more than 2 cards at a time.
 
-  
+  crocodileShockAppear(); // This function makes the crocodile appear shocked for 2 seconds.
 
 setTimeout(() => {
   firstCard.classList.remove("flipped-over");
   secondCard.classList.remove("flipped-over"); // removes the HTML class of "flipped-over" on the card that it is clicked on. This flips the card back over.
   resetCards (); // unlocks the cards so that the user can click on them again.
   if (!sfxNoMatch.classList.contains('sound-mute')) { //used !, if sfxNoMatch does not have the class sound-mute, then run the following code.
-    console.log("sfxNoMatch is not muted, should be playing");
     sfxNoMatch.play(); // This plays the flip sound effect when the card is clicked on.
   } else {
     console.log("sfxNoMatch is muted");
@@ -237,6 +241,29 @@ function resetCards() {// This function resets the variables to their original v
   [hasFlippedCard, lockCards] = [false, false];
   [firstCard, secondCard] = [null, null];
 
+}
+
+// ----------------- CROCODILE EXPRESSIONS -----------------
+
+function crocodileJoyAppear() {
+  crocodileRegular.classList.toggle("hide-sprite");
+  crocodileJoy.classList.toggle("hide-sprite");
+
+  setTimeout(() => {
+  crocodileRegular.classList.toggle("hide-sprite");
+  crocodileJoy.classList.toggle("hide-sprite");
+  },2000);// This sets a timer of 2 seconds.
+}
+
+function crocodileShockAppear() {
+  crocodileRegular.classList.toggle("hide-sprite");
+  crocodileShock.classList.toggle("hide-sprite");
+  console.log("crocodileShockAppear");
+  
+  setTimeout(() => {
+  crocodileRegular.classList.toggle("hide-sprite");
+  crocodileShock.classList.toggle("hide-sprite");
+  },2000);// This sets a timer of 2 seconds.
 }
 
 //----------------- +1 to turns, -1 to turns left -----------------
