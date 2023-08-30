@@ -301,6 +301,9 @@ p {
     "restart"
     "how-to-play"
     "footer";
+  position: absolute;
+  margin: 25px auto auto;
+}
 }
 
   #logo-desktop {grid-area: logo;}
@@ -338,16 +341,40 @@ p {
 
 
 #logo-desktop {
-  margin:auto auto 40px;
-  height: 40px;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin:auto auto;
 }
 
 .logo-layer {
-  position:absolute;
+  width:90vw;
+  height: auto;
+  max-width: 460px;
+}
+
+#logo-text-background {
+  position: relative;
   top: 0;
-  margin: auto;
-  width: 50%;
-  object-fit: contain;
+  left: 0;
+  margin: auto auto;
+  border: 1px red solid;
+}
+
+#logo-text-foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto auto;
+  border: 1px blue solid;
+}
+
+#crocodile-regular {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto auto;
+  border: 1px green solid;
 }
 
 
@@ -465,6 +492,14 @@ z-index: 3;
 
 
 /*---------------TURN COUNT SKELETON---------------*/
+
+#turns-left-section {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+  width: 100%;
+}
 
 /*---------------RESTART BUTTON SKELETON---------------*/
 

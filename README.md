@@ -77,6 +77,7 @@ In the issues I have logged written, video or screenshot accounts.
 - [5. Issues and Bugs](#5-issues-and-bugs)
 - [6. Credits \& Acknowledgements](#6-credits--acknowledgements)
   - [6.1. Code snippets](#61-code-snippets)
+  - [6.2. Stack Overflow and indirect support](#62-stack-overflow-and-indirect-support)
   - [6.2. Technologies Used](#62-technologies-used)
   - [6.3. Acknowledgements](#63-acknowledgements)
 
@@ -997,9 +998,13 @@ The following code snippets were used and adapted in the project:
 - [Confetti](https://www.npmjs.com/package/canvas-confetti) by Kiril Vatev was used as a fun feature to celebrate the player's match.
 - [Mute / Unmute Button](https://codepen.io/giannisrig/pen/RYJPzb)with Material Design Animation by Giannis Riganas was used to add a mute button to the game.
 
-  
-
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+## 6.2. Stack Overflow and indirect support
+
+The following Stack Overflow posts were used to solve issues in the project:
+
+- https://stackoverflow.com/questions/48474/how-do-i-position-one-image-on-top-of-another-in-html helped with arranging the Crocodile sprite with layers on top of each other.
 
 
 ## 6.2. Technologies Used
