@@ -28,13 +28,14 @@ In the issues I have logged written, video or screenshot accounts.
 
 - [1. Features](#1-features)
   - [1.1. Card Deck](#11-card-deck)
+  - [1.2. Reacting Crocodile](#12-reacting-crocodile)
   - [1.2. Turn Count](#12-turn-count)
   - [1.3. Restart Button](#13-restart-button)
   - [1.4. You Win feature](#14-you-win-feature)
   - [1.5. You Lost feature](#15-you-lost-feature)
   - [1.6. How to play feature](#16-how-to-play-feature)
-  - [1.6. SFX feature](#16-sfx-feature)
-  - [1.6. Footer](#16-footer)
+  - [1.7. SFX feature](#17-sfx-feature)
+  - [1.8. Footer](#18-footer)
 - [2. UX Development Planes \& Manual Testing](#2-ux-development-planes--manual-testing)
   - [2.1. Strategy Plane](#21-strategy-plane)
     - [2.1.1. Developer strategy](#211-developer-strategy)
@@ -45,7 +46,7 @@ In the issues I have logged written, video or screenshot accounts.
   - [2.2. Scope plane](#22-scope-plane)
     - [2.2.1. Mininum Viable Product features](#221-mininum-viable-product-features)
     - [2.2.2. Unique Selling Point features](#222-unique-selling-point-features)
-    - [2.2.2. Scope of Features](#222-scope-of-features)
+    - [2.2.3. Scope of Features](#223-scope-of-features)
   - [2.3. Structure Plane](#23-structure-plane)
     - [2.3.1. Card Deck structure](#231-card-deck-structure)
     - [2.3.2. Turn count structure](#232-turn-count-structure)
@@ -78,8 +79,8 @@ In the issues I have logged written, video or screenshot accounts.
 - [6. Credits \& Acknowledgements](#6-credits--acknowledgements)
   - [6.1. Code snippets](#61-code-snippets)
   - [6.2. Stack Overflow and indirect support](#62-stack-overflow-and-indirect-support)
-  - [6.2. Technologies Used](#62-technologies-used)
-  - [6.3. Acknowledgements](#63-acknowledgements)
+  - [6.3. Technologies Used](#63-technologies-used)
+  - [6.4. Acknowledgements](#64-acknowledgements)
 
 ***
 <div align="center">
@@ -96,6 +97,11 @@ In the issues I have logged written, video or screenshot accounts.
 - When the player gets a match, those cards stay flipped over and locked.
 - When the palyer gets a mismatch, the cards flip back over after 2 seconds.
 - When the player matches all 8 sets of cards, the You Win modal appears.
+
+***
+## 1.2. Reacting Crocodile
+
+- The crocodile reacts to the player's actions. 
 
 ***
 ## 1.2. Turn Count
@@ -140,7 +146,7 @@ The How to play feature explains the rules of the game.
 
 ***
 
-## 1.6. SFX feature
+## 1.7. SFX feature
 
 There are 2 buttons for music and sound effects. The music button toggles the music on and off. The sound effects button toggles the sound effects on and off.
 
@@ -156,7 +162,7 @@ SFX are included for the following events:
 
 ***
 
-## 1.6. Footer
+## 1.8. Footer
 There is a footer with social media links.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
@@ -393,7 +399,7 @@ The minumum viable product of the memory game was
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 
-### 2.2.2. Scope of Features
+### 2.2.3. Scope of Features
 The following features were designed to meet the needs of new playerssometimes appearing more than once for the purpose of both making the website easy to navigate and consistent branding design.
 
 The full scope and function of features is discussed in the opening [Features](#1-features) section.
@@ -1010,7 +1016,7 @@ The following Stack Overflow posts were used to solve issues in the project:
 - https://stackoverflow.com/questions/48474/how-do-i-position-one-image-on-top-of-another-in-html helped with arranging the Crocodile sprite with layers on top of each other.
 
 
-## 6.2. Technologies Used
+## 6.3. Technologies Used
 
 Languages
 [HTML5](https://en.wikipedia.org/wiki/HTML5) was used for the structure and content of the website
@@ -1042,7 +1048,7 @@ Tools
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 
-## 6.3. Acknowledgements
+## 6.4. Acknowledgements
 I'd like to thank to the tutors at Code Institute, who provided week-to-week support throughout the project, and were always available to answer questions and provide guidance.
 
 I'd like to thank Seun Owonikoko, my mentor at Code Institute, for her encouragement and support during our mentoring sessions.
