@@ -330,7 +330,7 @@ header {
 @media screen and (min-width: 1208px) {
 .gameplay-display-grid {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 33vw 67vw;
   grid-template-rows: auto;
   grid-template-areas:
     "logo cards"
@@ -368,7 +368,7 @@ header {
 }
 
 .logo-layer {
-  width:90vw;
+  width: 90%;
   height: auto;
   max-width: 460px;
 }
@@ -426,14 +426,13 @@ header {
   align-items: center;
   flex-direction: column;
   z-index: 99;
-  border: 5px solid red;
 } 
 
 
 @media screen and (min-width: 1208px) {
   #header-buttons {/*ultimate parent element*/
     position: relative;
-    width: 58%;
+    width: 90%;
     height: 36%;
     max-width: 31em;
     bottom: 0px;
@@ -443,7 +442,6 @@ header {
     align-items: center;
     flex-direction: row;
     z-index: 99;
-    border: 5px solid red;
   } 
 }
   
@@ -452,11 +450,31 @@ header {
   position: absolute;
 }
 
-.toggle-sound, .toggle-sfx {
-  position: fixed;
-  width: 55px;
-  height: 55px;
-  line-height: 58px;
+#music-button {
+  margin: auto 23% auto auto;
+  position: relative;
+}
+
+#sfx-button {
+  margin: auto auto auto auto;
+}
+
+#contact-button {
+  margin: -7% 0% auto auto;
+  width: 38px;
+  height: 38px;
+  background-color: var(--harmonious-lighter);
+  border-radius: 50%;
+  align-self: center;
+  right: 4px;
+}
+
+
+.toggle-sound, .toggle-sfx { /*connects to animation rules*/
+  position: relative;
+  width: 38px;
+  height: 38px;
+  line-height: 41px;
   border-radius: 50%;
   cursor: pointer;
   z-index: 99;
@@ -464,14 +482,23 @@ header {
   box-shadow: 0 0 0 0 var(--harmonious-light);
 }
 
-.toggle-sound {
-  margin: auto auto auto;
+.container-button h6 {
+  text-align: center;
+  margin-top: calc(-6px + 1vw);
+  margin-left: calc(-4px + 1vw);
+  color:var(--harmonious-lighter);
+  z-index:99;
 }
 
-.toggle-sfx {
-  margin: 6em auto auto;
+#contact-button h6 {
+  margin: 12px 0px 0px -6px;
+  bottom: 0px;
+  color:var(--harmonious-lighter);
+  z-index:99;
+  text-align: left;
 }
 
+/*---inside the buttons---*/
 .toggle-sound.sound-mute, .toggle-sfx.sound-mute {
 	box-shadow: none;
 }
@@ -496,13 +523,13 @@ header {
 .sound--icon {
 	color: inherit;
 	line-height: inherit;
-	font-size: 1.3rem;
+	font-size: 1rem;
 	display: block;
 	margin: 0px 0px 0px 6px;
 	text-align: left;
 	padding: 0px 0px 0px;
-  transform: scale(1.2);
-  transition: all 500ms;
+	transform: scale(1.2);
+	transition: all 500ms;
 }
 
 .sound-mute .sound--icon { /*make 20% larger on click*/
@@ -531,13 +558,7 @@ header {
   height: 56%;
 }
 .sound--wave_three {width: 85%;height:75%;}
-.sound-mute .sound--wave {
-border-radius: 0;
-width: 35%;
-height: 35%;
-border-width: 0 2px 0 0;
-left: 5px;
-}
+.sound-mute .sound--wave {border-radius: 0;width: 37%;height: 35%;border-width: 0 2px 0 0;left: 5px;}
 .sound-mute .sound--wave_one {
   transform: rotate(45deg) translate3d(7%, -45%, 0);
 }
@@ -548,28 +569,13 @@ left: 5px;
     opacity: 0;
     transform: translateX(-46%);
     height: 20%;
-
 }
 
-
-
-
-
-.container-button h6 {
-  text-align: center;
-  margin-top: calc(80px + 1vw);
-  margin-left: calc(33.5px + 1vw);
-  position: fixed;
-  color:var(--harmonious-lighter);
-  z-index:99;
-} 
-
-#sfx-button h6 {
-  margin-left: calc(41.5px + 1vw);
-  margin-top: calc(155px + 1vw);
+#contact-button img {
+  width: 60%;
+  height: auto;
+  margin: 6px auto auto;
 }
-
-
 
 /*---------------CARD DECK SKELETON---------------*/
 
@@ -588,6 +594,8 @@ left: 5px;
   #card-deck {
     width: 45em;
     height: 45em;
+    max-width: 45em;
+    max-height: 45em;
   }
 }
 
@@ -595,6 +603,8 @@ left: 5px;
   #card-deck {
     width: 55em;
     height: 55em;
+    max-width: 50vw;
+    max-height: 50vw;
   }
 }
 
@@ -622,6 +632,7 @@ left: 5px;
   align-items: center;
   margin: auto auto;
   width: 100%;
+  margin-top: 2em;
 }
 
 /*---------------RESTART BUTTON SKELETON---------------*/
