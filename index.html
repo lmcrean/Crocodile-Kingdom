@@ -20,9 +20,27 @@
   <title>Memory Game</title>
 </head>
 
-<body id="home-page">
-<header>
-  <div id="music-button" class="container-sound button"><!--container for sound-->
+<body id="home-page" class="gameplay-display-grid">
+
+  <!--header buttons-->
+<header id="logo-header">
+  
+    <img src="assets/media/crocodile-sprite/text-background.svg" id="logo-text-background" class="logo-layer">
+    
+  <!--sprites are placed here-->
+    <img src="assets/media/crocodile-sprite/regular.png" id="crocodile-regular" class="logo-layer">
+  
+    <img src="assets/media/crocodile-sprite/joy.png" id="crocodile-joy" class="logo-layer hide-sprite">
+  
+    <img src="assets/media/crocodile-sprite/shock.png" id="crocodile-shock" class="logo-layer hide-sprite">
+  
+    <img src="assets/media/crocodile-sprite/text-foreground.svg" id="logo-text-foreground" class="logo-layer">
+    </header>
+
+  <header id="header-buttons">
+  <!-- music button
+  <div id="header-button-container">
+  <div id="music-button" class="container-button button">
     <div class="unmuted toggle-sound sound-mute">
         <div class="tooltip--left sound" data-tooltip="Turn On/Off Sound">
           <div class="sound--icon fa fa-volume-off"></div>
@@ -34,7 +52,8 @@
       <h6>music</h6>
     </div>
 <br>
-    <div id="sfx-button" class="container-sound button"><!--container for sound-->
+    
+    <div id="sfx-button" class="container-button button">
       <div class="unmuted toggle-sfx sound-mute">
           <div class="tooltip--left sound" data-tooltip="Turn On/Off Sound">
             <div class="sound--icon fa fa-volume-off"></div>
@@ -45,6 +64,17 @@
         </div>
         <h6>sfx</h6>
       </div>
+
+      <div id="contact-button" class="container-button button">
+        <div class="unmuted toggle-contacy sound-mute">
+            <div class="tooltip--left sound">
+            </div>
+          </div>
+          <h6>contact</h6>
+        </div>
+      </div> -->
+
+     <!--sound files--> 
 
     <audio id="music-player-1">
       <source src="assets/media/sound/simple-piano-melody-9834.mp3" type="audio/mpeg">
@@ -75,22 +105,7 @@
       <source src="assets/media/sound/wronganswer-37702.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-
-</header>
-<main class="gameplay-display-grid">
-
-<section id="logo-desktop">
-  <img src="assets/media/crocodile-sprite/text-background.svg" id="logo-text-background" class="logo-layer">
-  
-<!--sprites are placed here-->
-  <img src="assets/media/crocodile-sprite/regular.png" id="crocodile-regular" class="logo-layer">
-
-  <img src="assets/media/crocodile-sprite/joy.png" id="crocodile-joy" class="logo-layer hide-sprite">
-
-  <img src="assets/media/crocodile-sprite/shock.png" id="crocodile-shock" class="logo-layer hide-sprite">
-
-  <img src="assets/media/crocodile-sprite/text-foreground.svg" id="logo-text-foreground" class="logo-layer">
-</section>
+  </header>
 
 <section id="score-count" style="display: none;">
   <h2 class="turns">Turns (placeholder): <span id="turns-count">0</span></h2>
@@ -170,8 +185,9 @@
   <button class="btn btn-primary rounded-corner shadow restart-function" id="restart-button">Restart</button>
 </div>
 
-<!--------------------- How to play Modal ------------------------>
+<!--------------------- How to play feature ------------------------>
 <section id="how-to-play" class="modal-box">
+
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#howtoplay">
     How to Play
   </button>
@@ -239,10 +255,12 @@
   <br><br>
   </section>
 
+  <!--well done feature-->
+
 <section id="well-done" class="modal-box">
 
   <!-- Button trigger modal -->
-<button type="button" class="btn btn-secondary well-done-modal hide-in-laptop-and-desktop" data-bs-toggle="modal" data-bs-target="#well-done-modal">
+<button type="button" class="btn btn-secondary well-done-modal hide" data-bs-toggle="modal" data-bs-target="#well-done-modal">
   Well done (placeholder)
 </button>
 
@@ -273,13 +291,15 @@
 </section>
 
 
+      <!--you lose feature-->
 
     <section id="you-lose" class="modal-box ">
       <br>
-      <button type="button" class="btn btn-secondary hide-in-laptop-and-desktop you-lose-modal" data-bs-toggle="modal" data-bs-target="#you-lose-modal">
+      <button type="button" class="btn btn-secondary hide-in-laptop-and-desktop you-lose-modal hide" data-bs-toggle="modal" data-bs-target="#you-lose-modal">
         Lose Screen (placeholder)
       </button>
     
+      <!--you lose modal-->
       <div class="modal fade  " id="you-lose-modal" tabindex="-1" aria-labelledby="you-lose" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -288,8 +308,8 @@
             </div>
             <div class="modal-body">
               <h1>You lost this time 😿</h1><br><br>
-              <img src="assets/media/you-lose-sad-crocodile.svg" alt="trophy" class="trophy-icon" width="399"><br><br>
-              <h2>unfortunately you ran out of turns. Don't give up though!</h2>
+              <img src="assets/media/you-lose-sad-crocodile.svg" alt="lose" class="trophy-icon" width="399"><br><br>
+              <h2>Unfortunately you ran out of turns. Don't give up though!</h2>
             </div>
             <div class="modal-footer-centered">
               <button type="button" class="btn btn-primary restart-function continue close-modal" data-bs-dismiss="modal" aria-label="Close" id="restart-button-from-lose">Play Again</button><br><br>
@@ -303,7 +323,7 @@
 
       <section id="welcome" class="modal-box">
         <br>
-        <button type="button" class="btn btn-secondary hide-in-laptop-and-desktop" data-bs-toggle="modal" data-bs-target="#welcome-modal">
+        <button type="button" class="btn btn-secondary hide-in-laptop-and-desktop hide" data-bs-toggle="modal" data-bs-target="#welcome-modal">
           Welcome screen (placeholder)
         </button>
       
@@ -348,8 +368,9 @@
       <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><img src="assets/media/icons/linkedin.svg" alt="icon"></a>
     </div>
 </div>
+
 </footer>
-</main>
+
 </body>
 
 <script>

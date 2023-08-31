@@ -109,7 +109,7 @@ h5 {font-size: 0.7rem;/*reduce font size*/}
 /*---------------SURFACE PLANE - COLORS---------------*/
 
 .toggle-sfx, .toggle-sound {background-color: var(--harmonious-lighter); color: var(--white);}
-.container-sound h6 {color: var(--harmonious-lighter);}
+.container-button h6 {color: var(--harmonious-lighter);}
 
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
   background-color: var(--harmonious-bold) !important;
@@ -288,13 +288,27 @@ p {
 @media screen and (min-width: 1728px) {
 .hide-in-desktop {display: none !important;}}
 
+.hide {display: none !important;}
+
+/*---------------SKELETON PLANE - HEADER STRUCTURE---------------*/
+
+header {
+  margin: 0px auto auto;
+}
+
+@media screen and (min-width: 1208px) {
+  header {
+  margin: 0px auto auto 25px;
+  }
+}
+
 /*---------------SKELETON PLANE - RESPONSIVE GRID DISPLAY ---------------*/
 
 .gameplay-display-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-template-areas: 
+  grid-template-areas:
     "logo"
     "turns-count"
     "cards"
@@ -302,10 +316,10 @@ p {
     "how-to-play"
     "footer";
   position: absolute;
-  margin: 25px auto auto;
+  margin: 10px auto auto;
 }
 
-  #logo-desktop {grid-area: logo;}
+  #logo-header {grid-area: logo;}
   #card-deck {grid-area: cards;}
   #turns-left-section {grid-area: turns-count;}
   #restart-section {grid-area: restart;}
@@ -317,15 +331,17 @@ p {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: auto;
-  grid-template-areas: 
+  grid-template-areas:
     "logo cards"
     "turns-count cards"
     "restart cards"
     "how-to-play cards"
     "footer footer";
+  margin: 3px auto auto;
 }
 
-  #logo-desktop {grid-area: logo; margin: 0px auto;}
+  #logo-header {grid-area: logo;margin: 0px auto;/* width: 69%; */}
+  #header-button-container{grid-area: logo; margin: 0px auto;}
   #card-deck {grid-area: cards;}
   #turns-left-section {grid-area: turns-count;}
   #restart-section {grid-area: restart;}
@@ -340,7 +356,9 @@ p {
 
 .hide-sprite {display: none !important;}/*hide sprite icon, JS toggles on and off to give illusion of changing crocodile expression*/
 
-#logo-desktop {
+
+
+#logo-header {
   position: relative;
   top: 0;
   left: 0;
@@ -389,12 +407,38 @@ p {
 }
 
 /*--------------- Header buttons ---------------*/
+/*SFX, music, contact*/
 
-/*---------------SFX button---------------*/
 /*This code is adapted from this source:*/
 /*https://codepen.io/giannisrig/pen/RYJPzb*/
 
-.container-sound {
+/* #header-button-container {/*ultimate parent element
+  position: relative;
+  width: 50vw;
+  max-width: 400px;
+  height: 100px;
+  max-height: auto;
+  margin: auto auto auto;
+  left: 40vw;
+  top: 9em;
+  display: flex;
+  flex-direction: row;
+  border: #ff0000 solid 3px;
+  z-index: 99;
+} */
+
+@media screen and (max-width: 508px) {
+  #header-button-container {
+  top: 34vw;
+  }
+}
+
+
+@media screen and (min-width: 1208px) {
+  }
+  
+
+.container-button {
   position: absolute;
 }
 
@@ -503,7 +547,7 @@ left: 5px;
 
 
 
-.container-sound h6 {
+.container-button h6 {
   text-align: center;
   margin-top: calc(80px + 1vw);
   margin-left: calc(33.5px + 1vw);
@@ -536,13 +580,15 @@ footer, #footer-desktop-display {
 @media screen and (min-width: 1208px) {
   footer, #footer-desktop-display {
   width: 100%;
+  left:0px;
+  position: relative;
 }
 }
 
 @media screen and (min-width: 1800px) {
   footer, #footer-desktop-display {
   width: 100vw;
-  position: relative;
+
   justify-content: center;
   margin-left:0px;
 }
