@@ -320,6 +320,7 @@ header {
 }
 
   #logo-header {grid-area: logo;}
+  #header-buttons {grid-area: logo;}
   #card-deck {grid-area: cards;}
   #turns-left-section {grid-area: turns-count;}
   #restart-section {grid-area: restart;}
@@ -340,7 +341,8 @@ header {
   margin: 3px auto auto;
 }
 
-  #logo-header {grid-area: logo;margin: 0px auto;/* width: 69%; */}
+  #logo-header {grid-area: logo;margin: 0px auto;}
+  #header-buttons {grid-area: logo;}
   #header-button-container{grid-area: logo; margin: 0px auto;}
   #card-deck {grid-area: cards;}
   #turns-left-section {grid-area: turns-count;}
@@ -412,40 +414,46 @@ header {
 /*This code is adapted from this source:*/
 /*https://codepen.io/giannisrig/pen/RYJPzb*/
 
-/* #header-button-container {/*ultimate parent element
+ #header-buttons {/*ultimate parent element*/
   position: relative;
-  width: 50vw;
-  max-width: 400px;
-  height: 100px;
-  max-height: auto;
-  margin: auto auto auto;
-  left: 40vw;
-  top: 9em;
+  width: 90vw;
+  height: 36%;
+  max-width: 34em;
+  bottom: 0px;
+  margin: auto auto 0px auto;
   display: flex;
-  flex-direction: row;
-  border: #ff0000 solid 3px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   z-index: 99;
-} */
-
-@media screen and (max-width: 508px) {
-  #header-button-container {
-  top: 34vw;
-  }
-}
+  border: 5px solid red;
+} 
 
 
 @media screen and (min-width: 1208px) {
-  }
+  #header-buttons {/*ultimate parent element*/
+    position: relative;
+    width: 58%;
+    height: 36%;
+    max-width: 31em;
+    bottom: 0px;
+    margin: auto auto 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    z-index: 99;
+    border: 5px solid red;
+  } 
+}
   
-
+/*general selector for buttons*/
 .container-button {
   position: absolute;
 }
 
 .toggle-sound, .toggle-sfx {
   position: fixed;
-  top: calc(25.5px + 1vw);
-  left: calc(25.5px + 1vw);
   width: 55px;
   height: 55px;
   line-height: 58px;
