@@ -909,9 +909,9 @@ This surface plane describes the choice of typefaces, colors and style themes re
 
 ### 2.5.1. Typefaces Surface
 
-Typefaces used were xxxxxxxxxxxxxxxxxxxxxxxxx for headings and xxxxxxxxxxxxxxxxxxxxxx for body text. The font pairings were chosen for their playful  but professional tone as outlined in the strategy plane.
+Typefaces used were Hussar Bold for headings and Amazing Grotesk for body text. The font pairings were chosen for their playful  but professional tone as outlined in the strategy plane.
 
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
+
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -998,13 +998,29 @@ The Automatic Testing achieved
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate the project to ensure there were no syntax errors in the project.
 
-The result was <b> passed </b> for HTML5, CSS3 and JS.
+The result was <b> passed </b> for HTML5.
 
 ![](assets/media/issues/2023-08-25-21-59-31.png)
 
+
+There were no warnings for the CSS other than Bootstrap's default styling, which cannot be changed.
+
+![](assets/media/issues/2023-09-01-13-44-42.png)
+
+<details>
+<summary>Click here to view Bootstrap explanation copied from <a href="https://getbootstrap.com/docs/5.3/getting-started/browsers-devices">Bootstrap's documentation</a>
+</summary>
+<i>
+In order to provide the best possible experience to old and buggy browsers, Bootstrap uses CSS browser hacks in several places to target special CSS to certain browser versions in order to work around bugs in the browsers themselves. These hacks understandably cause CSS validators to complain that they are invalid. In a couple places, we also use bleeding-edge CSS features that aren’t yet fully standardized, but these are used purely for progressive enhancement.
+
+These validation warnings don’t matter in practice since the non-hacky portion of our CSS does fully validate and the hacky portions don’t interfere with the proper functioning of the non-hacky portion, hence why we deliberately ignore these particular warnings.
+
+Our HTML docs likewise have some trivial and inconsequential HTML validation warnings due to our inclusion of a workaround for a certain Firefox bug.</i></details>
+
+JsHint was used to validate the JavaScript code. The result was <b> passed </b> with no errors.
+
 <img src="assets/media/documenation/../documentation/jshint.png" width="800">
 
-Admittedly there were some warnings for the CSS due to Bootstrap's default styling. This was necessary to ensure the design was consistent with the design plan. Bootstrap explains below:
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -1024,8 +1040,9 @@ To further improve the lighthouse score I could use more WebP images and reduce 
 
 ## 3.3. Browserstack Testing
 
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+A video is planned for testing the website on different browsers and devices. The video will be uploaded linked here. 
+
+https://www.browserstack.com/
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -1033,7 +1050,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # 4. Deployment
 The site was deployed to GitHub pages. You can access the live link here: [https://lmcrean.github.io/Crocodile-Kingdom](https://lmcrean.github.io/Crocodile-Kingdom).
 
-To deploy on Github pages, the following steps were taken:
+To deploy on Github pages, the following steps can be taken:
 
 1. Log in to GitHub and locate the GitHub Repository
 2. Go to the settings tab
@@ -1073,7 +1090,7 @@ The following code snippets were used and adapted in the project:
 
 The following Stack Overflow posts were used to solve issues in the project:
 
-- https://stackoverflow.com/questions/48474/how-do-i-position-one-image-on-top-of-another-in-html helped with arranging the Crocodile sprite with layers on top of each other.
+- https://stackoverflow.com/questions/48474/how-do-i-position-one-image-on-top-of-another-in-html helped with arranging the Crocodile sprite with layers on top of each other using absolute and relative positioning.
 
 
 ## 6.3. Technologies Used
