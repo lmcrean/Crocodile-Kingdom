@@ -29,24 +29,24 @@ In the issues I have logged written, video or screenshot accounts.
 - [1. Features](#1-features)
   - [1.1. Card Deck](#11-card-deck)
   - [1.2. Reacting Crocodile](#12-reacting-crocodile)
-  - [1.2. Turn Count](#12-turn-count)
-  - [1.3. Restart Button](#13-restart-button)
-  - [1.4. You Win feature](#14-you-win-feature)
-  - [1.5. You Lost feature](#15-you-lost-feature)
-  - [1.6. How to play feature](#16-how-to-play-feature)
-  - [1.7. SFX feature](#17-sfx-feature)
-  - [1.8. Footer](#18-footer)
+  - [1.3. Turns left Count](#13-turns-left-count)
+  - [1.4. Restart Button](#14-restart-button)
+  - [1.5. You Win feature](#15-you-win-feature)
+  - [1.6. You Lose feature](#16-you-lose-feature)
+  - [1.7. How to play feature](#17-how-to-play-feature)
+  - [1.8. Floating buttons header](#18-floating-buttons-header)
+  - [1.9. Footer](#19-footer)
 - [2. UX Development Planes \& Manual Testing](#2-ux-development-planes--manual-testing)
   - [2.1. Strategy Plane](#21-strategy-plane)
-    - [2.1.1. Developer strategy](#211-developer-strategy)
-    - [2.1.2. Developer Research](#212-developer-research)
-    - [2.1.3. Initial Product Research](#213-initial-product-research)
-    - [2.1.4. Project Timeline](#214-project-timeline)
-    - [2.1.5. Business Strategy \& User Stories](#215-business-strategy--user-stories)
+    - [2.1.1. Developer Research](#211-developer-research)
+    - [2.1.2. Initial Product Research](#212-initial-product-research)
+    - [2.1.3. Project Timeline](#213-project-timeline)
+    - [2.1.4. Business Strategy \& User Stories](#214-business-strategy--user-stories)
   - [2.2. Scope plane](#22-scope-plane)
-    - [2.2.1. Mininum Viable Product features](#221-mininum-viable-product-features)
-    - [2.2.2. Unique Selling Point features](#222-unique-selling-point-features)
-    - [2.2.3. Scope of Features](#223-scope-of-features)
+    - [2.2.1. Scope Strategy](#221-scope-strategy)
+    - [2.2.2. Mininum Viable Product features](#222-mininum-viable-product-features)
+    - [2.2.3. Unique Selling Point features](#223-unique-selling-point-features)
+    - [2.2.4. Scope of Features](#224-scope-of-features)
   - [2.3. Structure Plane](#23-structure-plane)
     - [2.3.1. Card Deck structure](#231-card-deck-structure)
     - [2.3.2. Turn count structure](#232-turn-count-structure)
@@ -60,16 +60,13 @@ In the issues I have logged written, video or screenshot accounts.
     - [2.4.2. How to play Skeleton:](#242-how-to-play-skeleton)
     - [2.4.3. Well done Skeleton:](#243-well-done-skeleton)
     - [2.4.4. You Lose Skeleton:](#244-you-lose-skeleton)
-    - [2.4.5. Sizing skeleton](#245-sizing-skeleton)
-    - [2.4.6. HTML classes skeleton](#246-html-classes-skeleton)
+    - [2.4.5. Scale solutions](#245-scale-solutions)
   - [2.5. Surface Plane](#25-surface-plane)
     - [2.5.1. Typefaces Surface](#251-typefaces-surface)
     - [2.5.2. Color surface](#252-color-surface)
-    - [2.5.3. Card Deck Surface](#253-card-deck-surface)
-    - [2.5.4. Logo Surface](#254-logo-surface)
-    - [2.5.5. Background Surface](#255-background-surface)
-    - [2.5.6. Button Surface](#256-button-surface)
-    - [2.5.7. Modal Surface](#257-modal-surface)
+    - [2.5.3. Logo Surface](#253-logo-surface)
+    - [2.5.4. Card Deck Surface](#254-card-deck-surface)
+    - [2.5.5. Button Surface](#255-button-surface)
 - [3. Automatic Testing](#3-automatic-testing)
   - [3.1. HTML/CSS/JS Validator Testing](#31-htmlcssjs-validator-testing)
   - [3.2. Lighthouse Report](#32-lighthouse-report)
@@ -90,56 +87,75 @@ In the issues I have logged written, video or screenshot accounts.
 ## 1.1. Card Deck
 <a src="assets/media/issues/1.1.5.mp4"><img alt="placeholder" src="assets/media/issues/2023-08-15-13-14-21.png" width="300px" ></a></div>
 
-- The Card Deck functions as the classic Memory Game, where the player has to try and match pairs of cards together while never turning more than two cards at once. The game challenges the player's memory skills. *The player wins the game when all the cards are flipped.*
+The Card Deck functions as the classic Memory Game, where the player has to try and match pairs of cards together while never turning more than two cards at once. The game challenges the player's memory skills. *The player wins the game when all the cards are flipped.*
 - As the player turns the cards, the logic checks if there's a match or not.
 - As the player turns the cards, the rest of the board is temporarily locked so the player can't cheat.
-- When the player gets a match, confetti appears to encourage the player.
 - When the player gets a match, those cards stay flipped over and locked.
-- When the palyer gets a mismatch, the cards flip back over after 2 seconds.
-- When the player matches all 8 sets of cards, the You Win modal appears.
+- When the player gets a mismatch, the cards flip back over after 2 seconds.
 
+***
+<i>
+
+Using embedded JS functions, the card deck is connected to other features
+- When the player gets a match,
+  - confetti appears to encourage the player.
+  - The crocodile mascot reacts with a happy face.
+  - a positive sound effect plays
+  - turns count count decreases by 1
+- When the player gets a mismatch,
+  - the crocodile mascot reacts with a suprised face.
+  - a negative sound effect plays
+  - the turn count decreases by 1
+- When the player matches all 8 sets of cards, the You Win modal appears.
+</i>
 ***
 ## 1.2. Reacting Crocodile
 
-<img alt="Reacting crocodile" src=>
+<img alt="Reacting crocodile" src="assets/media/documentation/feature-crocodile-reacts.gif">
 
-- The crocodile reacts to the player's actions. 
+The crocodile reacts to the player's actions. 
+- He is happy when the player gets a match.
+- He is suprised when the player gets a mismatch.
 
 ***
-## 1.2. Turn Count
-<img alt="placeholder" src="assets/media/issues/1.2b.gif" width="300px" >
+## 1.3. Turns left Count
+<img alt="placeholder" src="assets/media/documentation/features-turns-left.gif" width="300px" >
 
 - The turns start at 40, and count down each time the player attempts to get a match
 - When the player reaches 40 turns, the you lose modal appears.
 
 ***
 
-## 1.3. Restart Button 
+## 1.4. Restart Button 
 <img alt="placeholder" src="assets/media/issues/1.3.gif" width="300px" >
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+When the player clicks on the restart button, the following happens:
+- all cards flip back over
+- all cards are shuffled
+
+The restart button is also embedded in the You Win and You Lose feature.
 
 ***
 
-## 1.4. You Win feature
+## 1.5. You Win feature
 <img alt="placeholder" src="assets/media/issues/feature-well-done.gif" width="300px">
 
 When all the cards are flipped, the You Win modal appears. It displays the number of turns taken and remaining, and a restart button. It uses the wording "well done" to encourage the player.
 
 ***
 
-## 1.5. You Lost feature
+## 1.6. You Lose feature
 <img alt="placeholder" src="assets/media/issues/feature-you-lost.gif" width="300px" >
 
 When turns run out to 0, the You Lost modal appears.
 
+The feature provides a restart button, and uses the wording to encourage the player to try again.
 
 ***
 
-## 1.6. How to play feature
-<img alt="placeholder" src="assets/media/responsivity-tests/how-to-play.gif" width="300px" >
+## 1.7. How to play feature
+
+<img src="assets/media/issues/2023-09-01-12-37-29.png" width=400>
 
 The How to play feature explains the rules of the game. 
 
@@ -148,11 +164,17 @@ The How to play feature explains the rules of the game.
 
 ***
 
-## 1.7. SFX feature
+## 1.8. Floating buttons header
 
-There are 2 buttons for music and sound effects. The music button toggles the music on and off. The sound effects button toggles the sound effects on and off.
+![](assets/media/issues/2023-09-01-12-38-49.png)
 
-They start on mute, and the player can choose to turn them on.
+The floating buttons header contains a music button, a sound effect button, and a contact button. 
+
+### 1.8.1. SFX button <!-- omit in toc -->
+
+<img src="assets/media/documentation/feature-sfx-animation.gif">
+
+The sound effect button starts on mute, and the player can choose to turn them on.
 
 SFX are included for the following events:
 - when the player clicks on a card
@@ -161,11 +183,30 @@ SFX are included for the following events:
 - when the player wins the game
 - when the player loses the game
 
+The SFX button animates.
 
-***
 
-## 1.8. Footer
-There is a footer with social media links.
+### 1.8.2. Music button <!-- omit in toc -->
+
+![Alt text](image.png)
+
+The music button starts on mute, and the player can choose to turn it on.
+
+It plays a loop of relaxing music that 5 year olds might enjoy.
+
+The music button animated just like the SFX button.
+
+### 1.8.3. Contact button <!-- omit in toc -->
+
+![](assets/media/issues/2023-09-01-12-35-13.png)
+
+The contact button opens a new tab using mailto:.
+
+## 1.9. Footer
+
+![](assets/media/issues/2023-09-01-12-35-01.png)
+
+There is a footer with social media links, all of which open in a new tab.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -175,16 +216,18 @@ There is a footer with social media links.
 
 # 2. UX Development Planes & Manual Testing
 
-The 5 UX development planes were used as an efficient framework for documenting the project's intentions.
- - The Strategy plane set the intention of a children's memory game with Vanilla Javascript that would be developed over 6 weeks.
+**The 5 UX development planes were used as an efficient framework for documenting the project's intentions.** 
+
+- The Strategy plane set the intention of a children's memory game with Vanilla Javascript that would be developed over 6 weeks.
  - The Scope plane identified a range of Mininum Viable Product and Unique Selling Point features.
  - The Structure plane connected the features with efficient logic for playing the memory game.
  - The Skeleton plane was developed for a responsive layout, allowing the game to be played on all mainstream devices.
  - The Surface plane intended to be a fun, engaging and accessible design for children.
 
 
-Using the latter 3 UX Planes as a guideline, Manual testing was executed with the following criteria:
+**Manual testing focused on the functionality of the JS logic and CSS visuals:**
 
+Using the latter 3 UX Planes as a guideline:
 - **For the Structure plane, JS logic and HTML hyperlinks** functionality within each feature, using console.log() to check that the code was running as expected.
 - **For the Skeleton plane, CSS positioning and responsivity to viewport width**, key breakpoints being at mobile view, tablet view (768px), laptop view (1208px) and desktop view (1728px+). 
 - **For the Surface plane, design choices through vector graphics, typography, color and sound** that serve the user stories and elicit a positive emotional response. CSS was the key programming language and Canva was used for rendering graphic illustrations.
@@ -192,18 +235,13 @@ Using the latter 3 UX Planes as a guideline, Manual testing was executed with th
 
 ## 2.1. Strategy Plane
 
+The overall strategy was to develop a memory game over 6 weeks that would appeal to 5 year olds.
 
-### 2.1.1. Developer strategy
+**the developer chose to create a memory game**
+  - it had lots of resources available, making it achievable in the time frame
+  - it offered front-end opportunities with Javascript
 
-The project was researched, conceived and designed in 5 weeks. Important limitations of the project had to be set from the outset such as
-- **choosing a "well-trodden" path that had lots of tutorials and resources available.** This was to ensure that the project was achievable in the time frame, and that the developer could learn from the resources available.
-- **using a simple open-source database that already existed for the JavaScript to navigate**, e.g. pop quiz trivia data, personality test data. Inventing datasets risked distracting from the front-end design and JavaScript functionality.
-- **based on this criteria, the developer chose to create a memory game**, which had a lot of resources available, and was a good starting point for Junior-level Javascript.
-- **Developing the Mininum Viable Product and Unique Selling Point simultaeneously.** This way, the essential product would be met in time with the deadline, and the unique features would keep me motivated.
-
-[↑ Back to top](#Portfolio-Project-2-with-Javascript)
-
-### 2.1.2. Developer Research
+### 2.1.1. Developer Research
 
 <details>
 <summary>
@@ -233,11 +271,12 @@ The developer researched these areas of the Comparitative programming:</summary>
   </details>
 
 <br>
-The Developer then tested a walkthrough project of a memory game, using event listeners, functions, loops, arrays, objects, and DOM manipulation.
+
+The Developer then tested a [walkthrough project of a memory game](https://github.com/code-sketch/memory-game), using event listeners, functions, loops, arrays, objects, and DOM manipulation.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 2.1.3. Initial Product Research
+### 2.1.2. Initial Product Research
 This project had the intentional advantage of plenty existing resources of high relevance. 
 
 The following resources and repositories were researched. 
@@ -255,7 +294,7 @@ It was crucial for this project to choose a memory game that was achievable in t
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 2.1.4. Project Timeline
+### 2.1.3. Project Timeline
 
 The 6 week timeline for the project was as follows: 
 
@@ -302,7 +341,7 @@ The project was completed on Saturday 9th September 2023.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 2.1.5. Business Strategy & User Stories
+### 2.1.4. Business Strategy & User Stories
 
 The business goals were to create a simple memory game that was fun and engaging for the player. The target audience was 5 year olds, and it could be assumed that they have never played a memory game before.
 
@@ -322,9 +361,11 @@ The business goals were to create a simple memory game that was fun and engaging
      -  *the cards stay flipped over, allowing the player to see how many turns remain*
      -  *confetti appears when the player gets a match*
      -  *a positive "bell chime" plays*
+     -  the crocodile reacts with a happy face
   -  *if there's a mismatch...*
      -  *the cards flip back after a moment*
      -  *a buzz sound effect plays*
+     -  the crocodile reacts with a suprised face
   - *when the player wins...*
     - a well done message appears with a trophy icon
     - a celebratory sound effect plays
@@ -359,7 +400,8 @@ The business goals were to create a simple memory game that was fun and engaging
   - *the player is told their previous score and is encouraged to beat it*
 
 **As a player, I want to be able to contact the business if I have any questions, as well as share the game easily with my friends.**
-  - *A footer is displayed at the bottom of the page.*
+  - *A footer is displayed at the bottom of the page, with a mailto link that .*
+  - *a contact button is displayed at the top of the page, with a mailto link that opens in a new tab*
 
 ***
 
@@ -371,7 +413,18 @@ A mininum viable product is a product with just enough features to satisfy early
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 2.2.1. Mininum Viable Product features
+### 2.2.1. Scope Strategy
+
+It was important to choose a project that was achievable in the time frame, and that had a lot of resources available.
+
+The project was researched, conceived and designed in 6 weeks. Important limitations of the project had to be set from the outset such as
+- **choosing a "well-trodden" path that had lots of tutorials and resources available.** This was to ensure that the project was achievable in the time frame, and that the developer could learn from the resources available.
+- **using a simple open-source database that already existed for the JavaScript to navigate**, e.g. pop quiz trivia data, personality test data. Inventing datasets risked distracting from the front-end design and JavaScript functionality.
+- **Developing the Mininum Viable Product and Unique Selling Point simultaeneously.** This way, the essential product would be met in time with the deadline, and the unique features would keep me motivated.
+
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+### 2.2.2. Mininum Viable Product features
 
 <i>
 The minumum viable product of the memory game was
@@ -387,7 +440,7 @@ The minumum viable product of the memory game was
 - a logo and a contact button
 </i>
 
-### 2.2.2. Unique Selling Point features
+### 2.2.3. Unique Selling Point features
 
 <i>
 - Confetti
@@ -401,7 +454,7 @@ The minumum viable product of the memory game was
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 
-### 2.2.3. Scope of Features
+### 2.2.4. Scope of Features
 The following features were designed to meet the needs of new playerssometimes appearing more than once for the purpose of both making the website easy to navigate and consistent branding design.
 
 The full scope and function of features is discussed in the opening [Features](#1-features) section.
@@ -789,8 +842,12 @@ current state: a simple portrait view that fills mobile to desktop screen sizes.
 
 <img src="assets/media/responsivity-tests/how-to-play.gif">
 
-Figma wireframe:
+<details>
+<summary>Click here to view the Figma wireframe:</summary>
+
 <img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe-howtoplay.png" width="800px">
+</details>
+
 
 </div>
 
@@ -803,7 +860,9 @@ The How To Play feature was a simple modal pop-up that would show an animated gi
 
 ### 2.4.3. Well done Skeleton:
 
-<img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe-welldone.png" width="800px">
+<details>
+<summary>Click here to view the Well Done wireframe:</summary>
+<img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe-welldone.png" width="800px"></details>
 
 </div>
 
@@ -830,7 +889,7 @@ current state: a simple portrait view that fills mobile to desktop screen sizes.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 2.4.5. Sizing skeleton
+### 2.4.5. Scale solutions
 Regarding font-size, the ```clamp()``` function was mostly used to ensure the font size was responsive to the device size. This was used instead of media queries, as it was more efficient and easier to read, it allowed the media queries to be used more for positioning and to address bugs with the display.
 
 ```css
@@ -839,36 +898,6 @@ h1 { font-size: clamp(1.8rem, 1.3893rem + 2.3467vw, 4rem);}
 h2 { font-size: clamp(1.5rem, 1.5rem + 1.2vw, 2.5rem); }
 p, h3,h4,h5 { font-size: clamp(1rem, 0.9253rem + 0.4267vw, 1.4rem);}
 ```
-[↑ Back to top](#Portfolio-Project-2-with-Javascript)
-
-### 2.4.6. HTML classes skeleton
-Important HTML Class selectors were used to shorten the CSS code, such as
-- ```display-grid```
-- ```color-priority-1```
-- ```color-priority-2```
-- ```color-priority-3```
-- ```color-priority-4```
-- ```color-background```
-- ```modal-container```
-
-
-
-
-```css
-
-.card-item-container {
-  width: calc(25% - 10px);
-  height: calc(25% - 10px);
-  margin: 5px;
-}
-
-.card-item { /*this selects both the front and back, puts the cards one over the other*/
-  backface-visibility: hidden;
-  width: 100%;
-  height: 100%;
-}
-```
-
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 ## 2.5. Surface Plane
@@ -911,34 +940,44 @@ The color theme was chosen to be consistent with the logo with the aim of creati
 
 ### 2.5.2. Color surface
 
-### 2.5.3. Card Deck Surface
-|<img alt="placeholder" src="assets/media/card-deck/A.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/B.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/C.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/D.svg" width="100px">|
-|----|----|----|----|
-|<img alt="placeholder" src="assets/media/card-deck/D.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/E.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/F.svg" width="100px">|<img alt="placeholder" src="assets/media/card-deck/G.svg" width="100px">|
+the root variables were established in the ```:root selector:```
 
-The card deck used an animal theme, as a way to be appealing for children.
+![](assets/media/issues/2023-09-01-13-02-47.png)
 
-<img alt="placeholder" src="assets/media/card-deck/back.svg" width="100px">
-
-The back of the card included a box with question marks, with diagonal lines to indicate excitement.
-
-<img alt="card surface" src="assets/media/issues/2023-08-16-12-02-16.png" width=400>
-
-drop-shadow and rouunded corners were added to the cards to make them appear more 3D.
-
-[↑ Back to top](#Portfolio-Project-2-with-Javascript)
-
-### 2.5.4. Logo Surface
+### 2.5.3. Logo Surface
 
 <img alt="logo" src="assets/media/logo.svg" width="500px">
 
-The logo was designed with simple colors with Canva Open Source imagery.
+The logo was designed with simple colors with Canva Open Source imagery. The logo was designed to be simple and easy to read, with a friendly crocodile character.
 
-### 2.5.5. Background Surface
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 2.5.6. Button Surface
+### 2.5.4. Card Deck Surface
 
-### 2.5.7. Modal Surface
+The card deck used an animal theme, as a way to be appealing for children.
+
+|<img alt="placeholder" src="assets/media/card-deck/A.svg" width="200px">|<img alt="placeholder" src="assets/media/card-deck/B.svg" width="200px">|<img alt="placeholder" src="assets/media/card-deck/C.svg" width="200px">|<img alt="placeholder" src="assets/media/card-deck/D.svg" width="200px">|
+|----|----|----|----|
+|<img alt="placeholder" src="assets/media/card-deck/D.svg" width="200px">|<img alt="placeholder" src="assets/media/card-deck/E.svg" width="200px">|<img alt="placeholder" src="assets/media/card-deck/F.svg" width="200px">|<img alt="placeholder" src="assets/media/card-deck/G.svg" width="200px">|
+
+The back of the card included a box with question marks, with diagonal lines to indicate excitement.
+
+<img alt="placeholder" src="assets/media/card-deck/back.svg" width="200px">
+
+<br><br>
+
+```drop-shadow``` and ```rounded corners``` were added to the cards to make them appear more 3D.
+
+<img alt="card surface" src="assets/media/issues/2023-08-16-12-02-16.png" width=400>
+
+[↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+
+### 2.5.5. Button Surface
+
+The header and footer buttons used circle motifs, using a faded green from the ```root``` selectors..
+
+The gameplay buttons used a rounded rectangle motif, using a faded green from the ```root``` selectors.
 
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
