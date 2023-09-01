@@ -1004,6 +1004,8 @@ The result was <b> passed </b> for HTML5, CSS3 and JS.
 
 <img src="assets/media/documenation/../documentation/jshint.png" width="800">
 
+Admittedly there were some warnings for the CSS due to Bootstrap's default styling. This was necessary to ensure the design was consistent with the design plan. Bootstrap explains below:
+
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 ## 3.2. Lighthouse Report

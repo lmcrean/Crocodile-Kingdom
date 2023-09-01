@@ -113,7 +113,7 @@ h5 {font-size: 0.7rem;/*reduce font size*/}
 
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
   background-color: var(--harmonious-bold) !important;
-  border-color: none !important;
+  border-style: none !important;
   color: var(--black-medium);
 }
 
