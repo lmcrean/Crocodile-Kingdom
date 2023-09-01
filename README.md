@@ -125,6 +125,7 @@ The crocodile reacts to the player's actions.
 
 - The turns start at 40, and count down each time the player attempts to get a match
 - When the player reaches 40 turns, the you lose modal appears.
+- If the player gets a match, they are rewarded by not losing any turn left.
 
 ***
 

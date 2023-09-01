@@ -34,7 +34,7 @@ This page documents the issues and bugs encountered during the development of th
     - [2.1.5. with new "display: flex" method, card-face moves to side in flipped state](#215-with-new-display-flex-method-card-face-moves-to-side-in-flipped-state)
     - [2.1.6. Slight x-overflow in desktop view](#216-slight-x-overflow-in-desktop-view)
   - [2.2 would prefer Footer responsive design to meet the edges](#22-would-prefer-footer-responsive-design-to-meet-the-edges)
-  - [2.3 🔴 installing fonts](#23--installing-fonts)
+  - [2.3 installing fonts](#23-installing-fonts)
 - [3. Unfixed Bugs](#3-unfixed-bugs)
 
 # 1. Javascript Structure Issues
@@ -621,7 +621,7 @@ now to solve the shuffle issue.
 
 solution was to use % instead of vw for the footer width, worked better. Was fixed in this [commit here. ](https://github.com/lmcrean/Crocodile-Kingdom/commit/d4b510ff78c12510dbb263bb7f1c253019cf0d75)
 
-## 2.3 🔴 installing fonts 
+## 2.3 installing fonts 
 
 Todo list:
 - [x] downloaded fonts

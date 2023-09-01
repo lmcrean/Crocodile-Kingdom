@@ -186,7 +186,7 @@ crocodileJoyAppear(); // This function makes the crocodile appear happy for 2 se
 
 resetCards (); // unlocks the board so that the user can click on new cards again.
 
-updateTurnsAndTurnsLeft(); // adds 1 to the attempts counter
+updateTurnsOnly; // adds 1 to the attempts counter
 
 fire(0.25, {
   spread: 26,
@@ -305,6 +305,13 @@ function updateTurnsAndTurnsLeft() {
 if (turnsLeftContainer.innerText === "0") {
   showYouLoseModal();
 }
+}
+
+function updateTurnsOnly() {
+  let oldAttempt = parseInt(turnsContainer.innerText);
+  turnsContainer.innerText = ++oldAttempt; // This adds 1 to the attempts counter.
+
+  turnsModalContainer.textContent = turnsContainer.textContent; // This updates the turns modal box with the number of attempts the user has taken.
 }
 
 
