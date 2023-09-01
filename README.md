@@ -108,7 +108,9 @@ Using embedded JS functions, the card deck is connected to other features
   - the turn count decreases by 1
 - When the player matches all 8 sets of cards, the You Win modal appears.
 </i>
+
 ***
+
 ## 1.2. Reacting Crocodile
 
 <img alt="Reacting crocodile" src="assets/media/documentation/feature-crocodile-reacts.gif">

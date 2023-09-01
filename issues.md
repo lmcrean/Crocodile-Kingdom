@@ -19,12 +19,12 @@ This page documents the issues and bugs encountered during the development of th
     - [1.1.2. Click on a different card inbetween the 2 second interval, and it doesn't flip the cards back properly](#112-click-on-a-different-card-inbetween-the-2-second-interval-and-it-doesnt-flip-the-cards-back-properly)
     - [1.1.3. The shuffle algorithim doesn't appear to be working with ```Display: Grid``` (issue closed)](#113-the-shuffle-algorithim-doesnt-appear-to-be-working-with-display-grid-issue-closed)
     - [1.1.4. Using brackets to start the shuffle function seems to stop the cards from flipping](#114-using-brackets-to-start-the-shuffle-function-seems-to-stop-the-cards-from-flipping)
-    - [1.1.5. 1.1.5 Need to complete Shuffle Algorithm with display: flex method](#115-115-need-to-complete-shuffle-algorithm-with-display-flex-method)
-  - [1.2. 1.2 Turn Counter is not updating](#12-12-turn-counter-is-not-updating)
+    - [1.1.5. Need to complete Shuffle Algorithm with display: flex method](#115-need-to-complete-shuffle-algorithm-with-display-flex-method)
+  - [1.2. Turn Counter is not updating](#12-turn-counter-is-not-updating)
   - [1.3. Restart Button](#13-restart-button)
     - [1.3.1. After restart, the matched cards stay in a locked state.](#131-after-restart-the-matched-cards-stay-in-a-locked-state)
   - [1.4. SFX Button](#14-sfx-button)
-    - [1.4.1. Card-flip SFX does not always play on 2nd turn, if user clicks too fast](#141-card-flip-sfx-does-not-always-play-on-2nd-turn-if-user-clicks-too-fast)
+    - [1.4.1. 🔴 Card-flip SFX does not always play on 2nd turn, if user clicks too fast](#141--card-flip-sfx-does-not-always-play-on-2nd-turn-if-user-clicks-too-fast)
 - [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
   - [2.1. 2.1 Card Deck Skeleton](#21-21-card-deck-skeleton)
     - [2.1.1. 2.1.1 Responsive grid is falling off the horizontal viewport in desktop view](#211-211-responsive-grid-is-falling-off-the-horizontal-viewport-in-desktop-view)
@@ -33,7 +33,8 @@ This page documents the issues and bugs encountered during the development of th
     - [2.1.4. back of card doesn't fully cover card face underneath](#214-back-of-card-doesnt-fully-cover-card-face-underneath)
     - [2.1.5. with new "display: flex" method, card-face moves to side in flipped state](#215-with-new-display-flex-method-card-face-moves-to-side-in-flipped-state)
     - [2.1.6. Slight x-overflow in desktop view](#216-slight-x-overflow-in-desktop-view)
-    - [2.2 would prefer Footer responsive design to meet the edges](#22-would-prefer-footer-responsive-design-to-meet-the-edges)
+  - [2.2 would prefer Footer responsive design to meet the edges](#22-would-prefer-footer-responsive-design-to-meet-the-edges)
+  - [2.3 🔴 installing fonts](#23--installing-fonts)
 - [3. Unfixed Bugs](#3-unfixed-bugs)
 
 # 1. Javascript Structure Issues
@@ -46,7 +47,8 @@ This page documents the issues and bugs encountered during the development of th
 ### 1.1.1. Double click too fast and the card won't flip
 Problem (user is double/triple clicking too fast):
 
-<img src="assets/media/issues/Video08-12-23_222740.gif" width=500>
+<div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
+<img src="assets/media/issues/Video08-12-23_222740.gif" width=500></details></div>
 
 Solution:
 
@@ -81,16 +83,16 @@ function resetCards() {// This function resets the variables to their original v
 }
 ```
 
-Result:
+<div align=center><details><summary><i>click here to view a screen recording with the solution:</i></summary>
 
-<img src="assets/media/issues/1.1.1.gif" width=500>
+<img src="assets/media/issues/1.1.1.gif" width=500></details></div>
 
 
 ### 1.1.2. Click on a different card inbetween the 2 second interval, and it doesn't flip the cards back properly
 
 Problem:
-
-<img src="assets/media/issues/Video08-12-23_222519.gif" width=500>
+<div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
+<img src="assets/media/issues/Video08-12-23_222519.gif" width=500></details></div>
 
 
 Solution: 
@@ -117,14 +119,16 @@ setTimeout(() => {
 }
 ```
 
-Result:
+<div align=center><details><summary><i>click here to view a screen recording with the solution:</i></summary>
 
-<img src="assets/media/issues/1.1.2.gif" width=500>
+<img src="assets/media/issues/1.1.2.gif" width=500></details></div>
 
 ### 1.1.3. The shuffle algorithim doesn't appear to be working with ```Display: Grid``` (issue closed)
+<div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
+<img src="assets/media/issues/1.1.3b.gif" width=500></details></div>
 
-<img src="assets/media/issues/1.1.3b.gif" width=500>
 
+***
 Have added this shuffle algorthim to the javascript to randomise the order of the cards with the help of [code-sketch's tutorial](https://www.youtube.com/watch?v=NGtx3EBlpNE&list=PLLX1I3KXZ-YH-woTgiCfONMya39-Ty8qw&index=13). 
 
 ```js
@@ -228,10 +232,6 @@ script.js:54 Uncaught ReferenceError: shuffleArray is not defined
 ```
 shuffleArray is being called before it has been defined. Order doesn't seem to influence.
 
-***
-At this point the options are to:
-- use ```display: flex``` instead of ```display: grid``` and copy [code-sketches' version](https://marina-ferreira.github.io/projects/js/memory-game/). risk: leading to responsivity issues.
-- continue to consult the articles below. risk: time and further complications.
 
 
 ***
@@ -271,10 +271,15 @@ https://stackoverflow.com/questions/71617327/shuffle-a-containers-dom-elements-b
 
 **Result: This was an unsolved issue that began to introduce too much new material at the same time. The developer closed this issue by reverting to ```display: flex``` and thereby offering the opportunity to study a functioning example with [code-sketch](https://marina-ferreira.github.io/projects/js/memory-game/)**
 
+***
+At this point the options are to:
+- use ```display: flex``` instead of ```display: grid``` and copy [code-sketches' version](https://marina-ferreira.github.io/projects/js/memory-game/). This turned out to be a good solution and have had no issues since.
+
+
 ### 1.1.4. Using brackets to start the shuffle function seems to stop the cards from flipping
 
-
-<img src="assets/media/issues/1.1.4a.gif" width=500>
+<div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
+<img src="assets/media/issues/1.1.4a.gif" width=500></details></div>
 
 - [x] have tried removing entire shuffleCards and shuffleArray function, the result displays exactly the same as above.
 
@@ -283,7 +288,7 @@ https://stackoverflow.com/questions/71617327/shuffle-a-containers-dom-elements-b
 
 <img src="assets/media/issues/1.1.3b.gif" width=500>
 
-### 1.1.5. 1.1.5 Need to complete Shuffle Algorithm with display: flex method
+### 1.1.5. Need to complete Shuffle Algorithm with display: flex method
 
 [current result is same as video above]
 
@@ -309,9 +314,9 @@ https://stackoverflow.com/questions/71617327/shuffle-a-containers-dom-elements-b
 
 That concludes the essential structure of the card game.
 
-## 1.2. 1.2 Turn Counter is not updating
-
-<img src ="assets/media/issues/1.2.gif" width=500>
+## 1.2. Turn Counter is not updating
+<div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
+<img src ="assets/media/issues/1.2.gif" width=500></details></div>
 
 - turn counter does not update
 
@@ -448,8 +453,8 @@ result turn counter updates:
 ## 1.3. Restart Button
 
 ### 1.3.1. After restart, the matched cards stay in a locked state.
-
-<img src="assets/media/issues/1.3.1.gif" width=500> 
+<div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
+<img src="assets/media/issues/1.3.1.gif" width=500></details></div>
 
 ```js
 const restartButton = document.getElementById("restart-button"); // This variable selects the restart-button ID from the HTML
@@ -494,7 +499,7 @@ This adds an event listener to each card, as well as restores the "click" event 
 
 ## 1.4. SFX Button
 
-### 1.4.1. Card-flip SFX does not always play on 2nd turn, if user clicks too fast
+### 1.4.1. 🔴 Card-flip SFX does not always play on 2nd turn, if user clicks too fast
 
 Have tried:
 - [x] using a second sound file
@@ -610,15 +615,23 @@ now to solve the shuffle issue.
 
 <img src="assets/media/issues/2.1.6.gif" width=500>
 
-### 2.2 would prefer Footer responsive design to meet the edges
+## 2.2 would prefer Footer responsive design to meet the edges 
 
 ![](assets/media/issues/2023-08-28-14-04-49.png)
 
-[] take out of 
+solution was to use % instead of vw for the footer width, worked better. Was fixed in this [commit here. ](https://github.com/lmcrean/Crocodile-Kingdom/commit/d4b510ff78c12510dbb263bb7f1c253019cf0d75)
 
+## 2.3 🔴 installing fonts 
 
+- [x] downloaded fonts
+- [x] installed fonts as files
+- [ ] used @font-face to connect typography to CSS
+  - [ ] what is the correct syntax for this?
 
+/* @font-face kit by Fonts2u (https://fonts2u.com) */ @font-face {font-family:"HussarBoldWebEdition";src:url("HussarBoldWeb.eot?") format("eot"),url("HussarBoldWeb.woff") format("woff"),url("HussarBoldWeb.ttf") format("truetype"),url("HussarBoldWeb.svg#HussarBoldWeb") format("svg");font-weight:normal;font-style:normal;}
 
+Resources consulted:
+https://www.pagecloud.com/blog/how-to-add-custom-fonts-to-any-website
 
 
 
