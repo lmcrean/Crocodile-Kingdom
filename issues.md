@@ -623,12 +623,40 @@ solution was to use % instead of vw for the footer width, worked better. Was fix
 
 ## 2.3 🔴 installing fonts 
 
+Todo list:
 - [x] downloaded fonts
 - [x] installed fonts as files
-- [ ] used @font-face to connect typography to CSS
-  - [ ] what is the correct syntax for this?
+- [x] used @font-face to connect typography to CSS
+  - [x] what is the correct syntax for this?
 
-/* @font-face kit by Fonts2u (https://fonts2u.com) */ @font-face {font-family:"HussarBoldWebEdition";src:url("HussarBoldWeb.eot?") format("eot"),url("HussarBoldWeb.woff") format("woff"),url("HussarBoldWeb.ttf") format("truetype"),url("HussarBoldWeb.svg#HussarBoldWeb") format("svg");font-weight:normal;font-style:normal;}
+solution
+```css
+@font-face {
+  font-family: "HussarBoldWebEdition";
+  src: url("https://lmcrean.github.io/Crocodile-Kingdom/assets/fonts/HussarBoldWeb.eot") format("eot"), url("https://lmcrean.github.io/Crocodile-Kingdom/assets/fonts/HussarBoldWeb.woff") format("woff"), url("https://lmcrean.github.io/Crocodile-Kingdom/assets/fonts/HussarBoldWeb.ttf") format("truetype"), url("https://lmcrean.github.io/Crocodile-Kingdom/assets/fonts/HussarBoldWeb.svg#HussarBoldWeb") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AmazingGroteskDemi";
+  src: url("https://lmcrean.github.io/Crocodile-Kingdom/assets/fonts/AmazingGroteskDemi.woff") format("woff"), url;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*These type selectors are all Peace Sans*/
+h1, h2, label {
+  font-family: 'HussarBoldWebEdition', sans-serif;
+}
+
+/* These type selectors are all Glacial Indifference*/
+p, h3, h4, h5, a,
+form input{
+  font-family: 'AmazingGroteskDemi', sans-serif;
+}
+
+```
 
 Resources consulted:
 https://www.pagecloud.com/blog/how-to-add-custom-fonts-to-any-website

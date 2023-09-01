@@ -24,24 +24,6 @@
 
 /*---------------SURFACE PLANE - TYPEFACES------------*/
 
-@font-face {
-  font-family: 'glacialindifference';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Glacial Indifference'),
-       url('https://fonts.cdnfonts.com/s/31913/GlacialIndifference-Regular.woff') format('woff');
-  font-display: swap;
-
-}
-
-@font-face {
-  font-family: 'PeaceSans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Peace Sans'), url('https://fonts.cdnfonts.com/s/16323/peace_sans.woff') format('woff');
-  font-display: swap;
-}
-
 /* @font-face kit by Fonts2u (https://fonts2u.com) */ @font-face {
   font-family: "HussarBoldWebEdition";
   src: url("https://lmcrean.github.io/Crocodile-Kingdom/assets/fonts/HussarBoldWeb.eot") format("eot"), url("https://lmcrean.github.io/Crocodile-Kingdom/assets/fonts/HussarBoldWeb.woff") format("woff"), url("https://lmcrean.github.io/Crocodile-Kingdom/assets/fonts/HussarBoldWeb.ttf") format("truetype"), url("https://lmcrean.github.io/Crocodile-Kingdom/assets/fonts/HussarBoldWeb.svg#HussarBoldWeb") format("svg");
@@ -51,7 +33,7 @@
 
 @font-face {
   font-family: "AmazingGroteskDemi";
-  src: url("https://lmcrean.github.io/Crocodile-Kingdom/assets/fonts/AmazingGroteskDemi.woff") format("woff"), url;
+  src: url("https://lmcrean.github.io/Crocodile-Kingdom/assets/fonts/AmazingGroteskDemi.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -59,13 +41,13 @@
 
 /*These type selectors are all Peace Sans*/
 h1, h2, label {
-  font-family: 'HussarBoldWebEdition', sans-serif;
+  font-family: 'HussarBoldWebEdition', sans-serif !important; /*the !important rule is used to override the bootstrap font*/
 }
 
 /* These type selectors are all Glacial Indifference*/
-p, h3, h4, h5, a,
-form input{
-  font-family: 'AmazingGroteskDemi', sans-serif;
+p, h3, h4, h5, h6, a,
+form input, button {
+  font-family: 'AmazingGroteskDemi', sans-serif !important; /*the !important rule is used to override the bootstrap font*/
 }
 
 /* these type selectors are all Glacial Indifference, but with some small changes in style*/
@@ -122,6 +104,10 @@ h5 {font-size: 0.7rem;/*reduce font size*/}
 .background-white {background-color: var(--white);}
 
 /*---------------SURFACE PLANE - COLORS---------------*/
+
+html, body {
+  background-color: #fff;
+}
 
 .toggle-sfx, .toggle-sound {background-color: var(--harmonious-lighter); color: var(--white);}
 .container-button h6 {color: var(--harmonious-lighter);}
@@ -499,18 +485,19 @@ header {
 
 .container-button h6 {
   text-align: center;
-  margin-top: calc(-6px + 1vw);
+  margin-top: calc(-14px + 1vw);
   margin-left: calc(-4px + 1vw);
+  margin: 0px 4px 14px 0px;
   color:var(--harmonious-lighter);
   z-index:99;
 }
 
 #contact-button h6 {
-  margin: 12px 0px 0px -6px;
+  margin: 7px 0px 0px -6px;
   bottom: 0px;
   color:var(--harmonious-lighter);
   z-index:99;
-  text-align: left;
+  text-align: center;
 }
 
 /*---inside the buttons---*/
