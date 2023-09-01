@@ -101,6 +101,8 @@ In the issues I have logged written, video or screenshot accounts.
 ***
 ## 1.2. Reacting Crocodile
 
+<img alt="Reacting crocodile" src=>
+
 - The crocodile reacts to the player's actions. 
 
 ***
@@ -695,28 +697,41 @@ xxxxxxxxx
 
 ## 2.4. Skeleton Plane
 
+The skeleton plane covers the layout of the website, and the responsiveness to viewport width.
+
+**The skeleton plane in this project was intended to be simple and efficient using only 1-2 columns.**
+
 **The skeleton plane was first designed with figma to emphasise a simple and efficient responsive design.**  The design used CSS ```display: grid``` to arrange all elements:
 
 <div align="center">
 
 ### 2.4.1. Main Page Skeleton:
 
+
+
+
+
+Currently the main page switches between 2 views with 1 and 2 columns respectively, depending on the viewport width.
+
+Using amiresponsive tool:
+![](assets/media/issues/2023-08-25-16-17-19.png)
+
+<details><summary>Click here to view Devtools inspection:</summary>
+<img src="assets/issues/../media/issues/2-main-page.gif"></details>
+
+<details><summary>Click here to view initial Figma wireframe:</summary>
+<img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe.png" width="800px"></details><br><br>
 </div>
-
-<div align="center"><img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe.png" width="800px"></div>
-
 <i>
 
 - Mobile design used 1 column and arranged all the elements vertically. 
   - The deck of cards were also displayed in a 4x4 subgrid. 
-  - As the **JS code** would assign a set of 16 different ```class``` ID's randomly to each card, the cards would be put into different squares on the deck.
 - Desktop Design split the page into 2 columns,  
   - with the card deck on the right, taking up the screen space, 
   - the footer taking up both columns hiding underneath the card deck.
   - the remaining features were arranged in the left column in various rows, with a right-aligned position.
   </i>
 
-<img src="assets/issues/../media/issues/2-main-page.gif">
 
 to make the design responsive, the following CSS functions were used with ```grid-template-areas``` to indicate the position of each element:
 
@@ -763,11 +778,18 @@ to make the design responsive, the following CSS functions were used with ```gri
 }
 ```
 
+
+
 <br><br>
 <div align="center"> 
 
 ### 2.4.2. How to play Skeleton:
 
+current state: a simple portrait view that fills mobile to desktop screen sizes.
+
+<img src="assets/media/responsivity-tests/how-to-play.gif">
+
+Figma wireframe:
 <img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe-howtoplay.png" width="800px">
 
 </div>
@@ -776,9 +798,6 @@ The How To Play feature was a simple modal pop-up that would show an animated gi
 - Mobile design used 1 column and arranged all the elements vertically inside a container with ```position: absolute``` 
 - Desktop design split the page into 2 columns, with the animated tutorial in the left column, and the remaining content in the right column.
 
-current state: a simple portrait view that fills mobile to desktop screen sizes.
-
-<img src="assets/media/responsivity-tests/how-to-play.gif">
 
 <div align="center"> 
 

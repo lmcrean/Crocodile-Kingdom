@@ -153,7 +153,7 @@ button[type="submit"]:hover {
 }
 
 .footer-links a:hover {
-  background-color: var(--grey);
+  background-color: var(--harmonious-light);
 }
 
 i.fa-brands:hover {
