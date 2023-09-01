@@ -5,10 +5,10 @@
 <img src="assets/media/documentation/issues-icon.svg" width=200>
 
 
-# Issues and bugs<!-- omit in toc -->
+# Issues and Bugs<!-- omit in toc -->
 [<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-purple?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/) [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/ReadMe-purple?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/README.md)
 
-This page documents the issues and bugs encountered during the development of the Crocodile Kingdom game. It also documents the solutions found to fix them.
+This page documents the most challenging issues and bugs encountered during the development of the Crocodile Kingdom game. It also documents the solutions found to fix them.
 
 </div>
 
@@ -17,12 +17,12 @@ This page documents the issues and bugs encountered during the development of th
   - [1.1. Card Deck Structure](#11-card-deck-structure)
     - [1.1.1. Double click too fast and the card won't flip](#111-double-click-too-fast-and-the-card-wont-flip)
     - [1.1.2. Click on a different card inbetween the 2 second interval, and it doesn't flip the cards back properly](#112-click-on-a-different-card-inbetween-the-2-second-interval-and-it-doesnt-flip-the-cards-back-properly)
-    - [1.1.3. The shuffle algorithim doesn't appear to be working with ```Display: Grid``` (issue closed)](#113-the-shuffle-algorithim-doesnt-appear-to-be-working-with-display-grid-issue-closed)
+    - [1.1.3. The shuffle algorithim doesn't appear to be working with "Display: Grid"](#113-the-shuffle-algorithim-doesnt-appear-to-be-working-with-display-grid)
     - [1.1.4. Using brackets to start the shuffle function seems to stop the cards from flipping](#114-using-brackets-to-start-the-shuffle-function-seems-to-stop-the-cards-from-flipping)
     - [1.1.5. Need to complete Shuffle Algorithm with display: flex method](#115-need-to-complete-shuffle-algorithm-with-display-flex-method)
   - [1.2. Turn Counter is not updating](#12-turn-counter-is-not-updating)
   - [1.3. Restart Button: After restart, the matched cards stay in a locked state.](#13-restart-button-after-restart-the-matched-cards-stay-in-a-locked-state)
-  - [1.4. 🔴 SFX Button: Card-flip SFX does not always play on 2nd turn, if user clicks too fast](#14--sfx-button-card-flip-sfx-does-not-always-play-on-2nd-turn-if-user-clicks-too-fast)
+  - [1.4. SFX Button: Card-flip SFX does not always play on 2nd turn, if user clicks too fast](#14-sfx-button-card-flip-sfx-does-not-always-play-on-2nd-turn-if-user-clicks-too-fast)
 - [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
   - [2.1. Card Deck Skeleton](#21-card-deck-skeleton)
     - [2.1.1. Responsive grid is falling off the horizontal viewport in desktop view](#211-responsive-grid-is-falling-off-the-horizontal-viewport-in-desktop-view)
@@ -37,7 +37,11 @@ This page documents the issues and bugs encountered during the development of th
 
 # 1. Javascript Structure Issues
 
+<div align="center">
+
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Devtools](https://img.shields.io/badge/Devtools-3d89fc?style=for-the-badge&logo=google%20chrome&logoColor=white&color=black)
+
+</div>
 
 ## 1.1. Card Deck Structure
 <i>"I need the design to be accessible, easy to read with lots of visuals. I need the tone of the design to appear warm, entertaining and encouraging."</i>
@@ -121,7 +125,7 @@ setTimeout(() => {
 
 <img src="assets/media/issues/1.1.2.gif" width=500></details></div>
 
-### 1.1.3. The shuffle algorithim doesn't appear to be working with ```Display: Grid``` (issue closed)
+### 1.1.3. The shuffle algorithim doesn't appear to be working with "Display: Grid"
 <div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
 <img src="assets/media/issues/1.1.3b.gif" width=500></details></div>
 
@@ -287,8 +291,8 @@ At this point the options are to:
 <img src="assets/media/issues/1.1.3b.gif" width=500>
 
 ### 1.1.5. Need to complete Shuffle Algorithm with display: flex method
-
-[current result is same as video above]
+<div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
+<img src="assets/media/issues/1.1.3b.gif" width=500></details></div>
 
 - [x] Implemented shuffleCards function as taught in code-sketch tutorial
 
@@ -303,12 +307,16 @@ At this point the options are to:
 
 - [x] **Result: it's now shuffling correctly**
 
+<div align=center><details><summary><b>click here to view a screen recording of the solution:</b></summary>
+
 **Video 1 with cards shuffled correctly:**
 [![](assets/media/issues/2023-08-15-13-14-21.png)](assets/media/issues/1.1.5.mp4)
 
 **Video 2 presents fresh shuffle:**
 
 [![](assets/media/issues/2023-08-15-13-23-37.png)](assets/media/issues/1.1.5b.mp4)
+
+</details></div>
 
 That concludes the essential structure of the card game.
 
@@ -444,9 +452,9 @@ setTimeout(() => {
   plusOneAttempts(); // adds 1 to the attempts counter
 }
 ```
+<div align=center><details><summary><b>click here to view a screen recording of the solution: turn counter updates</b></summary>
 
-result turn counter updates:
-<img src="assets/media/issues/1.2b.gif" width=500>
+<img src="assets/media/issues/1.2b.gif" width=500></details></div>
 
 ## 1.3. Restart Button: After restart, the matched cards stay in a locked state.
 <div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
@@ -484,8 +492,8 @@ plusOneAttempts(); // adds 1 to the attempts counter
 }
 ```
 
-Solution result: 
-<img src="assets/media/issues/1.3.1b.gif" width=500>
+<div align=center><details><summary><b>click here to view a screen recording of the solution</b></summary>
+<img src="assets/media/issues/1.3.1b.gif" width=500></details></div>
 
 The restart button is now unlocks all the cards.
 
@@ -493,7 +501,7 @@ inside restartgame () function, added ```cards.forEach(card => card.addEventList
 
 This adds an event listener to each card, as well as restores the "click" event listener from ```disablecards``` function (used to disable cards when the cards match). When the card is clicked, the function cardAppear is run and the card is flipped.
 
-## 1.4. 🔴 SFX Button: Card-flip SFX does not always play on 2nd turn, if user clicks too fast
+## 1.4. SFX Button: Card-flip SFX does not always play on 2nd turn, if user clicks too fast
 
 Have tried:
 - [x] using a second sound file
@@ -571,7 +579,7 @@ if (!hasFlippedCard) { //"!"" references the opposite of hasFlippedCard. In the 
 }
 ```
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+<div align=center><img src="assets/media/documentation/color-red-line-break.png" width="800"></div>
 
 <!------------------------------------------------>
 
@@ -586,9 +594,11 @@ if (!hasFlippedCard) { //"!"" references the opposite of hasFlippedCard. In the 
 ## 2.1. Card Deck Skeleton
 
 ### 2.1.1. Responsive grid is falling off the horizontal viewport in desktop view
+
+<div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
 <img src="assets/media/issues/image.png" width=500>
 
-<img src="assets/media/issues/2023-08-12-15-40-14.png" width=500>
+<img src="assets/media/issues/2023-08-12-15-40-14.png" width=500></details></div>
 
 Seems okay in browser view, but not Devtools. Need the correct CSS Functions to
 
@@ -603,12 +613,17 @@ Seems okay in browser view, but not Devtools. Need the correct CSS Functions to
 - Improved sizing by changing card-item max-width from 25% to 100%
 used padding: 0px 1em to improve spacing between cards;
 
-
-<img src="https://github.com/lmcrean/Crocodile-Kingdom/assets/133490867/7a1a18e2-5314-4999-9704-49ffdfaf854f" width=500>
+<div align=center><details><summary><b>click here to view a screen recording of the solution:</b></summary>
+<img src="https://github.com/lmcrean/Crocodile-Kingdom/assets/133490867/7a1a18e2-5314-4999-9704-49ffdfaf854f" width=500></details></div>
 
 ### 2.1.2. Responsive grid is falling off the horizontal viewport in mobile view
 
-<img src="assets/media/issues/2023-08-24-15-25-21.png" width=300>
+<div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
+<img src="assets/media/issues/2023-08-24-15-25-21.png" width=300></details></div>
+
+
+
+solution: use vw instead of %, seems to work now.
 
 ```css
 #card-deck {
@@ -617,16 +632,19 @@ used padding: 0px 1em to improve spacing between cards;
 }
 ```
 
-solution: use vw instead of %, seems to work now.
+<div align=center><details><summary><b>click here to view a screen recording of the solution:</b></summary>
+<img src="assets/media/issues/2023-08-24-21-34-25.png" width=300></details></div>
 
-<img src="assets/media/issues/2023-08-24-21-34-25.png" width=300>
 
 tested with Chrome on Samsung Galaxy S21
 
 ### 2.1.3. Responsive grid is falling off the vertical viewport
 have tried ```max-height: 100vh``` and ```max-height: 100%``` but neither work.
 
-<img src="assets/media/issues/2023-08-12-17-27-46.png" width=500> 
+<div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
+
+<img src="assets/media/issues/2023-08-12-17-27-46.png" width=500> </details></div>
+
 
 solution: use max width and max height at 90vh. This seems to work.
 
@@ -642,25 +660,36 @@ solution: use max width and max height at 90vh. This seems to work.
   align-content: flex-start;
 }
 ```
-result:
+<div align=center><details><summary><b>click here to view a screen recording of the solution:</b></summary>
 
-<img src="assets/media/issues/2.1.3.gif" width=500>
+<img src="assets/media/issues/2.1.3.gif" width=500></details></div></details></div>
+
+
 
 ### 2.1.4. back of card doesn't fully cover card face underneath
 
-<img src="assets/media/issues/2023-08-12-22-23-28.png" width=500>
+<div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
+
+<img src="assets/media/issues/2023-08-12-22-23-28.png" width=500></details></div>
+
+This issues within ```#card-deck``` was eventually resolved inadvertently during the switch from ```display: grid``` to ```display: flex```
 
 ### 2.1.5. with new "display: flex" method, card-face moves to side in flipped state
 
+<div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
 <img src="assets/media/issues/2.1.4.gif" width=500>
+
+![](assets/media/issues/2023-08-15-12-35-40.png)
+
+</details></div>
+
 
 - [x] devtools inspection
   - [x] inspect backface-visibility
   - [x] inspect which items disappear in flipped state
 
 
-![](assets/media/issues/2023-08-15-12-35-40.png)
-it appears that the a2 container is pushed slightly to the right. Let's inspect the elements.
+Devtools suggests it appears that the a2 container is pushed slightly to the right.
 
 - [x] removed padding from .card-item, looks a bit healthier
 
@@ -677,19 +706,85 @@ it appears that the a2 container is pushed slightly to the right. Let's inspect 
 
 Result: functions same as ```display: grid``` version now
 
-<img src="assets/media/issues/1.1.3b.gif" width=500>
+<div align=center><details><summary><b>click here to view a screen recording of the solution:</b></summary>
+
+
+<img src="assets/media/issues/1.1.3b.gif" width=500></details></div>
+
 
 now to solve the shuffle issue.
 
 ### 2.1.6. Slight x-overflow in desktop view
+<div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
 
-<img src="assets/media/issues/2.1.6.gif" width=500>
+<img src="assets/media/issues/2.1.6.gif" width=500></details></div>
+
+
+solution: use vw units instead of fr for grid-template-columns, prevents the cards automatically spilling out. 
+
+```css
+@media screen and (min-width: 1208px) {
+.gameplay-display-grid {
+  display: grid;
+  grid-template-columns: 33vw 67vw;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "logo cards"
+    "turns-count cards"
+    "restart cards"
+    "how-to-play cards"
+    "footer footer";
+  margin: 3px auto auto 0px;
+  left: 0px;
+}
+```
+Then use max-height and max-width:
+```css
+#card-deck {
+  width: 90vw;
+  height: 90vw;
+  max-width: 40em;
+  max-height: 40em;
+  margin: 2em auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+@media screen and (min-width:1208px) {
+  #card-deck {
+    width: 45em;
+    height: 45em;
+    max-width: 45em;
+    max-height: 45em;
+    margin-left: 3rem;
+  }
+}
+
+@media screen and (min-width:1708px) {
+  #card-deck {
+    width: 55em;
+    height: 55em;
+    max-width: 50vw;
+    max-height: 50vw;
+  }
+}
+```
 
 ## 2.2. would prefer Footer responsive design to meet the edges 
+<div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
 
 ![](assets/media/issues/2023-08-28-14-04-49.png)
 
+</details></div>
+
+
 solution was to use % instead of vw for the footer width, worked better. Was fixed in this [commit here. ](https://github.com/lmcrean/Crocodile-Kingdom/commit/d4b510ff78c12510dbb263bb7f1c253019cf0d75)
+
+<div align=center><details><summary><b>click here to view a screen recording of the solution:</b></summary>
+
+<img src="assets/media/issues/2.2 footer-test.gif"></details></div>
+
 
 ## 2.3. installing fonts 
 
@@ -732,11 +827,14 @@ Resources consulted:
 https://www.pagecloud.com/blog/how-to-add-custom-fonts-to-any-website
 
 
+<div align=center><details><summary><b>click here to view a screen recording of the solution:</b></summary>
+
+![](assets/media/issues/2023-09-01-22-46-22.png)
+
+![](assets/media/issues/2023-09-01-22-46-33.png)
 
 
-
-
-
+</details></div>
 
 
 
