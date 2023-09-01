@@ -21,20 +21,18 @@ This page documents the issues and bugs encountered during the development of th
     - [1.1.4. Using brackets to start the shuffle function seems to stop the cards from flipping](#114-using-brackets-to-start-the-shuffle-function-seems-to-stop-the-cards-from-flipping)
     - [1.1.5. Need to complete Shuffle Algorithm with display: flex method](#115-need-to-complete-shuffle-algorithm-with-display-flex-method)
   - [1.2. Turn Counter is not updating](#12-turn-counter-is-not-updating)
-  - [1.3. Restart Button](#13-restart-button)
-    - [1.3.1. After restart, the matched cards stay in a locked state.](#131-after-restart-the-matched-cards-stay-in-a-locked-state)
-  - [1.4. SFX Button](#14-sfx-button)
-    - [1.4.1. 🔴 Card-flip SFX does not always play on 2nd turn, if user clicks too fast](#141--card-flip-sfx-does-not-always-play-on-2nd-turn-if-user-clicks-too-fast)
+  - [1.3. Restart Button: After restart, the matched cards stay in a locked state.](#13-restart-button-after-restart-the-matched-cards-stay-in-a-locked-state)
+  - [1.4. 🔴 SFX Button: Card-flip SFX does not always play on 2nd turn, if user clicks too fast](#14--sfx-button-card-flip-sfx-does-not-always-play-on-2nd-turn-if-user-clicks-too-fast)
 - [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
-  - [2.1. 2.1 Card Deck Skeleton](#21-21-card-deck-skeleton)
-    - [2.1.1. 2.1.1 Responsive grid is falling off the horizontal viewport in desktop view](#211-211-responsive-grid-is-falling-off-the-horizontal-viewport-in-desktop-view)
+  - [2.1. Card Deck Skeleton](#21-card-deck-skeleton)
+    - [2.1.1. Responsive grid is falling off the horizontal viewport in desktop view](#211-responsive-grid-is-falling-off-the-horizontal-viewport-in-desktop-view)
     - [2.1.2. Responsive grid is falling off the horizontal viewport in mobile view](#212-responsive-grid-is-falling-off-the-horizontal-viewport-in-mobile-view)
     - [2.1.3. Responsive grid is falling off the vertical viewport](#213-responsive-grid-is-falling-off-the-vertical-viewport)
     - [2.1.4. back of card doesn't fully cover card face underneath](#214-back-of-card-doesnt-fully-cover-card-face-underneath)
     - [2.1.5. with new "display: flex" method, card-face moves to side in flipped state](#215-with-new-display-flex-method-card-face-moves-to-side-in-flipped-state)
     - [2.1.6. Slight x-overflow in desktop view](#216-slight-x-overflow-in-desktop-view)
-  - [2.2 would prefer Footer responsive design to meet the edges](#22-would-prefer-footer-responsive-design-to-meet-the-edges)
-  - [2.3 installing fonts](#23-installing-fonts)
+  - [2.2. would prefer Footer responsive design to meet the edges](#22-would-prefer-footer-responsive-design-to-meet-the-edges)
+  - [2.3. installing fonts](#23-installing-fonts)
 - [3. Unfixed Bugs](#3-unfixed-bugs)
 
 # 1. Javascript Structure Issues
@@ -450,9 +448,7 @@ setTimeout(() => {
 result turn counter updates:
 <img src="assets/media/issues/1.2b.gif" width=500>
 
-## 1.3. Restart Button
-
-### 1.3.1. After restart, the matched cards stay in a locked state.
+## 1.3. Restart Button: After restart, the matched cards stay in a locked state.
 <div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
 <img src="assets/media/issues/1.3.1.gif" width=500></details></div>
 
@@ -497,25 +493,99 @@ inside restartgame () function, added ```cards.forEach(card => card.addEventList
 
 This adds an event listener to each card, as well as restores the "click" event listener from ```disablecards``` function (used to disable cards when the cards match). When the card is clicked, the function cardAppear is run and the card is flipped.
 
-## 1.4. SFX Button
-
-### 1.4.1. 🔴 Card-flip SFX does not always play on 2nd turn, if user clicks too fast
+## 1.4. 🔴 SFX Button: Card-flip SFX does not always play on 2nd turn, if user clicks too fast
 
 Have tried:
 - [x] using a second sound file
-  - [ ] using console.log to see if it runs
-- [ ] compressing the sound files
-- [ ] looking up on Stack Overflow
+  - [x] using console.log to see if it runs
+
+Solution use second SFX file.
+
+```html
+    <audio id="sfx-flip" class="sound-mute">
+      <source src="assets/media/sound/flipcard-91468.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="sfx-flip-2" class="sound-mute">
+      <source src="assets/media/sound/flipcard-91468-copy.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+```
+<details><summary>click here to see mute toggle function:</summary>
+
+```js
+$(document).ready(function() {
+  // When the sfx button is clicked...
+  $('.toggle-sfx').on('click', function() {
+    // Toggle the sound-mute class on the button...
+    $(this).toggleClass('sound-mute');
+    $('#sfx-flip').toggleClass('sound-mute');
+    $('#sfx-flip-2').toggleClass('sound-mute');
+    $('#sfx-match').toggleClass('sound-mute');
+    $('#sfx-no-match').toggleClass('sound-mute');
+    $('#sfx-win').toggleClass('sound-mute');
+    $('#sfx-lose').toggleClass('sound-mute');
+  });
+});
+```
+</details>
+
+```js
+const sfxFlip = document.getElementById('sfx-flip'); // This variable selects the sfx-flip ID from the HTML
+
+const sfxFlip2 = document.getElementById('sfx-flip-2'); // This variable selects the sfx-flip2 ID from the HTML
+```
+
+```js
+const sfxFlip = document.getElementById('sfx-flip'); // This variable selects the sfx-flip ID from the HTML
+
+const sfxFlip2 = document.getElementById('sfx-flip-2'); // This variable selects the sfx-flip2 ID from the HTML
+```
+
+solution: insert ```sfxFlip2.play();``` into ```cardAppear()``` function
+
+```js
+
+function cardAppear() { 
+
+
+[...]
+
+//check if sfxFlip has class sound-mute
+
+if (!sfxFlip.classList.contains('sound-mute')) {
+  sfxFlip.play(); // This plays the flip sound effect when the card is clicked on.
+}
+
+if (!hasFlippedCard) { //"!"" references the opposite of hasFlippedCard. In the game, this would mean that the user has not clicked on a card yet. If the user has not clicked on a card yet, then run the following code.
+  hasFlippedCard = true; 
+  firstCard = this; // "this" refers to the card that is clicked on. // In this scenario, the user is trying to click on the same card twice. 
+  return;} // [...]
+  hasFlippedCard = false; // in this scenario, the user is trying to click on a new card while another is flipped over. This resets the variable to false so that the user can click on a new card.
+  secondCard = this; // "this" refers to the card that is clicked on. This would mean that the user has clicked on a card already. If the user has clicked on a card already, then run the following code.
+  if (!sfxFlip2.classList.contains('sound-mute')) {
+    sfxFlip2.play(); // This plays the second flip sound effect when the card is clicked on.
+    console.log("sfxFlip2 is not muted, should be playing"); //console.log fired
+  };
+  [...]
+}
+```
+
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 
 <!------------------------------------------------>
 
 # 2. CSS Skeleton Issues and Bugs
+<div align=center>
+
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Devtools](https://img.shields.io/badge/Devtools-3d89fc?style=for-the-badge&logo=google%20chrome&logoColor=white&color=black)
 
+</div>
 
-## 2.1. 2.1 Card Deck Skeleton
 
-### 2.1.1. 2.1.1 Responsive grid is falling off the horizontal viewport in desktop view
+## 2.1. Card Deck Skeleton
+
+### 2.1.1. Responsive grid is falling off the horizontal viewport in desktop view
 <img src="assets/media/issues/image.png" width=500>
 
 <img src="assets/media/issues/2023-08-12-15-40-14.png" width=500>
@@ -615,13 +685,13 @@ now to solve the shuffle issue.
 
 <img src="assets/media/issues/2.1.6.gif" width=500>
 
-## 2.2 would prefer Footer responsive design to meet the edges 
+## 2.2. would prefer Footer responsive design to meet the edges 
 
 ![](assets/media/issues/2023-08-28-14-04-49.png)
 
 solution was to use % instead of vw for the footer width, worked better. Was fixed in this [commit here. ](https://github.com/lmcrean/Crocodile-Kingdom/commit/d4b510ff78c12510dbb263bb7f1c253019cf0d75)
 
-## 2.3 installing fonts 
+## 2.3. installing fonts 
 
 Todo list:
 - [x] downloaded fonts

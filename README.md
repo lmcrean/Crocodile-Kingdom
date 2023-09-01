@@ -1,6 +1,6 @@
 <div align="center">
 
-<img alt="placeholder" src="assets/media/logo.svg" width="300px" >
+<img alt="placeholder" src="assets/media/favicon.ico" width="20px">
 
 #  Memory Game with JavaScript <!-- omit in toc -->
 
@@ -17,7 +17,7 @@ Crocodile Kingdom is an **animal-themed version of the classic children's memory
 
 </div>
 
-***
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 This readme introduces the key features of the project, using the framework of the 5 planes of user experience. It summarises key challenges addressed along the way and also provides credits and acknowledgesments at the end.
 
 An issues file is dedicated to a more specific technical account.
@@ -79,7 +79,7 @@ In the issues I have logged written, video or screenshot accounts.
   - [6.3. Technologies Used](#63-technologies-used)
   - [6.4. Acknowledgements](#64-acknowledgements)
 
-***
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 <div align="center">
 
 # 1. Features
@@ -93,7 +93,7 @@ The Card Deck functions as the classic Memory Game, where the player has to try 
 - When the player gets a match, those cards stay flipped over and locked.
 - When the player gets a mismatch, the cards flip back over after 2 seconds.
 
-***
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 <i>
 
 Using embedded JS functions, the card deck is connected to other features
@@ -109,7 +109,7 @@ Using embedded JS functions, the card deck is connected to other features
 - When the player matches all 8 sets of cards, the You Win modal appears.
 </i>
 
-***
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 
 ## 1.2. Reacting Crocodile
 
@@ -119,7 +119,7 @@ The crocodile reacts to the player's actions.
 - He is happy when the player gets a match.
 - He is suprised when the player gets a mismatch.
 
-***
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 ## 1.3. Turns left Count
 <img alt="placeholder" src="assets/media/documentation/features-turns-left.gif" width="300px" >
 
@@ -127,7 +127,7 @@ The crocodile reacts to the player's actions.
 - When the player reaches 40 turns, the you lose modal appears.
 - If the player gets a match, they are rewarded by not losing any turn left.
 
-***
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 
 ## 1.4. Restart Button 
 <img alt="placeholder" src="assets/media/issues/1.3.gif" width="300px" >
@@ -138,14 +138,14 @@ When the player clicks on the restart button, the following happens:
 
 The restart button is also embedded in the You Win and You Lose feature.
 
-***
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 
 ## 1.5. You Win feature
 <img alt="placeholder" src="assets/media/issues/feature-well-done.gif" width="300px">
 
 When all the cards are flipped, the You Win modal appears. It displays the number of turns taken and remaining, and a restart button. It uses the wording "well done" to encourage the player.
 
-***
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 
 ## 1.6. You Lose feature
 <img alt="placeholder" src="assets/media/issues/feature-you-lost.gif" width="300px" >
@@ -154,7 +154,7 @@ When turns run out to 0, the You Lost modal appears.
 
 The feature provides a restart button, and uses the wording to encourage the player to try again.
 
-***
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 
 ## 1.7. How to play feature
 
@@ -165,7 +165,7 @@ The How to play feature explains the rules of the game.
 - it uses the Fisher Yates algorthim to shuffle the cards in the demo.
 
 
-***
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 
 ## 1.8. Floating buttons header
 
@@ -205,6 +205,8 @@ The music button animated just like the SFX button.
 
 The contact button opens a new tab using mailto:.
 
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+
 ## 1.9. Footer
 
 ![](assets/media/issues/2023-09-01-12-35-01.png)
@@ -213,7 +215,7 @@ There is a footer with social media links, all of which open in a new tab.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-***
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 
 </div>
 
@@ -406,7 +408,7 @@ The business goals were to create a simple memory game that was fun and engaging
   - *A footer is displayed at the bottom of the page, with a mailto link that .*
   - *a contact button is displayed at the top of the page, with a mailto link that opens in a new tab*
 
-***
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 
 ## 2.2. Scope plane
 
@@ -463,6 +465,8 @@ The following features were designed to meet the needs of new playerssometimes a
 The full scope and function of features is discussed in the opening [Features](#1-features) section.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 
 ## 2.3. Structure Plane
 
@@ -749,7 +753,7 @@ xxxxxxxxx
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-***
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 
 ## 2.4. Skeleton Plane
 
@@ -903,6 +907,8 @@ p, h3,h4,h5 { font-size: clamp(1rem, 0.9253rem + 0.4267vw, 1.4rem);}
 ```
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+
 ## 2.5. Surface Plane
 This surface plane describes the choice of typefaces, colors and style themes relevant to the project's desired tone and practical needs.
 
@@ -912,23 +918,39 @@ This surface plane describes the choice of typefaces, colors and style themes re
 
 ### 2.5.1. Typefaces Surface
 
-Typefaces used were Hussar Bold for headings and Amazing Grotesk for body text. The font pairings were chosen for their playful  but professional tone as outlined in the strategy plane.
+Typefaces used were Hussar Bold for headings and Amazing Grotesk for body text. The font pairings were chosen for their playful but professional tone as outlined in the strategy plane.
 
+![](assets/media/issues/2023-09-01-21-29-38.png)
 
-
-[↑ Back to top](#Portfolio-Project-2-with-Javascript)
-
-xxxxxxxxxxxxxxxx
 ```css
+/* @font-face kit by Fonts2u (https://fonts2u.com) */ @font-face {
+  font-family: "HussarBoldWebEdition";
+  src: url("https://lmcrean.github.io/Crocodile-Kingdom/assets/fonts/HussarBoldWeb.eot") format("eot"),
+    url("https://lmcrean.github.io/Crocodile-Kingdom/assets/fonts/HussarBoldWeb.woff") format("woff"),
+    url("https://lmcrean.github.io/Crocodile-Kingdom/assets/fonts/HussarBoldWeb.ttf") format("truetype"),
+    url("https://lmcrean.github.io/Crocodile-Kingdom/assets/fonts/HussarBoldWeb.svg#HussarBoldWeb") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* @font-face kit by Cufonfonts (https://www.cufonfonts.com/font/amazing-grotesk) */
+@font-face {
+  font-family: "AmazingGroteskDemi";
+  src: url("https://lmcrean.github.io/Crocodile-Kingdom/assets/fonts/AmazingGroteskDemi.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /*These type selectors are all Peace Sans*/
-h1, h2 {
-  font-family: 'PeaceSans', sans-serif;
+h1, h2, label {
+  font-family: 'HussarBoldWebEdition', sans-serif !important; /*the !important rule is used to override the bootstrap font*/
 }
 
 /* These type selectors are all Glacial Indifference*/
-p, h3, h4, h5, a,
-form input{
-  font-family: 'glacialindifference', sans-serif;
+p, h3, h4, h5, h6, a,
+form input, button {
+  font-family: 'AmazingGroteskDemi', sans-serif !important; /*the !important rule is used to override the bootstrap font*/
 }
 
 /* these type selectors are all Glacial Indifference, but with some small changes in style*/
@@ -937,11 +959,13 @@ h4 {font-style:italic;/*italicize text*/}
 h5 {font-size: 0.7rem;/*reduce font size*/}
 ```
 ***
-The color theme was chosen to be consistent with the logo with the aim of creating a consistent brand identity. To speed up efficiency, root variables were used to store the color values. This also allowed the color theme to be changed easily in the future.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 ### 2.5.2. Color surface
+
+The color theme was chosen to be consistent with the logo with the aim of creating a consistent brand identity. To speed up efficiency, root variables were used to store the color values. This also allowed the color theme to be changed easily in the future.
+
 
 the root variables were established in the ```:root selector:```
 
@@ -952,6 +976,14 @@ the root variables were established in the ```:root selector:```
 <img alt="logo" src="assets/media/logo.svg" width="500px">
 
 The logo was designed with simple colors with Canva Open Source imagery. The logo was designed to be simple and easy to read, with a friendly crocodile character.
+
+alternative versions of the character were designed for crocodile reactions.
+
+joy and shock below:
+
+<img src="assets/media/crocodile-sprite/joy.png">
+
+<img src="assets/media/crocodile-sprite/shock.png">
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -965,7 +997,7 @@ The card deck used an animal theme, as a way to be appealing for children.
 
 The back of the card included a box with question marks, with diagonal lines to indicate excitement.
 
-<img alt="placeholder" src="assets/media/card-deck/back.svg" width="200px">
+<div align=center><img alt="placeholder" src="assets/media/card-deck/back.svg" width="200px"></div>
 
 <br><br>
 
@@ -980,12 +1012,17 @@ The back of the card included a box with question marks, with diagonal lines to 
 
 The header and footer buttons used circle motifs, using a faded green from the ```root``` selectors..
 
+<img src="assets/media/documentation/feature-header.png">
+
+***
+
 The gameplay buttons used a rounded rectangle motif, using a faded green from the ```root``` selectors.
+<img src="assets/media/documentation/feature-buttons.png">
 
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 
 # 3. Automatic Testing
 
@@ -1049,8 +1086,16 @@ https://www.browserstack.com/
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 
 # 4. Deployment
+
+<div align=center>
+
+[<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-purple?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/)
+
+</div> 
+
 The site was deployed to GitHub pages. You can access the live link here: [https://lmcrean.github.io/Crocodile-Kingdom](https://lmcrean.github.io/Crocodile-Kingdom).
 
 To deploy on Github pages, the following steps can be taken:
@@ -1069,13 +1114,44 @@ To fork the repository:
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+
 # 5. Issues and Bugs
 
 [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Issues_Report-purple?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md)
 
 Fixed issues and bugs are documented in a seperate file called [issues.md](issues.md).
 
+***
+
+They can be summarised here:
+
+**1. Javascript Structure Issues and bugs**
+1.1. Card Deck Structure
+1.1.1. Double click too fast and the card won't flip
+1.1.2. Click on a different card in between the 2-second interval, and it doesn't flip the cards back properly
+1.1.3. The shuffle algorithm doesn't appear to be working with Display: Grid (issue closed)
+1.1.4. Using brackets to start the shuffle function seems to stop the cards from flipping
+1.1.5. Need to complete Shuffle Algorithm with display: flex method
+1.2. Turn Counter is not updating
+1.3. After restart, the matched cards stay in a locked state.
+1.4. Card-flip SFX does not always play on the 2nd turn if the user clicks too fast
+
+**2. CSS Skeleton Issues and Bugs**
+2.1. Card Deck Skeleton
+2.1.1. Responsive grid is falling off the horizontal viewport in desktop view
+2.1.2. Responsive grid is falling off the horizontal viewport in mobile view
+2.1.3. Responsive grid is falling off the vertical viewport
+2.1.4. The back of the card doesn't fully cover the card face underneath
+2.1.5. With the new "display: flex" method, the card-face moves to the side in the flipped state
+2.1.6. Slight x-overflow in desktop view
+2.2. Would prefer Footer responsive design to meet the edges
+2.3. Installing fonts
+
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+
 
 # 6. Credits & Acknowledgements
 
@@ -1094,30 +1170,31 @@ The following code snippets were used and adapted in the project:
 The following Stack Overflow posts were used to solve issues in the project:
 
 - https://stackoverflow.com/questions/48474/how-do-i-position-one-image-on-top-of-another-in-html helped with arranging the Crocodile sprite with layers on top of each other using absolute and relative positioning.
+- Stack Overflow forum, "how to randomize placement order in a placement grid", https://stackoverflow.com/questions/73847991/how-to-randomize-placement-order-in-a-css-grid
 
 
 ## 6.3. Technologies Used
 
-Languages
+**Languages**
 [HTML5](https://en.wikipedia.org/wiki/HTML5) was used for the structure and content of the website
 [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) was used for the styling of the website
 [Javascript](https://en.wikipedia.org/wiki/JavaScript) was used for the interactive features of the website
 
-Programmes
+**Programmes**
 [VSCode](https://code.visualstudio.com/) was used as my code editor
 [Github](https://www.github.com/) was used for Version control
 [Canva](https://www.canva.com/) was used for designing Graphics including the logo
 [Figma](https://www.figma.com/)  for Designing wireframe
 [Fancy Screen](http://fancyapps.com/) by Janis Skarnelis was used to document GIFs and videos of the project
 
-Libraries
+**Libraries**
 [Node.js](https://nodejs.org/en/) was used to install ```npm``` and run the Confetti feature.
 [Bootstrap](https://getbootstrap.com/) was used for the Modal, button features as well as drop-shadow effects
 [JQuery](https://jquery.com/) was used for mute button.
 [Canva](https://www.canva.com/) was used for sourcing open-source images.
 
 
-Tools
+**Tools**
 [Clamp tool](https://clamp.font-size.app/) was used for developing a responsive font size with the clamp tool
 [amiresponsive](https://ui.dev/amiresponsive) was used for checking mobile, desktop, tablet view
 [browserstack](https://www.browserstack.com/) was used for checking website on firefox, opera, edge, safari and chrome
@@ -1134,3 +1211,6 @@ I'd like to thank to the tutors at Code Institute, who provided week-to-week sup
 I'd like to thank Seun Owonikoko, my mentor at Code Institute, for her encouragement and support during our mentoring sessions.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"> 
+</div>

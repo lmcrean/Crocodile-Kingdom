@@ -43,7 +43,7 @@ const musicPlayer1 = document.getElementById('music-player-1'); // This variable
 
 const sfxFlip = document.getElementById('sfx-flip'); // This variable selects the sfx-flip ID from the HTML
 
-const sfxFlip2 = document.getElementById('sfx-flip2'); // This variable selects the sfx-flip2 ID from the HTML
+const sfxFlip2 = document.getElementById('sfx-flip-2'); // This variable selects the sfx-flip2 ID from the HTML
 
 const sfxMatch = document.getElementById('sfx-match'); // This variable selects the sfx-match ID from the HTML
 
@@ -119,7 +119,7 @@ $(document).ready(function() {
     // Toggle the sound-mute class on the button...
     $(this).toggleClass('sound-mute');
     $('#sfx-flip').toggleClass('sound-mute');
-    $('#sfx-flip2').toggleClass('sound-mute');
+    $('#sfx-flip-2').toggleClass('sound-mute');
     $('#sfx-match').toggleClass('sound-mute');
     $('#sfx-no-match').toggleClass('sound-mute');
     $('#sfx-win').toggleClass('sound-mute');
@@ -141,18 +141,18 @@ this.classList.toggle("flipped-over"); // .toggle adds/removes the HTML class of
 //check if sfxFlip has class sound-mute
 
 if (!sfxFlip.classList.contains('sound-mute')) {
-  console.log("sfxFlip is not muted, should be playing");
   sfxFlip.play(); // This plays the flip sound effect when the card is clicked on.
-} else {
-  console.log("sfxFlip is muted");
 }
 
 if (!hasFlippedCard) { //"!"" references the opposite of hasFlippedCard. In the game, this would mean that the user has not clicked on a card yet. If the user has not clicked on a card yet, then run the following code.
-  hasFlippedCard = true;
-  firstCard = this; // "this" refers to the card that is clicked on.
+  hasFlippedCard = true; 
+  firstCard = this; // "this" refers to the card that is clicked on. // In this scenario, the user is trying to click on the same card twice. 
   return;} // This stops the function if the user clicks on the same card twice. "If this is equal to firstCard, then return (stop the function)." this refers to the card that is clicked on.
-  hasFlippedCard = false;
+  hasFlippedCard = false; // in this scenario, the user is trying to click on a new card while another is flipped over. This resets the variable to false so that the user can click on a new card.
   secondCard = this; // "this" refers to the card that is clicked on. This would mean that the user has clicked on a card already. If the user has clicked on a card already, then run the following code.
+  if (!sfxFlip2.classList.contains('sound-mute')) {
+    sfxFlip2.play(); // This plays the second flip sound effect when the card is clicked on.
+  };
   checkForMatch(); // "if the user hasn't clicked on the same card twice, check for match" This function checks if the cards match...
 }
 
