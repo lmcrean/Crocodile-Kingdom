@@ -8,11 +8,11 @@
 
 <br>
 
-![](assets/media/issues/2023-08-25-16-17-19.png)
+<img src="assets/media/documentation/features-gameplay.gif" width=500>
 
 <br>
 
-Crocodile Kingdom is an **animal-themed version of the classic children's memory game**, where the player has to try and match pairs of cards together while never turning more than two cards at once. The game challenges the player's memory skills. *The player wins the game when all the cards are flipped.*
+Crocodile Kingdom is an **animal-themed version of the classic children's memory game**, where the player has to try and match pairs of cards together while never turning more than two cards at once. The game challenges the player's memory skills and is designed for 5 year olds.
 
 
 </div>
