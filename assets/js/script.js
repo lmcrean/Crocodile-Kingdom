@@ -37,7 +37,11 @@
 // the following selects the crocodile images from the HTML
 const crocodileRegular = document.getElementById("crocodile-regular"); 
 const crocodileJoy = document.getElementById("crocodile-joy");
+const crocodileJoy2 = document.getElementById("crocodile-joy-2");
+const crocodileJoy3 = document.getElementById("crocodile-joy-3");
 const crocodileShock = document.getElementById("crocodile-shock");
+const crocodileShock2 = document.getElementById("crocodile-shock-2");
+const crocodileShock3 = document.getElementById("crocodile-shock-3");
 
 const musicPlayer1 = document.getElementById('music-player-1'); // This variable selects the music-player ID from the HTML
 
@@ -269,24 +273,39 @@ function resetCards() {// This function resets the variables to their original v
 
 // ----------------- CROCODILE EXPRESSIONS -----------------
 
-function crocodileJoyAppear() {
+function crocodileJoyAppear() {// This function makes the crocodile appear happy for 2 seconds. 
   crocodileRegular.classList.toggle("hide-sprite");
-  crocodileJoy.classList.toggle("hide-sprite");
+
+  // Get a random number between 1 and 3
+  const randomIndex = Math.floor(Math.random() * 3) + 1;
+
+  // Create an array of crocodile elements
+  const crocodileArray = [crocodileJoy, crocodileJoy2, crocodileJoy3];
+
+  // Toggle "hide-sprite" for the randomly chosen crocodile element
+  crocodileArray[randomIndex - 1].classList.toggle("hide-sprite");
 
   setTimeout(() => {
   crocodileRegular.classList.toggle("hide-sprite");
-  crocodileJoy.classList.toggle("hide-sprite");
+  crocodileArray[randomIndex - 1].classList.toggle("hide-sprite");
   },2000);// This sets a timer of 2 seconds.
 }
 
 function crocodileShockAppear() {
   crocodileRegular.classList.toggle("hide-sprite");
-  crocodileShock.classList.toggle("hide-sprite");
-  console.log("crocodileShockAppear");
+
+  // Get a random number between 1 and 3
+  const randomIndex = Math.floor(Math.random() * 3) + 1;
+
+  // Create an array of crocodile elements for the shock appearance
+  const crocodileShockArray = [crocodileShock, crocodileShock2, crocodileShock3];
+
+  // Toggle "hide-sprite" for the randomly chosen crocodile element
+  crocodileShockArray[randomIndex - 1].classList.toggle("hide-sprite");
   
   setTimeout(() => {
   crocodileRegular.classList.toggle("hide-sprite");
-  crocodileShock.classList.toggle("hide-sprite");
+  crocodileShockArray[randomIndex - 1].classList.toggle("hide-sprite");
   },2000);// This sets a timer of 2 seconds.
 }
 

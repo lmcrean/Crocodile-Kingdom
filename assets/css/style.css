@@ -387,32 +387,11 @@ header {
   margin: auto auto;
 }
 
-#logo-text-foreground {
+#logo-header > .stack-layer {
   position: absolute;
   top: 0;
   left: 0;
   margin: auto auto;
-}
-
-#crocodile-regular {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: auto auto;
-}
-
-#crocodile-joy {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: auto;
-}
-
-#crocodile-shock {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: auto;
 }
 
 /*--------------- Header buttons ---------------*/
@@ -590,11 +569,16 @@ header {
 .progress {
   width: 50%;
   height: 1.5em;
-  background-color: var(--harmonious-lighter);
+
   border-radius: 0.5em;
   margin: auto auto 1em auto;
   --bs-progress-bg: var(--complementary) !important;
 }
+
+
+.progress-bar {
+  background: linear-gradient(to left, var(--harmonious-bold), var(--harmonious-lighter)) !important;
+  }
 
 @media screen and (min-width: 1208px){
   .progress {/*align the progress bar to the right of the grid*/
