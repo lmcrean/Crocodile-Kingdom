@@ -114,6 +114,10 @@
 
 <section id="turns-left-section">
   <h2 class="turns-left">Turns left: <span id="turns-left-count">40</span></h2>
+
+  <div class="progress" style="height:2em;border-radius: 2em; margin-top:1em;">
+    <div class="progress-bar bg-success" role="progressbar" style="width: 100%; border-radius: 2em; height: 2em; " aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"></div>
+  </div>
 </section>
 
 <div id="card-deck"><!--this card deck uses display-flex, so it can be centered easily-->
@@ -201,17 +205,17 @@
         </div>
         <div class="modal-body">
           <h1>How to play</h1><br><br>
-          <h2>Try to get a matching pair of cards by remembering your previous turns </h2><br>
+          <h3>Try to get a matching pair of cards by remembering your previous turns.✅ </h3><br>
           <!---this line shows a demo of MATCH + MATCH = HAPPY -->
           <img src="assets/media/card-deck/G.svg" alt="match" class="match-demo rounded-1 shadow-sm" width="100">
           <img src="assets/media/card-deck/G.svg" alt="match" class="match-demo rounded-1 shadow-sm" width="100"><br><hr>
-          <h2>Try not to get a mismatch. Remember, you only have 40 turns! </h2><br>
+          <h3>Try not to get a mismatch.❌<br> Remember, you only have 40 turns! </h3><br>
           <!---this line shows a demo of MATCH + MISMATCH = SAD -->
           <img src="assets/media/card-deck/G.svg" alt="match" class="mismatch-demo rounded-1 shadow-sm" width="100">
           <img src="assets/media/card-deck/H.svg" alt="mismatch" class="mismatch-demo rounded-1 shadow-sm" width="100">
 
           <br><hr>
-          <h2>You win when all the cards are matched!🏆</h2><br>
+          <h3>You win when all the cards are matched!🏆</h3><br>
           <div class="win-demo-container">
           <!--display all 16 cards in a random order-->
           <img src="assets/media/card-deck/A.svg" alt="A" class="win-demo rounded-1 shadow-sm" width="50">

@@ -65,6 +65,7 @@ h5 {font-size: 0.7rem;/*reduce font size*/}
 :root {
 --brand-color: #00ff3c; /* Brand color */
 --background-color: #ade6bf; /*background color*/
+--complementary: #db41b2; /*complementary color*/
 
 /*Harmonious palette*/
 --harmonious-bold: #0e6b06;
@@ -583,6 +584,22 @@ header {
   width: 60%;
   height: auto;
   margin: 6px auto auto;
+}
+/*---------------TURNS LEFT PROGRESS BAR---------------*/
+
+.progress {
+  width: 50%;
+  height: 1.5em;
+  background-color: var(--harmonious-lighter);
+  border-radius: 0.5em;
+  margin: auto auto 1em auto;
+  --bs-progress-bg: var(--complementary) !important;
+}
+
+@media screen and (min-width: 1208px){
+  .progress {/*align the progress bar to the right of the grid*/
+  margin: auto 0px auto auto;
+  }
 }
 
 /*---------------CARD DECK SKELETON---------------*/

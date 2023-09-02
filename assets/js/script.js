@@ -301,6 +301,16 @@ function updateTurnsAndTurnsLeft() {
   turnsModalContainer.textContent = turnsContainer.textContent; // This updates the turns modal box with the number of attempts the user has taken.
   turnsLeftModalContainer.textContent = turnsLeftContainer.textContent; // This updates the turns left modal box with the number of attempts the user has left.
 
+  // Update the progress bar
+  let progressBar = document.querySelector(".progress-bar");
+  let currentValue = parseInt(progressBar.getAttribute("aria-valuenow"));
+    
+  if (currentValue > 0) {
+      progressBar.setAttribute("aria-valuenow", currentValue - 1); // Subtract 1 from aria-valuenow
+      let newWidth = (currentValue - 1) * 100 / 40; // Calculate the new width
+      progressBar.style.width = newWidth + "%"; // Update the width of the progress bar
+    }
+
   // check if turns-left has reached 0
 if (turnsLeftContainer.innerText === "0") {
   showYouLoseModal();

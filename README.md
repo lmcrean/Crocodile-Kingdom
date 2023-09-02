@@ -1162,6 +1162,7 @@ The following code snippets were used and adapted in the project:
 - [Code-sketch's step by step Memory Game tutorial](https://www.youtube.com/watch?v=ZniVgo8U7ek) for a memory game with flex: display. This was used as a starting point for the project, and was adapted to suit the project's needs.
 - [Confetti](https://www.npmjs.com/package/canvas-confetti) by Kiril Vatev was used as a fun feature to celebrate the player's match.
 - [Mute / Unmute Button](https://codepen.io/giannisrig/pen/RYJPzb)with Material Design Animation by Giannis Riganas was used to add a mute button to the game.
+- [Bootstrap Progress Bar](https://www.w3schools.com/bootstrap/bootstrap_progressbars.asp) was used to create the progress bar for the attempts counter.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -1192,6 +1193,7 @@ The following Stack Overflow posts were used to solve issues in the project:
 [Bootstrap](https://getbootstrap.com/) was used for the Modal, button features as well as drop-shadow effects
 [JQuery](https://jquery.com/) was used for mute button.
 [Canva](https://www.canva.com/) was used for sourcing open-source images.
+[Pixabay](https://pixabay.com/) was used for sourcing open-source sound effects and music.
 
 
 **Tools**
