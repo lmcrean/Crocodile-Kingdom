@@ -418,4 +418,23 @@ showYouLoseModal = () => {
 // ...then close modal box
 
 
-// ----------------- Importated
+// creates a function that will add shake-effect class to the .card-back elements every 5 seconds, and remove it after 1 second
+
+
+// Call the function to start the shaking
+
+
+// function activateShakeCards() {
+//   setInterval(shakeCards, 5000); // 5000 milliseconds (5 seconds)
+// }
+
+// function shakeCards() { //needs to select one random card and add the shake-effect class to it, then remove it after 1 second
+//   const cardBacks = document.querySelectorAll(".card-back");
+//   cardBacks.forEach(cardBack => cardBack.classList.add("shake-effect"));
+//   console.log("cards should be shaking")
+//   setTimeout(() => {
+//     cardBacks.forEach(cardBack => cardBack.classList.remove("shake-effect"));
+//   }, 1000);
+// }
+
+// activateShakeCards();
