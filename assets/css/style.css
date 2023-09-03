@@ -299,7 +299,7 @@ p {
 /*---------------SKELETON PLANE - HEADER STRUCTURE---------------*/
 
 header {
-  margin: 0px auto auto;
+  margin: auto auto;
 }
 
 @media screen and (min-width: 1208px) {
@@ -368,20 +368,22 @@ header {
 
 
 #logo-header {
+  max-width: 100%;
   position: relative;
   top: 0;
   left: 0;
-  margin:auto auto;
+  margin: auto auto;
 }
 
 .logo-layer {
-  width: 90%;
   height: auto;
-  max-width: 460px;
+  max-width: 100%;
+  margin:auto;
+  object-fit: contain;
 }
 
 #logo-text-background {
-  position: relative; /*the other divs are absolute, so they fall into this size*/
+  position: relative;
   top: 0;
   left: 0;
   margin: auto auto;
@@ -413,6 +415,16 @@ header {
   flex-direction: column;
   z-index: 99;
 } 
+
+@media screen and (max-width:410px) {
+  #header-buttons {/*ultimate parent element*/
+    margin:auto auto -14px auto;
+  }
+
+  #contact-button {
+    margin: 0px 0px auto auto;
+  }
+}
 
 
 @media screen and (min-width: 1208px) {
@@ -447,7 +459,7 @@ header {
 }
 
 #contact-button {
-  margin: -7% 0% auto auto;
+  margin: -2em 0% auto auto;
   width: 38px;
   height: 38px;
   background-color: var(--harmonious-lighter);

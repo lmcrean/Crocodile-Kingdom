@@ -368,6 +368,11 @@ function restartGame() {
 
   cards.forEach(card => card.addEventListener("click", cardAppear)); // This adds an event listener to each card, as well as restores the "click" event listener from disablecards function (used to disable cards when the cards match). When the card is clicked, the function cardAppear is run and the card is flipped.
 
+  // this sets the progress bar back to 40
+  let progressBar = document.querySelector(".progress-bar");
+  progressBar.setAttribute("aria-valuenow", 40);
+  progressBar.style.width = "100%";
+
   setTimeout (() => { // This sets a timer of just over 0.5 seconds before the cards flip back over, without this function, the player would be able to see the flipped over cards get assigned to their secret position.
   shuffleCardsAgain (); // This reshuffles the cards.
   }, 550);
