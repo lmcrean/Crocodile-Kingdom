@@ -800,6 +800,19 @@ function showHighScores() {
 
 ![](assets/media/issues/2023-09-07-16-44-36.png)
 
+![](assets/media/issues/2023-09-07-16-53-09.png)
+
+
+
+1. update newscore in localstorage
+
+```js
+const newScore = {  $('#turns-left-count').text(), $('#playerName').val(), };
+```
+
+get this error message:
+![](assets/media/issues/2023-09-07-17-00-50.png)
+
 <div align=center><img src="assets/media/documentation/color-red-line-break.png" width="800"></div>
 <!------------------------------------------------>
 

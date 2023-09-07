@@ -413,8 +413,9 @@ document.getElementById('submitNameBtn').addEventListener('click', function() {
   console.log($('#playerName').val());
   console.log($('#turns-left-count').text());
   $('#high-score-modal').modal('show'); // Show the "High Scores" modal
-  updateHighScores($('#playerName').val(), $('#turns-left-count').text()); // Update the high scores in the table
   checkHighScore($('#turns-left-count').text()); // Check if the user's score is a high score
+  saveHighScore($('#turns-left-count').text()); // Save the user's score
+  showHighScores(); // Show the high scores
 });
 
 // Javascript to record the score
