@@ -412,17 +412,22 @@ showYouLoseModal = () => {
   document.getElementsByClassName("you-lose-modal")[0].click();  console.log("showYouLoseModal"); //This function opens the well done modal box, by clicking the HTML button with the class of "well-done-modal".
 }
 
+// Enter your name Modal
 
-//??? Has user pressed Play Again button???(yes)
-// ...then run restart button function
-// ...then close modal box
+// JavaScript to handle the transition from "You've Won" to "Enter Your Name"
+document.getElementById('you-won-to-enter-name-modal').addEventListener('click', function() {
+  $('#well-done-modal').modal('hide'); // Close the "You've Won" modal
+  $('#enter-name-modal').modal('show'); // Show the "Enter Your Name" modal
+});
+
+// JavaScript to handle the transition from "Enter Your Name" to "High Scores"
+document.getElementById('submitNameBtn').addEventListener('click', function() {
+  $('#enter-name-modal').modal('hide'); // Close the "Enter Your Name" modal
+  $('#high-score-modal').modal('show'); // Show the "High Scores" modal
+});
 
 
-// creates a function that will add shake-effect class to the .card-back elements every 5 seconds, and remove it after 1 second
-
-
-// Call the function to start the shaking
-
+// ----------------- Shake Cards -----------------
 
 // function activateShakeCards() {
 //   setInterval(shakeCards, 5000); // 5000 milliseconds (5 seconds)
