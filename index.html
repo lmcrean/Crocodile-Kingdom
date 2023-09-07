@@ -300,10 +300,12 @@
 </section>
 
 
-      <!--you lose feature-->
+      <!--you lose feature: button and modal-->
 
     <section id="you-lose" class="modal-box ">
       <br>
+
+      <!--you lose button-->
       <button type="button" class="btn btn-secondary hide-in-laptop-and-desktop you-lose-modal hide" data-bs-toggle="modal" data-bs-target="#you-lose-modal">
         Lose Screen (placeholder)
       </button>
@@ -330,7 +332,77 @@
       </div>
       </section>
 
-      <section id="welcome" class="modal-box">
+      <!--enter your name feature: invisible button and modal -->
+<!-- Enter your name button -->
+<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#enter-name-modal">
+  Enter Your Name
+</button>
+
+<!-- Enter your name modal -->
+<div class="modal fade" id="enter-name-modal" tabindex="-1" aria-labelledby="enterNameModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="enterNameModalLabel">Enter Your Name 👇</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Add a form to input the name -->
+        <form>
+          <div class="mb-3">
+            <label for="playerName" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="playerName" placeholder="Enter your name here" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <!-- Add a button to submit the name -->
+        <button type="button" class="btn btn-primary" id="submitNameBtn">Submit</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!--simple high score feature: invisible button and modal-->
+
+<!-- High score button -->
+<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#high-score-modal">
+  High Score
+</button>
+
+<!-- High score modal -->
+<div class="modal fade" id="high-score-modal" tabindex="-1" aria-labelledby="highScoreModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="highScoreModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h1>High Score🏆</h1>
+        <!-- Display the high scores here -->
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Rank</th>
+              <th scope="col">Name</th>
+              <th scope="col">Score</th>
+            </tr>
+          </thead>
+          <tbody id="highScoreTable">
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+      <!-- <section id="welcome" class="modal-box">
         <br>
         <button type="button" class="btn btn-secondary hide-in-laptop-and-desktop hide" data-bs-toggle="modal" data-bs-target="#welcome-modal">
           Welcome screen (placeholder)
@@ -349,13 +421,12 @@
               </div>
               <div class="modal-footer-centered">
                 <button type="button" class="btn btn-primary continue close-modal" data-bs-dismiss="modal" aria-label="Close">Continue</button>
-                <!--this button closes the modal with bootstrap-->
               </div>
               <br>
             </div>
           </div>
         </div>
-        </section>
+        </section> -->
 
 <footer id="footer-desktop-display" class="background-color">
 <div class="footer-small-print">
