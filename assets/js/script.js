@@ -182,8 +182,6 @@ secondCard.removeEventListener("click", cardAppear);
 
 if (!sfxMatch.classList.contains('sound-mute')) { //used !, if sfxMatch does not have the class sound-mute, then run the following code.
   sfxMatch.play(); // This plays the flip sound effect when the card is clicked on.
-} else {
-  console.log("sfxMatch is muted");
 }
 
 crocodileJoyAppear(); // This function makes the crocodile appear happy for 2 seconds.
@@ -219,10 +217,7 @@ fire(0.1, {
 if (document.querySelectorAll(".flipped-over").length === cards.length) {
 // All cards are matched, so show the well-done modal
 if (!sfxWin.classList.contains('sound-mute')) { //used !, if sfxWin does not have the class sound-mute, then run the following code.
-  console.log("sfxWin is not muted, should be playing");
   sfxWin.play(); // This plays the flip sound effect when the card is clicked on.
-} else {
-  console.log("sfxwin is muted");
 };
 showWellDoneModal();
 }
@@ -256,9 +251,7 @@ setTimeout(() => {
   resetCards (); // unlocks the cards so that the user can click on them again.
   if (!sfxNoMatch.classList.contains('sound-mute')) { //used !, if sfxNoMatch does not have the class sound-mute, then run the following code.
     sfxNoMatch.play(); // This plays the flip sound effect when the card is clicked on.
-  } else {
-    console.log("sfxNoMatch is muted");
-  }
+  };
   },
   2000); // This sets a timer of 2 seconds before the cards flip back over.
 
@@ -392,24 +385,18 @@ function restartGame() {
 
 showWellDoneModal = () => {
   if (!sfxWin.classList.contains('sound-mute')) { //used !, if sfxWin does not have the class sound-mute, then run the following code.
-    console.log("sfxWin is not muted, should be playing");
     sfxWin.play(); // This plays the flip sound effect when the card is clicked on.
-  } else {
-    console.log("sfxwin is muted");
   };
-  document.getElementsByClassName("well-done-modal")[0].click();  console.log("showWellDoneModal"); //This function opens the well done modal box, by clicking the HTML button with the class of "well-done-modal".
+  document.getElementsByClassName("well-done-modal")[0].click(); //This function opens the well done modal box, by clicking the HTML button with the class of "well-done-modal".
 };
 
 // ----------------- You Lose modal box -----------------
 
 showYouLoseModal = () => {
   if (!sfxLose.classList.contains('sound-mute')) { //used !, if sfxLose does not have the class sound-mute, then run the following code.
-    console.log("sfxLose is not muted, should be playing");
     sfxLose.play(); // This plays the flip sound effect when the card is clicked on.
-  } else {
-    console.log("sfxLose is muted");
   };
-  document.getElementsByClassName("you-lose-modal")[0].click();  console.log("showYouLoseModal"); //This function opens the well done modal box, by clicking the HTML button with the class of "well-done-modal".
+  document.getElementsByClassName("you-lose-modal")[0].click(); //This function opens the well done modal box, by clicking the HTML button with the class of "well-done-modal".
 }
 
 // Enter your name Modal
@@ -424,27 +411,58 @@ document.getElementById('you-won-to-enter-name-modal').addEventListener('click',
 document.getElementById('submitNameBtn').addEventListener('click', function() {
   $('#enter-name-modal').modal('hide'); // Close the "Enter Your Name" modal
   console.log($('#playerName').val());
+  console.log($('#turns-left-count').text());
   $('#high-score-modal').modal('show'); // Show the "High Scores" modal
+  updateHighScores($('#playerName').val(), $('#turns-left-count').text()); // Update the high scores in the table
+  checkHighScore($('#turns-left-count').text()); // Check if the user's score is a high score
 });
 
 // Javascript to record the score
 
-// Retrieve the User Name from the input field in the Enter Your Name modal
-const userName = document.getElementById('userName').value;
-
-// Retrieve the high scores from Turns left count on the main page
-const userScore = document.getElementById('turns-left-count').textContent;
+const highScoreString = localStorage.getItem(HIGH_SCORES);
+const highScores = JSON.parse(highScoreString) ?? [];
+const lowestScore = highScores[NO_OF_HIGH_SCORES - 1]?.score ?? 0;
 
 // Get the tbody element by its id
 const tbody = document.getElementById('highScoreTable');
 
-// Update and display high scores in the tbody element
-function updateHighScores(userName, userScore) {
+function checkHighScore(score) {
+  const highScores = JSON.parse(localStorage.getItem(HIGH_SCORES)) ?? [];
+  const lowestScore = highScores[NO_OF_HIGH_SCORES - 1]?.score ?? 0;
+  
+  if (score > lowestScore) {
+    saveHighScore(score, highScores); // TODO
+    showHighScores(); // TODO
+  }
 
-  // Create a new score object
-  const highScores = JSON.parse(localStorage.getItem('highScores')) || []; // If there are no high scores, then create an empty array
+  console.log(checkHighScore);
+}
 
-  // Display the high scores in the table
+function saveHighScore(score, highScores) {
+  const name = prompt('You got a highscore! Enter name:');
+  const newScore = { score, name };
+  
+  // 1. Add to list
+  highScores.push(newScore);
+
+  // 2. Sort the list
+  highScores.sort((a, b) => b.score - a.score);
+  
+  // 3. Select new list
+  highScores.splice(NO_OF_HIGH_SCORES); // Remove scores after the top 5
+  
+  // 4. Save to local storage
+  localStorage.setItem(HIGH_SCORES, JSON.stringify(highScores));
+
+  console.log(saveHighScore);
+};
+
+function showHighScores() {
+  const highScores = JSON.parse(localStorage.getItem(HIGH_SCORES)) ?? [];
+  const highScoreList = document.getElementById(HIGH_SCORES);
+  console.log(showhighScores);
+  
+ // Display the high scores in the table id "highScoreTable"
   highScores.forEach((score, index) => {
     const row = document.createElement('tr');
     row.innerHTML = `
@@ -453,9 +471,9 @@ function updateHighScores(userName, userScore) {
       <td>${score.score}</td>
     `;
     tbody.appendChild(row);
+    console.log(showhighScoresAddtoTable);
   });
 }
-
 
 
 // ----------------- Shake Cards -----------------

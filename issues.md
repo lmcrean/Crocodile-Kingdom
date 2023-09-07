@@ -24,6 +24,7 @@ This page documents the most challenging issues and bugs encountered during the 
   - [1.3. Restart Button: After restart, the matched cards stay in a locked state.](#13-restart-button-after-restart-the-matched-cards-stay-in-a-locked-state)
   - [1.4. SFX Button: Card-flip SFX does not always play on 2nd turn, if user clicks too fast](#14-sfx-button-card-flip-sfx-does-not-always-play-on-2nd-turn-if-user-clicks-too-fast)
   - [1.5 High Score Table is not yet updating](#15-high-score-table-is-not-yet-updating)
+  - [1.5.1 Still solving High Score Table (see above), at the moment 3 new functions added to script.js but not displaying in console.log](#151-still-solving-high-score-table-see-above-at-the-moment-3-new-functions-added-to-scriptjs-but-not-displaying-in-consolelog)
 - [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
   - [2.1. Card Deck Skeleton](#21-card-deck-skeleton)
     - [2.1.1. Responsive grid is falling off the horizontal viewport in desktop view](#211-responsive-grid-is-falling-off-the-horizontal-viewport-in-desktop-view)
@@ -696,10 +697,108 @@ function updateHighScores(userName, userScore) {
 </details>
 <br>
 
-**Articles consulted:**
-- https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68
-- https://dev.to/minna_xd/adding-a-high-score-table-to-javascript30-whack-a-mole-4adk
+**Main Article consulted:**
+https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68
 
+This article walks through how to save a high score using local storage.
+
+Once local storage is created, the next step is to create a function that will update the high scores in the table.
+
+```js
+// Update and display high scores in the tbody element
+const highScoreString = localStorage.getItem(HIGH_SCORES);
+const highScores = JSON.parse(highScoreString) ?? [];
+```
+
+> The nullish coalescing operator (??) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
+
+
+
+**Debugging steps**
+1. Created localstorage.js
+2. Added ```<script src="assets/js/localstorage.js"></script>``` to index.html
+3. use console.log to record the value of userName and userScore
+
+```js
+// JavaScript to handle the transition from "Enter Your Name" to "High Scores"
+document.getElementById('submitNameBtn').addEventListener('click', function() {
+  $('#enter-name-modal').modal('hide'); // Close the "Enter Your Name" modal
+  console.log($('#playerName').val());
+  console.log($('#turns-left-count').text());
+  $('#high-score-modal').modal('show'); // Show the "High Scores" modal
+});
+```
+console log:
+![](assets/media/issues/2023-09-07-15-34-24.png) --it works
+
+4. add ```updateHighScores(userName, userScore);``` to the end of the function above 
+```js
+updateHighScores($('#playerName').val(), $('#turns-left-count').text()); // Update the high scores in the table
+```
+
+5. add checkHighScore function to end of game, when the user clicks button to submit their name
+
+```js
+document.getElementById('submitNameBtn').addEventListener('click', function() {
+  $('#enter-name-modal').modal('hide'); // Close the "Enter Your Name" modal
+  console.log($('#playerName').val());
+  console.log($('#turns-left-count').text());
+  $('#high-score-modal').modal('show'); // Show the "High Scores" modal
+  updateHighScores($('#playerName').val(), $('#turns-left-count').text()); // Update the high scores in the table
+  checkHighScore($('#turns-left-count').text()); // Check if the user's score is a high score
+});
+```
+
+6. Add saveHighScore function to script.js that achieves the following
+
+see the markdown for what steps are followed.
+
+```js
+function saveHighScore(score, highScores) {
+  const name = prompt('You got a highscore! Enter name:');
+  const newScore = { score, name };
+  
+  // 1. Add to list
+  highScores.push(newScore);
+
+  // 2. Sort the list
+  highScores.sort((a, b) => b.score - a.score);
+  
+  // 3. Select new list
+  highScores.splice(NO_OF_HIGH_SCORES); // Remove scores after the top 5
+  
+  // 4. Save to local storage
+  localStorage.setItem(HIGH_SCORES, JSON.stringify(highScores));
+};
+```
+
+7. to show the scores on the screen with table id #highScoreTable
+
+```js
+function showHighScores() {
+  const highScores = JSON.parse(localStorage.getItem(HIGH_SCORES)) ?? [];
+  const highScoreList = document.getElementById(HIGH_SCORES);
+  
+ // Display the high scores in the table id "highScoreTable"
+  highScores.forEach((score, index) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${index + 1}</td>
+      <td>${score.name}</td>
+      <td>${score.score}</td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+```
+
+**Other Articles**
+- https://dev.to/minna_xd/adding-a-high-score-table-to-javascript30-whack-a-mole-4adk
+- https://github.com/melcor76/js-tetris github repo of the main article, nice use of highscore embedded during gameplay
+
+## 1.5.1 Still solving High Score Table (see above), at the moment 3 new functions added to script.js but not displaying in console.log
+
+![](assets/media/issues/2023-09-07-16-44-36.png)
 
 <div align=center><img src="assets/media/documentation/color-red-line-break.png" width="800"></div>
 <!------------------------------------------------>
