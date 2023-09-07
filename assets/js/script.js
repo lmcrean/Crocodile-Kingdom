@@ -426,6 +426,36 @@ document.getElementById('submitNameBtn').addEventListener('click', function() {
   $('#high-score-modal').modal('show'); // Show the "High Scores" modal
 });
 
+// Javascript to record the score
+
+// Retrieve the User Name from the input field in the Enter Your Name modal
+const userName = document.getElementById('userName').value;
+
+// Retrieve the high scores from Turns left count on the main page
+const userScore = document.getElementById('turns-left-count').textContent;
+
+// Get the tbody element by its id
+const tbody = document.getElementById('highScoreTable');
+
+// Update and display high scores in the tbody element
+function updateHighScores(userName, userScore) {
+
+  // Create a new score object
+  const highScores = JSON.parse(localStorage.getItem('highScores')) || []; // If there are no high scores, then create an empty array
+
+  // Display the high scores in the table
+  highScores.forEach((score, index) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${index + 1}</td>
+      <td>${score.name}</td>
+      <td>${score.score}</td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+
+
 
 // ----------------- Shake Cards -----------------
 

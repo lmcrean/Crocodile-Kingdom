@@ -23,6 +23,7 @@ This page documents the most challenging issues and bugs encountered during the 
   - [1.2. Turn Counter is not updating](#12-turn-counter-is-not-updating)
   - [1.3. Restart Button: After restart, the matched cards stay in a locked state.](#13-restart-button-after-restart-the-matched-cards-stay-in-a-locked-state)
   - [1.4. SFX Button: Card-flip SFX does not always play on 2nd turn, if user clicks too fast](#14-sfx-button-card-flip-sfx-does-not-always-play-on-2nd-turn-if-user-clicks-too-fast)
+  - [1.5 High Score Table is not yet updating](#15-high-score-table-is-not-yet-updating)
 - [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
   - [2.1. Card Deck Skeleton](#21-card-deck-skeleton)
     - [2.1.1. Responsive grid is falling off the horizontal viewport in desktop view](#211-responsive-grid-is-falling-off-the-horizontal-viewport-in-desktop-view)
@@ -579,8 +580,128 @@ if (!hasFlippedCard) { //"!"" references the opposite of hasFlippedCard. In the 
 }
 ```
 
-<div align=center><img src="assets/media/documentation/color-red-line-break.png" width="800"></div>
+## 1.5 High Score Table is not yet updating
 
+<div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
+
+<img src="assets/media/issues/1.5.gif" width=500></details></div>
+
+
+<details><summary> click here to view problem HTML:</summary>
+
+```html
+      <!--enter your name feature: invisible button and modal -->
+<!-- Enter your name button -->
+<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#enter-name-modal">
+  Enter Your Name
+</button>
+
+<!-- Enter your name modal -->
+<div class="modal fade" id="enter-name-modal" tabindex="-1" aria-labelledby="enterNameModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="enterNameModalLabel">Enter Your Name 👇</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Add a form to input the name -->
+        <form>
+          <div class="mb-3">
+            <label for="playerName" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="playerName" placeholder="Enter your name here" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <!-- Add a button to submit the name -->
+        <button type="button" class="btn btn-primary" id="submitNameBtn">Submit</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!--simple high score feature: invisible button and modal-->
+
+<!-- High score button -->
+<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#high-score-modal">
+  High Score
+</button>
+
+<!-- High score modal -->
+<div class="modal fade" id="high-score-modal" tabindex="-1" aria-labelledby="highScoreModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="highScoreModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h1>High Score🏆</h1>
+        <!-- Display the high scores here -->
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Rank</th>
+              <th scope="col">Name</th>
+              <th scope="col">Score (Turns Left)</th>
+            </tr>
+          </thead>
+          <tbody id="highScoreTable">
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+</details>
+
+<details><summary> click here to view problem JS:</summary>
+
+```js
+// Javascript to record the score
+
+// Retrieve the User Name from the input field in the Enter Your Name modal
+const userName = document.getElementById('userName').value;
+
+// Retrieve the high scores from Turns left count on the main page
+const userScore = document.getElementById('turns-left-count').textContent;
+
+// Get the tbody element by its id
+const tbody = document.getElementById('highScoreTable');
+
+// Update and display high scores in the tbody element
+function updateHighScores(userName, userScore) {
+
+  // Create a new score object
+  const highScores = JSON.parse(localStorage.getItem('highScores')) || []; // If there are no high scores, then create an empty array
+
+  // Display the high scores in the table
+  highScores.forEach((score, index) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${index + 1}</td>
+      <td>${score.name}</td>
+      <td>${score.score}</td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+```
+</details>
+<br>
+
+**Articles consulted:**
+- https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68
+- https://dev.to/minna_xd/adding-a-high-score-table-to-javascript30-whack-a-mole-4adk
+
+
+<div align=center><img src="assets/media/documentation/color-red-line-break.png" width="800"></div>
 <!------------------------------------------------>
 
 # 2. CSS Skeleton Issues and Bugs
