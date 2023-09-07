@@ -423,6 +423,7 @@ document.getElementById('you-won-to-enter-name-modal').addEventListener('click',
 // JavaScript to handle the transition from "Enter Your Name" to "High Scores"
 document.getElementById('submitNameBtn').addEventListener('click', function() {
   $('#enter-name-modal').modal('hide'); // Close the "Enter Your Name" modal
+  console.log($('#playerName').val());
   $('#high-score-modal').modal('show'); // Show the "High Scores" modal
 });
 
