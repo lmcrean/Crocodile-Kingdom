@@ -24,9 +24,8 @@ This page documents the most challenging issues and bugs encountered during the 
   - [1.3. Restart Button: After restart, the matched cards stay in a locked state.](#13-restart-button-after-restart-the-matched-cards-stay-in-a-locked-state)
   - [1.4. SFX Button: Card-flip SFX does not always play on 2nd turn, if user clicks too fast](#14-sfx-button-card-flip-sfx-does-not-always-play-on-2nd-turn-if-user-clicks-too-fast)
   - [1.5 High Score Table is not yet updating](#15-high-score-table-is-not-yet-updating)
-  - [1.5.1 Still solving High Score Table (see above), at the moment 3 new functions added to script.js but not displaying in console.log](#151-still-solving-high-score-table-see-above-at-the-moment-3-new-functions-added-to-scriptjs-but-not-displaying-in-consolelog)
-  - [1.5.2 Add rank column for high score table](#152-add-rank-column-for-high-score-table)
-  - [1.5.3. Sort HTML Table](#153-sort-html-table)
+  - [1.5.2 How to sort HTML Table](#152-how-to-sort-html-table)
+  - [1.5.3. how to add rank column](#153-how-to-add-rank-column)
 - [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
   - [2.1. Card Deck Skeleton](#21-card-deck-skeleton)
     - [2.1.1. Responsive grid is falling off the horizontal viewport in desktop view](#211-responsive-grid-is-falling-off-the-horizontal-viewport-in-desktop-view)
@@ -798,36 +797,196 @@ function showHighScores() {
 - https://dev.to/minna_xd/adding-a-high-score-table-to-javascript30-whack-a-mole-4adk
 - https://github.com/melcor76/js-tetris github repo of the main article, nice use of highscore embedded during gameplay
 
-## 1.5.1 Still solving High Score Table (see above), at the moment 3 new functions added to script.js but not displaying in console.log
+***
+
+Still solving High Score Table (see above), at the moment 3 new functions added to script.js but not displaying in console.log
+
+***
+
+<div align=center><details><summary><b>click here to view devtools inspection:</b></summary>
 
 ![](assets/media/issues/2023-09-07-16-44-36.png)
 
 ![](assets/media/issues/2023-09-07-16-53-09.png)
 
+</details></div>
 
 
-1. update newscore in localstorage
+8. update newscore in localstorage
 
 ```js
 const newScore = {  $('#turns-left-count').text(), $('#playerName').val(), };
 ```
 
-get this error message:
-![](assets/media/issues/2023-09-07-17-00-50.png)
+<div align=center><details><summary>click here to view error message:</summary>
+
+![](assets/media/issues/2023-09-07-17-00-50.png)</details></div>
+
+***
+
+Previous steps had been mislead by expecting localStorage to function as a js or JSON file.
+
+The key turning point to getting the high score feature working was understanding the role of localStorage as an API, which I learnt first through my mentor and then through W3 Schools.
+
+***
+
+<br>
+
+1. remove localstorage.js and use ```localStorage.getItem()```
+
+```js
+  const highScores = JSON.parse(localStorage.getItem('highScores')) ?? {};
+```
+
+
+Articles consulted:
+
+- “Window Object.” W3schools.com, 2023, www.w3schools.com/jsref/obj_window.asp. Accessed 7 Sept. 2023.
+- “Window LocalStorage Property.” W3schools.com, 2023, www.w3schools.com/jsref/prop_win_localstorage.asp. Accessed 7 Sept. 2023.
+
+10. reduce three seperate functions adapted from the earlier article to a much simpler showHighScores() function.
+
+11. Use Event Listener to record on localStorage using JQuery syntax.
+
+```js
+// IMPORTANT EVENT LISTENER JavaScript to handle the transition from "Enter Your Name" to "High Scores", using window localStorage to record the game score.
+document.getElementById('submitNameBtn').addEventListener('click', function() {
+  $('#enter-name-modal').modal('hide'); // Close the "Enter Your Name" modal
+  console.log($('#playerName').val());
+  let currentHighScore = JSON.parse(localStorage.getItem('highScores')) ?? {}; // Get the current high scores from local storage
+  currentHighScore[$('#playerName').val()] = $('#turns-left-count').text(); // Add the new high score to the list using JQuery
+  localStorage.setItem('highScores', JSON.stringify(currentHighScore)); // Save the new high scores to local storage
+  console.log($('#turns-left-count').text());
+  $('#high-score-modal').modal('show'); // Show the "High Scores" modal
+  showHighScores(); // Show the high scores
+});
+```
+
+Articles consulted:
+- “JQuery Syntax.” W3schools.com, 2023, www.w3schools.com/jquery/jquery_syntax.asp. Accessed 7 Sept. 2023.
+- JS Foundation - js.foundation. “.Val() | JQuery API Documentation.” Jquery.com, 2023, api.jquery.com/val/. Accessed 7 Sept. 2023.
+- JS Foundation - js.foundation. “.Text() | JQuery API Documentation.” Jquery.com, 2023, api.jquery.com/text/. Accessed 7 Sept. 2023.
+
+12. use function showHighScores() to push the localStorage object to the table.
+
+```js
+function showHighScores() {
+  const highScores = JSON.parse(localStorage.getItem('highScores')) ?? {};
+
+  for (const [key, value] of Object.entries(highScores)) {
+    console.log(`${key}: ${value}`);
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${1}</td>
+      <td>${key}</td>
+      <td>${value}</td>
+    `;
+    highScoreTableBody.appendChild(row);
+  }
+```
+
+**Understanding template literals.**
+*The template literal is used here in backticks and uses the ```$``` character to indicate that it's an expression to be evaluated. When the template literal is evaluated, the expression is **replaced** with the value of the name variable.*
+
+*For example:*
+
+```
+const name = "John";
+const greeting = `Hello, ${name}!`;
+console.log(greeting); // Hello, John!
+```
+
+Articles consulted:
+- “HTML DOM Element AppendChild() Method.” W3schools.com, 2023, www.w3schools.com/jsref/met_node_appendchild.asp. Accessed 7 Sept. 2023.
+- “Document: CreateElement() Method - Web APIs | MDN.” Mozilla.org, 7 July 2023, developer.mozilla.org/en-US/docs/Web/API/Document/createElement. Accessed 7 Sept. 2023.
+- “JavaScript Template Literals.” W3schools.com, 2015, www.w3schools.com/js/js_string_templates.asp. Accessed 7 Sept. 2023.
+- “What’s in a Name? Understanding $ and _ in JavaScript.” ThoughtCo, 2019, www.thoughtco.com/and-in-javascript-2037515#:~:text=The%20dollar%20sign%20(%24)%20and,properties%2C%20events%2C%20and%20objects. Accessed 9 Sept. 2023.
+
+
+‌
+13.  use removeAllChildNodes(highScoreTableBody) function to remove duplicate pushes.
+
+```js
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+  }
+}
+```
+
+Articles consulted:
+- “JavaScript While Loop.” W3schools.com, 2015, www.w3schools.com/js/js_loop_while.asp. Accessed 7 Sept. 2023.
+- “HTML DOM Element FirstChild Property.” W3schools.com, 2023, www.w3schools.com/jsref/prop_node_firstchild.asp. Accessed 7 Sept. 2023.
+- “Node: RemoveChild() Method - Web APIs | MDN.” Mozilla.org, 4 Aug. 2023, developer.mozilla.org/en-US/docs/Web/API/Node/removeChild. Accessed 7 Sept. 2023.
+‌
+
+***
+
+Result: High Score Table is now pushing, with no sense of rank or order.
+
+
+
+
+
+<div align=center><details><summary><b>click here to view a screen recording of the solution:</b></summary>
+
+![](assets/media/issues/2023-09-07-19-27-44.png)
+
+</details></div>
+‌
+
+
 
 <div align=center><img src="assets/media/documentation/color-red-line-break.png" width="800"></div>
 
-## 1.5.2 Add rank column for high score table
+## 1.5.2 How to sort HTML Table 
 
 <div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
 
 
 ![](assets/media/issues/2023-09-07-19-27-44.png)
-</details>
 
-## 1.5.3. Sort HTML Table
+</details></div>
+
+## 1.5.3. how to add rank column
 
 <div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
+![](assets/media/issues/2023-09-07-19-27-44.png)
+</details></div><br>
+
+solution: use  ``` <td>${rank + 1}</td>``` within ```sortedScores.forEach()``` method. The + 1 is necessary because the index starts at 0.
+
+```js
+function showHighScores() {
+  const highScores = JSON.parse(localStorage.getItem('highScores')) ?? {};
+  const sortedScores = [];
+
+  // Create an array of objects from the highScores object for sorting using the for...in loop
+  for (const [key, value] of Object.entries(highScores)) {
+    sortedScores.push({ name: key, score: value });
+  }
+
+  // Sort the scores in descending order based on score using the sort () method
+  sortedScores.sort((a, b) => b.score - a.score);
+
+  removeAllChildNodes(highScoreTableBody);
+
+  // Go through the sorted scores and add them to the table using forEach () method
+  sortedScores.forEach((score, rank) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${rank + 1}</td>
+      <td>${score.name}</td>
+      <td>${score.score}</td>
+    `;
+    highScoreTableBody.appendChild(row);
+  });
+}
+```
+
+<div align=center><details><summary><b>click here to view a screen recording of the solution:</b></summary>
+
+![](assets/media/issues/2023-09-09-08-14-58.png)
 
 </details>
 

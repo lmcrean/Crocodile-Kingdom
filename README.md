@@ -1,6 +1,6 @@
 <div align="center">
 
-<img alt="placeholder" src="assets/media/favicon.ico" width="20px">
+<img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px">
 
 #  Memory Game with JavaScript <!-- omit in toc -->
 

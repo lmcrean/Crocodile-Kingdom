@@ -408,12 +408,12 @@ document.getElementById('you-won-to-enter-name-modal').addEventListener('click',
   $('#enter-name-modal').modal('show'); // Show the "Enter Your Name" modal
 });
 
-// IMPORTANT EVENT LISTENER JavaScript to handle the transition from "Enter Your Name" to "High Scores"
+// IMPORTANT EVENT LISTENER JavaScript to handle the transition from "Enter Your Name" to "High Scores", using window localStorage to record the game score.
 document.getElementById('submitNameBtn').addEventListener('click', function() {
   $('#enter-name-modal').modal('hide'); // Close the "Enter Your Name" modal
   console.log($('#playerName').val());
   let currentHighScore = JSON.parse(localStorage.getItem('highScores')) ?? {}; // Get the current high scores from local storage
-  currentHighScore[$('#playerName').val()] = $('#turns-left-count').text(); // Add the new high score to the list
+  currentHighScore[$('#playerName').val()] = $('#turns-left-count').text(); // Add the new high score to the list using JQuery
   localStorage.setItem('highScores', JSON.stringify(currentHighScore)); // Save the new high scores to local storage
   console.log($('#turns-left-count').text());
   $('#high-score-modal').modal('show'); // Show the "High Scores" modal
@@ -442,24 +442,26 @@ function showHighScores() {
   // Sort the scores in descending order based on score using the sort () method
   sortedScores.sort((a, b) => b.score - a.score);
 
-  removeAllChildNodes(highScoreTableBody);
+  removeAllChildNodes(highScoreTableBody); // Remove all the child nodes from the table body.
 
   // Go through the sorted scores and add them to the table using forEach () method
-  sortedScores.forEach((score, index) => {
+  sortedScores.forEach((score, rank) => {
     const row = document.createElement('tr');
     row.innerHTML = `
-      <td>${index + 1}</td>
+      <td>${rank + 1}</td>
       <td>${score.name}</td>
       <td>${score.score}</td>
-    `;
-    highScoreTableBody.appendChild(row);
+    `; // Uses template literals to replace the expression with the rank, name and score.
+
+    highScoreTableBody.appendChild(row); // Add the row to the table body. The appendChild() method appends a node (element) as the last child of an element.
   });
 }
-
+// Function removes all the child nodes from parent element. The while() loop loops through a block of code as long as a specified condition inside the brackets is true.
 function removeAllChildNodes(parent) {
-  while (parent.firstChild) {
+  while (parent.firstChild) // 
+  {
       parent.removeChild(parent.firstChild);
-  }
+  } 
 }
 
 
