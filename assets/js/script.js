@@ -448,7 +448,7 @@ function showHighScores() {
   sortedScores.forEach((score, index) => {
     const row = document.createElement('tr');
     row.innerHTML = `
-      <td>${1}</td>
+      <td>${index + 1}</td>
       <td>${score.name}</td>
       <td>${score.score}</td>
     `;
