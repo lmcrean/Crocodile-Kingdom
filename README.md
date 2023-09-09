@@ -1167,8 +1167,8 @@ To further improve the lighthouse score I could use more WebP images and reduce 
 
 | | Home Page |
 |---|---|
-| Mobile | ![](assets/media/issues/2023-08-25-16-10-21.png)  | <img  src="assets/media/documentation/placeholder.svg" width="300px"> | <img  src="assets/media/documentation/placeholder.svg" width="300px">
-| Desktop | ![](assets/media/issues/2023-08-25-16-09-54.png)| <img  src="assets/media/documentation/placeholder.svg" width="300px"> | <img  src="assets/media/documentation/placeholder.svg" width="300px">
+| Mobile | ![](assets/media/issues/![](assets/media/issues/2023-08-25-16-10-21.png).png)  | <img  src="assets/media/documentation/placeholder.svg" width="300px"> | <img  src="assets/media/documentation/placeholder.svg" width="300px">
+| Desktop | ![](assets/media/issues/![](assets/media/issues/2023-08-25-16-09-54.png).png)| <img  src="assets/media/documentation/placeholder.svg" width="300px"> | <img  src="assets/media/documentation/placeholder.svg" width="300px">
 |Timestamp| 25/8/2023 | 31st July '23 | 15th July '23 |
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
