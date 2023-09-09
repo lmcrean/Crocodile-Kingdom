@@ -134,6 +134,10 @@ $(document).ready(function() {
 
 // ----------------- Well done modal box -----------------
 
+function confetti() {
+  // This is an external library that creates confetti
+}
+
 function showWellDoneModal() {
   if (!sfxWin.classList.contains('sound-mute')) {
     sfxWin.play();

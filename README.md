@@ -1149,6 +1149,14 @@ There were no warnings for the CSS other than Bootstrap's default styling, which
 
 </details>
 
+JShint was passed.
+
+<details><summary>click here to view: JS Validator Results</summary>
+
+![](assets/media/issues/2023-09-09-18-14-55.png)
+
+</details>
+
 <details>
 <summary>Click here to view Bootstrap explanation copied from <a href="https://getbootstrap.com/docs/5.3/getting-started/browsers-devices">Bootstrap's documentation</a>
 </summary>
