@@ -1,19 +1,18 @@
 <div align="center">
 
-<img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px">
+<img alt="logo" src="assets/media/logo.svg" width="300px" >
 
-#  Crocodile Kingdom <!-- omit in toc -->
 
 ![HTML5](https://img.shields.io/badge/html5-orange.svg?style=for-the-badge&logo=html5&logoColor=orange&color=172416&Color=orange)![](https://img.shields.io/badge/css3-blue.svg?style=for-the-badge&logo=css3&logoColor=blue&color=172416&Color=blue)![](https://img.shields.io/badge/javascript-yellow.svg?style=for-the-badge&logo=javascript&logoColor=yellow&color=172416&Color=yellow) ![bootstrap 5](https://img.shields.io/badge/bootstrap5-purple.svg?style=for-the-badge&logo=bootstrap&logoColor=lightpurple&color=172416&Color=pink)![jquery](https://img.shields.io/badge/jquery-blue.svg?style=for-the-badge&logo=jquery&logoColor=blue&color=172416&Color=blue)![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&color=172416)
 
+<br>
 
-[<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-2d521f?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/) [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Issues_Report-2d521f?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md) [![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/lmcrean/Crocodile-Kingdom?color=green)](https://github.com/lmcrean/Crocodile-Kingdom/commits/main)
+<img src="assets/media/issues/2023-09-09-15-31-02.png" width=500>
 
 <br>
 
-<img src="assets/media/documentation/features-gameplay.gif" width=500>
+# Crocodile Kingdom <!-- omit in toc -->
 
-<br>
 
 Crocodile Kingdom is an **animal-themed version of the classic children's memory game**, where the player has to try and match pairs of cards together while never turning more than two cards at once. The game challenges the player's memory skills and is designed for 5 year olds.
 
@@ -24,9 +23,29 @@ Crocodile Kingdom is an **animal-themed version of the classic children's memory
 
 This readme introduces the key features of the project, using the framework of the 5 planes of User Experience. It summarises key challenges addressed along the way and also provides credits and acknowledgesments at the end.
 
-An [issues.md](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md) file is dedicated to the most specific technical account of important issues and bugs that were researched and solved during the project. 
+An [issues.md](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md) file is dedicated to the most specific technical account of important issues and bugs that were researched and solved during the project.
 
-## Table of Contents <!-- omit in toc -->
+
+<div align=center>
+
+***Navigation Links:***
+
+[<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-2d521f?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/) [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Issues_Report-2d521f?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md) [![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/lmcrean/Crocodile-Kingdom?color=green)](https://github.com/lmcrean/Crocodile-Kingdom/commits/main)
+</div>
+
+##Table of Contents: <!-- omit in toc -->
+
+
+**[1. Outline of Features](#1-outline-of-features)
+[2. UX Development Planes & Manual Testing](#2-ux-development-planes--manual-testing)
+[3. Automatic Testing](#3-automatic-testing)
+[4. Deployment](#4-deployment)
+[5. Issues and Bugs](#5-issues-and-bugs)
+[6. Credits & Acknowledgements](#6-credits--acknowledgements)**
+
+***
+
+Full Table of Contents: <!-- omit in toc --></div>
 
 - [1. Outline of Features](#1-outline-of-features)
   - [1.1. Card Deck](#11-card-deck)
@@ -57,6 +76,7 @@ An [issues.md](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md)
     - [2.3.5. How To Play structure](#235-how-to-play-structure)
     - [2.3.6. Navbar structure](#236-navbar-structure)
     - [2.3.7. Footer structure](#237-footer-structure)
+    - [2.3.8. High Score Structure](#238-high-score-structure)
   - [2.4. Skeleton Plane](#24-skeleton-plane)
     - [2.4.1. Main Page Skeleton:](#241-main-page-skeleton)
     - [2.4.2. How to play Skeleton:](#242-how-to-play-skeleton)
@@ -78,8 +98,10 @@ An [issues.md](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md)
 - [6. Credits \& Acknowledgements](#6-credits--acknowledgements)
   - [6.1. Code snippets](#61-code-snippets)
   - [6.2. Stack Overflow and indirect support](#62-stack-overflow-and-indirect-support)
+  - [6.3. Articles](#63-articles)
   - [6.3. Technologies Used](#63-technologies-used)
-  - [6.4. Acknowledgements](#64-acknowledgements)
+  - [6.4. Libraries Used](#64-libraries-used)
+  - [6.5. Acknowledgements](#65-acknowledgements)
 
 <div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 <div align="center">
@@ -619,6 +641,8 @@ Successful testing results below:
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
+***
+
 ### 2.3.2. Turn count structure
 
 <img src="assets/media/issues/1.2b.gif" width=500>
@@ -685,8 +709,7 @@ setTimeout(() => {
 }
 ```
 
-
-
+***
 
 ### 2.3.3. Restart button structure
 
@@ -717,6 +740,8 @@ function restartGame() {
   lockCards = false; // This statement is set to false so that the player can click on the cards again.
 }
 ```
+
+***
 
 ### 2.3.4. Well done feature structure 
 
@@ -783,7 +808,7 @@ Resources consulted:
 - https://www.w3schools.com/bootstrap/bootstrap_modal.asp#:~:text=To%20trigger%20the%20modal%20window,the%20id%20of%20the%20modal
 - https://stackoverflow.com/questions/17144459/javascript-automatically-clicking-a-button
 
-
+***
 
 ### 2.3.5. How To Play structure 
 
@@ -791,11 +816,17 @@ Resources consulted:
 
 <i>"As a player, I need to understand how to play the game."</i>
 
+***
+
+
 ### 2.3.6. Navbar structure 
 
 <img  src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"As a player, I need the tone of the design to appear warm, entertaining and encouraging."</i>
+
+***
+
 
 ### 2.3.7. Footer structure
 
@@ -803,6 +834,9 @@ Resources consulted:
 
 <i>"I want to be able to contact the business if I have any questions, and share the game easily with my friends."</i>
 
+### 2.3.8. High Score Structure
+
+<img  src="assets/media/documentation/placeholder.svg" width="100px">
 
 
 xxxxxxxxx
@@ -1090,6 +1124,8 @@ The Automatic Testing achieved
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
+***
+
 ## 3.1. HTML/CSS/JS Validator Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate the project to ensure there were no syntax errors in the project.
@@ -1120,6 +1156,9 @@ JsHint was used to validate the JavaScript code. The result was <b> passed </b> 
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
+
+***
+
 ## 3.2. Lighthouse Report
 
 To check the lighthouse report on a chrome browser, right click inspect and click on the lighthouse tab. The lighthouse report was run on the home page, features page and sign up page.
@@ -1133,6 +1172,9 @@ To further improve the lighthouse score I could use more WebP images and reduce 
 |Timestamp| 25/8/2023 | 31st July '23 | 15th July '23 |
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+
+***
 
 ## 3.3. Browserstack Testing
 
@@ -1182,7 +1224,8 @@ Fixed issues and bugs are documented in a seperate file called [issues.md](issue
 
 They can be summarised here:
 
-**1. Javascript Structure Issues and bugs**
+**Javascript Structure Issues and Bugs**
+
 1.1. Card Deck Structure
 1.1.1. Double click too fast and the card won't flip
 1.1.2. Click on a different card in between the 2-second interval, and it doesn't flip the cards back properly
@@ -1190,15 +1233,19 @@ They can be summarised here:
 1.1.4. Using brackets to start the shuffle function seems to stop the cards from flipping
 1.1.5. Need to complete Shuffle Algorithm with display: flex method
 1.2. Turn Counter is not updating
-1.3. After restart, the matched cards stay in a locked state.
-1.4. Card-flip SFX does not always play on the 2nd turn if the user clicks too fast
+1.3. Restart Button: After restart, the matched cards stay in a locked state.
+1.4. SFX Button: Card-flip SFX does not always play on the 2nd turn if the user clicks too fast
+1.5. High Score Table is not yet updating
+1.5.1. How to sort HTML Table
+1.5.2. How to add rank column
 
-**2. CSS Skeleton Issues and Bugs**
+**CSS Skeleton Issues and Bugs**
+
 2.1. Card Deck Skeleton
 2.1.1. Responsive grid is falling off the horizontal viewport in desktop view
 2.1.2. Responsive grid is falling off the horizontal viewport in mobile view
 2.1.3. Responsive grid is falling off the vertical viewport
-2.1.4. The back of the card doesn't fully cover the card face underneath
+2.1.4. Back of card doesn't fully cover card face underneath
 2.1.5. With the new "display: flex" method, the card-face moves to the side in the flipped state
 2.1.6. Slight x-overflow in desktop view
 2.2. Would prefer Footer responsive design to meet the edges
@@ -1217,10 +1264,13 @@ The following code snippets were used and adapted in the project:
 
 - [Code-sketch's step by step Memory Game tutorial](https://www.youtube.com/watch?v=ZniVgo8U7ek) for a memory game with flex: display. This was used as a starting point for the project, and was adapted to suit the project's needs.
 - [Confetti](https://www.npmjs.com/package/canvas-confetti) by Kiril Vatev was used as a fun feature to celebrate the player's match.
-- [Mute / Unmute Button](https://codepen.io/giannisrig/pen/RYJPzb)with Material Design Animation by Giannis Riganas was used to add a mute button to the game.
+- [Mute / Unmute Button](https://codepen.io/giannisrig/pen/RYJPzb) with Material Design Animation by Giannis Riganas was used to add a mute button to the game.
 - [Bootstrap Progress Bar](https://www.w3schools.com/bootstrap/bootstrap_progressbars.asp) was used to create the progress bar for the attempts counter.
+- [Hoverboard](https://github.com/lmcrean/Hoverboard), the previous project by the author, was used as a boilerplate structure of the project, and was imported at the beginning of the project. The rationale for this was to start the project with a structure that was already familiar to the author.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+***
 
 ## 6.2. Stack Overflow and indirect support
 
@@ -1229,6 +1279,28 @@ The following Stack Overflow posts were used to solve issues in the project:
 - https://stackoverflow.com/questions/48474/how-do-i-position-one-image-on-top-of-another-in-html helped with arranging the Crocodile sprite with layers on top of each other using absolute and relative positioning.
 - Stack Overflow forum, "how to randomize placement order in a placement grid", https://stackoverflow.com/questions/73847991/how-to-randomize-placement-order-in-a-css-grid
 
+## 6.3. Articles
+
+The following articles were used to understand the high feature, while also consulting mentors and tutors at code institute:
+
+<details><summary>click here to view articles read to understand the high score feature</summary>
+
+- “Window Object.” W3schools.com, 2023, www.w3schools.com/jsref/obj_window.asp. Accessed 7 Sept. 2023.
+- “Window LocalStorage Property.” W3schools.com, 2023, www.w3schools.com/jsref/prop_win_localstorage.asp. Accessed 7 Sept. 2023.
+- “JQuery Syntax.” W3schools.com, 2023, www.w3schools.com/jquery/jquery_syntax.asp. Accessed 7 Sept. 2023.
+- JS Foundation - js.foundation. “.Val() | JQuery API Documentation.” Jquery.com, 2023, api.jquery.com/val/. Accessed 7 Sept. 2023.
+- JS Foundation - js.foundation. “.Text() | JQuery API Documentation.” Jquery.com, 2023, api.jquery.com/text/. Accessed 7 Sept. 2023.
+- “HTML DOM Element AppendChild() Method.” W3schools.com, 2023, www.w3schools.com/jsref/met_node_appendchild.asp. Accessed 7 Sept. 2023.
+- “Document: CreateElement() Method - Web APIs | MDN.” Mozilla.org, 7 July 2023, developer.mozilla.org/en-US/docs/Web/API/Document/createElement. Accessed 7 Sept. 2023.
+- “JavaScript Template Literals.” W3schools.com, 2015, www.w3schools.com/js/js_string_templates.asp. Accessed 7 Sept. 2023.
+- “What’s in a Name? Understanding $ and _ in JavaScript.” ThoughtCo, 2019, www.thoughtco.com/and-in-javascript-2037515#:~:text=The%20dollar%20sign%20(%24)%20and,properties%2C%20events%2C%20and%20objects. Accessed 9 Sept. 2023.
+- - “JavaScript While Loop.” W3schools.com, 2015, www.w3schools.com/js/js_loop_while.asp. Accessed 7 Sept. 2023.
+- “HTML DOM Element FirstChild Property.” W3schools.com, 2023, www.w3schools.com/jsref/prop_node_firstchild.asp. Accessed 7 Sept. 2023.
+- “Node: RemoveChild() Method - Web APIs | MDN.” Mozilla.org, 4 Aug. 2023, developer.mozilla.org/en-US/docs/Web/API/Node/removeChild. Accessed 7 Sept. 2023.
+
+</details>
+
+***
 
 ## 6.3. Technologies Used
 
@@ -1237,19 +1309,14 @@ The following Stack Overflow posts were used to solve issues in the project:
 [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) was used for the styling of the website
 [Javascript](https://en.wikipedia.org/wiki/JavaScript) was used for the interactive features of the website
 
-**Programmes**
+**Programming Software**
 [VSCode](https://code.visualstudio.com/) was used as my code editor
 [Github](https://www.github.com/) was used for Version control
+
+**General Software**
 [Canva](https://www.canva.com/) was used for designing Graphics including the logo
 [Figma](https://www.figma.com/)  for Designing wireframe
-[Fancy Screen](http://fancyapps.com/) by Janis Skarnelis was used to document GIFs and videos of the project
 
-**Libraries**
-[Node.js](https://nodejs.org/en/) was used to install ```npm``` and run the Confetti feature.
-[Bootstrap](https://getbootstrap.com/) was used for the Modal, button features as well as drop-shadow effects
-[JQuery](https://jquery.com/) was used for mute button.
-[Canva](https://www.canva.com/) was used for sourcing open-source images.
-[Pixabay](https://pixabay.com/) was used for sourcing open-source sound effects and music.
 
 
 **Tools**
@@ -1258,17 +1325,39 @@ The following Stack Overflow posts were used to solve issues in the project:
 [browserstack](https://www.browserstack.com/) was used for checking website on firefox, opera, edge, safari and chrome
 [Python Tutor](https://www.pythontutor.com) was used for debugging the Javascript, as well as a research tool early on in the project to understand the flow of the code.
 [shields.io](https://shields.io/) was used for Documentation Badges
-
+[Fancy Screen](http://fancyapps.com/) by Janis Skarnelis was used to document GIFs and videos of the project
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
+***
 
-## 6.4. Acknowledgements
+## 6.4. Libraries Used
+
+**Programming Libraries**
+[Node.js](https://nodejs.org/en/) was used to install ```npm``` and run the Confetti feature.
+[Bootstrap](https://getbootstrap.com/) was used for the Modal, button features as well as drop-shadow effects
+[JQuery](https://jquery.com/) was used for mute button.
+
+**Media libraries**
+[Canva](https://www.canva.com/) was used for sourcing open-source images.
+[Pixabay](https://pixabay.com/) was used for sourcing open-source sound effects and music.
+[Freepik](https://www.freepik.com/) was used for sourcing open-source background svg.
+
+**Fonts**
+[Fonts2U](https://fonts2u.com) was used for Hussar Bold Web Edition
+[Cufonfonts](https://www.cufonfonts.com/font/amazing-grotesk) was used for Amazing Grotesk Demi.
+
+***
+
+## 6.5. Acknowledgements
 I'd like to thank to the tutors at Code Institute, who provided week-to-week support throughout the project, and were always available to answer questions and provide guidance.
 
-I'd like to thank Seun Owonikoko, my mentor at Code Institute, for her encouragement and support during our mentoring sessions.
+I'd like to thank Seun Owonikoko, my mentor at Code Institute, for her support during our mentoring sessions. Especially with helping me to understand the localStorage API when I had been struggling with it for a long time.
+
+I'd like to thank my friends & family for their support and encouragement throughout the project.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"><img  src="assets/media/favicon.ico" width="20px"> 
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"><br><br><img  src="assets/media/logo.svg" width="200px"></div>
+
 </div>

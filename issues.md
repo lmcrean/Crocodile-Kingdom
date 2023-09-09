@@ -23,9 +23,9 @@ This page documents the most challenging issues and bugs encountered during the 
   - [1.2. Turn Counter is not updating](#12-turn-counter-is-not-updating)
   - [1.3. Restart Button: After restart, the matched cards stay in a locked state.](#13-restart-button-after-restart-the-matched-cards-stay-in-a-locked-state)
   - [1.4. SFX Button: Card-flip SFX does not always play on 2nd turn, if user clicks too fast](#14-sfx-button-card-flip-sfx-does-not-always-play-on-2nd-turn-if-user-clicks-too-fast)
-  - [1.5 High Score Table is not yet updating](#15-high-score-table-is-not-yet-updating)
-  - [1.5.2 How to sort HTML Table](#152-how-to-sort-html-table)
-  - [1.5.3. how to add rank column](#153-how-to-add-rank-column)
+  - [1.5. High Score Table is not yet updating](#15-high-score-table-is-not-yet-updating)
+    - [1.5.1. How to sort HTML Table](#151-how-to-sort-html-table)
+    - [1.5.2. how to add rank column](#152-how-to-add-rank-column)
 - [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
   - [2.1. Card Deck Skeleton](#21-card-deck-skeleton)
     - [2.1.1. Responsive grid is falling off the horizontal viewport in desktop view](#211-responsive-grid-is-falling-off-the-horizontal-viewport-in-desktop-view)
@@ -582,7 +582,7 @@ if (!hasFlippedCard) { //"!"" references the opposite of hasFlippedCard. In the 
 }
 ```
 
-## 1.5 High Score Table is not yet updating
+## 1.5. High Score Table is not yet updating
 
 <div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
 
@@ -939,7 +939,7 @@ Result: High Score Table is now pushing, with no sense of rank or order.
 
 <div align=center><img src="assets/media/documentation/color-red-line-break.png" width="800"></div>
 
-## 1.5.2 How to sort HTML Table 
+### 1.5.1. How to sort HTML Table 
 
 <div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
 
@@ -962,7 +962,7 @@ solution:
 Articles consulted: 
 -xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-## 1.5.3. how to add rank column
+### 1.5.2. how to add rank column
 
 <div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
 ![](assets/media/issues/2023-09-07-19-27-44.png)

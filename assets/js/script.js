@@ -424,11 +424,6 @@ document.getElementById('submitNameBtn').addEventListener('click', function() {
   showHighScores(); // Show the high scores
 });
 
-// Javascript to record the score
-
-const highScoreString = localStorage.getItem(HIGH_SCORES);
-const highScores = JSON.parse(highScoreString) ?? [];
-const lowestScore = highScores[NO_OF_HIGH_SCORES - 1]?.score ?? 0;
 
 // Get the tbody element by its id
 const tbody = document.getElementById('highScoreTable');
@@ -448,16 +443,25 @@ function showHighScores() {
 
   removeAllChildNodes(highScoreTableBody); // Remove all the child nodes from the table body.
 
+  let previousScore = null; // Initialize the previous score variable
+  let currentRank = 0; // Initialize the current rank variable
+
   // Go through the sorted scores and add them to the table using forEach () method
   sortedScores.forEach((score, rank) => {
+    if (score.score !== previousScore) {
+      currentRank = rank + 1; // Update the current rank if the score is different from the previous score
+    }
+
     const row = document.createElement('tr');
     row.innerHTML = `
-      <td>${rank + 1}</td>
+      <td>${currentRank}</td>
       <td>${score.name}</td>
       <td>${score.score}</td>
-    `; // Uses template literals to replace the expression with the rank, name and score.
+    `; // Uses template literals to replace the expression with the rank, name, and score.
 
     highScoreTableBody.appendChild(row); // Add the row to the table body. The appendChild() method appends a node (element) as the last child of an element.
+
+    previousScore = score.score; // Update the previous score for the next iteration
   });
 }
 // Function removes all the child nodes from parent element. The while() loop loops through a block of code as long as a specified condition inside the brackets is true.
