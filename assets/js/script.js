@@ -434,26 +434,26 @@ function showHighScores() {
   const highScores = JSON.parse(localStorage.getItem('highScores')) ?? {};
   const sortedScores = [];
 
-  // Create an array of objects from the highScores object for sorting
+  // Create an array of objects from the highScores object for sorting using the for...in loop
   for (const [key, value] of Object.entries(highScores)) {
     sortedScores.push({ name: key, score: value });
   }
 
-  // Sort the scores in descending order based on score
+  // Sort the scores in descending order based on score using the sort () method
   sortedScores.sort((a, b) => b.score - a.score);
 
   removeAllChildNodes(highScoreTableBody);
 
-  for (const [key, value] of Object.entries(highScores)) {
-    console.log(`${key}: ${value}`);
+  // Go through the sorted scores and add them to the table using forEach () method
+  sortedScores.forEach((score, index) => {
     const row = document.createElement('tr');
     row.innerHTML = `
       <td>${1}</td>
-      <td>${key}</td>
-      <td>${value}</td>
+      <td>${score.name}</td>
+      <td>${score.score}</td>
     `;
     highScoreTableBody.appendChild(row);
-  };
+  });
 }
 
 function removeAllChildNodes(parent) {
