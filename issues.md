@@ -824,15 +824,15 @@ const newScore = {  $('#turns-left-count').text(), $('#playerName').val(), };
 
 ***
 
-Previous steps had been mislead by expecting localStorage to function as a js or JSON file.
+*Previous steps had been mislead by expecting localStorage to function as a js or JSON file.*
 
-The key turning point to getting the high score feature working was understanding the role of localStorage as an API, which I learnt first through my mentor and then through W3 Schools.
+*The key turning point to getting the high score feature working was understanding the role of localStorage as an API, which I learnt first through my mentor and then through W3 Schools.*
 
 ***
 
 <br>
 
-1. remove localstorage.js and use ```localStorage.getItem()```
+9. remove localstorage.js and use ```localStorage.getItem()```
 
 ```js
   const highScores = JSON.parse(localStorage.getItem('highScores')) ?? {};
@@ -943,10 +943,24 @@ Result: High Score Table is now pushing, with no sense of rank or order.
 
 <div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
 
-
 ![](assets/media/issues/2023-09-07-19-27-44.png)
 
 </details></div>
+
+solution:
+
+```js
+ // Create an array of objects from the highScores object for sorting using the for...in loop
+  for (const [key, value] of Object.entries(highScores)) {
+    sortedScores.push({ name: key, score: value });
+  }
+
+  // Sort the scores in descending order based on score using the sort () method
+  sortedScores.sort((a, b) => b.score - a.score);
+```
+
+Articles consulted: 
+-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ## 1.5.3. how to add rank column
 
@@ -969,7 +983,7 @@ function showHighScores() {
   // Sort the scores in descending order based on score using the sort () method
   sortedScores.sort((a, b) => b.score - a.score);
 
-  removeAllChildNodes(highScoreTableBody);
+  removeAllChildNodes(highScoreTableBody); // Remove all the child nodes from the table body.
 
   // Go through the sorted scores and add them to the table using forEach () method
   sortedScores.forEach((score, rank) => {
@@ -978,8 +992,9 @@ function showHighScores() {
       <td>${rank + 1}</td>
       <td>${score.name}</td>
       <td>${score.score}</td>
-    `;
-    highScoreTableBody.appendChild(row);
+    `; // Uses template literals to replace the expression with the rank, name and score.
+
+    highScoreTableBody.appendChild(row); // Add the row to the table body. The appendChild() method appends a node (element) as the last child of an element.
   });
 }
 ```

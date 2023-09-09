@@ -95,6 +95,7 @@ h5 {font-size: 0.7rem;/*reduce font size*/}
 .grey {color: var(--grey);}
 .lightgrey {color: var(--lightgrey);}
 .white {color: var(--white);}
+.complementary {color: var(--complementary);}
 .background-brand-color {background-color: var(--brand-color);}
 .background-color {background-color: var(--background-color);}
 .background-harmonious-bold {background-color: var(--harmonious-bold);}
@@ -107,6 +108,25 @@ h5 {font-size: 0.7rem;/*reduce font size*/}
 .background-grey {background-color: var(--grey);}
 .background-lightgrey {background-color: var(--lightgrey);}
 .background-white {background-color: var(--white);}
+
+/* ---------------SURFACE PLANE - BACKGROUND IMAGE---------------*/
+
+#background-image-jungle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.8;
+  filter: blur(1px);
+}
+
+.gameplay-display-grid {
+  z-index: -1;
+}
+
 
 /*---------------SURFACE PLANE - COLORS---------------*/
 
@@ -422,7 +442,6 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 99;
 } 
 
 @media screen and (max-width:410px) {
@@ -448,7 +467,6 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    z-index: 99;
     margin-right: 1rem;
   } 
 }
@@ -485,7 +503,6 @@ header {
   line-height: 41px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 99;
   animation: pulse 3.25s cubic-bezier(0.66, 0, 0, 1);
   box-shadow: 0 0 0 0 var(--harmonious-light);
 }
@@ -496,14 +513,12 @@ header {
   margin-left: calc(-4px + 1vw);
   margin: 0px 4px 14px 0px;
   color:var(--harmonious-lighter);
-  z-index:99;
 }
 
 #contact-button h6 {
   margin: 7px 0px 0px -6px;
   bottom: 0px;
   color:var(--harmonious-lighter);
-  z-index:99;
   text-align: center;
 }
 
@@ -693,6 +708,7 @@ header {
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
+    z-index: 2;
   }
   
   @media screen and (min-width: 1208px) {
