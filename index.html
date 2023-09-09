@@ -272,7 +272,7 @@
 <section id="well-done" class="modal-box">
 
   <!-- Button trigger modal -->
-<button type="button" class="btn btn-secondary well-done-modal" data-bs-toggle="modal" data-bs-target="#well-done-modal">
+<button type="button" class="btn btn-secondary well-done-modal hide" data-bs-toggle="modal" data-bs-target="#well-done-modal">
   Well done (placeholder)
 </button>
 
@@ -338,7 +338,7 @@
 
       <!--enter your name feature: invisible button and modal -->
 <!-- Enter your name button -->
-<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#enter-name-modal">
+<button type="button" class="btn btn-secondary hide" data-bs-toggle="modal" data-bs-target="#enter-name-modal">
   Enter Your Name
 </button>
 
@@ -359,7 +359,7 @@
           </div>
         </form>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer centered">
         <!-- Add a button to submit the name -->
         <button type="button" class="btn btn-primary" id="submitNameBtn">Submit</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -398,8 +398,8 @@
           </tbody>
         </table>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-primary" id="high-score-play-again" data-bs-dismiss="modal">Play Again</button>
       </div>
     </div>
   </div>
