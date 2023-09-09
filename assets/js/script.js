@@ -384,6 +384,29 @@ function restartGame() {
 //??? Has user pressed close button???(yes)
 // ...then close modal box
 
+  // Display all 16 .win-demo cards in a random CSS style order
+  let winDemo = document.querySelectorAll(".win-demo");
+  let winDemoArray = Array.from(winDemo);
+
+  // Create a new array to store the shuffled cards
+  let shuffledCards = [];
+  
+  // Shuffle the cards using a Fisher-Yates shuffle
+  while (winDemoArray.length > 0) {
+    const randomIndex = Math.floor(Math.random() * winDemoArray.length); // Pick a random index
+    const card = winDemoArray.splice(randomIndex, 1)[0]; // Remove the card from the original array
+    shuffledCards.push(card); // Add the card to the new array
+  }
+
+  // Append the shuffled cards back to the container with line breaks
+  let container = document.querySelector("#howtoplay .modal-body");
+  shuffledCards.forEach(function (card, index) {
+    container.appendChild(card);
+    if ((index + 1) % 4 === 0) {
+      container.appendChild(document.createElement("br"));
+    }
+  });
+
 // ----------------- Well done modal box -----------------
 
 showWellDoneModal = () => {

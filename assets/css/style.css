@@ -689,10 +689,16 @@ header {
   align-items: center;
   margin: 2em auto 2em auto;
 }
-/*---------------WELL DONE FEATURE SKELETON---------------*/
 
-/*---------------HOW TO PLAY SKELETON---------------*/
+/*---------------MODAL BUTTONS SKELETON---------------*/
 
+#how-to-play-close-btn {
+  margin: 1rem auto auto;
+}
+
+.win-demo {
+  margin: 0.2rem;
+}
 
 /*---------------FOOTER FEATURE SKELETON---------------
   ---------------Elements = footer-small-print, footer icons ---------------*/

@@ -27,20 +27,20 @@
   <!--header buttons-->
 <header id="logo-header">
   
-    <img src="assets/media/crocodile-sprite/text-background.svg" id="logo-text-background" class="logo-layer">
+    <img alt="logo-text-background" src="assets/media/crocodile-sprite/text-background.svg" id="logo-text-background" class="logo-layer">
     
   <!--sprites are placed here-->
-    <img src="assets/media/crocodile-sprite/regular.png" id="crocodile-regular" class="logo-layer stack-layer">
+    <img alt="logo-layer" src="assets/media/crocodile-sprite/regular.png" id="crocodile-regular" class="logo-layer stack-layer">
   
-    <img src="assets/media/crocodile-sprite/joy.png" id="crocodile-joy" class="logo-layer hide-sprite stack-layer">
-    <img src="assets/media/crocodile-sprite/joy-2.png" id="crocodile-joy-2" class="logo-layer hide-sprite stack-layer">
-    <img src="assets/media/crocodile-sprite/joy-3.png" id="crocodile-joy-3" class="logo-layer hide-sprite stack-layer">
+    <img alt="logo-layer" src="assets/media/crocodile-sprite/joy.png" id="crocodile-joy" class="logo-layer hide-sprite stack-layer">
+    <img alt="logo-layer" src="assets/media/crocodile-sprite/joy-2.png" id="crocodile-joy-2" class="logo-layer hide-sprite stack-layer">
+    <img alt="logo-layer" src="assets/media/crocodile-sprite/joy-3.png" id="crocodile-joy-3" class="logo-layer hide-sprite stack-layer">
   
-    <img src="assets/media/crocodile-sprite/shock.png" id="crocodile-shock" class="logo-layer hide-sprite stack-layer">
-    <img src="assets/media/crocodile-sprite/shock-2.png" id="crocodile-shock-2" class="logo-layer hide-sprite stack-layer">
-    <img src="assets/media/crocodile-sprite/shock-3.png" id="crocodile-shock-3" class="logo-layer hide-sprite stack-layer">
+    <img alt="logo-layer" src="assets/media/crocodile-sprite/shock.png" id="crocodile-shock" class="logo-layer hide-sprite stack-layer">
+    <img alt="logo-layer" src="assets/media/crocodile-sprite/shock-2.png" id="crocodile-shock-2" class="logo-layer hide-sprite stack-layer">
+    <img alt="logo-layer" src="assets/media/crocodile-sprite/shock-3.png" id="crocodile-shock-3" class="logo-layer hide-sprite stack-layer">
   
-    <img src="assets/media/crocodile-sprite/text-foreground.svg" id="logo-text-foreground" class="logo-layer stack-layer">
+    <img alt="logo-layer" src="assets/media/crocodile-sprite/text-foreground.svg" id="logo-text-foreground" class="logo-layer stack-layer">
     </header>
 
 
@@ -75,11 +75,9 @@
     
     <div id="contact-button" class="container-button ">
       <a href="mailto:contact@crocodilekingdom.co.uk" target="_blank" rel="noopener noreferrer"> 
-      <img src="assets/media/icons/contact.svg" alt="contact" class="contact-icon"></a>
+      <img alt="contact-icon" src="assets/media/icons/contact.svg" alt="contact" class="contact-icon"></a>
       <h6>contact</h6>
     </div>
-
-    </header>
 
      <!--sound files--> 
 
@@ -128,8 +126,8 @@
 
 <div id="card-deck"><!--this card deck uses display-flex, so it can be centered easily-->
   <div class="card-item-container color-grey" data-framework="A"><!-- the container is used to flip the card-->
-    <img src="assets/media/card-deck/A.svg" alt="card-A" class="card-item rounded-corner shadow card-front card-A" >
-    <img src="assets/media/card-deck/back.svg" alt="card-back" class="card-item rounded-corner shadow card-back">
+    <img alt="card-deck" src="assets/media/card-deck/A.svg" alt="card-A" class="card-item rounded-corner shadow card-front card-A" >
+    <img alt="card-deck" src="assets/media/card-deck/back.svg" alt="card-back" class="card-item rounded-corner shadow card-back">
   </div>
   <div class="card-item-container" data-framework="A" id="card-A2">
     <img src="assets/media/card-deck/A.svg" alt="card-A" class="card-item rounded-corner shadow card-front card-A" >
@@ -196,7 +194,7 @@
   <button class="btn btn-primary rounded-corner shadow restart-function" id="restart-button">Restart</button>
 </div>
 
-<!--------------------- How to play feature ------------------------>
+<!-- How to play feature -->
 <section id="how-to-play" class="modal-box">
 
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#howtoplay">
@@ -210,13 +208,13 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <h1>How to play</h1><br><br>
+          <h2>How to play</h2><br><br>
           <h3>Try to get a matching pair of cards by remembering your previous turns.✅ </h3><br>
-          <!---this line shows a demo of MATCH + MATCH = HAPPY -->
+          <!---this line shows a demo of MATCH + MATCH -->
           <img src="assets/media/card-deck/G.svg" alt="match" class="match-demo rounded-1 shadow-sm" width="100">
           <img src="assets/media/card-deck/G.svg" alt="match" class="match-demo rounded-1 shadow-sm" width="100"><br><hr>
           <h3>Try not to get a mismatch.❌<br> Remember, you only have 40 turns! </h3><br>
-          <!---this line shows a demo of MATCH + MISMATCH = SAD -->
+          <!---this line shows a demo of MATCH + MISMATCH -->
           <img src="assets/media/card-deck/G.svg" alt="match" class="mismatch-demo rounded-1 shadow-sm" width="100">
           <img src="assets/media/card-deck/H.svg" alt="mismatch" class="mismatch-demo rounded-1 shadow-sm" width="100">
 
@@ -241,11 +239,6 @@
           <img src="assets/media/card-deck/G.svg" alt="G" class="win-demo rounded-1 shadow-sm" width="50">
           <img src="assets/media/card-deck/H.svg" alt="H" class="win-demo rounded-1 shadow-sm" width="50">
           </div>
-          <style>
-            .win-demo {
-              margin: 0.2rem;
-            }
-          </style>
 
           
         </div>
@@ -254,11 +247,6 @@
           <button type="button" id="how-to-play-close-btn" class="btn btn-primary continue close-modal" data-bs-dismiss="modal" aria-label="Close">Let's Play</button>
           <!--this button closes the modal with bootstrap-->
         </div>
-        <style>
-          #how-to-play-close-btn {
-            margin: 1rem auto auto;
-          }
-        </style>
         <br>
       </div>
     </div>
@@ -282,7 +270,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <h1>Well Done!😊</h1><br><br>
+        <h2>Well Done!😊</h2><br><br>
         <img src="assets/media/trophy.svg" alt="trophy" class="trophy-icon" width="399"><br><br>
 
         <h2>You completed the game in <br>
@@ -321,7 +309,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <h1>You lost this time 😿</h1><br><br>
+              <h2>You lost this time 😿</h2><br><br>
               <img src="assets/media/you-lose-sad-crocodile.svg" alt="lose" class="trophy-icon" width="399"><br><br>
               <h2>Unfortunately you ran out of turns. Don't give up though!</h2>
             </div>
@@ -379,11 +367,10 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="highScoreModalLabel"></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <h1>High Score🏆</h1>
+        <h2>High Score🏆</h2>
         <!-- Display the high scores here -->
         <table class="table table-striped table-hover">
           <thead>
@@ -404,33 +391,6 @@
   </div>
 </div>
 
-      
-      <!-- <section id="welcome" class="modal-box">
-        <br>
-        <button type="button" class="btn btn-secondary hide-in-laptop-and-desktop hide" data-bs-toggle="modal" data-bs-target="#welcome-modal">
-          Welcome screen (placeholder)
-        </button>
-      
-        <div class="modal fade  " id="welcome-modal" tabindex="-1" aria-labelledby="welcome" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <h1>How to play</h1><br><br>
-                <img src="assets/media/documentation/placeholder.svg" alt="trophy" class="trophy-icon" width="399"><br><br>
-                
-              </div>
-              <div class="modal-footer-centered">
-                <button type="button" class="btn btn-primary continue close-modal" data-bs-dismiss="modal" aria-label="Close">Continue</button>
-              </div>
-              <br>
-            </div>
-          </div>
-        </div>
-        </section> -->
-
 <footer id="footer-desktop-display" class="background-color">
 <div class="footer-small-print">
   <p>
@@ -445,7 +405,7 @@
       <a href="https://www.tiktok.com/" class="grey" target="_blank" rel="noopener noreferrer"><img src="assets/media/icons/tiktok.svg" alt="icon"></a>
     </div>
     <div class="footer-row2">
-      <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer"><img src="assets/media/icons/youtube.svg" target=”_blank” alt="icon"></a>
+      <a href="https://www.youtube.com/"  target="_blank" rel="noopener noreferrer"><img src="assets/media/icons/youtube.svg" target=”_blank” alt="icon"></a>
       <a href="https://www.discord.com/" target="_blank" rel="noopener noreferrer"><img src="assets/media/icons/discord.svg" alt="icon"></a>
       <a href="https://www.slack.com/"><img src="assets/media/icons/slack.svg" alt="icon"></a>
       <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><img src="assets/media/icons/linkedin.svg" alt="icon"></a>
@@ -455,29 +415,3 @@
 </footer>
 
 </body>
-
-<script>
-  // Display all 16 .win-demo cards in a random CSS style order
-  let winDemo = document.querySelectorAll(".win-demo");
-  let winDemoArray = Array.from(winDemo);
-
-  // Create a new array to store the shuffled cards
-  let shuffledCards = [];
-  
-  // Shuffle the cards using a Fisher-Yates shuffle
-  while (winDemoArray.length > 0) {
-    const randomIndex = Math.floor(Math.random() * winDemoArray.length); // Pick a random index
-    const card = winDemoArray.splice(randomIndex, 1)[0]; // Remove the card from the original array
-    shuffledCards.push(card); // Add the card to the new array
-  }
-
-  // Append the shuffled cards back to the container with line breaks
-  let container = document.querySelector("#howtoplay .modal-body");
-  shuffledCards.forEach(function (card, index) {
-    container.appendChild(card);
-    if ((index + 1) % 4 === 0) {
-      container.appendChild(document.createElement("br"));
-    }
-  });
-</script>
-
