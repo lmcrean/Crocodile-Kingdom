@@ -1,10 +1,13 @@
 <div align="center">
 
-<img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"><img alt="placeholder" src="assets/media/favicon.ico" width="20px">
+<img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px"><img  src="assets/media/favicon.ico" width="20px">
 
-#  Memory Game with JavaScript <!-- omit in toc -->
+#  Crocodile Kingdom <!-- omit in toc -->
 
-[<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-purple?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/) [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Issues_Report-purple?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md) [![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/lmcrean/Crocodile-Kingdom?color=green)](https://github.com/lmcrean/Crocodile-Kingdom/commits/main)
+![HTML5](https://img.shields.io/badge/html5-orange.svg?style=for-the-badge&logo=html5&logoColor=orange&color=172416&Color=orange)![](https://img.shields.io/badge/css3-blue.svg?style=for-the-badge&logo=css3&logoColor=blue&color=172416&Color=blue)![](https://img.shields.io/badge/javascript-yellow.svg?style=for-the-badge&logo=javascript&logoColor=yellow&color=172416&Color=yellow) ![bootstrap 5](https://img.shields.io/badge/bootstrap5-purple.svg?style=for-the-badge&logo=bootstrap&logoColor=lightpurple&color=172416&Color=pink)![jquery](https://img.shields.io/badge/jquery-blue.svg?style=for-the-badge&logo=jquery&logoColor=blue&color=172416&Color=blue)![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&color=172416)
+
+
+[<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-2d521f?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/) [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Issues_Report-2d521f?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md) [![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/lmcrean/Crocodile-Kingdom?color=green)](https://github.com/lmcrean/Crocodile-Kingdom/commits/main)
 
 <br>
 
@@ -17,18 +20,17 @@ Crocodile Kingdom is an **animal-themed version of the classic children's memory
 
 </div>
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
-This readme introduces the key features of the project, using the framework of the 5 planes of user experience. It summarises key challenges addressed along the way and also provides credits and acknowledgesments at the end.
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div><br>
 
-An issues file is dedicated to a more specific technical account.
+This readme introduces the key features of the project, using the framework of the 5 planes of User Experience. It summarises key challenges addressed along the way and also provides credits and acknowledgesments at the end.
 
-In the issues I have logged written, video or screenshot accounts.
+An [issues.md](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md) file is dedicated to the most specific technical account of important issues and bugs that were researched and solved during the project. 
 
 ## Table of Contents <!-- omit in toc -->
 
-- [1. Features](#1-features)
+- [1. Outline of Features](#1-outline-of-features)
   - [1.1. Card Deck](#11-card-deck)
-  - [1.2. Reacting Crocodile](#12-reacting-crocodile)
+  - [1.2. Logo with Reacting Crocodile feature](#12-logo-with-reacting-crocodile-feature)
   - [1.3. Turns left Count](#13-turns-left-count)
   - [1.4. Restart Button](#14-restart-button)
   - [1.5. You Win feature](#15-you-win-feature)
@@ -41,7 +43,7 @@ In the issues I have logged written, video or screenshot accounts.
     - [2.1.1. Developer Research](#211-developer-research)
     - [2.1.2. Initial Product Research](#212-initial-product-research)
     - [2.1.3. Project Timeline](#213-project-timeline)
-    - [2.1.4. Business Strategy \& User Stories](#214-business-strategy--user-stories)
+    - [2.1.4. User Stories \& business goals](#214-user-stories--business-goals)
   - [2.2. Scope plane](#22-scope-plane)
     - [2.2.1. Scope Strategy](#221-scope-strategy)
     - [2.2.2. Mininum Viable Product features](#222-mininum-viable-product-features)
@@ -82,18 +84,19 @@ In the issues I have logged written, video or screenshot accounts.
 <div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 <div align="center">
 
-# 1. Features
+# 1. Outline of Features
 
 ## 1.1. Card Deck
-<a src="assets/media/issues/1.1.5.mp4"><img alt="placeholder" src="assets/media/issues/2023-08-15-13-14-21.png" width="300px" ></a></div>
+<a src="assets/media/issues/1.1.5.mp4"><img  src="assets/media/issues/2023-08-15-13-14-21.png" width="300px" ></a></div>
 
-The Card Deck functions as the classic Memory Game, where the player has to try and match pairs of cards together while never turning more than two cards at once. The game challenges the player's memory skills. *The player wins the game when all the cards are flipped.*
+The Card Deck functions as the classic Memory Game, where the player has to try and match pairs of cards together while never turning more than two cards at once. *The player wins the game when all the cards are flipped.*
 - As the player turns the cards, the logic checks if there's a match or not.
 - As the player turns the cards, the rest of the board is temporarily locked so the player can't cheat.
 - When the player gets a match, those cards stay flipped over and locked.
 - When the player gets a mismatch, the cards flip back over after 2 seconds.
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+***
+
 <i>
 
 Using embedded JS functions, the card deck is connected to other features
@@ -109,28 +112,35 @@ Using embedded JS functions, the card deck is connected to other features
 - When the player matches all 8 sets of cards, the You Win modal appears.
 </i>
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
 
-## 1.2. Reacting Crocodile
+## 1.2. Logo with Reacting Crocodile feature
 
-<img alt="Reacting crocodile" src="assets/media/documentation/feature-crocodile-reacts.gif">
+<img alt="Reacting crocodile" src="assets/media/documentation/feature-crocodile-reacts.gif" width=400></div>
 
-The crocodile reacts to the player's actions. 
-- He is happy when the player gets a match.
-- He is suprised when the player gets a mismatch.
+The crocodile reacts to the player's actions, creating an engaging and entertaining effect for the player. 
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+- When the player gets a match, the crocodile reacts with a happy reaction. 
+  - *This reaction is selected from a random array of "Happy" reactions.*
+- When the player gets a mismatch, the crocodile reacts with a suprised reaction. 
+  - *This reaction is selected from a random array of "Suprised" reactions.*
+
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
+
 ## 1.3. Turns left Count
-<img alt="placeholder" src="assets/media/documentation/features-turns-left.gif" width="300px" >
+<img  src="assets/media/documentation/features-turns-left.gif" width="300px" ></div>
 
-- The turns start at 40, and count down each time the player attempts to get a match
-- When the player reaches 40 turns, the you lose modal appears.
+The player can clearly see how many turns they have left, in a fun and dynamic way.
+
+- The "turns left" starts at 40, and counts downwards each time the player attempts to get a match and misses.
+- If all 40 turns are taken, then the you lose modal appears.
 - If the player gets a match, they are rewarded by not losing any turn left.
+- The "turns left" is visualised with a progress bar.
 
 <div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 
 ## 1.4. Restart Button 
-<img alt="placeholder" src="assets/media/issues/1.3.gif" width="300px" >
+<img  src="assets/media/issues/1.3.gif" width="300px" >
 
 When the player clicks on the restart button, the following happens:
 - all cards flip back over
@@ -138,44 +148,51 @@ When the player clicks on the restart button, the following happens:
 
 The restart button is also embedded in the You Win and You Lose feature.
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
 
 ## 1.5. You Win feature
-<img alt="placeholder" src="assets/media/issues/feature-well-done.gif" width="300px">
+<img  src="assets/media/issues/feature-well-done.gif" width="300px"></div>
 
-When all the cards are flipped, the You Win modal appears. It displays the number of turns taken and remaining, and a restart button. It uses the wording "well done" to encourage the player.
+If the player matches all 8 pairs, they are praised with a well done message that summarises their progress and offers to record their high score.
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+- When all the cards are flipped, the You Win modal appears. 
+- It displays the player's number of turns taken and remaining turns left.
+- From here, the player navigate the buttons to either restart or record their high score.
+
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
 
 ## 1.6. You Lose feature
-<img alt="placeholder" src="assets/media/issues/feature-you-lost.gif" width="300px" >
+<img  src="assets/media/issues/feature-you-lost.gif" width="300px" ></div>
 
-When turns run out to 0, the You Lost modal appears.
+To introduce challenge to the game, it ends if the player exceeds 40 turns.
 
-The feature provides a restart button, and uses the wording to encourage the player to try again.
+- The feature provides a restart button to restart the game.
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
 
 ## 1.7. How to play feature
 
-<img src="assets/media/issues/2023-09-01-12-37-29.png" width=400>
+<img src="assets/media/issues/2023-09-01-12-37-29.png" width=400></div>
 
 The How to play feature explains the rules of the game. 
 
-- it uses the Fisher Yates algorthim to shuffle the cards in the demo.
+- it displays clear illustrations for the player to follow.
+- Like the card game itself, it shuffles the deck of matched cards.
 
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
 
 ## 1.8. Floating buttons header
 
-![](assets/media/issues/2023-09-01-12-38-49.png)
+![](assets/media/issues/2023-09-01-12-38-49.png)</div>
 
 The floating buttons header contains a music button, a sound effect button, and a contact button. 
 
+<div align=center>
+
 ### 1.8.1. SFX button <!-- omit in toc -->
 
-<img src="assets/media/documentation/feature-sfx-animation.gif">
+<img src="assets/media/documentation/feature-sfx-animation.gif"></div>
 
 The sound effect button starts on mute, and the player can choose to turn them on.
 
@@ -188,22 +205,29 @@ SFX are included for the following events:
 
 The SFX button animates.
 
+<div align=center>
 
 ### 1.8.2. Music button <!-- omit in toc -->
 
 ![Alt text](image.png)
 
+</div>
+
 The music button starts on mute, and the player can choose to turn it on.
 
 It plays a loop of relaxing music that 5 year olds might enjoy.
 
-The music button animated just like the SFX button.
+The music button is animated just like the SFX button.
+
+<div align=center>
 
 ### 1.8.3. Contact button <!-- omit in toc -->
 
 ![](assets/media/issues/2023-09-01-12-35-13.png)
 
-The contact button opens a new tab using mailto:.
+</div>
+
+The contact button opens a new tab using ```mailto:```.
 
 <div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 
@@ -215,11 +239,11 @@ There is a footer with social media links, all of which open in a new tab.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
-
-</div>
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
 
 # 2. UX Development Planes & Manual Testing
+
+</div>
 
 **The 5 UX development planes were used as an efficient framework for documenting the project's intentions.** 
 
@@ -237,12 +261,15 @@ Using the latter 3 UX Planes as a guideline:
 - **For the Skeleton plane, CSS positioning and responsivity to viewport width**, key breakpoints being at mobile view, tablet view (768px), laptop view (1208px) and desktop view (1728px+). 
 - **For the Surface plane, design choices through vector graphics, typography, color and sound** that serve the user stories and elicit a positive emotional response. CSS was the key programming language and Canva was used for rendering graphic illustrations.
 
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
 
 ## 2.1. Strategy Plane
 
+</div>
+
 The overall strategy was to develop a memory game over 6 weeks that would appeal to 5 year olds.
 
-**the developer chose to create a memory game**
+**The rational for selecting such a memory game was**
   - it had lots of resources available, making it achievable in the time frame
   - it offered front-end opportunities with Javascript
 
@@ -250,7 +277,7 @@ The overall strategy was to develop a memory game over 6 weeks that would appeal
 
 <details>
 <summary>
-The developer researched these areas of the Comparitative programming:</summary>
+click here to see the areas of the Comparitative programming that were researched:</summary>
 
 - Variables. In Javascript, variables are used to store data values. Variables are declared with the ```var``` keyword. The ```=``` sign is used to assign values to variables. In this project.
 - Core Data types, such as **strings**, **float** or real, **integers**, **booleans**. In some situations undefined or null is appropriate.
@@ -267,7 +294,7 @@ The developer researched these areas of the Comparitative programming:</summary>
 </details>
 <br>
 <details>
-<summary>The Developer then researched these areas of the Javascript:</summary>
+<summary>click here to see the initial Javascript methods that were researched:</summary>
 
 - var, let and const variables. In Javascript, variables are used to store data values. Variables are declared with the ```var``` keyword. The ```=``` sign is used to assign values to variables. In this project.
 - $ symbol. In Javascript, the $ symbol is used to select an element from the DOM. In this project, the $ symbol was used to select the elements from the DOM, and to manipulate the elements.
@@ -280,6 +307,8 @@ The developer researched these areas of the Comparitative programming:</summary>
 The Developer then tested a [walkthrough project of a memory game](https://github.com/code-sketch/memory-game), using event listeners, functions, loops, arrays, objects, and DOM manipulation.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 
 ### 2.1.2. Initial Product Research
 This project had the intentional advantage of plenty existing resources of high relevance. 
@@ -298,6 +327,8 @@ The following resources and repositories were researched.
 It was crucial for this project to choose a memory game that was achievable in the time frame, and that had a lot of resources available.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 
 ### 2.1.3. Project Timeline
 
@@ -341,19 +372,22 @@ The 6 week timeline for the project was as follows:
 
 - Surface Design Tweaks
 - Documentation
+- Scoreboard
 
 The project was completed on Saturday 9th September 2023.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-### 2.1.4. Business Strategy & User Stories
+***
 
-The business goals were to create a simple memory game that was fun and engaging for the player. The target audience was 5 year olds, and it could be assumed that they have never played a memory game before.
+### 2.1.4. User Stories & business goals
+
+The business goals were to create a simple memory game that was fun and engaging for the player. The target audience was 5 year olds, and it could be assumed that they have never played a memory game before and may need help understanding the rules.
 
 <div align="center"><h3> User Stories testing</h3>
 
 
-<img alt="placeholder" src="assets/media/documentation/userimage.svg" width="300px" >
+<img  src="assets/media/documentation/userimage.svg" width="300px" >
  </div>
 
 
@@ -362,15 +396,18 @@ The business goals were to create a simple memory game that was fun and engaging
   **As a player, I need to an engaging feedback loop that suggests how I'm doing as I play the game.**<i>
   - *the turn's left feature counts down after each turn*
     - when they player reaches 0 turns, the you lost modal appears
+    - it is visualised with a progress bar
   -  *if there's a match...*
      -  *the cards stay flipped over, allowing the player to see how many turns remain*
      -  *confetti appears when the player gets a match*
      -  *a positive "bell chime" plays*
      -  the crocodile reacts with a happy face
+        -  this reaction is selected from a random array of "Happy" reactions
   -  *if there's a mismatch...*
      -  *the cards flip back after a moment*
      -  *a buzz sound effect plays*
      -  the crocodile reacts with a suprised face
+        -  this reaction is selected from a random array of "Suprised" reactions
   - *when the player wins...*
     - a well done message appears with a trophy icon
     - a celebratory sound effect plays
@@ -402,7 +439,8 @@ The business goals were to create a simple memory game that was fun and engaging
 
 **As a player, I need an engaging level of challenge**
   - *The card deck shuffles each time the player restarts the game*
-  - *the player is told their previous score and is encouraged to beat it*
+  - *in the You've Won modal, the player is told their previous score and is encouraged to beat it*
+  - *Their is a high score board that the player can record their score on and try to beat.*
 
 **As a player, I want to be able to contact the business if I have any questions, as well as share the game easily with my friends.**
   - *A footer is displayed at the bottom of the page, with a mailto link that .*
@@ -414,9 +452,12 @@ The business goals were to create a simple memory game that was fun and engaging
 
 For the scope plane, the developer drafted a mininum viable product that informed a scope of features designed to meet the needs of new players.
 
-A mininum viable product is a product with just enough features to satisfy early customers, and to provide feedback for future development. 
+
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
+
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+
 
 ### 2.2.1. Scope Strategy
 
@@ -429,7 +470,11 @@ The project was researched, conceived and designed in 6 weeks. Important limitat
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+
 ### 2.2.2. Mininum Viable Product features
+
+A mininum viable product is a product with just enough features to satisfy early customers, and to provide feedback for future development.
 
 <i>
 The minumum viable product of the memory game was
@@ -445,22 +490,29 @@ The minumum viable product of the memory game was
 - a logo and a contact button
 </i>
 
+***
+
+
 ### 2.2.3. Unique Selling Point features
 
+The unique selling point features were designed to meet the needs of new players, and to make the game more engaging and fun.
+
 <i>
+
 - Confetti
 - Sound effects
 - Music
-- Animated Crocodile
-- Animations
+- Animated Crocodile reactions
+- Animations for the cards
+- Score board with recorded user name
 - a footer with social media links
 </i>
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
+***
 
 ### 2.2.4. Scope of Features
-The following features were designed to meet the needs of new playerssometimes appearing more than once for the purpose of both making the website easy to navigate and consistent branding design.
 
 The full scope and function of features is discussed in the opening [Features](#1-features) section.
 
@@ -472,6 +524,8 @@ The full scope and function of features is discussed in the opening [Features](#
 
 This Structure plane summarises the structure of each feature by highlighting most essential HTML, CSS and JS functions for the feature to work. The developer also used this as a workflow for drafting in the features.
 
+***
+
 ### 2.3.1. Card Deck structure
 
 <a src="assets/media/issues/1.1.5.mp4"><img src="assets/media/issues/2023-08-15-13-14-21.png" width=400></a>
@@ -479,11 +533,14 @@ This Structure plane summarises the structure of each feature by highlighting mo
 <i>"As a player, I need the design to be accessible, easy to read with lots of visuals. As a player, I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
 JS:
-The flowchart below illustrates the logic of the card deck.
+The flowchart below illustrates the absolute most essential logic of the card deck itself without the other features.
 
-<img alt="placeholder" src="assets/media/documentation-flowchart/flowchart-mvp.svg" width="800px" >
+<img  src="assets/media/documentation-flowchart/flowchart-mvp.svg" width="800px" >
 
 START computer spawn cards, turns starts at 0:
+
+<details><summary><b>click here to see early testing of the card deck logic:</b></summary>
+
 
 <img src="https://github.com/lmcrean/Crocodile-Kingdom/assets/133490867/7a1a18e2-5314-4999-9704-49ffdfaf854f" width=400>
 
@@ -491,7 +548,7 @@ START computer spawn cards, turns starts at 0:
 
 **player clicks on first image, card appears:**
 
-<img alt="placeholder" src="assets/media/documentation/card-flip.gif" width="400px">
+<img  src="assets/media/documentation/card-flip.gif" width="400px">
 
 CSS:
 
@@ -537,7 +594,8 @@ cards.forEach(card => card.addEventListener("click", cardAppear));
 function cardAppear() { 
 this.classList.toggle("flipped-over"); // .toggle adds/removes the class of "flipped-over" on the card that it is clicked on.
 }
-```
+``` 
+</details><br>
 
 - player clicks on second image, card appears, +1 to turns:
 
@@ -553,13 +611,11 @@ this.classList.toggle("flipped-over"); // .toggle adds/removes the class of "fli
 
 - Are all the cards flipped? (yes), go to you've won feature.
 
-**Video 1 with cards shuffled correctly:**
+Successful testing results below:
 
-<a src="assets/media/issues/1.1.5.mp4"><img src="assets/media/issues/2023-08-15-13-14-21.png" width=400></a>
-
-**Video 2 presents fresh shuffle:**
-
-<a src="assets/media/issues/1.1.5b.mp4"><img src="assets/media/issues/2023-08-15-13-23-37.png" width=400></a>
+| **Video 1 with cards shuffled correctly:** | **Video 2 with cards shuffled correctly:** |
+| :---: | :---: |
+| <a src="assets/media/issues/1.1.5.mp4"><img src="assets/media/issues/2023-08-15-13-14-21.png" width=400></a> | <a src="assets/media/issues/1.1.5b.mp4"><img src="assets/media/issues/2023-08-15-13-23-37.png" width=400></a> |
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -634,7 +690,7 @@ setTimeout(() => {
 
 ### 2.3.3. Restart button structure
 
-<img alt="placeholder" src="assets/media/issues/1.3.gif" width="500px">
+<img  src="assets/media/issues/1.3.gif" width="500px">
 
 <i>"As a player, I need a new arrangement of cards each time I play the game to keep it interesting."</i>
 
@@ -664,7 +720,7 @@ function restartGame() {
 
 ### 2.3.4. Well done feature structure 
 
-<img alt="placeholder" src="assets/media/issues/feature-well-done.gif" width="400px">
+<img  src="assets/media/issues/feature-well-done.gif" width="400px">
 
 <i>"As a player, I need to receive praise for completing the game."</i>
 
@@ -731,19 +787,19 @@ Resources consulted:
 
 ### 2.3.5. How To Play structure 
 
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+<img  src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"As a player, I need to understand how to play the game."</i>
 
 ### 2.3.6. Navbar structure 
 
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+<img  src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"As a player, I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
 ### 2.3.7. Footer structure
 
-<img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="100px">
+<img  src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"I want to be able to contact the business if I have any questions, and share the game easily with my friends."</i>
 
@@ -780,7 +836,7 @@ Using amiresponsive tool:
 <img src="assets/issues/../media/issues/2-main-page.gif"></details>
 
 <details><summary>Click here to view initial Figma wireframe:</summary>
-<img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe.png" width="800px"></details><br><br>
+<img  src="assets/media/documentation-wireframe/skeleton-wireframe.png" width="800px"></details><br><br>
 </div>
 <i>
 
@@ -852,7 +908,7 @@ current state: a simple portrait view that fills mobile to desktop screen sizes.
 <details>
 <summary>Click here to view the Figma wireframe:</summary>
 
-<img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe-howtoplay.png" width="800px">
+<img  src="assets/media/documentation-wireframe/skeleton-wireframe-howtoplay.png" width="800px">
 </details>
 
 
@@ -869,7 +925,7 @@ The How To Play feature was a simple modal pop-up that would show an animated gi
 
 <details>
 <summary>Click here to view the Well Done wireframe:</summary>
-<img alt="placeholder" src="assets/media/documentation-wireframe/skeleton-wireframe-welldone.png" width="800px"></details>
+<img  src="assets/media/documentation-wireframe/skeleton-wireframe-welldone.png" width="800px"></details>
 
 </div>
 
@@ -991,13 +1047,13 @@ joy and shock below:
 
 The card deck used an animal theme, as a way to be appealing for children.
 
-|<img alt="placeholder" src="assets/media/card-deck/A.svg" width="200px">|<img alt="placeholder" src="assets/media/card-deck/B.svg" width="200px">|<img alt="placeholder" src="assets/media/card-deck/C.svg" width="200px">|<img alt="placeholder" src="assets/media/card-deck/D.svg" width="200px">|
+|<img  src="assets/media/card-deck/A.svg" width="200px">|<img  src="assets/media/card-deck/B.svg" width="200px">|<img  src="assets/media/card-deck/C.svg" width="200px">|<img  src="assets/media/card-deck/D.svg" width="200px">|
 |----|----|----|----|
-|<img alt="placeholder" src="assets/media/card-deck/D.svg" width="200px">|<img alt="placeholder" src="assets/media/card-deck/E.svg" width="200px">|<img alt="placeholder" src="assets/media/card-deck/F.svg" width="200px">|<img alt="placeholder" src="assets/media/card-deck/G.svg" width="200px">|
+|<img  src="assets/media/card-deck/D.svg" width="200px">|<img  src="assets/media/card-deck/E.svg" width="200px">|<img  src="assets/media/card-deck/F.svg" width="200px">|<img  src="assets/media/card-deck/G.svg" width="200px">|
 
 The back of the card included a box with question marks, with diagonal lines to indicate excitement.
 
-<div align=center><img alt="placeholder" src="assets/media/card-deck/back.svg" width="200px"></div>
+<div align=center><img  src="assets/media/card-deck/back.svg" width="200px"></div>
 
 <br><br>
 
@@ -1072,8 +1128,8 @@ To further improve the lighthouse score I could use more WebP images and reduce 
 
 | | Home Page |
 |---|---|
-| Mobile | ![](assets/media/issues/2023-08-25-16-10-21.png)  | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px"> | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
-| Desktop | ![](assets/media/issues/2023-08-25-16-09-54.png)| <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px"> | <img alt="placeholder" src="assets/media/documentation/placeholder.svg" width="300px">
+| Mobile | ![](assets/media/issues/2023-08-25-16-10-21.png)  | <img  src="assets/media/documentation/placeholder.svg" width="300px"> | <img  src="assets/media/documentation/placeholder.svg" width="300px">
+| Desktop | ![](assets/media/issues/2023-08-25-16-09-54.png)| <img  src="assets/media/documentation/placeholder.svg" width="300px"> | <img  src="assets/media/documentation/placeholder.svg" width="300px">
 |Timestamp| 25/8/2023 | 31st July '23 | 15th July '23 |
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
@@ -1092,7 +1148,7 @@ https://www.browserstack.com/
 
 <div align=center>
 
-[<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-purple?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/)
+[<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-2d521f?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/)
 
 </div> 
 
@@ -1118,7 +1174,7 @@ To fork the repository:
 
 # 5. Issues and Bugs
 
-[<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Issues_Report-purple?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md)
+[<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Issues_Report-2d521f?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md)
 
 Fixed issues and bugs are documented in a seperate file called [issues.md](issues.md).
 
@@ -1214,5 +1270,5 @@ I'd like to thank Seun Owonikoko, my mentor at Code Institute, for her encourage
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"><img alt="placeholder" src="assets/media/favicon.ico" width="20px"> 
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"><img  src="assets/media/favicon.ico" width="20px"> 
 </div>
