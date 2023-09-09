@@ -43,8 +43,6 @@ const crocodileShock = document.getElementById("crocodile-shock");
 const crocodileShock2 = document.getElementById("crocodile-shock-2");
 const crocodileShock3 = document.getElementById("crocodile-shock-3");
 
-const musicPlayer1 = document.getElementById('music-player-1'); // This variable selects the music-player ID from the HTML
-
 const sfxFlip = document.getElementById('sfx-flip'); // This variable selects the sfx-flip ID from the HTML
 
 const sfxFlip2 = document.getElementById('sfx-flip-2'); // This variable selects the sfx-flip2 ID from the HTML
@@ -157,7 +155,7 @@ if (!hasFlippedCard) { //"!"" references the opposite of hasFlippedCard. In the 
   secondCard = this; // "this" refers to the card that is clicked on. This would mean that the user has clicked on a card already. If the user has clicked on a card already, then run the following code.
   if (!sfxFlip2.classList.contains('sound-mute')) {
     sfxFlip2.play(); // This plays the second flip sound effect when the card is clicked on.
-  };
+  }
   checkForMatch(); // "if the user hasn't clicked on the same card twice, check for match" This function checks if the cards match...
 }
 
@@ -219,7 +217,7 @@ if (document.querySelectorAll(".flipped-over").length === cards.length) {
 // All cards are matched, so show the well-done modal
 if (!sfxWin.classList.contains('sound-mute')) { //used !, if sfxWin does not have the class sound-mute, then run the following code.
   sfxWin.play(); // This plays the flip sound effect when the card is clicked on.
-};
+}
 showWellDoneModal();
 }
 }
@@ -252,7 +250,7 @@ setTimeout(() => {
   resetCards (); // unlocks the cards so that the user can click on them again.
   if (!sfxNoMatch.classList.contains('sound-mute')) { //used !, if sfxNoMatch does not have the class sound-mute, then run the following code.
     sfxNoMatch.play(); // This plays the flip sound effect when the card is clicked on.
-  };
+  }
   },
   2000); // This sets a timer of 2 seconds before the cards flip back over.
 
@@ -391,7 +389,7 @@ function restartGame() {
 showWellDoneModal = () => {
   if (!sfxWin.classList.contains('sound-mute')) { //used !, if sfxWin does not have the class sound-mute, then run the following code.
     sfxWin.play(); // This plays the flip sound effect when the card is clicked on.
-  };
+  }
   document.getElementsByClassName("well-done-modal")[0].click(); //This function opens the well done modal box, by clicking the HTML button with the class of "well-done-modal".
 };
 
@@ -400,9 +398,9 @@ showWellDoneModal = () => {
 showYouLoseModal = () => {
   if (!sfxLose.classList.contains('sound-mute')) { //used !, if sfxLose does not have the class sound-mute, then run the following code.
     sfxLose.play(); // This plays the flip sound effect when the card is clicked on.
-  };
+  }
   document.getElementsByClassName("you-lose-modal")[0].click(); //This function opens the well done modal box, by clicking the HTML button with the class of "well-done-modal".
-}
+};
 
 // Enter your name Modal
 
@@ -423,11 +421,6 @@ document.getElementById('submitNameBtn').addEventListener('click', function() {
   $('#high-score-modal').modal('show'); // Show the "High Scores" modal
   showHighScores(); // Show the high scores
 });
-
-
-// Get the tbody element by its id
-const tbody = document.getElementById('highScoreTable');
-
 
 function showHighScores() {
   const highScores = JSON.parse(localStorage.getItem('highScores')) ?? {};

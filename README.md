@@ -33,15 +33,18 @@ An [issues.md](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md)
 [<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-2d521f?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/) [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Issues_Report-2d521f?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md) [![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/lmcrean/Crocodile-Kingdom?color=green)](https://github.com/lmcrean/Crocodile-Kingdom/commits/main)
 </div>
 
-##Table of Contents: <!-- omit in toc -->
+## Table of Contents: <!-- omit in toc -->
 
+<b>
 
-**[1. Outline of Features](#1-outline-of-features)
-[2. UX Development Planes & Manual Testing](#2-ux-development-planes--manual-testing)
-[3. Automatic Testing](#3-automatic-testing)
-[4. Deployment](#4-deployment)
-[5. Issues and Bugs](#5-issues-and-bugs)
-[6. Credits & Acknowledgements](#6-credits--acknowledgements)**
+[1. Outline of Features](#1-outline-of-features)<br>
+[2. UX Development Planes & Manual Testing](#2-ux-development-planes--manual-testing)<br>
+[3. Automatic Testing](#3-automatic-testing)<br>
+[4. Deployment](#4-deployment)<br>
+[5. Issues and Bugs](#5-issues-and-bugs)<br>
+[6. Credits & Acknowledgements](#6-credits--acknowledgements)
+
+</br>
 
 ***
 
