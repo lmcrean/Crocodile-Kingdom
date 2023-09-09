@@ -1135,12 +1135,19 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 
 The result was <b> passed </b> for HTML5.
 
+<details><summary>click here to view: HTML5 Validator Results</summary>
+
 ![](assets/media/issues/2023-08-25-21-59-31.png)
+</details>
 
 
 There were no warnings for the CSS other than Bootstrap's default styling, which cannot be changed.
 
+<details><summary>click here to view: CSS Validator Results</summary>
+
 ![](assets/media/issues/2023-09-01-13-44-42.png)
+
+</details>
 
 <details>
 <summary>Click here to view Bootstrap explanation copied from <a href="https://getbootstrap.com/docs/5.3/getting-started/browsers-devices">Bootstrap's documentation</a>

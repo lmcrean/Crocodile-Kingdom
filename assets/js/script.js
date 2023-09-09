@@ -25,7 +25,9 @@
     // ...then close modal box
 
 // ----------------- JAVASCRIPT CODE -----------------
-/*jshint esversion: 6 */
+/*jshint esversion: 11 */
+/*global $ */ //Declares Juery
+
 
 //Mute Toggle imported from https://codepen.io/giannisrig/pen/RYJPzb
 
@@ -130,6 +132,31 @@ $(document).ready(function() {
   });
 });
 
+// ----------------- Well done modal box -----------------
+
+function showWellDoneModal() {
+  if (!sfxWin.classList.contains('sound-mute')) {
+    sfxWin.play();
+  }
+  const modal = document.getElementsByClassName("well-done-modal")[0];
+  if (modal) {
+    modal.click();
+  }
+}
+
+// ----------------- You Lose modal box -----------------
+
+function showYouLoseModal() {
+  if (!sfxLose.classList.contains('sound-mute')) {
+    sfxLose.play();
+  }
+  const modal = document.getElementsByClassName("you-lose-modal")[0];
+  if (modal) {
+    modal.click();
+  }
+}
+
+
 // ----------------- User Clicks on 1st or 2nd card -----------------
 
 function cardAppear() { 
@@ -170,8 +197,13 @@ cards.forEach(card => card.addEventListener("click", cardAppear)); // .forEach l
 function checkForMatch() {
     let matchTrue = firstCard.dataset.framework === secondCard.dataset.framework; // This variable checks if the data-framework of the first card is equal to the data-framework of the second card. If they are equal, then the variable is set to true. If they are not equal, then the variable is set to false.
 
-    matchTrue ? disableCards() : flipBackCards(); // this is a ternary operator. A ternary operator is a shortcut for an if statement. If matchTrue is true, then run disableCards. If matchTrue is false, then run flipBackCards.
-  }
+if (matchTrue) {
+  disableCards();
+} else {
+  flipBackCards();
+}
+
+}
 
 function disableCards(){ //if this function is running, then the cards match.
   
@@ -187,7 +219,7 @@ crocodileJoyAppear(); // This function makes the crocodile appear happy for 2 se
 
 resetCards (); // unlocks the board so that the user can click on new cards again.
 
-updateTurnsOnly; // adds 1 to the attempts counter
+updateTurnsOnly (); // adds 1 to the attempts counter
 
 fire(0.25, {
   spread: 26,
@@ -218,6 +250,7 @@ if (document.querySelectorAll(".flipped-over").length === cards.length) {
 if (!sfxWin.classList.contains('sound-mute')) { //used !, if sfxWin does not have the class sound-mute, then run the following code.
   sfxWin.play(); // This plays the flip sound effect when the card is clicked on.
 }
+  
 showWellDoneModal();
 }
 }
@@ -407,23 +440,20 @@ function restartGame() {
     }
   });
 
-// ----------------- Well done modal box -----------------
 
-showWellDoneModal = () => {
-  if (!sfxWin.classList.contains('sound-mute')) { //used !, if sfxWin does not have the class sound-mute, then run the following code.
-    sfxWin.play(); // This plays the flip sound effect when the card is clicked on.
-  }
-  document.getElementsByClassName("well-done-modal")[0].click(); //This function opens the well done modal box, by clicking the HTML button with the class of "well-done-modal".
-};
 
 // ----------------- You Lose modal box -----------------
 
-showYouLoseModal = () => {
-  if (!sfxLose.classList.contains('sound-mute')) { //used !, if sfxLose does not have the class sound-mute, then run the following code.
-    sfxLose.play(); // This plays the flip sound effect when the card is clicked on.
+function showYouLoseModal() {
+  if (!sfxLose.classList.contains('sound-mute')) {
+    sfxLose.play();
   }
-  document.getElementsByClassName("you-lose-modal")[0].click(); //This function opens the well done modal box, by clicking the HTML button with the class of "well-done-modal".
-};
+  const modal = document.getElementsByClassName("you-lose-modal")[0];
+  if (modal) {
+    modal.click();
+  }
+}
+
 
 // Enter your name Modal
 
