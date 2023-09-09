@@ -69,8 +69,6 @@ const turnsLeftModalContainer = document.getElementById('turns-left-modal'); // 
 
 const highScoreTableBody = document.getElementById('highScoreTableBody'); // This variable selects the highScoreTable ID from the HTML, which is used to display the high scores.
 
-localStorage.setItem('highScores', JSON.stringify({}));
-
 let hasFlippedCard = false; // This variable is set to false because the card has not been clicked yet.
 
 let firstCard, secondCard; // These variables are set to undefined because the card has not been clicked yet.
@@ -414,7 +412,7 @@ document.getElementById('you-won-to-enter-name-modal').addEventListener('click',
 document.getElementById('submitNameBtn').addEventListener('click', function() {
   $('#enter-name-modal').modal('hide'); // Close the "Enter Your Name" modal
   console.log($('#playerName').val());
-  let currentHighScore = JSON.parse(localStorage.getItem('highScores')); // Get the current high scores from local storage
+  let currentHighScore = JSON.parse(localStorage.getItem('highScores')) ?? {}; // Get the current high scores from local storage
   currentHighScore[$('#playerName').val()] = $('#turns-left-count').text(); // Add the new high score to the list
   localStorage.setItem('highScores', JSON.stringify(currentHighScore)); // Save the new high scores to local storage
   console.log($('#turns-left-count').text());
@@ -431,39 +429,19 @@ const lowestScore = highScores[NO_OF_HIGH_SCORES - 1]?.score ?? 0;
 // Get the tbody element by its id
 const tbody = document.getElementById('highScoreTable');
 
-// function checkHighScore(score) {
-//   const highScores = JSON.parse(localStorage.getItem(HIGH_SCORES)) ?? [];
-//   const lowestScore = highScores[NO_OF_HIGH_SCORES - 1]?.score ?? 0;
-  
-//   if (score > lowestScore) {
-//     saveHighScore(score, highScores); // TODO
-//     showHighScores(); // TODO
-//   }
-
-//   console.log(checkHighScore);
-// }
-
-// function saveHighScore(score, highScores) {
-//   const name = prompt('You got a highscore! Enter name:');
-//   const newScore = { score, name };
-  
-//   // 1. Add to list
-//   highScores.push(newScore);
-
-//   // 2. Sort the list
-//   highScores.sort((a, b) => b.score - a.score);
-  
-//   // 3. Select new list
-//   highScores.splice(NO_OF_HIGH_SCORES); // Remove scores after the top 5
-  
-//   // 4. Save to local storage
-//   localStorage.setItem(HIGH_SCORES, JSON.stringify(highScores));
-
-//   console.log(saveHighScore);
-// };
 
 function showHighScores() {
   const highScores = JSON.parse(localStorage.getItem('highScores')) ?? {};
+  const sortedScores = [];
+
+  // Create an array of objects from the highScores object for sorting
+  for (const [key, value] of Object.entries(highScores)) {
+    sortedScores.push({ name: key, score: value });
+  }
+
+  // Sort the scores in descending order based on score
+  sortedScores.sort((a, b) => b.score - a.score);
+
   removeAllChildNodes(highScoreTableBody);
 
   for (const [key, value] of Object.entries(highScores)) {
@@ -475,20 +453,7 @@ function showHighScores() {
       <td>${value}</td>
     `;
     highScoreTableBody.appendChild(row);
-  }
-  
- // Display the high scores in the table id "highScoreTable"
-  // highScores.forEach((score, index) => {
-    
-  //   const row = document.createElement('tr');
-  //   row.innerHTML = `
-  //     <td>${index + 1}</td>
-  //     <td>${score.name}</td>
-  //     <td>${score.score}</td>
-  //   `;
-  //   tbody.appendChild(row);
-  //   console.log(showhighScoresAddtoTable);
-  // });
+  };
 }
 
 function removeAllChildNodes(parent) {

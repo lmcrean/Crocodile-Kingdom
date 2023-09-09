@@ -25,6 +25,8 @@ This page documents the most challenging issues and bugs encountered during the 
   - [1.4. SFX Button: Card-flip SFX does not always play on 2nd turn, if user clicks too fast](#14-sfx-button-card-flip-sfx-does-not-always-play-on-2nd-turn-if-user-clicks-too-fast)
   - [1.5 High Score Table is not yet updating](#15-high-score-table-is-not-yet-updating)
   - [1.5.1 Still solving High Score Table (see above), at the moment 3 new functions added to script.js but not displaying in console.log](#151-still-solving-high-score-table-see-above-at-the-moment-3-new-functions-added-to-scriptjs-but-not-displaying-in-consolelog)
+  - [1.5.2 Add rank column for high score table](#152-add-rank-column-for-high-score-table)
+  - [1.5.3. Sort HTML Table](#153-sort-html-table)
 - [2. CSS Skeleton Issues and Bugs](#2-css-skeleton-issues-and-bugs)
   - [2.1. Card Deck Skeleton](#21-card-deck-skeleton)
     - [2.1.1. Responsive grid is falling off the horizontal viewport in desktop view](#211-responsive-grid-is-falling-off-the-horizontal-viewport-in-desktop-view)
@@ -814,6 +816,21 @@ get this error message:
 ![](assets/media/issues/2023-09-07-17-00-50.png)
 
 <div align=center><img src="assets/media/documentation/color-red-line-break.png" width="800"></div>
+
+## 1.5.2 Add rank column for high score table
+
+<div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
+
+
+![](assets/media/issues/2023-09-07-19-27-44.png)
+</details>
+
+## 1.5.3. Sort HTML Table
+
+<div align=center><details><summary><b>click here to view a screen recording of the issue:</b></summary>
+
+</details>
+
 <!------------------------------------------------>
 
 # 2. CSS Skeleton Issues and Bugs
