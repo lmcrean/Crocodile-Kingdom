@@ -1723,6 +1723,12 @@ They can be summarised here:
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
+
+
+Unfixed bugs:
+
+on 10/9/2023, the showWellDoneModal function was not working. It had been working the day before when tested.
+
 <div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
 
 
