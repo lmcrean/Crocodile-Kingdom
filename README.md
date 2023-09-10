@@ -7,7 +7,7 @@
 
 <br>
 
-<img src="assets/media/issues/2023-09-09-15-31-02.png" width=500>
+<img src="assets/media/issues/2023-09-09-15-31-02.png" width=800>
 
 <br>
 
@@ -179,7 +179,8 @@ The restart button is also embedded in the You Win and You Lose feature.
 <div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
 
 ## 1.5. You Win feature
-<img  src="assets/media/issues/feature-well-done.gif" width="300px"></div>
+<img  src="assets/media/issues/2023-09-10-12-31-36.png" width="300px"></div>
+
 
 If the player matches all 8 pairs, they are praised with a well done message that summarises their progress and offers to record their high score.
 
@@ -190,7 +191,7 @@ If the player matches all 8 pairs, they are praised with a well done message tha
 <div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
 
 ## 1.6. You Lose feature
-<img  src="assets/media/issues/feature-you-lost.gif" width="300px" ></div>
+<img  src="assets/media/issues/2023-09-10-12-32-01.png" width="300px" ></div>
 
 To introduce challenge to the game, it ends if the player exceeds 40 turns.
 
@@ -200,7 +201,7 @@ To introduce challenge to the game, it ends if the player exceeds 40 turns.
 
 ## 1.7. How to play feature
 
-<img src="assets/media/issues/2023-09-01-12-37-29.png" width=400></div>
+<img src="assets/media/issues/2023-09-10-12-32-31.png" width=400></div>
 
 The How to play feature explains the rules of the game. 
 
@@ -273,16 +274,15 @@ There is a footer with social media links, all of which open in a new tab.
 
 ## 1.10. High Score feature
 
-![](assets/media/issues/2023-09-09-08-14-58.png)
-
-since this screenshot the rank now can assign equal ranks to players with the same score.
-
+![](assets/media/issues/2023-09-10-12-36-20.png)
 
 </div>
 
 The high score feature updates the high score board with the player's name and score.
 
 When the player wins the game, they are invited to record their high score.
+
+![](assets/media/issues/2023-09-10-12-33-30.png)
 
 At this point they are invited to enter their name.
  
@@ -1032,7 +1032,7 @@ function showYouLoseModal() {
 
 ### 2.3.6. How To Play structure 
 
-<img  src="assets/media/documentation/placeholder.svg" width="100px">
+click here to view the code with commentary
 
 <i>"As a player, I need to understand how to play the game."</i>
 
@@ -1075,7 +1075,7 @@ function showYouLoseModal() {
 
 ### 2.3.7. Reacting Crocodile structure 
 
-<img  src="assets/media/documentation/placeholder.svg" width="100px">
+click here to view the code with commentary<
 
 <i>"As a player, I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
@@ -1208,7 +1208,7 @@ function showWellDoneModal() {
 
 ### 2.3.9. High Score Structure
 
-<img  src="assets/media/documentation/placeholder.svg" width="100px">
+click here to view the code with commentary<
 
 <details><summary>click here to view the code with commentary</summary>
 
@@ -1313,7 +1313,7 @@ The skeleton plane covers the layout of the website, and the responsiveness to v
 Currently the main page switches between 2 views with 1 and 2 columns respectively, depending on the viewport width.
 
 Using amiresponsive tool:
-![](assets/media/issues/2023-08-25-16-17-19.png)
+![](assets/media/issues/2023-09-09-15-31-02.png)
 
 <details><summary>Click here to view Devtools inspection:</summary>
 <img src="assets/issues/../media/issues/2-main-page.gif"></details>
