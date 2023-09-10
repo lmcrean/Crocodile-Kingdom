@@ -273,6 +273,10 @@ There is a footer with social media links, all of which open in a new tab.
 
 ## 1.10. High Score feature
 
+![](assets/media/issues/2023-09-09-08-14-58.png)
+
+since this screenshot the rank now can assign equal ranks to players with the same score.
+
 
 </div>
 
