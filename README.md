@@ -45,6 +45,7 @@ An [issues.md](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md)
 [6. Credits & Acknowledgements](#6-credits--acknowledgements)
 
 </br>
+</b>
 
 ***
 
@@ -1115,9 +1116,12 @@ The gameplay buttons used a rounded rectangle motif, using a faded green from th
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
 
 # 3. Automatic Testing
+
+
+</div>
 
 The Automatic Testing achieved
 * use lighthouse testing to identify files that could be resized and accessibility that can be improved.
@@ -1131,6 +1135,8 @@ The Automatic Testing achieved
 
 ## 3.1. HTML/CSS/JS Validator Testing
 
+<img src="assets/media/documentation/validator.png">
+
 The W3C Markup Validator and W3C CSS Validator Services were used to validate the project to ensure there were no syntax errors in the project.
 
 The result was <b> passed </b> for HTML5.
@@ -1140,14 +1146,28 @@ The result was <b> passed </b> for HTML5.
 ![](assets/media/issues/2023-08-25-21-59-31.png)
 </details>
 
+***
 
-There were no warnings for the CSS other than Bootstrap's default styling, which cannot be changed.
+The style.css stylesheet passed with no warnings. There were however warnings for Bootstrap's default styling.
 
 <details><summary>click here to view: CSS Validator Results</summary>
 
 ![](assets/media/issues/2023-09-01-13-44-42.png)
 
 </details>
+
+<details>
+<summary>Click here to view Bootstrap explanation copied from <a href="https://getbootstrap.com/docs/5.3/getting-started/browsers-devices">Bootstrap's documentation</a>
+</summary>
+
+<i><br>
+In order to provide the best possible experience to old and buggy browsers, Bootstrap uses CSS browser hacks in several places to target special CSS to certain browser versions in order to work around bugs in the browsers themselves. <b>These hacks understandably cause CSS validators to complain that they are invalid.</b> In a couple places, we also use bleeding-edge CSS features that aren’t yet fully standardized, but these are used purely for progressive enhancement.<br><br>
+
+<b>These validation warnings don’t matter in practice</b> since the non-hacky portion of our CSS does fully validate and the hacky portions don’t interfere with the proper functioning of the non-hacky portion, hence why <b>we deliberately ignore these particular warnings.</b>
+
+Our HTML docs likewise have some trivial and inconsequential HTML validation warnings due to our inclusion of a workaround for a certain Firefox bug.</i></details>
+
+***
 
 JShint was passed.
 
@@ -1157,19 +1177,6 @@ JShint was passed.
 
 </details>
 
-<details>
-<summary>Click here to view Bootstrap explanation copied from <a href="https://getbootstrap.com/docs/5.3/getting-started/browsers-devices">Bootstrap's documentation</a>
-</summary>
-<i>
-In order to provide the best possible experience to old and buggy browsers, Bootstrap uses CSS browser hacks in several places to target special CSS to certain browser versions in order to work around bugs in the browsers themselves. These hacks understandably cause CSS validators to complain that they are invalid. In a couple places, we also use bleeding-edge CSS features that aren’t yet fully standardized, but these are used purely for progressive enhancement.
-
-These validation warnings don’t matter in practice since the non-hacky portion of our CSS does fully validate and the hacky portions don’t interfere with the proper functioning of the non-hacky portion, hence why we deliberately ignore these particular warnings.
-
-Our HTML docs likewise have some trivial and inconsequential HTML validation warnings due to our inclusion of a workaround for a certain Firefox bug.</i></details>
-
-JsHint was used to validate the JavaScript code. The result was <b> passed </b> with no errors.
-
-<img src="assets/media/documenation/../documentation/jshint.png" width="800">
 
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
@@ -1187,7 +1194,7 @@ To further improve the lighthouse score I could use more WebP images and reduce 
 |---|---|
 | Mobile | ![](assets/media/issues/![](assets/media/issues/2023-08-25-16-10-21.png).png)  | <img  src="assets/media/documentation/placeholder.svg" width="300px"> | <img  src="assets/media/documentation/placeholder.svg" width="300px">
 | Desktop | ![](assets/media/issues/![](assets/media/issues/2023-08-25-16-09-54.png).png)| <img  src="assets/media/documentation/placeholder.svg" width="300px"> | <img  src="assets/media/documentation/placeholder.svg" width="300px">
-|Timestamp| 25/8/2023 | 31st July '23 | 15th July '23 |
+|Timestamp| 9/9/2023 |
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -1202,11 +1209,9 @@ https://www.browserstack.com/
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
 
 # 4. Deployment
-
-<div align=center>
 
 [<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-2d521f?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/)
 
@@ -1230,11 +1235,13 @@ To fork the repository:
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
 
 # 5. Issues and Bugs
 
 [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Issues_Report-2d521f?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md)
+
+</div>
 
 Fixed issues and bugs are documented in a seperate file called [issues.md](issues.md).
 
@@ -1271,16 +1278,19 @@ They can be summarised here:
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
 
 
 # 6. Credits & Acknowledgements
+
+</div>
 
 ## 6.1. Code snippets
 
 The following code snippets were used and adapted in the project:
 
-- [Code-sketch's step by step Memory Game tutorial](https://www.youtube.com/watch?v=ZniVgo8U7ek) for a memory game with flex: display. This was used as a starting point for the project, and was adapted to suit the project's needs.
+- [Code-sketch's step by step Memory Game tutorial](https://www.youtube.com/watch?v=ZniVgo8U7ek) for the card-deck logic with CSS flex: display. This was used as a starting point for the project, and was adapted to suit the project's needs.
+- “What Is Fisher Yates Shuffle in JavaScript?” Tutorialspoint.com, 2022, www.tutorialspoint.com/what-is-fisher-yates-shuffle-in-javascript. This article was used to understand the Fisher Yates Shuffle algorithm, which was used to shuffle the cards in How to Play feature.
 - [Confetti](https://www.npmjs.com/package/canvas-confetti) by Kiril Vatev was used as a fun feature to celebrate the player's match.
 - [Mute / Unmute Button](https://codepen.io/giannisrig/pen/RYJPzb) with Material Design Animation by Giannis Riganas was used to add a mute button to the game.
 - [Bootstrap Progress Bar](https://www.w3schools.com/bootstrap/bootstrap_progressbars.asp) was used to create the progress bar for the attempts counter.
@@ -1329,13 +1339,12 @@ The following articles were used to understand the high feature, while also cons
 
 **Programming Software**
 [VSCode](https://code.visualstudio.com/) was used as my code editor
+[Gitpod](https://www.gitpod.io/) was used as my secondary code editor
 [Github](https://www.github.com/) was used for Version control
 
 **General Software**
 [Canva](https://www.canva.com/) was used for designing Graphics including the logo
 [Figma](https://www.figma.com/)  for Designing wireframe
-
-
 
 **Tools**
 [Clamp tool](https://clamp.font-size.app/) was used for developing a responsive font size with the clamp tool
@@ -1358,12 +1367,14 @@ The following articles were used to understand the high feature, while also cons
 
 **Media libraries**
 [Canva](https://www.canva.com/) was used for sourcing open-source images.
-[Pixabay](https://pixabay.com/) was used for sourcing open-source sound effects and music.
+[Pixabay](https://pixabay.com/) was used for sourcing the open-source sound effects and music.
 [Freepik](https://www.freepik.com/) was used for sourcing open-source background svg.
+[SVG Repo](https://www.svgrepo.com/) was used for the mail icon in the header and social media svgs.
 
 **Fonts**
 [Fonts2U](https://fonts2u.com) was used for Hussar Bold Web Edition
 [Cufonfonts](https://www.cufonfonts.com/font/amazing-grotesk) was used for Amazing Grotesk Demi.
+[FontAwesome](https://fontawesome.com/) was used for the mute button icon.
 
 ***
 

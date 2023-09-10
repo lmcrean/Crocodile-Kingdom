@@ -2,44 +2,49 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Crocodile Kingdom, a memory Game for kids">
-  <meta name="keywords" content="Memory Game, gameplay, children, crocodile kingdom, fun game, simple game, friendly game, games for young children, happy games, brain training, puzzle, animal themed game, card game, games for 5 year olds, games for young children, games for early years"> 
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"><!--bootstrap CSS-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script src="https://kit.fontawesome.com/c7515a9d31.js" crossorigin="anonymous" defer></script>
-  <script src="assets/js/script.js" defer></script>
-  <link rel="icon" href="assets/media/favicon.ico" type="image/x-icon">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script><!--bootstrap JS-->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><!--jQuery-->
+  <meta charset="UTF-8"> <!--for special characters-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--for IE-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--for mobile responsiveness-->
+  <title>Memory Game</title><!--title appears on browser-->
+  <meta name="description" content="Crocodile Kingdom, a memory Game for kids"> <!--Search description-->
+  <meta name="keywords" content="Memory Game, gameplay, children, crocodile kingdom, fun game, simple game, friendly game, games for young children, happy games, brain training, puzzle, animal themed game, card game, games for 5 year olds, games for young children, games for early years"> <!--Search keywords-->
+  <link rel="icon" href="assets/media/favicon.ico" type="image/x-icon"><!--favicon-->
+  <link rel="stylesheet" href="assets/css/style.css"><!--CSS stylesheet by author-->
+  <script src="assets/js/script.js" defer></script><!--script.js by author-->
+  <!------Javascript libraries:------>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" defer><!--bootstrap CSS, used for buttons, progress bar and modals-->
+  <script src="https://kit.fontawesome.com/c7515a9d31.js" crossorigin="anonymous" defer></script><!--font Awesome, used for header buttons-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><!--jQuery, used as compact syntax in buttons > soundwave graphics and high score logic-->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script><!--confetti via Node.JS-->
-  <title>Memory Game</title>
+
 </head>
 
+<!--gameplay-display-grid is used to center the card deck-->
 <body id="home-page" class="gameplay-display-grid">
 
- <img src="assets/media/background-imagery/tropical-jungle.svg" alt="background" class="background-image" id="background-image-jungle"> <!--background image-->
+  <!--background images-->
+ <img src="assets/media/background-imagery/tropical-jungle.svg" alt="background" class="background-image" id="background-image-jungle">
 
   <!--header buttons-->
 <header id="logo-header">
   
+  <!--Scroll and text-->
     <img alt="logo-text-background" src="assets/media/crocodile-sprite/text-background.svg" id="logo-text-background" class="logo-layer">
     
-  <!--sprites are placed here-->
+  <!--Regular Crocodile Mascot-->
     <img alt="logo-layer" src="assets/media/crocodile-sprite/regular.png" id="crocodile-regular" class="logo-layer stack-layer">
   
+    <!--array of Crocodile Joy Reactions-->
     <img alt="logo-layer" src="assets/media/crocodile-sprite/joy.png" id="crocodile-joy" class="logo-layer hide-sprite stack-layer">
     <img alt="logo-layer" src="assets/media/crocodile-sprite/joy-2.png" id="crocodile-joy-2" class="logo-layer hide-sprite stack-layer">
     <img alt="logo-layer" src="assets/media/crocodile-sprite/joy-3.png" id="crocodile-joy-3" class="logo-layer hide-sprite stack-layer">
   
+    <!--array of Crocodile Shock reactions-->
     <img alt="logo-layer" src="assets/media/crocodile-sprite/shock.png" id="crocodile-shock" class="logo-layer hide-sprite stack-layer">
     <img alt="logo-layer" src="assets/media/crocodile-sprite/shock-2.png" id="crocodile-shock-2" class="logo-layer hide-sprite stack-layer">
     <img alt="logo-layer" src="assets/media/crocodile-sprite/shock-3.png" id="crocodile-shock-3" class="logo-layer hide-sprite stack-layer">
   
+    <!--Text Foreground, "Crocodile" appears slightly in front of the crocodile-->
     <img alt="logo-layer" src="assets/media/crocodile-sprite/text-foreground.svg" id="logo-text-foreground" class="logo-layer stack-layer">
     </header>
 
@@ -47,10 +52,14 @@
     <!--header buttons-->
   <header id="header-buttons">
 
+    <!--Sound Effects-->
+    <!--Mute / Unmute Button with Material Design Animation by Giannis Riganas specifically provides a smooth animation from mute to soundwaves. https://codepen.io/giannisrig/pen/RYJPzb
+    -->
     <div id="sfx-button" class="container-button button">
       <div class="unmuted toggle-sfx sound-mute">
         <div class="tooltip--left sound" data-tooltip="Turn On/Off Sound">
-          <div class="sound--icon fa fa-volume-off"></div>
+          <div class="sound--icon fa fa-volume-off"></div><!--Font Awesome volume icon, https://fontawesome.com
+          -->
           <div class="sound--wave sound--wave_one"></div>
           <div class="sound--wave sound--wave_two"></div>
           <div class="sound--wave sound--wave_three"></div>
@@ -59,10 +68,14 @@
       <h6>SFX</h6>
     </div>
 
+    <!--Music-->
+    <!--Mute / Unmute Button with Material Design Animation by Giannis Riganas specifically provides a smooth animation from mute to soundwaves. https://codepen.io/giannisrig/pen/RYJPzb
+    -->
     <div id="music-button" class="container-button button">
       <div class="unmuted toggle-sound sound-mute">
         <div class="tooltip--left sound" data-tooltip="Turn On/Off Sound">
-          <div class="sound--icon fa fa-volume-off"></div>
+          <div class="sound--icon fa fa-volume-off"></div><!--Font Awesome volume icon, https://fontawesome.com
+          -->
           <div class="sound--wave sound--wave_one"></div>
           <div class="sound--wave sound--wave_two"></div>
           <div class="sound--wave sound--wave_three"></div>
@@ -71,59 +84,65 @@
       <h6>music</h6>
     </div>
     
-
-    
+    <!--contact-->
     <div id="contact-button" class="container-button ">
-      <a href="mailto:contact@crocodilekingdom.co.uk" target="_blank" rel="noopener noreferrer"> 
-      <img alt="contact-icon" src="assets/media/icons/contact.svg" class="contact-icon"></a>
+      <a href="mailto:contact@crocodilekingdom.co.uk" target="_blank" rel="noopener noreferrer"> <!--opens email in a new tab-->
+      <img alt="contact-icon" src="assets/media/icons/contact.svg" class="contact-icon"></a><!--Public Domain liscence from SVG repo, https://www.svgrepo.com/
+      -->
       <h6>contact</h6>
     </div>
 
-     <!--sound files--> 
-
-    <audio id="music-player-1">
+     <!--sound files-->
+     <!--sourced from Pixabay, https://pixabay.com/
+    --> 
+    <audio id="music-player-1"><!--Piano Melody backgrouund music, approx. 90 seconds, activated by music button-->
       <source src="assets/media/sound/simple-piano-melody-9834.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-
-    <audio id="sfx-flip" class="sound-mute">
+    <audio id="sfx-flip" class="sound-mute"><!--flip card sound effect, activated by sfx button-->
       <source src="assets/media/sound/flipcard-91468.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-    <audio id="sfx-flip-2" class="sound-mute">
+    <audio id="sfx-flip-2" class="sound-mute"> <!--flip card sound effect plays if first isn't running, activated by sfx button-->
       <source src="assets/media/sound/flipcard-91468-copy.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-    <audio id="sfx-match" class="sound-mute">
+    <audio id="sfx-match" class="sound-mute"><!--match sound effect, positive glockenspiel sound-->
       <source src="assets/media/sound/short-success-sound-glockenspiel-treasure-video-game-6346.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-    <audio id="sfx-no-match" class="sound-mute">
+    <audio id="sfx-no-match" class="sound-mute"><!--no match sound, discreet buzzer souund-->
       <source src="assets/media/sound/wronganswer-37702.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-    <audio id="sfx-win" class="sound-mute">
+    <audio id="sfx-win" class="sound-mute"><!--win sound, melody scales upwards-->
       <source src="assets/media/sound/success-1-6297.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-    <audio id="sfx-lose" class="sound-mute">
-      <source src="assets/media/sound/wronganswer-37702.mp3" type="audio/mpeg">
+    <audio id="sfx-lose" class="sound-mute"><!--lose sound, melody scales downwards-->
+      <source src="assets/media/sound/negative_beeps-6008.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
   </header>
 
+  <!--score count, counts upwards and is displayed in you-won modal at present-->
 <section id="score-count" style="display: none;">
   <h2 class="turns">Turns (placeholder): <span id="turns-count">0</span></h2>
 </section>
 
+<!--turns left feature-->
 <section id="turns-left-section">
+
+  <!--turns left counts downwards when player gets a mismatch, at 0 leads to you lose modal-->
   <h2 class="turns-left ">Turns left: <span id="turns-left-count">40</span></h2>
 
+  <!--progress bar-->
   <div class="progress shadow" style="height:2em;border-radius: 2em; margin-top:1em;">
     <div class="progress-bar " role="progressbar" style="width: 100%; border-radius: 2em; height: 2em; " aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"></div>
   </div>
 </section>
 
+<!--card deck feature-->
 <div id="card-deck"><!--this card deck uses display-flex, so it can be centered easily-->
   <div class="card-item-container color-grey" data-framework="A"><!-- the container is used to flip the card-->
     <img src="assets/media/card-deck/A.svg" alt="card-A" class="card-item rounded-corner shadow card-front card-A" >
@@ -221,7 +240,7 @@
           <br><hr>
           <h3>You win when all the cards are matched!🏆</h3><br>
           <div class="win-demo-container">
-          <!--display all 16 cards in a random order-->
+          <!--small card deck, display all 16 cards in a random order-->
           <img src="assets/media/card-deck/A.svg" alt="A" class="win-demo rounded-1 shadow-sm" width="50">
           <img src="assets/media/card-deck/B.svg" alt="B" class="win-demo rounded-1 shadow-sm" width="50">
           <img src="assets/media/card-deck/C.svg" alt="C" class="win-demo rounded-1 shadow-sm" width="50">

@@ -1,42 +1,28 @@
-// ----------------- TABLE OF CONTENTS -----------------
-// CARD DECK
-    // START - define the variables
-    // Computer Spawns Cards, rearrange at Random
-    // User Clicks on 1st orn 2nd card
-    // ???Do the cards match??? (yes)
-    // ???Do the cards match??? (no)
-
-// TURN COUNTER
-    // turns starts at 0
-    // +1 to turns
-
-// Restart button Event listener
-    //??? Has user pressed restart button???(yes)
-    // ...then all cards flip to face down.
-    // ...then reshuffle cards
-
-// How to play modal box
-    //??? Has user pressed close button???(yes)
-    // ...then close modal box
-
-// Well done modal box
-    //??? Has user pressed Play Again button???(yes)
-    // ...then run restart button function
-    // ...then close modal box
-
 // ----------------- JAVASCRIPT CODE -----------------
 /*jshint esversion: 11 */
 /*global $ */ //Declares Juery
 
-
-//Mute Toggle imported from https://codepen.io/giannisrig/pen/RYJPzb
-
-
+//This Javascript Code is structured by the following:
+//DEFINING THE VARIABLES
+//CARD DECK
+//MUTE TOGGLE
+//WELL DONE MODAL BOX (2 modal boxes are placed earlier in the code so that the functions can be called from the restart button)
+//YOU LOSE MODAL BOX
+//USER CLICKS ON 1ST OR 2ND CARD
+//CARD APPEAR
+//???DO THE CARDS MATCH??? (YES)
+//???DO THE CARDS MATCH??? (NO)
+//CROCODILE EXPRESSIONS
+//+1 TO TURNS, -1 TO TURNS LEFT
+//RESTART BUTTON EVENT LISTENER
+//HOW TO PLAY MODAL BOX
+//YOU LOSE MODAL BOX
+//ENTER YOUR NAME MODAL
+//HIGH SCORES MODAL
 
 // ----------------- DEFINE THE VARIABLES ----------------- 
-// Define the variables
 
-// the following selects the crocodile images from the HTML
+// the following selects the crocodile images , selecting the HTML ID of each crocodile image.
 const crocodileRegular = document.getElementById("crocodile-regular"); 
 const crocodileJoy = document.getElementById("crocodile-joy");
 const crocodileJoy2 = document.getElementById("crocodile-joy-2");
@@ -45,49 +31,42 @@ const crocodileShock = document.getElementById("crocodile-shock");
 const crocodileShock2 = document.getElementById("crocodile-shock-2");
 const crocodileShock3 = document.getElementById("crocodile-shock-3");
 
-const sfxFlip = document.getElementById('sfx-flip'); // This variable selects the sfx-flip ID from the HTML
+// the following selects the sound effects , selecting the HTML ID of each sound effect.
+const sfxFlip = document.getElementById('sfx-flip'); 
+const sfxFlip2 = document.getElementById('sfx-flip-2'); 
+const sfxMatch = document.getElementById('sfx-match'); 
+const sfxNoMatch = document.getElementById('sfx-no-match'); 
+const sfxWin = document.getElementById('sfx-win'); 
+const sfxLose = document.getElementById('sfx-lose'); 
 
-const sfxFlip2 = document.getElementById('sfx-flip-2'); // This variable selects the sfx-flip2 ID from the HTML
-
-const sfxMatch = document.getElementById('sfx-match'); // This variable selects the sfx-match ID from the HTML
-
-const sfxNoMatch = document.getElementById('sfx-no-match'); // This variable selects the sfx-no-match ID from the HTML
-
-const sfxWin = document.getElementById('sfx-win'); // This variable selects the sfx-win ID from the HTML
-
-const sfxLose = document.getElementById('sfx-lose'); // This variable selects the sfx-lose ID from the HTML
-
-const cards = document.querySelectorAll(".card-item-container"); // This variable selects the card-item-container class from the HTML
+const cards = document.querySelectorAll(".card-item-container"); // This variable selects the 16 card-item-container classes from the HTML
 
 const turnsContainer = document.getElementById("turns-count"); // This variable selects the attempts ID from the HTML, which is used to display the number of attempts the user has taken. It has started at 0.
+const turnsLeftContainer = document.getElementById("turns-left-count"); // This variable selects the attempts ID, which is used to display the number of attempts the user has taken. It has started at 40.
 
-const turnsLeftContainer = document.getElementById("turns-left-count"); // This variable selects the attempts ID from the HTML, which is used to display the number of attempts the user has taken. It has started at 40.
+const turnsModalContainer = document.getElementById('turns-modal'); // This variable selects the turns-modal ID, which is used to display the number of attempts the user has taken.
+const turnsLeftModalContainer = document.getElementById('turns-left-modal'); // This variable selects the turns-left-modal ID, which is used to display the number of attempts the user has taken.
 
-const turnsModalContainer = document.getElementById('turns-modal'); // This variable selects the turns-modal ID from the HTML, which is used to display the number of attempts the user has taken.
-
-const turnsLeftModalContainer = document.getElementById('turns-left-modal'); // This variable selects the turns-left-modal ID from the HTML, which is used to display the number of attempts the user has taken.
-
-const highScoreTableBody = document.getElementById('highScoreTableBody'); // This variable selects the highScoreTable ID from the HTML, which is used to display the high scores.
+const highScoreTableBody = document.getElementById('highScoreTableBody'); // This variable selects the highScoreTable ID, which is used to display the high scores.
 
 let hasFlippedCard = false; // This variable is set to false because the card has not been clicked yet.
-
 let firstCard, secondCard; // These variables are set to undefined because the card has not been clicked yet.
-
 let lockCards = false; // This variable is set to false because the card has not been clicked yet. This variable is used to prevent the user from checking more than 2 cards at a time.
 
 
 // ----------------- CARD DECK -----------------
-// ----------------- Computer Spawns cards, rearrange at random -----------------
 
 
 
+// This function shuffles the cards. It is an Immediately Invoked Function Expression (IIFE). This function is put in brackets to make it run as soon as the page loads.
+// Code-sketch's step by step Memory Game tutorial was adapted for the card game logic, https://www.youtube.com/watch?v=ZniVgo8U7ek
 (function shuffleCards () { 
   cards.forEach(card => {
     let randomPosition = Math.floor(Math.random() * 16); // This variable generates a random number between 0 and 16. Math.floor rounds the number down to the nearest whole number. Math.random generates a random number between 0 and 1. Multiplying this by 16 gives a number between 0 and 16.
     card.style.order = randomPosition; // This changes the order of the cards to the random number generated above. style.order is a CSS property that changes the order of the cards.
   });
 
-})(); // This function is put in brackets to make it run as soon as the page loads.
+})(); 
 
 function shuffleCardsAgain () { 
   cards.forEach(card => {
@@ -96,7 +75,21 @@ function shuffleCardsAgain () {
   });
 }
 
-// ----------------- Mute Toggle -----------------
+// ----------------- Mute Toggle ----------------
+
+$(document).ready(function() {
+  // When the sfx button is clicked...
+  $('.toggle-sfx').on('click', function() {
+    // Toggle the sound-mute class on the button...
+    $(this).toggleClass('sound-mute');
+    $('#sfx-flip').toggleClass('sound-mute');
+    $('#sfx-flip-2').toggleClass('sound-mute');
+    $('#sfx-match').toggleClass('sound-mute');
+    $('#sfx-no-match').toggleClass('sound-mute');
+    $('#sfx-win').toggleClass('sound-mute');
+    $('#sfx-lose').toggleClass('sound-mute');
+  });
+});
 
 $(document).ready(function() {
   // When the music button is clicked...
@@ -118,24 +111,10 @@ $(document).ready(function() {
   });
 });
 
-$(document).ready(function() {
-  // When the sfx button is clicked...
-  $('.toggle-sfx').on('click', function() {
-    // Toggle the sound-mute class on the button...
-    $(this).toggleClass('sound-mute');
-    $('#sfx-flip').toggleClass('sound-mute');
-    $('#sfx-flip-2').toggleClass('sound-mute');
-    $('#sfx-match').toggleClass('sound-mute');
-    $('#sfx-no-match').toggleClass('sound-mute');
-    $('#sfx-win').toggleClass('sound-mute');
-    $('#sfx-lose').toggleClass('sound-mute');
-  });
-});
-
+//(These 2 modal boxes are placed earlier in the code so that the functions can be called from the restart button)
 // ----------------- Well done modal box -----------------
-
 function confetti() {
-  // This is an external library that creates confetti
+  // Placeholder, this is an external library that creates confetti. Confetti by Kiril Vatev. https://www.npmjs.com/package/canvas-confetti
 }
 
 function showWellDoneModal() {
@@ -160,7 +139,8 @@ function showYouLoseModal() {
   }
 }
 
-
+// ----------------- CARD DECK GAME PLAY -----------------
+// The card deck logic of "match-unmatch" and "lock" is adapted from Code-sketch's step by step Memory Game tutorial, with several other features infused throughout https://www.youtube.com/watch?v=ZniVgo8U7ek
 // ----------------- User Clicks on 1st or 2nd card -----------------
 
 function cardAppear() { 
@@ -225,7 +205,7 @@ resetCards (); // unlocks the board so that the user can click on new cards agai
 
 updateTurnsOnly (); // adds 1 to the attempts counter
 
-fire(0.25, {
+fire(0.25, { // Confetti by Kiril Vatev. https://www.npmjs.com/package/canvas-confetti
   spread: 26,
   startVelocity: 55,
 });
@@ -264,7 +244,7 @@ var defaults = {
   origin: { y: 0.7 }
 };
 
-
+// Confetti by Kiril Vatev. https://www.npmjs.com/package/canvas-confetti
 function fire(particleRatio, opts) {
   confetti(Object.assign({}, defaults, opts, {
     particleCount: Math.floor(count * particleRatio)
@@ -380,11 +360,11 @@ function updateTurnsOnly() {
 
 // ----------------- Restart button Event listener -----------------
 
-const restartButton = document.getElementById("restart-button"); // This variable selects the restart-button ID from the HTML
+const restartButton = document.getElementById("restart-button"); // This variable selects the restart-button ID 
 
-const restartButtonFromWin = document.getElementById("restart-button-from-win"); // This variable selects the restart-button-from-win ID from the HTML
+const restartButtonFromWin = document.getElementById("restart-button-from-win"); // This variable selects the restart-button-from-win ID 
 
-const restartButtonFromLose = document.getElementById("restart-button-from-lose"); // This variable selects the restart-button-from-lose ID from the HTML
+const restartButtonFromLose = document.getElementById("restart-button-from-lose"); // This variable selects the restart-button-from-lose ID 
 
 const restartButtonFromHighScore = document.getElementById("high-score-play-again"); // ... from High Score modal
 
@@ -418,6 +398,8 @@ function restartGame() {
 }
 
 // ----------------- How to play modal box -----------------
+//The Fisher-Yates shuffle is adapted from https://www.tutorialspoint.com/what-is-fisher-yates-shuffle-in-javascript
+
 //??? Has user pressed close button???(yes)
 // ...then close modal box
 
@@ -444,8 +426,6 @@ function restartGame() {
     }
   });
 
-
-
 // ----------------- You Lose modal box -----------------
 
 function showYouLoseModal() {
@@ -458,8 +438,7 @@ function showYouLoseModal() {
   }
 }
 
-
-// Enter your name Modal
+// ----------------- Enter your name Modal -----------------
 
 // JavaScript to handle the transition from "You've Won" to "Enter Your Name"
 document.getElementById('you-won-to-enter-name-modal').addEventListener('click', function() {
@@ -478,6 +457,10 @@ document.getElementById('submitNameBtn').addEventListener('click', function() {
   $('#high-score-modal').modal('show'); // Show the "High Scores" modal
   showHighScores(); // Show the high scores
 });
+
+
+// -----------------High Scores Modal-----------------
+// This function displays the high scores in the modal.
 
 function showHighScores() {
   const highScores = JSON.parse(localStorage.getItem('highScores')) ?? {};
@@ -514,6 +497,7 @@ function showHighScores() {
     previousScore = score.score; // Update the previous score for the next iteration
   });
 }
+
 // Function removes all the child nodes from parent element. The while() loop loops through a block of code as long as a specified condition inside the brackets is true.
 function removeAllChildNodes(parent) {
   while (parent.firstChild) // 
@@ -521,21 +505,3 @@ function removeAllChildNodes(parent) {
       parent.removeChild(parent.firstChild);
   } 
 }
-
-
-// ----------------- Shake Cards -----------------
-
-// function activateShakeCards() {
-//   setInterval(shakeCards, 5000); // 5000 milliseconds (5 seconds)
-// }
-
-// function shakeCards() { //needs to select one random card and add the shake-effect class to it, then remove it after 1 second
-//   const cardBacks = document.querySelectorAll(".card-back");
-//   cardBacks.forEach(cardBack => cardBack.classList.add("shake-effect"));
-//   console.log("cards should be shaking")
-//   setTimeout(() => {
-//     cardBacks.forEach(cardBack => cardBack.classList.remove("shake-effect"));
-//   }, 1000);
-// }
-
-// activateShakeCards();
