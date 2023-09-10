@@ -361,19 +361,12 @@ function updateTurnsOnly() {
 // ----------------- Restart button Event listener -----------------
 
 const restartButton = document.getElementById("restart-button"); // This variable selects the restart-button ID 
-
 const restartButtonFromWin = document.getElementById("restart-button-from-win"); // This variable selects the restart-button-from-win ID 
-
 const restartButtonFromLose = document.getElementById("restart-button-from-lose"); // This variable selects the restart-button-from-lose ID 
-
 const restartButtonFromHighScore = document.getElementById("high-score-play-again"); // ... from High Score modal
-
 restartButton.addEventListener("click", restartGame); // This adds an event listener to the restart button. When the restart button is clicked, the function restartGame is run.
-
 restartButtonFromWin.addEventListener("click", restartGame); // This adds an event listener to the restart button. When the restart button is clicked, the function restartGame is run.
-
 restartButtonFromLose.addEventListener("click", restartGame); // This adds an event listener to the restart button. When the restart button is clicked, the function restartGame is run.
-
 restartButtonFromHighScore.addEventListener("click", restartGame); // This adds an event listener to the restart button. When the restart button is clicked, the function restartGame is run.
 
 function restartGame() {

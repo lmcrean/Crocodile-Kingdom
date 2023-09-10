@@ -77,11 +77,12 @@ Full Table of Contents: <!-- omit in toc --></div>
     - [2.3.1. Card Deck structure](#231-card-deck-structure)
     - [2.3.2. Turn count structure](#232-turn-count-structure)
     - [2.3.3. Restart button structure](#233-restart-button-structure)
-    - [2.3.4. Well done feature structure](#234-well-done-feature-structure)
-    - [2.3.5. How To Play structure](#235-how-to-play-structure)
-    - [2.3.6. Navbar structure](#236-navbar-structure)
-    - [2.3.7. Footer structure](#237-footer-structure)
-    - [2.3.8. High Score Structure](#238-high-score-structure)
+    - [2.3.4. You Win feature structure](#234-you-win-feature-structure)
+    - [2.3.5. You Lose Feature Structure](#235-you-lose-feature-structure)
+    - [2.3.6. How To Play structure](#236-how-to-play-structure)
+    - [2.3.7. Reacting Crocodile structure](#237-reacting-crocodile-structure)
+    - [2.3.8. Sound effect structure](#238-sound-effect-structure)
+    - [2.3.9. High Score Structure](#239-high-score-structure)
   - [2.4. Skeleton Plane](#24-skeleton-plane)
     - [2.4.1. Main Page Skeleton:](#241-main-page-skeleton)
     - [2.4.2. How to play Skeleton:](#242-how-to-play-skeleton)
@@ -104,9 +105,9 @@ Full Table of Contents: <!-- omit in toc --></div>
   - [6.1. Code snippets](#61-code-snippets)
   - [6.2. Stack Overflow and indirect support](#62-stack-overflow-and-indirect-support)
   - [6.3. Articles](#63-articles)
-  - [6.3. Technologies Used](#63-technologies-used)
-  - [6.4. Libraries Used](#64-libraries-used)
-  - [6.5. Acknowledgements](#65-acknowledgements)
+  - [6.4. Technologies Used](#64-technologies-used)
+  - [6.5. Libraries Used](#65-libraries-used)
+  - [6.6. Acknowledgements](#66-acknowledgements)
 
 <div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
 <div align="center">
@@ -114,7 +115,7 @@ Full Table of Contents: <!-- omit in toc --></div>
 # 1. Outline of Features
 
 ## 1.1. Card Deck
-<a src="assets/media/issues/1.1.5.mp4"><img  src="assets/media/issues/2023-08-15-13-14-21.png" width="300px" ></a></div>
+<a src="assets/media/issues/1.1.5.mp4"><img  src="assets/media/documentation/card-flip-gameplay.gif" width="800px" ></a></div>
 
 The Card Deck functions as the classic Memory Game, where the player has to try and match pairs of cards together while never turning more than two cards at once. *The player wins the game when all the cards are flipped.*
 - As the player turns the cards, the logic checks if there's a match or not.
@@ -143,7 +144,7 @@ Using embedded JS functions, the card deck is connected to other features
 
 ## 1.2. Logo with Reacting Crocodile feature
 
-<img alt="Reacting crocodile" src="assets/media/documentation/feature-crocodile-reacts.gif" width=400></div>
+<img alt="Reacting crocodile" src="assets/media/documentation/reactions.gif" width=400></div>
 
 The crocodile reacts to the player's actions, creating an engaging and entertaining effect for the player. 
 
@@ -155,7 +156,7 @@ The crocodile reacts to the player's actions, creating an engaging and entertain
 <div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
 
 ## 1.3. Turns left Count
-<img  src="assets/media/documentation/features-turns-left.gif" width="300px" ></div>
+<img  src="assets/media/documentation/progress-bar.gif" width="600px" ></div>
 
 The player can clearly see how many turns they have left, in a fun and dynamic way.
 
@@ -167,7 +168,7 @@ The player can clearly see how many turns they have left, in a fun and dynamic w
 <div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
 
 ## 1.4. Restart Button 
-<img  src="assets/media/issues/1.3.gif" width="300px" ></div>
+<img  src="assets/media/documentation/restart-button.gif" width="600px" ></div>
 
 When the player clicks on the restart button, the following happens:
 - all cards flip back over
@@ -871,6 +872,7 @@ setTimeout(() => {
   plusOneAttempts(); // adds 1 to the attempts counter
 }
 ```
+</details>
 
 ***
 
@@ -879,6 +881,23 @@ setTimeout(() => {
 <img  src="assets/media/issues/1.3.gif" width="500px">
 
 <i>"As a player, I need a new arrangement of cards each time I play the game to keep it interesting."</i>
+
+<details><summary>click here to view the variables</summary>
+
+```js
+const restartButton = document.getElementById("restart-button"); // This variable selects the restart-button ID 
+const restartButtonFromWin = document.getElementById("restart-button-from-win"); // This variable selects the restart-button-from-win ID 
+const restartButtonFromLose = document.getElementById("restart-button-from-lose"); // This variable selects the restart-button-from-lose ID 
+const restartButtonFromHighScore = document.getElementById("high-score-play-again"); // ... from High Score modal
+restartButton.addEventListener("click", restartGame); // This adds an event listener to the restart button. When the restart button is clicked, the function restartGame is run.
+restartButtonFromWin.addEventListener("click", restartGame); // This adds an event listener to the restart button. When the restart button is clicked, the function restartGame is run.
+restartButtonFromLose.addEventListener("click", restartGame); // This adds an event listener to the restart button. When the restart button is clicked, the function restartGame is run.
+restartButtonFromHighScore.addEventListener("click", restartGame); // This adds an event listener to the restart button. When the restart button is clicked, the function restartGame is run.
+```
+
+</details>
+
+<details><summary>click here to view the Logic</summary>
 
 HTML:
 
@@ -893,24 +912,36 @@ function restartGame() {
 
   cards.forEach(card => card.addEventListener("click", cardAppear)); // This adds an event listener to each card, as well as restores the "click" event listener from disablecards function (used to disable cards when the cards match). When the card is clicked, the function cardAppear is run and the card is flipped.
 
+  // this sets the progress bar back to 40
+  let progressBar = document.querySelector(".progress-bar");
+  progressBar.setAttribute("aria-valuenow", 40);
+  progressBar.style.width = "100%";
+
   setTimeout (() => { // This sets a timer of just over 0.5 seconds before the cards flip back over, without this function, the player would be able to see the flipped over cards get assigned to their secret position.
   shuffleCardsAgain (); // This reshuffles the cards.
   }, 550);
-  
-  resetCards (); // This resets the variables to their original values.
-  attemptsContainer.innerText = 0; // This resets the attempts counter to 0. 
 
-  lockCards = false; // This statement is set to false so that the player can click on the cards again.
+  resetCards (); // This resets the variables to their original values.
+  turnsContainer.innerText = 0; // This resets the attempts counter to 0. 
+  turnsLeftContainer.innerText = 40; // This resets the attempts left counter to 40.
+
+  lockCards = false; // This statement is set to false so that the user can click on the cards again.
 }
+
 ```
+
+</details>
 
 ***
 
-### 2.3.4. Well done feature structure 
+### 2.3.4. You Win feature structure 
 
 <img  src="assets/media/issues/feature-well-done.gif" width="400px">
 
 <i>"As a player, I need to receive praise for completing the game."</i>
+
+<details><summary>click here to view the code with commentary</summary>
+
 
 HTML:
 ```html
@@ -967,42 +998,293 @@ function updateTurnsAndTurnsLeft() {
 }
 ```
 
+</details>
+
 Resources consulted:
 - https://www.w3schools.com/bootstrap/bootstrap_modal.asp#:~:text=To%20trigger%20the%20modal%20window,the%20id%20of%20the%20modal
 - https://stackoverflow.com/questions/17144459/javascript-automatically-clicking-a-button
 
 ***
 
-### 2.3.5. How To Play structure 
+### 2.3.5. You Lose Feature Structure
+
+<details><summary>click here to view the code with commentary</summary>
+
+```js
+// ----------------- You Lose modal box -----------------
+
+function showYouLoseModal() {
+  if (!sfxLose.classList.contains('sound-mute')) {
+    sfxLose.play();
+  }
+  const modal = document.getElementsByClassName("you-lose-modal")[0];
+  if (modal) {
+    modal.click();
+  }
+}
+```
+
+</details>
+
+### 2.3.6. How To Play structure 
 
 <img  src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"As a player, I need to understand how to play the game."</i>
 
+<details><summary>click here to view the code with commentary</summary>
+
+```js
+// ----------------- How to play modal box -----------------
+//The Fisher-Yates shuffle is adapted from https://www.tutorialspoint.com/what-is-fisher-yates-shuffle-in-javascript
+
+//??? Has user pressed close button???(yes)
+// ...then close modal box
+
+  // Display all 16 .win-demo cards in a random CSS style order
+  let winDemo = document.querySelectorAll(".win-demo");
+  let winDemoArray = Array.from(winDemo);
+
+  // Create a new array to store the shuffled cards
+  let shuffledCards = [];
+  
+  // Shuffle the cards using a Fisher-Yates shuffle
+  while (winDemoArray.length > 0) {
+    const randomIndex = Math.floor(Math.random() * winDemoArray.length); // Pick a random index
+    const card = winDemoArray.splice(randomIndex, 1)[0]; // Remove the card from the original array
+    shuffledCards.push(card); // Add the card to the new array
+  }
+
+  // Append the shuffled cards back to the container with line breaks
+  let container = document.querySelector("#howtoplay .modal-body");
+  shuffledCards.forEach(function (card, index) {
+    container.appendChild(card);
+    if ((index + 1) % 4 === 0) {
+      container.appendChild(document.createElement("br"));
+    }
+  });
+```
+
+</details>
+
 ***
 
-
-### 2.3.6. Navbar structure 
+### 2.3.7. Reacting Crocodile structure 
 
 <img  src="assets/media/documentation/placeholder.svg" width="100px">
 
 <i>"As a player, I need the tone of the design to appear warm, entertaining and encouraging."</i>
 
+<details><summary>click here to view the code with commentary</summary>
+  
+  ```js
+  // the following selects the crocodile images , selecting the HTML ID of each crocodile image.
+const crocodileRegular = document.getElementById("crocodile-regular"); 
+const crocodileJoy = document.getElementById("crocodile-joy");
+const crocodileJoy2 = document.getElementById("crocodile-joy-2");
+const crocodileJoy3 = document.getElementById("crocodile-joy-3");
+const crocodileShock = document.getElementById("crocodile-shock");
+const crocodileShock2 = document.getElementById("crocodile-shock-2");
+const crocodileShock3 = document.getElementById("crocodile-shock-3");
+```
+
+these 2 codes are placed in the ```disableCards()``` and ```flipBackCards()``` functions respectively:
+```js
+function crocodileJoyAppear() {// This function makes the crocodile appear happy for 2 seconds. 
+  crocodileRegular.classList.toggle("hide-sprite");
+
+  // Get a random number between 1 and 3
+  const randomIndex = Math.floor(Math.random() * 3) + 1;
+
+  // Create an array of crocodile elements
+  const crocodileArray = [crocodileJoy, crocodileJoy2, crocodileJoy3];
+
+  // Toggle "hide-sprite" for the randomly chosen crocodile element
+  crocodileArray[randomIndex - 1].classList.toggle("hide-sprite");
+
+  setTimeout(() => {
+  crocodileRegular.classList.toggle("hide-sprite");
+  crocodileArray[randomIndex - 1].classList.toggle("hide-sprite");
+  },2000);// This sets a timer of 2 seconds.
+}
+
+function crocodileShockAppear() {
+  crocodileRegular.classList.toggle("hide-sprite");
+
+  // Get a random number between 1 and 3
+  const randomIndex = Math.floor(Math.random() * 3) + 1;
+
+  // Create an array of crocodile elements for the shock appearance
+  const crocodileShockArray = [crocodileShock, crocodileShock2, crocodileShock3];
+
+  // Toggle "hide-sprite" for the randomly chosen crocodile element
+  crocodileShockArray[randomIndex - 1].classList.toggle("hide-sprite");
+  
+  setTimeout(() => {
+  crocodileRegular.classList.toggle("hide-sprite");
+  crocodileShockArray[randomIndex - 1].classList.toggle("hide-sprite");
+  },2000);// This sets a timer of 2 seconds.
+}
+```
+</details>
+
 ***
 
+### 2.3.8. Sound effect structure
 
-### 2.3.7. Footer structure
+<details><summary>click here to view the code with commentary</summary>
+
+```js
+// the following selects the sound effects , selecting the HTML ID of each sound effect.
+const sfxFlip = document.getElementById('sfx-flip'); 
+const sfxFlip2 = document.getElementById('sfx-flip-2'); 
+const sfxMatch = document.getElementById('sfx-match'); 
+const sfxNoMatch = document.getElementById('sfx-no-match'); 
+const sfxWin = document.getElementById('sfx-win'); 
+const sfxLose = document.getElementById('sfx-lose'); 
+```
+
+Mute and unmute functions are established:
+
+```js
+
+// ----------------- Mute Toggle ----------------
+
+$(document).ready(function() {
+  // When the sfx button is clicked...
+  $('.toggle-sfx').on('click', function() {
+    // Toggle the sound-mute class on the button...
+    $(this).toggleClass('sound-mute');
+    $('#sfx-flip').toggleClass('sound-mute');
+    $('#sfx-flip-2').toggleClass('sound-mute');
+    $('#sfx-match').toggleClass('sound-mute');
+    $('#sfx-no-match').toggleClass('sound-mute');
+    $('#sfx-win').toggleClass('sound-mute');
+    $('#sfx-lose').toggleClass('sound-mute');
+  });
+});
+
+$(document).ready(function() {
+  // When the music button is clicked...
+  $('.toggle-sound').on('click', function() {
+    // Toggle the sound-mute class on the button...
+    $(this).toggleClass('sound-mute');
+    
+    // Get the audio element...
+    var audioElement = document.getElementById('music-player-1');
+    audioElement.volume = 0.3;
+    
+    // If the sound-mute class is present, pause the audio
+    // If the sound-mute class is not present, play the audio
+    if ($(this).hasClass('sound-mute')) {
+      audioElement.pause();
+    } else {
+      audioElement.play();
+    }
+  });
+});
+```
+
+
+The 6 sound effects are then infused throughout the functions using the if method to check if they are unmuted, for example in the showWellDoneModal() function:
+
+```js
+function showWellDoneModal() {
+  if (!sfxWin.classList.contains('sound-mute')) {
+    sfxWin.play();
+  }
+  const modal = document.getElementsByClassName("well-done-modal")[0];
+  if (modal) {
+    modal.click();
+  }
+}
+```
+
+</details>
+
+### 2.3.9. High Score Structure
 
 <img  src="assets/media/documentation/placeholder.svg" width="100px">
 
-<i>"I want to be able to contact the business if I have any questions, and share the game easily with my friends."</i>
+<details><summary>click here to view the code with commentary</summary>
 
-### 2.3.8. High Score Structure
+```js
+const highScoreTableBody = document.getElementById('highScoreTableBody'); // This variable selects the highScoreTable ID, which is used to display the high scores.
+```
 
-<img  src="assets/media/documentation/placeholder.svg" width="100px">
+```js
+
+// ----------------- Enter your name Modal -----------------
+
+// JavaScript to handle the transition from "You've Won" to "Enter Your Name"
+document.getElementById('you-won-to-enter-name-modal').addEventListener('click', function() {
+  $('#well-done-modal').modal('hide'); // Close the "You've Won" modal
+  $('#enter-name-modal').modal('show'); // Show the "Enter Your Name" modal
+});
+
+// IMPORTANT EVENT LISTENER JavaScript to handle the transition from "Enter Your Name" to "High Scores", using window localStorage to record the game score.
+document.getElementById('submitNameBtn').addEventListener('click', function() {
+  $('#enter-name-modal').modal('hide'); // Close the "Enter Your Name" modal
+  console.log($('#playerName').val());
+  let currentHighScore = JSON.parse(localStorage.getItem('highScores')) ?? {}; // Get the current high scores from local storage
+  currentHighScore[$('#playerName').val()] = $('#turns-left-count').text(); // Add the new high score to the list using JQuery
+  localStorage.setItem('highScores', JSON.stringify(currentHighScore)); // Save the new high scores to local storage
+  console.log($('#turns-left-count').text());
+  $('#high-score-modal').modal('show'); // Show the "High Scores" modal
+  showHighScores(); // Show the high scores
+});
 
 
-xxxxxxxxx
+// -----------------High Scores Modal-----------------
+// This function displays the high scores in the modal.
+
+function showHighScores() {
+  const highScores = JSON.parse(localStorage.getItem('highScores')) ?? {};
+  const sortedScores = [];
+
+  // Create an array of objects from the highScores object for sorting using the for...in loop
+  for (const [key, value] of Object.entries(highScores)) {
+    sortedScores.push({ name: key, score: value });
+  }
+
+  // Sort the scores in descending order based on score using the sort () method
+  sortedScores.sort((a, b) => b.score - a.score);
+
+  removeAllChildNodes(highScoreTableBody); // Remove all the child nodes from the table body.
+
+  let previousScore = null; // Initialize the previous score variable
+  let currentRank = 0; // Initialize the current rank variable
+
+  // Go through the sorted scores and add them to the table using forEach () method
+  sortedScores.forEach((score, rank) => {
+    if (score.score !== previousScore) {
+      currentRank = rank + 1; // Update the current rank if the score is different from the previous score
+    }
+
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${currentRank}</td>
+      <td>${score.name}</td>
+      <td>${score.score}</td>
+    `; // Uses template literals to replace the expression with the rank, name, and score.
+
+    highScoreTableBody.appendChild(row); // Add the row to the table body. The appendChild() method appends a node (element) as the last child of an element.
+
+    previousScore = score.score; // Update the previous score for the next iteration
+  });
+}
+
+// Function removes all the child nodes from parent element. The while() loop loops through a block of code as long as a specified condition inside the brackets is true.
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) // 
+  {
+      parent.removeChild(parent.firstChild);
+  } 
+}
+```
+
+</details>
+
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -1489,7 +1771,7 @@ The following articles were used to understand the high feature, while also cons
 
 ***
 
-## 6.3. Technologies Used
+## 6.4. Technologies Used
 
 **Languages**
 [HTML5](https://en.wikipedia.org/wiki/HTML5) was used for the structure and content of the website
@@ -1517,7 +1799,7 @@ The following articles were used to understand the high feature, while also cons
 
 ***
 
-## 6.4. Libraries Used
+## 6.5. Libraries Used
 
 **Programming Libraries**
 [Node.js](https://nodejs.org/en/) was used to install ```npm``` and run the Confetti feature.
@@ -1537,7 +1819,7 @@ The following articles were used to understand the high feature, while also cons
 
 ***
 
-## 6.5. Acknowledgements
+## 6.6. Acknowledgements
 I'd like to thank to the tutors at Code Institute, who provided week-to-week support throughout the project, and were always available to answer questions and provide guidance.
 
 I'd like to thank Seun Owonikoko, my mentor at Code Institute, for her support during our mentoring sessions. Especially with helping me to understand the localStorage API when I had been struggling with it for a long time.
