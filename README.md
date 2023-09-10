@@ -1521,19 +1521,22 @@ The logo was designed with simple colors with Canva Open Source imagery. The log
 
 alternative versions of the character were designed for crocodile reactions.
 
-joy and shock reaction array below:
 
-<img src="assets/media/crocodile-sprite/joy.png">
+Joy reaction array below:
 
-<img src="assets/media/crocodile-sprite/joy-2.png">
+<img src="assets/media/crocodile-sprite/joy.png" width="300">
 
-<img src="assets/media/crocodile-sprite/joy-3.png">
+<img src="assets/media/crocodile-sprite/joy-2.png" width="300">
 
-<img src="assets/media/crocodile-sprite/shock.png">
+<img src="assets/media/crocodile-sprite/joy-3.png" width="300">
 
-<img src="assets/media/crocodile-sprite/shock-2.png">
+Shock reaction array below:
 
-<img src="assets/media/crocodile-sprite/shock-3.png">
+<img src="assets/media/crocodile-sprite/shock.png" width="300">
+
+<img src="assets/media/crocodile-sprite/shock-2.png" width="300">
+
+<img src="assets/media/crocodile-sprite/shock-3.png" width="300">
 
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
