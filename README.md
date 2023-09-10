@@ -1315,6 +1315,9 @@ Currently the main page switches between 2 views with 1 and 2 columns respective
 Using amiresponsive tool:
 ![](assets/media/issues/2023-09-09-15-31-02.png)
 
+<details><summary>Click here to view Responsivity Test:</summary>
+<img src="assets/media/responsivity-tests/responsivity-main.gif"></details>
+
 <details><summary>Click here to view Devtools inspection:</summary>
 <img src="assets/issues/../media/issues/2-main-page.gif"></details>
 
@@ -1518,11 +1521,20 @@ The logo was designed with simple colors with Canva Open Source imagery. The log
 
 alternative versions of the character were designed for crocodile reactions.
 
-joy and shock below:
+joy and shock reaction array below:
 
 <img src="assets/media/crocodile-sprite/joy.png">
 
+<img src="assets/media/crocodile-sprite/joy-2.png">
+
+<img src="assets/media/crocodile-sprite/joy-3.png">
+
 <img src="assets/media/crocodile-sprite/shock.png">
+
+<img src="assets/media/crocodile-sprite/shock-2.png">
+
+<img src="assets/media/crocodile-sprite/shock-3.png">
+
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -1648,9 +1660,11 @@ To further improve the lighthouse score I could use more WebP images and reduce 
 
 ## 3.3. Browserstack Testing
 
-A video is planned for testing the website on different browsers and devices. The video will be uploaded linked here. 
+The website was tested on Browserstack and confirmed working on Edge, Chrome, safari, Opera and Firefox. It was also confirmed working on Android Galaxy S23 Ultra (chrome) and iPhone 13 (safari)
 
 https://www.browserstack.com/
+
+<a src="assets/media/responsivity-tests/browserstack.mp4">click here to view the testing video</a>
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
