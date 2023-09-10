@@ -111,32 +111,8 @@ $(document).ready(function() {
   });
 });
 
-//(These 2 modal boxes are placed earlier in the code so that the functions can be called from the restart button)
-// ----------------- Well done modal box -----------------
 function confetti() {
   // Placeholder, this is an external library that creates confetti. Confetti by Kiril Vatev. https://www.npmjs.com/package/canvas-confetti
-}
-
-function showWellDoneModal() {
-  if (!sfxWin.classList.contains('sound-mute')) {
-    sfxWin.play();
-  }
-  const modal = document.getElementsByClassName("well-done-modal")[0];
-  if (modal) {
-    modal.click();
-  }
-}
-
-// ----------------- You Lose modal box -----------------
-
-function showYouLoseModal() {
-  if (!sfxLose.classList.contains('sound-mute')) {
-    sfxLose.play();
-  }
-  const modal = document.getElementsByClassName("you-lose-modal")[0];
-  if (modal) {
-    modal.click();
-  }
 }
 
 // ----------------- CARD DECK GAME PLAY -----------------
@@ -231,11 +207,12 @@ fire(0.1, {
 // Check if all cards are matched
 if (document.querySelectorAll(".flipped-over").length === cards.length) {
 // All cards are matched, so show the well-done modal
+showWellDoneModal();
+
 if (!sfxWin.classList.contains('sound-mute')) { //used !, if sfxWin does not have the class sound-mute, then run the following code.
   sfxWin.play(); // This plays the flip sound effect when the card is clicked on.
 }
   
-showWellDoneModal();
 }
 }
 
@@ -418,6 +395,32 @@ function restartGame() {
       container.appendChild(document.createElement("br"));
     }
   });
+
+//(These 2 modal boxes are placed earlier in the code so that the functions can be called from the restart button)
+// ----------------- Well done modal box -----------------
+
+
+function showWellDoneModal() {
+  if (!sfxWin.classList.contains('sound-mute')) {
+    sfxWin.play();
+  }
+  const modal = document.getElementsByClassName("well-done-modal")[0];
+  if (modal) {
+    modal.click();
+  }
+}
+
+// ----------------- You Lose modal box -----------------
+
+function showYouLoseModal() {
+  if (!sfxLose.classList.contains('sound-mute')) {
+    sfxLose.play();
+  }
+  const modal = document.getElementsByClassName("you-lose-modal")[0];
+  if (modal) {
+    modal.click();
+  }
+}
 
 // ----------------- You Lose modal box -----------------
 
