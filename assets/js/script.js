@@ -40,6 +40,9 @@ const sfxWin = document.getElementById('sfx-win');
 const sfxLose = document.getElementById('sfx-lose'); 
 
 const cards = document.querySelectorAll(".card-item-container"); // This variable selects the 16 card-item-container classes from the HTML
+let hasFlippedCard = false; // This variable is set to false because the card has not been clicked yet.
+let firstCard, secondCard; // These variables are set to undefined because the card has not been clicked yet.
+let lockCards = false; // This variable is set to false because the card has not been clicked yet. This variable is used to prevent the user from checking more than 2 cards at a time.
 
 const turnsContainer = document.getElementById("turns-count"); // This variable selects the attempts ID from the HTML, which is used to display the number of attempts the user has taken. It has started at 0.
 const turnsLeftContainer = document.getElementById("turns-left-count"); // This variable selects the attempts ID, which is used to display the number of attempts the user has taken. It has started at 40.
@@ -49,9 +52,6 @@ const turnsLeftModalContainer = document.getElementById('turns-left-modal'); // 
 
 const highScoreTableBody = document.getElementById('highScoreTableBody'); // This variable selects the highScoreTable ID, which is used to display the high scores.
 
-let hasFlippedCard = false; // This variable is set to false because the card has not been clicked yet.
-let firstCard, secondCard; // These variables are set to undefined because the card has not been clicked yet.
-let lockCards = false; // This variable is set to false because the card has not been clicked yet. This variable is used to prevent the user from checking more than 2 cards at a time.
 
 
 // ----------------- CARD DECK -----------------

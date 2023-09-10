@@ -61,6 +61,7 @@ Full Table of Contents: <!-- omit in toc --></div>
   - [1.7. How to play feature](#17-how-to-play-feature)
   - [1.8. Floating buttons header](#18-floating-buttons-header)
   - [1.9. Footer](#19-footer)
+  - [1.10. High Score feature](#110-high-score-feature)
 - [2. UX Development Planes \& Manual Testing](#2-ux-development-planes--manual-testing)
   - [2.1. Strategy Plane](#21-strategy-plane)
     - [2.1.1. Developer Research](#211-developer-research)
@@ -163,10 +164,10 @@ The player can clearly see how many turns they have left, in a fun and dynamic w
 - If the player gets a match, they are rewarded by not losing any turn left.
 - The "turns left" is visualised with a progress bar.
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
 
 ## 1.4. Restart Button 
-<img  src="assets/media/issues/1.3.gif" width="300px" >
+<img  src="assets/media/issues/1.3.gif" width="300px" ></div>
 
 When the player clicks on the restart button, the following happens:
 - all cards flip back over
@@ -255,17 +256,43 @@ The music button is animated just like the SFX button.
 
 The contact button opens a new tab using ```mailto:```.
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
 
 ## 1.9. Footer
 
 ![](assets/media/issues/2023-09-01-12-35-01.png)
+
+</div>
 
 There is a footer with social media links, all of which open in a new tab.
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
 <div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
+
+## 1.10. High Score feature
+
+
+</div>
+
+The high score feature updates the high score board with the player's name and score.
+
+When the player wins the game, they are invited to record their high score.
+
+At this point they are invited to enter their name.
+ 
+-  if this isn't first time, the name is remembered from last time they played
+-  the name is the stored in the browser's ```localStorage```
+
+The High Score leaderboard is then revealed with the player's name
+
+- the player's name is featured on the leaderboard
+- the table is sorted with highest score at the top
+- a rank is assigned with highest score as ```1```
+- if player's have the same score, the players are assigned an equal rank.
+
+<div align=center><img src="assets/media/documentation/color-line-break.png" width="800">
+
 
 # 2. UX Development Planes & Manual Testing
 
@@ -299,6 +326,8 @@ The overall strategy was to develop a memory game over 6 weeks that would appeal
   - it had lots of resources available, making it achievable in the time frame
   - it offered front-end opportunities with Javascript
 
+***
+
 ### 2.1.1. Developer Research
 
 <details>
@@ -316,7 +345,6 @@ click here to see the areas of the Comparitative programming that were researche
 - Manipulating data structures. An example would be adding points to a scoreboard, or displaying a countdown timer.
 - Functions. In comparitative programming, functions are used to perform a specific task. In this project, functions were used to navigate the database, and to display the data in the DOM.
 - Classes. In comparitative programming, classes are used to create objects for example a class of "car" could have the properties of "colour", "make", "model", "year". Classes can interact with each other, for example a class of "car" could have a method of "drive" which would interact with the class of "engine". In this project, classes could be used to create objects, such as the "quiz" class, which had the properties of "question", "answer", "choices", "correct answer", "image", "explanation".
-
 </details>
 <br>
 <details>
@@ -334,7 +362,7 @@ The Developer then tested a [walkthrough project of a memory game](https://githu
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+***
 
 ### 2.1.2. Initial Product Research
 This project had the intentional advantage of plenty existing resources of high relevance. 
@@ -354,7 +382,7 @@ It was crucial for this project to choose a memory game that was achievable in t
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
-<div align=center><img src="assets/media/documentation/color-line-break.png" width="800"></div>
+***
 
 ### 2.1.3. Project Timeline
 
@@ -554,16 +582,38 @@ This Structure plane summarises the structure of each feature by highlighting mo
 
 ### 2.3.1. Card Deck structure
 
-<a src="assets/media/issues/1.1.5.mp4"><img src="assets/media/issues/2023-08-15-13-14-21.png" width=400></a>
+Successful testing results below:
 
-<i>"As a player, I need the design to be accessible, easy to read with lots of visuals. As a player, I need the tone of the design to appear warm, entertaining and encouraging."</i>
+| **Video 1 with cards shuffled correctly:** | **Video 2 with cards shuffled correctly:** |
+| :---: | :---: |
+| <a src="assets/media/issues/1.1.5.mp4"><img src="assets/media/issues/2023-08-15-13-14-21.png" width=400></a> | <a src="assets/media/issues/1.1.5b.mp4"><img src="assets/media/issues/2023-08-15-13-23-37.png" width=400></a> |
 
-JS:
-The flowchart below illustrates the absolute most essential logic of the card deck itself without the other features.
+"as a player, I need a card deck that shuffles each time I restart the game."
 
-<img  src="assets/media/documentation-flowchart/flowchart-mvp.svg" width="800px" >
+The flowchart below illustrates the absolute most essential JacaScript logic of the card deck itself without the other features.
 
-START computer spawn cards, turns starts at 0:
+<img  src="assets/media/documentation-flowchart/flowchart-mvp.svg" width="1200px" >
+
+<br>
+
+- START computer spawn cards:
+
+- player clicks on first image, card appears:
+
+- player clicks on second image, card appears and board is locked during this time:
+
+
+- Do the cards match? (no), clicked images flipped back after 2 seconds:
+
+
+- Do the cards match? (yes), clicked images stay flipped:
+
+
+- Are all the cards flipped? (no), go back to player clicks on first image.
+
+
+- Are all the cards flipped? (yes), go to you've won feature.
+
 
 <details><summary><b>click here to see early testing of the card deck logic:</b></summary>
 
@@ -621,27 +671,136 @@ function cardAppear() {
 this.classList.toggle("flipped-over"); // .toggle adds/removes the class of "flipped-over" on the card that it is clicked on.
 }
 ``` 
-</details><br>
+</details>
 
-- player clicks on second image, card appears, +1 to turns:
+<details><summary>click here to view the declared variables:</summary>
+
+```js
+const cards = document.querySelectorAll(".card-item-container"); // This variable selects the 16 card-item-container classes from the HTML
+let hasFlippedCard = false; // This variable is set to false because the card has not been clicked yet.
+let firstCard, secondCard; // These variables are set to undefined because the card has not been clicked yet.
+let lockCards = false; // This variable is set to false because the card has not been clicked yet. This variable is used to prevent the user from checking more than 2 cards at a time.
+```
+</details>
+
+<details><summary>click here to view the shuffle function code:</summary>
+
+```js
+// This function shuffles the cards. It is an Immediately Invoked Function Expression (IIFE). This function is put in brackets to make it run as soon as the page loads.
+// Code-sketch's step by step Memory Game tutorial was adapted for the card game logic, https://www.youtube.com/watch?v=ZniVgo8U7ek
+(function shuffleCards () { 
+  cards.forEach(card => {
+    let randomPosition = Math.floor(Math.random() * 16); // This variable generates a random number between 0 and 16. Math.floor rounds the number down to the nearest whole number. Math.random generates a random number between 0 and 1. Multiplying this by 16 gives a number between 0 and 16.
+    card.style.order = randomPosition; // This changes the order of the cards to the random number generated above. style.order is a CSS property that changes the order of the cards.
+  });
+
+})(); 
+
+function shuffleCardsAgain () { 
+  cards.forEach(card => {
+    let randomPosition = Math.floor(Math.random() * 16); // This variable generates a random number between 0 and 16. Math.floor rounds the number down to the nearest whole number. Math.random generates a random number between 0 and 1. Multiplying this by 16 gives a number between 0 and 16.
+    card.style.order = randomPosition; // This changes the order of the cards to the random number generated above. style.order is a CSS property that changes the order of the cards.
+  });
+}
+```
+</details>
+
+<details><summary>click here to view the card match function code (infused features ommitted):</summary>
+
+```js
+// ----------------- CARD DECK GAME PLAY -----------------
+// The card deck logic of "match-unmatch" and "lock" is adapted from Code-sketch's step by step Memory Game tutorial, with several other features infused throughout https://www.youtube.com/watch?v=ZniVgo8U7ek
+// ----------------- User Clicks on 1st or 2nd card -----------------
+
+function cardAppear() { 
 
 
-- Do the cards match? (no), clicked images flipped back after 2 seconds:
+if (lockCards) return; // This stops the function of lockCards is true, preventing the user from clicking on more than 2 cards at a time. "If lockCards is true, then return (stop the function)."
+
+if (this === firstCard) return; // This stops the function if the user clicks on the same card twice. "If this is equal to firstCard, then return (stop the function)." this refers to the card that is clicked on.
+
+this.classList.toggle("flipped-over"); // .toggle adds/removes the HTML class of "flipped-over" on the card that it is clicked on. This flips the card over.
+
+// [...]
+
+if (!hasFlippedCard) { //"!"" references the opposite of hasFlippedCard. In the game, this would mean that the user has not clicked on a card yet. If the user has not clicked on a card yet, then run the following code.
+  hasFlippedCard = true; 
+  firstCard = this; // "this" refers to the card that is clicked on. // In this scenario, the user is trying to click on the same card twice. 
+  return;} // This stops the function if the user clicks on the same card twice. "If this is equal to firstCard, then return (stop the function)." this refers to the card that is clicked on.
+  hasFlippedCard = false; // in this scenario, the user is trying to click on a new card while another is flipped over. This resets the variable to false so that the user can click on a new card.
+  secondCard = this; // "this" refers to the card that is clicked on. This would mean that the user has clicked on a card already. If the user has clicked on a card already, then run the following code.
+  // [...]
+  checkForMatch(); // "if the user hasn't clicked on the same card twice, check for match" This function checks if the cards match...
+}
+
+// ----------------- Card appears -------------------
+
+cards.forEach(card => card.addEventListener("click", cardAppear)); // .forEach loops through each card and adds an event listener to each card. When the card is clicked, the function cardAppear is run and the card is flipped.
+
+// ----------------- ???Do the cards match??? (yes) -----------------
+// ...then clicked images stay flipped
+// ...then ask ???Are all the cards flipped???
+
+function checkForMatch() {
+    let matchTrue = firstCard.dataset.framework === secondCard.dataset.framework; // This variable checks if the data-framework of the first card is equal to the data-framework of the second card. If they are equal, then the variable is set to true. If they are not equal, then the variable is set to false.
+
+if (matchTrue) {
+  disableCards();
+} else {
+  flipBackCards();
+}
+
+}
+
+function disableCards(){ //if this function is running, then the cards match.
+  
+firstCard.removeEventListener("click", cardAppear);
+secondCard.removeEventListener("click", cardAppear);
+// .removeEventListener removes the event listener from the two selected cards so that they can't be clicked again.})
+
+// [...]
+
+// [...]
+
+resetCards (); // unlocks the board so that the user can click on new cards again.
+
+// [...]
+
+// [...]
+
+// [...]
+}
+
+// [...]
 
 
-- Do the cards match? (yes), clicked images stay flipped:
+// ----------------- ???Do the cards match??? (no) -----------------
+// ...then clicked images flip back after 2 seconds
+// ...then wait for "User Clicks on 1st card"
 
+function flipBackCards() {
+  lockCards = true; // This statement is set to true so that the user can't click on more than 2 cards at a time.
 
-- Are all the cards flipped? (no), go back to player clicks on first image.
+  [...]
 
+setTimeout(() => {
+  firstCard.classList.remove("flipped-over");
+  secondCard.classList.remove("flipped-over"); // removes the HTML class of "flipped-over" on the card that it is clicked on. This flips the card back over.
+  resetCards (); // unlocks the cards so that the user can click on them again.
+// [...]
+  }
+  },
+  2000); // This sets a timer of 2 seconds before the cards flip back over.
 
-- Are all the cards flipped? (yes), go to you've won feature.
+// [...]
+}
 
-Successful testing results below:
+function resetCards() {// This function resets the variables to their original values.
+  [hasFlippedCard, lockCards] = [false, false];
+  [firstCard, secondCard] = [null, null];
 
-| **Video 1 with cards shuffled correctly:** | **Video 2 with cards shuffled correctly:** |
-| :---: | :---: |
-| <a src="assets/media/issues/1.1.5.mp4"><img src="assets/media/issues/2023-08-15-13-14-21.png" width=400></a> | <a src="assets/media/issues/1.1.5b.mp4"><img src="assets/media/issues/2023-08-15-13-23-37.png" width=400></a> |
+}
+```
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
