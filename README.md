@@ -31,6 +31,7 @@ An [issues.md](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md)
 ***Navigation Links:***
 
 [<img alt="Live page Badge" src="https://img.shields.io/badge/live_page-2d521f?logo=googlechrome&logoColor=white">](https://lmcrean.github.io/Crocodile-Kingdom/) [<img alt="Full Documentation Research Badge" src="https://img.shields.io/badge/Issues_Report-2d521f?logo=mdBook">](https://github.com/lmcrean/Crocodile-Kingdom/blob/main/issues.md) [![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/lmcrean/Crocodile-Kingdom?color=green)](https://github.com/lmcrean/Crocodile-Kingdom/commits/main)
+
 </div>
 
 ## Table of Contents: <!-- omit in toc -->
@@ -356,7 +357,7 @@ click here to see the areas of the Comparitative programming that were researche
 <summary>click here to see the initial Javascript methods that were researched:</summary>
 
 - var, let and const variables. In Javascript, variables are used to store data values. Variables are declared with the ```var``` keyword. The ```=``` sign is used to assign values to variables. In this project.
-- $ symbol. In Javascript, the $ symbol is used to select an element from the DOM. In this project, the $ symbol was used to select the elements from the DOM, and to manipulate the elements.
+- ```$``` symbol. In Javascript, the ```$``` symbol is used to select an element from the DOM. In this project, the $ symbol was used to select the elements from the DOM, and to manipulate the elements.
 - String methods for manipulating strings
 - The DOM. The DOM represents the page so that programs can change the document structure, style, and content.
   </details>
@@ -1571,6 +1572,7 @@ The header and footer buttons used circle motifs, using a faded green from the `
 ***
 
 The gameplay buttons used a rounded rectangle motif, using a faded green from the ```root``` selectors.
+
 <img src="assets/media/documentation/feature-buttons.png">
 
 
@@ -1795,26 +1797,26 @@ The following articles were used to understand the high feature, while also cons
 ## 6.4. Technologies Used
 
 **Languages**
-[HTML5](https://en.wikipedia.org/wiki/HTML5) was used for the structure and content of the website
-[CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) was used for the styling of the website
-[Javascript](https://en.wikipedia.org/wiki/JavaScript) was used for the interactive features of the website
+- [HTML5](https://en.wikipedia.org/wiki/HTML5) was used for the structure and content of the website
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) was used for the styling of the website
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript) was used for the interactive features of the website
 
 **Programming Software**
-[VSCode](https://code.visualstudio.com/) was used as my code editor
-[Gitpod](https://www.gitpod.io/) was used as my secondary code editor
-[Github](https://www.github.com/) was used for Version control
+- [VSCode](https://code.visualstudio.com/) was used as my code editor
+- [Gitpod](https://www.gitpod.io/) was used as my secondary code editor
+- [Github](https://www.github.com/) was used for Version control
 
 **General Software**
-[Canva](https://www.canva.com/) was used for designing Graphics including the logo
+- [Canva](https://www.canva.com/) was used for designing Graphics including the logo
 [Figma](https://www.figma.com/)  for Designing wireframe
 
 **Tools**
-[Clamp tool](https://clamp.font-size.app/) was used for developing a responsive font size with the clamp tool
-[amiresponsive](https://ui.dev/amiresponsive) was used for checking mobile, desktop, tablet view
-[browserstack](https://www.browserstack.com/) was used for checking website on firefox, opera, edge, safari and chrome
-[Python Tutor](https://www.pythontutor.com) was used for debugging the Javascript, as well as a research tool early on in the project to understand the flow of the code.
-[shields.io](https://shields.io/) was used for Documentation Badges
-[Fancy Screen](http://fancyapps.com/) by Janis Skarnelis was used to document GIFs and videos of the project
+- [Clamp tool](https://clamp.font-size.app/) was used for developing a responsive font size with the clamp tool
+- [amiresponsive](https://ui.dev/amiresponsive) was used for checking mobile, desktop, tablet view
+- [browserstack](https://www.browserstack.com/) was used for checking website on firefox, opera, edge, safari and chrome
+- [Python Tutor](https://www.pythontutor.com) was used for debugging the Javascript, as well as a research tool early on in the project to understand the flow of the code.
+- [shields.io](https://shields.io/) was used for Documentation Badges
+- [Fancy Screen](http://fancyapps.com/) by Janis Skarnelis was used to document GIFs and videos of the project
 
 [↑ Back to top](#Portfolio-Project-2-with-Javascript)
 
@@ -1823,20 +1825,20 @@ The following articles were used to understand the high feature, while also cons
 ## 6.5. Libraries Used
 
 **Programming Libraries**
-[Node.js](https://nodejs.org/en/) was used to install ```npm``` and run the Confetti feature.
-[Bootstrap](https://getbootstrap.com/) was used for the Modal, button features as well as drop-shadow effects
-[JQuery](https://jquery.com/) was used for mute button.
+- [Node.js](https://nodejs.org/en/) was used to install ```npm``` and run the Confetti feature.
+- [Bootstrap](https://getbootstrap.com/) was used for the Modal, button features as well as drop-shadow effects
+- [JQuery](https://jquery.com/) was used for mute button.
 
 **Media libraries**
-[Canva](https://www.canva.com/) was used for sourcing open-source images.
-[Pixabay](https://pixabay.com/) was used for sourcing the open-source sound effects and music.
-[Freepik](https://www.freepik.com/) was used for sourcing open-source background svg.
-[SVG Repo](https://www.svgrepo.com/) was used for the mail icon in the header and social media svgs.
+- [Canva](https://www.canva.com/) was used for sourcing open-source images.
+- [Pixabay](https://pixabay.com/) was used for sourcing the open-source sound effects and music.
+- [Freepik](https://www.freepik.com/) was used for sourcing open-source background svg.
+- [SVG Repo](https://www.svgrepo.com/) was used for the mail icon in the header and social media svgs.
 
 **Fonts**
-[Fonts2U](https://fonts2u.com) was used for Hussar Bold Web Edition
-[Cufonfonts](https://www.cufonfonts.com/font/amazing-grotesk) was used for Amazing Grotesk Demi.
-[FontAwesome](https://fontawesome.com/) was used for the mute button icon.
+- [Fonts2U](https://fonts2u.com) was used for Hussar Bold Web Edition
+- [Cufonfonts](https://www.cufonfonts.com/font/amazing-grotesk) was used for Amazing Grotesk Demi.
+- [FontAwesome](https://fontawesome.com/) was used for the mute button icon.
 
 ***
 
